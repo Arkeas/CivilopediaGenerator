@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Rio de Janeiro</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Rio de Janeiro</div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Im Jahr 1502 n. Chr. kamen portugiesische Entdecker erstmals in die Gegend von Rio de Janeiro. Damals lebten dort vier verschiedene Gruppen einheimischer Völker. Zum Schutz vor den Ureinwohnern und &Uuml;berf&auml;llen durch französische Piraten wurde eine kleine befestigte Siedlung errichtet. Am 1. M&auml;rz 1565 wurde das Zentrum der Stadt offiziell gegr&uuml;ndet. Das fruchtbare Land rund um die Siedlung wurde mit Zuckerrohr bepflanzt; daraus bezog die Stadt zu Anfang ihre gesamten Eink&uuml;nfte. Um 1700 war die kleine Stadt auf rund 8.000 Einwohner angewachsen, aber wahrscheinlich waren etwa zwei Drittel davon Sklaven.<br /><br />Dann fanden Kundschafter in den umliegenden H&uuml;geln Gold und Diamanten, was zu einem gro&szlig;en Zustrom von Reichtum und Einwanderern f&uuml;hrte. Die Stadt verdreifachte ihre Grö&szlig;e, und die Hauptstadt der Kolonie wurde 1763 hierher verlegt. Rio wuchs wild weiter, &uuml;ber die befestigte Anlage hinaus. Zu dieser Zeit entstanden auch viele gro&szlig;e Aqu&auml;dukte nach römischem Vorbild, deren Ruinen heute noch in der Stadt zu finden sind. Gegen Ende des 18. Jahrhunderts waren die Minen allm&auml;hlich erschöpft, und Mittelamerika dr&auml;ngte mit seiner eigenen starken Zuckerindustrie auf den Weltmarkt; beides zusammen brachte Rio in eine prek&auml;re Lage. 1796 waren die Exporte bereits um mehr als die H&auml;lfte zur&uuml;ckgegangen.<br /><br />Dann kam die Rettung f&uuml;r Rio in Form einer Bohne: 1808 ordnete die portugiesische Königsfamilie den Anbau von Kaffee an und zog selbst nach Brasilien um. So kehrte der wirtschaftliche Aufschwung in die Kolonie zur&uuml;ck. Die Ausbreitung der Kaffeeplantagen zog in der Stadt eine neue Welle von Verbesserungen nach sich. Es wurden gro&szlig;e herrschaftliche H&auml;user errichtet, Stra&szlig;en gepflastert und herausragende akademische Institute gegr&uuml;ndet.<br /><br />1822 erkl&auml;rte Prinz Pedro I. Brasiliens Unabh&auml;ngigkeit und ernannte Rio de Janeiro zur Hauptstadt des neuen Reichs. Als die Monarchie 1889 durch eine Republik ersetzt wurde, blieb Rio weiterhin die Hauptstadt. Die Verwandlung Rio de Janeiros in eine Stadt der Moderne wurde Anfang des 20. Jahrhunderts fortgesetzt. Stra&szlig;en wurden verbreitert, Ma&szlig;nahmen zur Verbesserung der Volksgesundheit ergriffen, und die umliegenden S&uuml;mpfe wurden trockengelegt, um mehr Baupl&auml;tze zu schaffen. 1960 wurde der Regierungssitz in die neu errichtete Stadt Brasilia verlegt und Rios Wachstum verlangsamte sich endlich.<br /><br />Rio de Janeiro ist weltber&uuml;hmt f&uuml;r seinen Karneval, die Erfindung der Samba-Musik, den Cristo Redentor (ein modernes Weltwunder) und seine herrlichen Str&auml;nde. Leider ist die Stadt auch als Metropole des Verbrechens bekannt und hat die zweifelhafte Ehre, als eine der gewaltt&auml;tigsten St&auml;dte der Welt zu gelten. Dennoch zieht sie weiterhin jedes Jahr Millionen von Touristen an, die ihren Charme, ihre Schönheit und ihr entspanntes Lebensgef&uuml;hl genie&szlig;en möchten.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Afrikanischer Waldelefant</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_CARTHAGINIAN_FOREST_ELEPHANT.png" alt="Afrikanischer Waldelefant" class="contentimage" />
+	<div class="contentleft">
+		<h2>Kosten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">100 <img src="/civilopedia/images/production.png" alt="production" /> / 200 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Kampftyp:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Berittene Einheiten</div></div></div></div></div></div></div></div>
+		<h2>Kampf:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Fortbewegung:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">3 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Zivilisation:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_CARTHAGE.aspx" onmouseover="return tooltip('Karthagisches Reich');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_CARTHAGE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>F&auml;higkeiten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Keine defensiven Gel&auml;nde-Bonusse');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Fortbewegung nach einem Angriff');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Malus beim Angriff auf St&auml;dte (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_FEARED_ELEPHANT.aspx" onmouseover="return tooltip('Furchteinflö&szlig;ender Elefant');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_SPAWN_GENERALS_II.aspx" onmouseover="return tooltip('Gro&szlig;e Gener&auml;le II');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Benötigte Technologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_HORSEBACK_RIDING.aspx" onmouseover="return tooltip('Reiterei');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_HORSEBACK_RIDING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wird veraltet durch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Ritterlichkeit');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Einheit modernisieren</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_KNIGHT.aspx" onmouseover="return tooltip('Ritter');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_KNIGHT.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ersetzt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_HORSEMAN.aspx" onmouseover="return tooltip('Reiter');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HORSEMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Afrikanischer Waldelefant</div>
+		<h2>Spielinformationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Kraftvolle berittene Einheit im Anfangsstadium des Spiels. Anf&auml;llig gegen&uuml;ber Speerk&auml;mpfern. Nur die Karthager können sie bauen. Diese Einheit hat eine höhere <img src="/civilopedia/images/strength.png" alt="strength" /> Kampfst&auml;rke als der Reiter, den sie ersetzt. Sie ver&auml;ngstigt feindliche Einheiten in der N&auml;he und hilft, Gro&szlig;e Gener&auml;le schneller zu produzieren.</div></div></div></div></div></div></div></div>
+		<h2>Strategie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Der Afrikanische Waldelefant ist eine Einheit nur f&uuml;r Karthager, die den Reiter ersetzt. Sie sind langsamer, aber kraftvoller als die Reiter. Sie können sich nach dem Angriff noch bewegen. Sie be&auml;ngstigen auch Einheiten in der N&auml;he und geben ihnen einen negativen Kampfmultiplikator. Der Erfolg im Kampf mit einem Elefanten erhöht die Wahrscheinlichkeit auf Gro&szlig;e Gener&auml;le.</div></div></div></div></div></div></div></div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Der Elefant, der unter dem legend&auml;ren General Hannibal bei seinen Feldz&uuml;gen gegen die Römer h&auml;ufig in den Streitkr&auml;ften Karthagos eingesetzt wurde, war wertvolles Lasttier und gef&auml;hrliche Waffe zugleich. Karthagische Kriegselefanten wurden in den Punischen Kriegen mit wechselndem Erfolg verwendet und waren darauf trainiert, mit Soldaten auf dem R&uuml;cken in die feindlichen Linien zu st&uuml;rmen. Trotz ihrer Furcht einflö&szlig;enden Grö&szlig;e waren Elefanten beim Einsatz mobiler Infanterie sehr verwundbar, und die hohen Nahrungs- und Pflegeanforderungen dieser gewaltigen Tiere f&uuml;hrten oft dazu, dass sie auf den qu&auml;lenden M&auml;rschen der karthagischen Armee verendeten.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

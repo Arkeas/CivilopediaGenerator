@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: &Eacute;quitation</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_HORSEBACK_RIDING.png" alt="&Eacute;quitation" class="contentimage" />
+	<div class="contentleft">
+		<h2>Co&ucirc;t :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">105 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Technologies requises :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_THE_WHEEL.aspx" onmouseover="return tooltip('La roue');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_THE_WHEEL.png" /></a><a href="TECH_TRAPPING.aspx" onmouseover="return tooltip('Pi&egrave;ge');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_TRAPPING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>M&egrave;ne aux technologies :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CIVIL_SERVICE.aspx" onmouseover="return tooltip('Administration');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CIVIL_SERVICE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unit&eacute;s d&eacute;bloqu&eacute;es :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_BYZANTINE_CATAPHRACT.aspx" onmouseover="return tooltip('Cataphractaire');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_BYZANTINE_CATAPHRACT.png" /></a><a href="UNIT_CARTHAGINIAN_FOREST_ELEPHANT.aspx" onmouseover="return tooltip('&Eacute;l&eacute;phant de for&ecirc;t d\'Afrique');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CARTHAGINIAN_FOREST_ELEPHANT.png" /></a><a href="UNIT_HORSEMAN.aspx" onmouseover="return tooltip('Cavalier');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HORSEMAN.png" /></a><a href="UNIT_GREEK_COMPANIONCAVALRY.aspx" onmouseover="return tooltip('Cavalerie des Compagnons');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_GREEK_COMPANIONCAVALRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>B&acirc;timents d&eacute;bloqu&eacute;s :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_STABLE.aspx" onmouseover="return tooltip('&Eacute;curie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_STABLE.png" /></a><a href="BUILDING_CIRCUS_MAXIMUS.aspx" onmouseover="return tooltip('Circus Maximus');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_CIRCUS_MAXIMUS.png" /></a><a href="BUILDING_DUCAL_STABLE.aspx" onmouseover="return tooltip('&Eacute;curie ducale');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_DUCAL_STABLE.png" /></a><a href="BUILDING_CARAVANSARY.aspx" onmouseover="return tooltip('Caravans&eacute;rail');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_CARAVANSARY.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">&Eacute;quitation</div>
+		<h2>Informations de jeu :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permet la formation de <span class="color_positive_text">cavaliers</span>, une unit&eacute; mont&eacute;e puissante et rapide.</div></div></div></div></div></div></div></div>
+		
+		<h2>Citation :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Un cheval ! Un cheval ! Mon royaume pour un cheval !"<br />  - Shakespeare (Richard III)<br /></div></div></div></div></div></div></div></div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">L'&eacute;quitation fut probablement d&eacute;velopp&eacute;e au deuxi&egrave;me mill&eacute;naire av. J.-C. (peut-&ecirc;tre m&ecirc;me avant) par les peuples nomades d'Asie centrale. Le cheval &eacute;tait d&eacute;j&agrave; domestiqu&eacute; depuis longtemps, mais l'anc&ecirc;tre de l'animal &eacute;tait trop petit pour la monte. Ce n'est que lorsque la taille de l'animal devint suffisante que l'&eacute;quitation devint v&eacute;ritablement un savoir-faire pratique. Les Scythes, des nomades antiques, &eacute;taient des cavaliers accomplis. Ils sont peut-&ecirc;tre les inventeurs des premiers mod&egrave;les de selles et d'&eacute;triers (bien qu'ils n'aient probablement utilis&eacute; ces derniers que pour monter et descendre de cheval). Si l'on en croit les historiens grecs, les Scythes furent les premiers &agrave; hongrer (castrer) les chevaux trop sauvages, afin de les rendre plus dociles et faciles &agrave; monter.<br /><br />Aux alentours de 1500 av. J.-C., nombreux &eacute;taient les peuples du Croissant fertile (Hittites, Assyriens et Babyloniens) qui combattaient &agrave; cheval. Ce fut &agrave; cette p&eacute;riode que les chevaux arriv&egrave;rent en &Eacute;gypte. Du temps d'Alexandre le Grand, les tactiques de cavalerie &eacute;taient nettement plus perfectionn&eacute;es, et la "cavalerie des Compagnons" d'Alexandre fut probablement constitu&eacute;e des combattants les plus puissants et les plus efficaces du monde m&eacute;diterran&eacute;en.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

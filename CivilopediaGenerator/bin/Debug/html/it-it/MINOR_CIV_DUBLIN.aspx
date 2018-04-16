@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Dublino</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Dublino</div>
+		<h2>Informazioni storiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Dublino &egrave; la citt&agrave; pi&ugrave; grande e la capitale della Repubblica d'Irlanda. Il suo nome in lingua gaelica &egrave; Baile &Aacute;tha Cliath, ovvero "citt&agrave; dal guado fortificato"; questa denominazione &egrave; un po' pi&ugrave; romantica del nome originale Dubh Linn, che significa "stagno nero". L'astronomo greco Tolomeo fornì alcune prove che sembrano dimostrare che l'area di Dublino fosse gi&agrave; abitata nel 140 d.C., ma la data di fondazione ufficiale risale all'841, quando i normanni costruirono una cittadina sulla foce del fiume Liffey. Nonostante la crescita dell'influenza celtica i Normanni continuarono a governare la regione.<br /><br />Dublino divenne un centro di potere militare e giudiziario mentre il dominio del paese oscillava tra i Normanni e la Corona inglese. La presenza inglese fu indebolita per qualche tempo in seguito alla peste bubbonica del 1348, ma i Tudor ripresero con rinnovato vigore la conquista dell'isola. Dublino cadde definitivamente sotto la bandiera britannica nel 1603. La citt&agrave; si espanse rapidamente e per un breve periodo divenne la seconda citt&agrave; dell'Impero inglese. In questo periodo il piccolo porto e l'affluente sul quale era nata la citt&agrave; furono riempiti di terra e coperti da nuove costruzioni. Gran parte degli abitanti dimenticò persino la loro esistenza.<br /><br />Nel 1759 a St. James's Gate fu fondata una piccola fabbrica di birra che avrebbe formato la base dell'economia locale per secoli a venire. Arthur Guinness utilizzò il denaro lasciatogli dal padrino per firmare un accordo d'affitto della durata di 9.000 anni a un costo annuale di 45 sterline per un complesso di quattro acri. Ai tempi molti dubitarono della sua intelligenza e del suo senso degli affari, ma ben presto il birrificio Guinness diventò il maggior datore di lavoro della citt&agrave;, sostenendone significativamente l'economia.<br /><br />Dopo il 1800 la sede del governo fu spostata a Westminster e la citt&agrave; entrò in un periodo di decadenza. Dublino, come il resto dell'Irlanda, non aveva alcun giacimento di carbone nel sottosuolo, così non giocò alcuna parte nella rivoluzione industriale che sconvolse l'Europa nel XIX secolo. Questo contribuì ulteriormente al suo declino.<br /><br />Le fortune della citt&agrave; cambiarono con la Rivolta di Pasqua del 1916, quando i repubblicani irlandesi tentarono di porre fine al dominio inglese e guadagnare l'indipendenza. Nelle successive battaglie la citt&agrave; subì gravi danni, ma quando nel 1922 la "libera nazione irlandese" fu finalmente riconosciuta dagli inglesi, il governo cominciò subito a ricostruirne il centro, riportandovi la propria sede. Talvolta i lavori hanno proceduto dolorosamente a rilento, ma la ricostruzione ha fatto di Dublino lo snodo culturale dell'Irlanda. Di recente i grandi flussi di denaro affluiti nella citt&agrave; hanno ulteriormente accelerato questo processo: oggi Dublino &egrave; un importante centro per le scienze, l'educazione e l'industria.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

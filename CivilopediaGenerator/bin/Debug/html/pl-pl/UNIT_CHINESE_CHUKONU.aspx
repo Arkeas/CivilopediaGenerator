@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Chu-Ko-Nu</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_CHINESE_CHUKONU.png" alt="Chu-Ko-Nu" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">120 <img src="/civilopedia/images/production.png" alt="production" /> / 240 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">&#321;ucznicza</div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">13 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a ostrza&#322;u:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Zasi&#281;g:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2</div></div></div></div></div></div></div></div>
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_CHINA.aspx" onmouseover="return tooltip('Cesarstwo chi&#324;skie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_CHINA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('Nie mo&#380;e atakowa&#263; wr&#281;cz');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_SECOND_ATTACK.aspx" onmouseover="return tooltip('Podw&oacute;jny atak');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MACHINERY.aspx" onmouseover="return tooltip('Mechanika');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MACHINERY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wypierana przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_INDUSTRIALIZATION.aspx" onmouseover="return tooltip('Industrializacja');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_INDUSTRIALIZATION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_GATLINGGUN.aspx" onmouseover="return tooltip('Karabin&oacute;w Gatlinga');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_GATLINGGUN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CROSSBOWMAN.aspx" onmouseover="return tooltip('Kusznik&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CROSSBOWMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Chu-Ko-Nu</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">&#346;redniowieczna jednostka piechoty strzelaj&#261;cej. Mog&#261; j&#261; stworzy&#263; wy&#322;&#261;cznie Chi&#324;czycy. Mo&#380;e strzeli&#263; dwa razy na tur&#281;, w przeciwie&#324;stwie do kusznik&oacute;w, kt&oacute;rych zast&#281;puje.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Chu-Ko-Nu to unikatowa jednostka chi&#324;ska zast&#281;puj&#261;ca kusznik&oacute;w. S&#261; oni od nich troch&#281; s&#322;absi, ale mog&#261; atakowa&#263; dwa razy na tur&#281;, co daje im du&#380;&#261; si&#322;&#281; ofensywn&#261;. Jednostka ta jest szczeg&oacute;lnie skuteczna, gdy stacjonuje w obleganym mie&#347;cie.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Chu-Ko-Nu to nazwa eleganckiej samopowtarzalnej kuszy, kt&oacute;r&#261; wynaleziono w Chinach, w drugim wieku naszej ery. Jej mechanizm strzelecki zbli&#380;ony by&#322; do tego, kt&oacute;ry stosowano w tradycyjnych kuszach europejskich. Podobnie jak w wersji europejskiej, be&#322;t umieszczano w jej g&oacute;rnej cz&#281;&#347;ci, tu&#380; przed ci&#281;ciw&#261;. Wyposa&#380;ona by&#322;a r&oacute;wnie&#380; w ko&#322;czan z be&#322;tami, a tak&#380;e d&#378;wigni&#281; u&#322;atwiaj&#261;c&#261; napi&#281;cie ci&#281;ciwy, za&#322;adowanie oraz wystrzelenie be&#322;tu. Czyni&#322;o j&#261; to bardziej szybkostrzeln&#261; wzgl&#281;dem kusz europejskich. Chu-Ko-Nu strzela&#322;a jednak l&#380;ejszymi be&#322;tami i mia&#322;a mniejszy zasi&#281;g. O ile kusza europejska stanowi&#322;a du&#380;e zagro&#380;enie nawet w otwartym terenie i przeciwko silnie opancerzonym przeciwnikom, o tyle jej chi&#324;ski odpowiednik sprawdza&#322; si&#281; lepiej na kr&oacute;tszym dystansie i przeciwko wi&#281;kszej liczbie lekko opancerzonych wrog&oacute;w.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

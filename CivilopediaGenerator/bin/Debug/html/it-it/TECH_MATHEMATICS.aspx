@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Matematica</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_MATHEMATICS.png" alt="Matematica" class="contentimage" />
+	<div class="contentleft">
+		<h2>Costo:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">105 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Tecnologie propedeutiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_THE_WHEEL.aspx" onmouseover="return tooltip('Ruota');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_THE_WHEEL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Conduce alle tecnologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CURRENCY.aspx" onmouseover="return tooltip('Valuta');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CURRENCY.png" /></a><a href="TECH_ENGINEERING.aspx" onmouseover="return tooltip('Ingegneria');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ENGINEERING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unit&agrave; sbloccate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CATAPULT.aspx" onmouseover="return tooltip('Catapulta');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CATAPULT.png" /></a><a href="UNIT_ROMAN_BALLISTA.aspx" onmouseover="return tooltip('Balista');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ROMAN_BALLISTA.png" /></a><a href="UNIT_ASSYRIAN_SIEGE_TOWER.aspx" onmouseover="return tooltip('Torre d\'assedio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ASSYRIAN_SIEGE_TOWER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Edifici sbloccati:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_COURTHOUSE.aspx" onmouseover="return tooltip('Palazzo di giustizia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_COURTHOUSE.png" /></a><a href="BUILDING_HANGING_GARDEN.aspx" onmouseover="return tooltip('i Giardini Pensili');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_HANGING_GARDEN.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Matematica</div>
+		<h2>Informazione sulla partita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permette la costruzione della <span class="color_positive_text">Catapulta</span>, una potente arma d'assedio. Inoltre ti permette di costruire il <span class="color_positive_text">Palazzo di giustizia</span>, un edificio che riduce <img src="/civilopedia/images/happiness_4.png" alt="unhappiness" /> l'Infelicit&agrave; provocata dalle <img src="/civilopedia/images/occupied.png" alt="occupied" /> citt&agrave; occupate.</div></div></div></div></div></div></div></div>
+		
+		<h2>Citazione:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"La matematica &egrave; la porta e la chiave delle scienze."<br /> - Ruggero Bacone<br /></div></div></div></div></div></div></div></div>
+		<h2>Informazioni storiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">La matematica può essere definita come la scienza dell'ordine, della struttura e delle relazioni tra entit&agrave;. Si &egrave; evoluta a partire dalla capacit&agrave; di contare, di misurare le grandezze e di descrivere gli oggetti e la loro forma. La matematica &egrave; la base di tutte le scienze fisiche. I Sumeri possedevano gi&agrave; un robusto sistema matematico che era sia a base 10 (come il nostro) sia a base 60. Le ultime vestigia del sistema a base 60 si possono trovare nella misurazione del tempo: le ore sono divise in 60 minuti, a loro volta formati da 60 secondi.<br /><br />Gli scribi e gli esattori delle tasse egizi avevano sviluppato un sistema un po' pi&ugrave; semplice, che fu comunque capace di supportare i calcoli necessari per realizzare opere enormi come le piramidi (e anche, si presume, per tener traccia delle tasse da raccogliere). I Greci divisero la matematica in due grandi sfere: l'aritmetica, che studia le quantit&agrave;, e la geometria, che studia le dimensioni. Il loro contributo pi&ugrave; importante, comunque, consiste nell'aver applicato alla matematica i concetti di teoria e dimostrazione. I sistemi precedenti erano basati sull'osservazione della realt&agrave;, mentre i Greci si sforzarono di definire regole generali che andassero oltre la registrazione dell'esistente.<br /><br />Tra l'VIII e il XV secolo il mondo islamico contribuì in modo fondamentale alla matematica. Le invenzioni pi&ugrave; importanti furono probabilmente il sistema decimale e il numero zero, avvenute intorno al 600 d.C. in India. Il nuovo sistema sostituì quello romano, molto barocco e scomodo, che oggi sopravvive quasi solo nella numerazione dei sequel dei film horror.<br /><br />La matematica si &egrave; sviluppata tremendamente dai suoi inizi e ha permesso all'uomo di spezzare gli atomi, creare Internet e organizzare elaborati campionati di fantacalcio. Chiss&agrave; quali segreti ci potr&agrave; schiudere in futuro?</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

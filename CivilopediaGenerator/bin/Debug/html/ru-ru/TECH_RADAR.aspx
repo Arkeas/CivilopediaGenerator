@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Радар</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_RADAR.png" alt="Радар" class="contentimage" />
+	<div class="contentleft">
+		<h2>Стоимость:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Нужные технологии:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ELECTRONICS.aspx" onmouseover="return tooltip('Электроника');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRONICS.png" /></a><a href="TECH_BALLISTICS.aspx" onmouseover="return tooltip('баллистических ракет');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_BALLISTICS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ведет к технологиям:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_NUCLEAR_FISSION.aspx" onmouseover="return tooltip('Расщепление ядра');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_NUCLEAR_FISSION.png" /></a><a href="TECH_ROCKETRY.aspx" onmouseover="return tooltip('Ракетостроение');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ROCKETRY.png" /></a><a href="TECH_COMPUTERS.aspx" onmouseover="return tooltip('компьютеров');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMPUTERS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Открывает юниты:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_BOMBER.aspx" onmouseover="return tooltip('Бомбардировщик');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_BOMBER.png" /></a><a href="UNIT_AMERICAN_B17.aspx" onmouseover="return tooltip('Бомбардировщик B-17');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_AMERICAN_B17.png" /></a><a href="UNIT_FIGHTER.aspx" onmouseover="return tooltip('Истребитель');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_FIGHTER.png" /></a><a href="UNIT_JAPANESE_ZERO.aspx" onmouseover="return tooltip('"Зеро"');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_JAPANESE_ZERO.png" /></a><a href="UNIT_PARATROOPER.aspx" onmouseover="return tooltip('парашютистов');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_PARATROOPER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Открывает здания:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_AIRPORT.aspx" onmouseover="return tooltip('Аэропорт');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_AIRPORT.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Радар</div>
+		<h2>Игровая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Позволяет строить <span class="color_positive_text">бомбардировщики</span> - самолеты, способные наносить смертоносные авиаудары, и <span class="color_positive_text">истребители</span>, специально предназначенные для защиты неба от вражеской авиации. Также позволяет создавать <span class="color_positive_text">парашютистов</span> - пехоту, которую можно забрасывать за линию обороны противника по воздуху.</div></div></div></div></div></div></div></div>
+		
+		<h2>Цитата:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Дальновидность - искусство узреть незримое".<br /> - Джонатан Свифт<br /></div></div></div></div></div></div></div></div>
+		<h2>Историческая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Радар - система обнаружения объектов на расстоянии с помощью электромагнитных волн. Радаром можно обнаруживать корабли и самолеты. Термин "радар" появился в 1941 году, это сокращение от английского выражения "Radio Detection And Ranging" - "радиообнаружение и дальнометрия".<br /><br />В 1904 году Кристиан Гюльсмейер засек корабль в густом тумане. В том же году он усовершенствовал свое устройство, что позволило обнаруживать объекты на большем расстоянии. <br /><br />В августе 1917 году Никола Тесла создал первые примитивные радары, которые могли "определить относительное местоположение движущегося объекта, например судна на море, пройденное им расстояние и скорость".<br /><br />К началу Второй мировой войны все страны работали над созданием военного радара. Дальше всех продвинулись англичане, и к началу войны их радар мог засекать самолеты противника уже на подлете к Британии. (Исследования англичан подстегнул слух, что немцы работают над лучевым оружием.) Технологии радара были засекречены, и во время войны англичане утверждали, что перехваченные немецкие самолеты обнаруживались наводчиками. <br /><br />К концу войны все развитые державы освоили технологию радара, и к середине века она стала использоваться повсеместно, в том числе для слежения за гражданской авиацией. Сегодня самолеты (за исключением суперсовременных малозаметных летательных аппаратов) не могут вторгнуться в воздушное пространство промышленно развитого государства и остаться незамеченными.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

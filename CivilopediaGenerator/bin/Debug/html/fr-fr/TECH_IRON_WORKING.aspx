@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Travail du fer</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_IRON_WORKING.png" alt="Travail du fer" class="contentimage" />
+	<div class="contentleft">
+		<h2>Co&ucirc;t :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">175 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Technologies requises :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_BRONZE_WORKING.aspx" onmouseover="return tooltip('Travail du bronze');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_BRONZE_WORKING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>M&egrave;ne aux technologies :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_METAL_CASTING.aspx" onmouseover="return tooltip('Moulage');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_METAL_CASTING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unit&eacute;s d&eacute;bloqu&eacute;es :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_SWORDSMAN.aspx" onmouseover="return tooltip('Spadassin');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_SWORDSMAN.png" /></a><a href="UNIT_IROQUOIAN_MOHAWKWARRIOR.aspx" onmouseover="return tooltip('Guerrier mohawk');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_IROQUOIAN_MOHAWKWARRIOR.png" /></a><a href="UNIT_ROMAN_LEGION.aspx" onmouseover="return tooltip('L&eacute;gion');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ROMAN_LEGION.png" /></a><a href="UNIT_KRIS_SWORDSMAN.aspx" onmouseover="return tooltip('Spadassin &agrave; kriss');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_KRIS_SWORDSMAN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>B&acirc;timents d&eacute;bloqu&eacute;s :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_HEROIC_EPIC.aspx" onmouseover="return tooltip('&Eacute;pop&eacute;e h&eacute;ro&iuml;que');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_HEROIC_EPIC.png" /></a><a href="BUILDING_COLOSSUS.aspx" onmouseover="return tooltip('Colosse');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_COLOSSUS.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Travail du fer</div>
+		<h2>Informations de jeu :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permet la construction du <span class="color_positive_text">Spadassin</span>, une unit&eacute; de combat rapproch&eacute;e puissante.</div></div></div></div></div></div></div></div>
+		
+		<h2>Citation :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"N'attendez pas que le fer soit chaud pour le battre : enflammez-le de vos coups r&eacute;p&eacute;t&eacute;s."<br />  - William Butler Yeats<br /></div></div></div></div></div></div></div></div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Le travail du fer est plus ancien que l'Histoire elle-m&ecirc;me. Le premier fer &agrave; avoir &eacute;t&eacute; travaill&eacute; fut probablement le fer m&eacute;t&eacute;orique, mais ce mat&eacute;riau n'&eacute;tant pas des plus &eacute;vidents &agrave; trouver, les peuples de l'antiquit&eacute; lui cherch&egrave;rent ailleurs un substitut. La technique d'extraction du fer par fusion (ou l'extraction du m&eacute;tal contenu dans le minerai de fer) semble avoir &eacute;t&eacute; d&eacute;couverte au XIIe si&egrave;cle av. J.-C. dans le Caucase, en Asie Mineure, ou en Inde. La production du fer forg&eacute;, elle, apparut vers l'an 1000 av. J.-C. <br /><br />Les objets les plus anciens &agrave; avoir &eacute;t&eacute; fabriqu&eacute;s &agrave; partir de fer m&eacute;t&eacute;orique datent de 4000 av. J.-C., et sont originaires de l'&Eacute;gypte antique et de Sumer. A cette &eacute;poque, le fer &eacute;tait extr&ecirc;mement rare, au point que certains historiens pensent qu'il &eacute;tait alors plus pr&eacute;cieux que l'or.<br /><br />Au XIIe si&egrave;cle av. J.-C., en M&eacute;diterran&eacute;e orientale, le fer rempla&ccedil;a le bronze comme mat&eacute;riau de pr&eacute;dilection dans la fabrication d'armes et d'outils. Non pas qu'il fut un mat&eacute;riau de meilleure qualit&eacute; que le bronze qu'il rempla&ccedil;a : il &eacute;tait simplement plus abondant, et se trouvait dans des r&eacute;gions pauvres en cuivre et en &eacute;tain (mat&eacute;riaux constitutifs du bronze), le rendant nettement plus abordable.<br /><br />Le m&eacute;tal "moderne" qu'est l'acier, fut produit pour la premi&egrave;re fois durant la Pr&eacute;histoire, mais la technologie permettant sa production &agrave; grande &eacute;chelle ne fut d&eacute;couverte qu'au XVIIe si&egrave;cle apr. J.-C. Une fois l'acier devenu bon march&eacute; et abondant, il supplanta le fer dans la quasi-totalit&eacute; de ses utilisations.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

@@ -1,0 +1,271 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-fr">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,unit,units" />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('Concepts de jeu');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_off.png" class="tab" id="tab01" onmouseover="this.src='/civilopedia/images/tab_concept_on.png';" onmouseout="this.src='/civilopedia/images/tab_concept_off.png';" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('Technologies');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('Unit&eacute;s');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_on.png" class="tab" id="tab03" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('Promotions');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_off.png" class="tab" id="tab04" onmouseover="this.src='/civilopedia/images/tab_promotion_on.png';" onmouseout="this.src='/civilopedia/images/tab_promotion_off.png';" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('B&acirc;timents');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('Merveilles');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('Doctrines');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_off.png" class="tab" id="tab07" onmouseover="this.src='/civilopedia/images/tab_policy_on.png';" onmouseout="this.src='/civilopedia/images/tab_policy_off.png';" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('Sp&eacute;cialistes et personnages illustres');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('Civilisations et dirigeants');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_off.png" class="tab" id="tab09" onmouseover="this.src='/civilopedia/images/tab_civilization_on.png';" onmouseout="this.src='/civilopedia/images/tab_civilization_off.png';" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('Cit&eacute;s-&eacute;tats');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_off.png" class="tab" id="tab10" onmouseover="this.src='/civilopedia/images/tab_city_state_on.png';" onmouseout="this.src='/civilopedia/images/tab_city_state_off.png';" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('Terrains et caract&eacute;ristiques');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('Ressources');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('Am&eacute;nagements');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('Religion');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_off.png" class="tab" id="tab14" onmouseover="this.src='/civilopedia/images/tab_religion_on.png';" onmouseout="this.src='/civilopedia/images/tab_religion_off.png';" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('Congr&egrave;s mondial');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">Unit&eacute;s
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+					<option value="zh-hant-hk">中文 (繁體)</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="UNIT_HOME.aspx"><div id="UNIT_HOME" class="menuitem">Page d'accueil - Unit&eacute;s</div></a>
+			<div id="GROUP_TXT_KEY_PEDIA_RELIGIOUS" class="menugroupcontainer"><a href="javascript:togglediv('TXT_KEY_PEDIA_RELIGIOUS_CONTENT');"><div id="TXT_KEY_PEDIA_RELIGIOUS" class="menugroup">Religion</div></a><div id="TXT_KEY_PEDIA_RELIGIOUS_CONTENT">
+				<a href="UNIT_INQUISITOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_INQUISITOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_INQUISITOR" class="menuitem">Inquisiteur</div></a>
+				<a href="UNIT_MISSIONARY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MISSIONARY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MISSIONARY" class="menuitem">Missionnaire</div></a>
+			</div></div>
+			<div id="GROUP_ERA_ANCIENT" class="menugroupcontainer"><a href="javascript:togglediv('ERA_ANCIENT_CONTENT');"><div id="ERA_ANCIENT" class="menugroup">Antiquit&eacute;</div></a><div id="ERA_ANCIENT_CONTENT">
+				<a href="UNIT_SCOUT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SCOUT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SCOUT" class="menuitem">&Eacute;claireur</div></a>
+				<a href="UNIT_INDIAN_WARELEPHANT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_INDIAN_WARELEPHANT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_INDIAN_WARELEPHANT" class="menuitem">&Eacute;l&eacute;phant de guerre</div></a>
+				<a href="UNIT_ARCHER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ARCHER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ARCHER" class="menuitem">Archer</div></a>
+				<a href="UNIT_BABYLONIAN_BOWMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BABYLONIAN_BOWMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BABYLONIAN_BOWMAN" class="menuitem">Archer Babylonien</div></a>
+				<a href="UNIT_HUN_HORSE_ARCHER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_HUN_HORSE_ARCHER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_HUN_HORSE_ARCHER" class="menuitem">Archer mont&eacute;</div></a>
+				<a href="UNIT_CHARIOT_ARCHER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CHARIOT_ARCHER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CHARIOT_ARCHER" class="menuitem">Archer sur char</div></a>
+				<a href="UNIT_HUN_BATTERING_RAM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_HUN_BATTERING_RAM.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_HUN_BATTERING_RAM" class="menuitem">B&eacute;lier</div></a>
+				<a href="UNIT_WORKBOAT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_WORKBOAT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_WORKBOAT" class="menuitem">Bateau-atelier</div></a>
+				<a href="UNIT_BARBARIAN_AXMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BARBARIAN_AXMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BARBARIAN_AXMAN" class="menuitem">Biface</div></a>
+				<a href="UNIT_BARBARIAN_WARRIOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BARBARIAN_WARRIOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BARBARIAN_WARRIOR" class="menuitem">Brute</div></a>
+				<a href="UNIT_CARAVAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CARAVAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CARAVAN" class="menuitem">Caravane</div></a>
+				<a href="UNIT_EGYPTIAN_WARCHARIOT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_EGYPTIAN_WARCHARIOT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_EGYPTIAN_WARCHARIOT" class="menuitem">Char de guerre</div></a>
+				<a href="UNIT_SETTLER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SETTLER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SETTLER" class="menuitem">Colon</div></a>
+				<a href="UNIT_SHOSHONE_PATHFINDER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SHOSHONE_PATHFINDER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SHOSHONE_PATHFINDER" class="menuitem">D&eacute;fricheur</div></a>
+				<a href="UNIT_BYZANTINE_DROMON.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BYZANTINE_DROMON.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BYZANTINE_DROMON" class="menuitem">Dromon</div></a>
+				<a href="UNIT_INCAN_SLINGER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_INCAN_SLINGER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_INCAN_SLINGER" class="menuitem">Frondeur</div></a>
+				<a href="UNIT_GALLEY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GALLEY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GALLEY" class="menuitem">Gal&egrave;re</div></a>
+				<a href="UNIT_WARRIOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_WARRIOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_WARRIOR" class="menuitem">Guerrier</div></a>
+				<a href="UNIT_POLYNESIAN_MAORI_WARRIOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_POLYNESIAN_MAORI_WARRIOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_POLYNESIAN_MAORI_WARRIOR" class="menuitem">Guerrier maori</div></a>
+				<a href="UNIT_CELT_PICTISH_WARRIOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CELT_PICTISH_WARRIOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CELT_PICTISH_WARRIOR" class="menuitem">Guerrier picte</div></a>
+				<a href="UNIT_GREEK_HOPLITE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GREEK_HOPLITE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GREEK_HOPLITE" class="menuitem">Hoplite</div></a>
+				<a href="UNIT_PERSIAN_IMMORTAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_PERSIAN_IMMORTAL.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_PERSIAN_IMMORTAL" class="menuitem">Immortel</div></a>
+				<a href="UNIT_AZTEC_JAGUAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_AZTEC_JAGUAR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_AZTEC_JAGUAR" class="menuitem">Jaguar</div></a>
+				<a href="UNIT_SPEARMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SPEARMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SPEARMAN" class="menuitem">Lancier</div></a>
+				<a href="UNIT_CARGO_SHIP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CARGO_SHIP.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CARGO_SHIP" class="menuitem">Navire marchand</div></a>
+				<a href="UNIT_WORKER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_WORKER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_WORKER" class="menuitem">Ouvrier</div></a>
+				<a href="UNIT_MAYAN_ATLATLIST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MAYAN_ATLATLIST.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MAYAN_ATLATLIST" class="menuitem">Propulseur</div></a>
+				<a href="UNIT_CARTHAGINIAN_QUINQUEREME.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CARTHAGINIAN_QUINQUEREME.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CARTHAGINIAN_QUINQUEREME" class="menuitem">Quinqu&eacute;r&egrave;me</div></a>
+				<a href="UNIT_TRIREME.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_TRIREME.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_TRIREME" class="menuitem">Trir&egrave;me</div></a>
+			</div></div>
+			<div id="GROUP_ERA_CLASSICAL" class="menugroupcontainer"><a href="javascript:togglediv('ERA_CLASSICAL_CONTENT');"><div id="ERA_CLASSICAL" class="menugroup">&Egrave;re classique</div></a><div id="ERA_CLASSICAL_CONTENT">
+				<a href="UNIT_CARTHAGINIAN_FOREST_ELEPHANT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CARTHAGINIAN_FOREST_ELEPHANT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CARTHAGINIAN_FOREST_ELEPHANT" class="menuitem">&Eacute;l&eacute;phant de for&ecirc;t d'Afrique</div></a>
+				<a href="UNIT_COMPOSITE_BOWMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_COMPOSITE_BOWMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_COMPOSITE_BOWMAN" class="menuitem">Archer composite</div></a>
+				<a href="UNIT_ROMAN_BALLISTA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ROMAN_BALLISTA.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ROMAN_BALLISTA" class="menuitem">Baliste</div></a>
+				<a href="UNIT_BYZANTINE_CATAPHRACT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BYZANTINE_CATAPHRACT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BYZANTINE_CATAPHRACT" class="menuitem">Cataphractaire</div></a>
+				<a href="UNIT_CATAPULT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CATAPULT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CATAPULT" class="menuitem">Catapulte</div></a>
+				<a href="UNIT_GREEK_COMPANIONCAVALRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GREEK_COMPANIONCAVALRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GREEK_COMPANIONCAVALRY" class="menuitem">Cavalerie des Compagnons</div></a>
+				<a href="UNIT_HORSEMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_HORSEMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_HORSEMAN" class="menuitem">Cavalier</div></a>
+				<a href="UNIT_IROQUOIAN_MOHAWKWARRIOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_IROQUOIAN_MOHAWKWARRIOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_IROQUOIAN_MOHAWKWARRIOR" class="menuitem">Guerrier mohawk</div></a>
+				<a href="UNIT_ROMAN_LEGION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ROMAN_LEGION.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ROMAN_LEGION" class="menuitem">L&eacute;gion</div></a>
+				<a href="UNIT_SWORDSMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SWORDSMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SWORDSMAN" class="menuitem">Spadassin</div></a>
+				<a href="UNIT_KRIS_SWORDSMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_KRIS_SWORDSMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_KRIS_SWORDSMAN" class="menuitem">Spadassin &agrave; kriss</div></a>
+				<a href="UNIT_ASSYRIAN_SIEGE_TOWER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ASSYRIAN_SIEGE_TOWER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ASSYRIAN_SIEGE_TOWER" class="menuitem">Tour de si&egrave;ge</div></a>
+			</div></div>
+			<div id="GROUP_ERA_MEDIEVAL" class="menugroupcontainer"><a href="javascript:togglediv('ERA_MEDIEVAL_CONTENT');"><div id="ERA_MEDIEVAL" class="menugroup">Moyen &Acirc;ge</div></a><div id="ERA_MEDIEVAL_CONTENT">
+				<a href="UNIT_SIAMESE_WARELEPHANT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SIAMESE_WARELEPHANT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SIAMESE_WARELEPHANT" class="menuitem">&Eacute;l&eacute;phant de Naresuan</div></a>
+				<a href="UNIT_CROSSBOWMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CROSSBOWMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CROSSBOWMAN" class="menuitem">Arbal&eacute;trier</div></a>
+				<a href="UNIT_ENGLISH_LONGBOWMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ENGLISH_LONGBOWMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ENGLISH_LONGBOWMAN" class="menuitem">Archer long</div></a>
+				<a href="UNIT_ARABIAN_CAMELARCHER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ARABIAN_CAMELARCHER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ARABIAN_CAMELARCHER" class="menuitem">Archer m&eacute;hariste</div></a>
+				<a href="UNIT_DANISH_BERSERKER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_DANISH_BERSERKER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_DANISH_BERSERKER" class="menuitem">Berserker</div></a>
+				<a href="UNIT_SONGHAI_MUSLIMCAVALRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SONGHAI_MUSLIMCAVALRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SONGHAI_MUSLIMCAVALRY" class="menuitem">Cavalier mand&eacute;kalou</div></a>
+				<a href="UNIT_KNIGHT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_KNIGHT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_KNIGHT" class="menuitem">Chevalier</div></a>
+				<a href="UNIT_CHINESE_CHUKONU.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CHINESE_CHUKONU.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CHINESE_CHUKONU" class="menuitem">Chu-ko-nu</div></a>
+				<a href="UNIT_SPANISH_CONQUISTADOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SPANISH_CONQUISTADOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SPANISH_CONQUISTADOR" class="menuitem">Conquistador</div></a>
+				<a href="UNIT_GALLEASS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GALLEASS.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GALLEASS" class="menuitem">Gal&eacute;asse</div></a>
+				<a href="UNIT_VENETIAN_GALLEASS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_VENETIAN_GALLEASS.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_VENETIAN_GALLEASS" class="menuitem">Gal&eacute;asse v&eacute;nitienne</div></a>
+				<a href="UNIT_KOREAN_HWACHA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_KOREAN_HWACHA.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_KOREAN_HWACHA" class="menuitem">Hwach'a</div></a>
+				<a href="UNIT_ZULU_IMPI.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ZULU_IMPI.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ZULU_IMPI" class="menuitem">Impi</div></a>
+				<a href="UNIT_MONGOLIAN_KESHIK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MONGOLIAN_KESHIK.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MONGOLIAN_KESHIK" class="menuitem">Keshik</div></a>
+				<a href="UNIT_GERMAN_LANDSKNECHT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GERMAN_LANDSKNECHT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GERMAN_LANDSKNECHT" class="menuitem">Lansquenet</div></a>
+				<a href="UNIT_PIKEMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_PIKEMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_PIKEMAN" class="menuitem">Piquier</div></a>
+				<a href="UNIT_JAPANESE_SAMURAI.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_JAPANESE_SAMURAI.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_JAPANESE_SAMURAI" class="menuitem">Samoura&iuml;</div></a>
+				<a href="UNIT_LONGSWORDSMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_LONGSWORDSMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_LONGSWORDSMAN" class="menuitem">Spadassin &agrave; &eacute;p&eacute;e longue</div></a>
+				<a href="UNIT_TREBUCHET.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_TREBUCHET.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_TREBUCHET" class="menuitem">Tr&eacute;buchet</div></a>
+			</div></div>
+			<div id="GROUP_ERA_RENAISSANCE" class="menugroupcontainer"><a href="javascript:togglediv('ERA_RENAISSANCE_CONTENT');"><div id="ERA_RENAISSANCE" class="menugroup">Renaissance</div></a><div id="ERA_RENAISSANCE_CONTENT">
+				<a href="UNIT_MUSKETMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MUSKETMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MUSKETMAN" class="menuitem">Arquebusier</div></a>
+				<a href="UNIT_KOREAN_TURTLE_SHIP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_KOREAN_TURTLE_SHIP.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_KOREAN_TURTLE_SHIP" class="menuitem">Bateau tortue</div></a>
+				<a href="UNIT_CANNON.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CANNON.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CANNON" class="menuitem">Canon</div></a>
+				<a href="UNIT_CARAVEL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CARAVEL.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CARAVEL" class="menuitem">Caravelle</div></a>
+				<a href="UNIT_PRIVATEER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_PRIVATEER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_PRIVATEER" class="menuitem">Corsaire</div></a>
+				<a href="UNIT_FRIGATE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_FRIGATE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_FRIGATE" class="menuitem">Fr&eacute;gate</div></a>
+				<a href="UNIT_DUTCH_SEA_BEGGAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_DUTCH_SEA_BEGGAR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_DUTCH_SEA_BEGGAR" class="menuitem">Gueux de la mer</div></a>
+				<a href="UNIT_SWEDISH_HAKKAPELIITTA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SWEDISH_HAKKAPELIITTA.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SWEDISH_HAKKAPELIITTA" class="menuitem">Hakkap&eacute;lite</div></a>
+				<a href="UNIT_POLISH_WINGED_HUSSAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_POLISH_WINGED_HUSSAR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_POLISH_WINGED_HUSSAR" class="menuitem">Hussard ail&eacute;</div></a>
+				<a href="UNIT_OTTOMAN_JANISSARY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_OTTOMAN_JANISSARY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_OTTOMAN_JANISSARY" class="menuitem">Janissaire</div></a>
+				<a href="UNIT_LANCER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_LANCER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_LANCER" class="menuitem">Lancier</div></a>
+				<a href="UNIT_AMERICAN_MINUTEMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_AMERICAN_MINUTEMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_AMERICAN_MINUTEMAN" class="menuitem">Minuteman</div></a>
+				<a href="UNIT_FRENCH_MUSKETEER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_FRENCH_MUSKETEER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_FRENCH_MUSKETEER" class="menuitem">Mousquetaire</div></a>
+				<a href="UNIT_ENGLISH_SHIPOFTHELINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ENGLISH_SHIPOFTHELINE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ENGLISH_SHIPOFTHELINE" class="menuitem">Navire de ligne</div></a>
+				<a href="UNIT_PORTUGUESE_NAU.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_PORTUGUESE_NAU.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_PORTUGUESE_NAU" class="menuitem">Nef</div></a>
+				<a href="UNIT_OTTOMAN_SIPAHI.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_OTTOMAN_SIPAHI.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_OTTOMAN_SIPAHI" class="menuitem">Spahi</div></a>
+				<a href="UNIT_SPANISH_TERCIO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SPANISH_TERCIO.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SPANISH_TERCIO" class="menuitem">Tercio</div></a>
+			</div></div>
+			<div id="GROUP_ERA_INDUSTRIAL" class="menugroupcontainer"><a href="javascript:togglediv('ERA_INDUSTRIAL_CONTENT');"><div id="ERA_INDUSTRIAL" class="menugroup">&Egrave;re industrielle</div></a><div id="ERA_INDUSTRIAL_CONTENT">
+				<a href="UNIT_ARCHAEOLOGIST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ARCHAEOLOGIST.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ARCHAEOLOGIST" class="menuitem">Arch&eacute;ologue</div></a>
+				<a href="UNIT_ARTILLERY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ARTILLERY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ARTILLERY" class="menuitem">Artillerie</div></a>
+				<a href="UNIT_CAVALRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CAVALRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CAVALRY" class="menuitem">Cavalerie</div></a>
+				<a href="UNIT_BERBER_CAVALRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BERBER_CAVALRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BERBER_CAVALRY" class="menuitem">Cavalerie berb&egrave;re</div></a>
+				<a href="UNIT_SHOSHONE_COMANCHE_RIDERS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SHOSHONE_COMANCHE_RIDERS.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SHOSHONE_COMANCHE_RIDERS" class="menuitem">Cavaliers comanches</div></a>
+				<a href="UNIT_RUSSIAN_COSSACK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_RUSSIAN_COSSACK.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_RUSSIAN_COSSACK" class="menuitem">Cosaque</div></a>
+				<a href="UNIT_IRONCLAD.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_IRONCLAD.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_IRONCLAD" class="menuitem">Cuirass&eacute; &agrave; vapeur</div></a>
+				<a href="UNIT_RIFLEMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_RIFLEMAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_RIFLEMAN" class="menuitem">Fusilier</div></a>
+				<a href="UNIT_AUSTRIAN_HUSSAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_AUSTRIAN_HUSSAR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_AUSTRIAN_HUSSAR" class="menuitem">Hussard</div></a>
+				<a href="UNIT_DANISH_SKI_INFANTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_DANISH_SKI_INFANTRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_DANISH_SKI_INFANTRY" class="menuitem">Infanterie &agrave; ski norv&eacute;gienne</div></a>
+				<a href="UNIT_SWEDISH_CAROLEAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SWEDISH_CAROLEAN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SWEDISH_CAROLEAN" class="menuitem">Karoliner</div></a>
+				<a href="UNIT_ETHIOPIAN_MEHAL_SEFARI.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ETHIOPIAN_MEHAL_SEFARI.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ETHIOPIAN_MEHAL_SEFARI" class="menuitem">Mehal Sefari</div></a>
+				<a href="UNIT_GATLINGGUN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GATLINGGUN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GATLINGGUN" class="menuitem">Mitrailleuse Gatling</div></a>
+			</div></div>
+			<div id="GROUP_ERA_MODERN" class="menugroupcontainer"><a href="javascript:togglediv('ERA_MODERN_CONTENT');"><div id="ERA_MODERN" class="menugroup">&Egrave;re moderne</div></a><div id="ERA_MODERN_CONTENT">
+				<a href="UNIT_WWI_BOMBER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_WWI_BOMBER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_WWI_BOMBER" class="menuitem">Bombardier de la Grande Guerre</div></a>
+				<a href="UNIT_ANTI_AIRCRAFT_GUN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ANTI_AIRCRAFT_GUN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ANTI_AIRCRAFT_GUN" class="menuitem">Canon antia&eacute;rien</div></a>
+				<a href="UNIT_BATTLESHIP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BATTLESHIP.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BATTLESHIP" class="menuitem">Cuirass&eacute;</div></a>
+				<a href="UNIT_DESTROYER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_DESTROYER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_DESTROYER" class="menuitem">Destroyer</div></a>
+				<a href="UNIT_INFANTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_INFANTRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_INFANTRY" class="menuitem">Infanterie</div></a>
+				<a href="UNIT_GREAT_WAR_INFANTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GREAT_WAR_INFANTRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GREAT_WAR_INFANTRY" class="menuitem">Infanterie de la Grande Guerre</div></a>
+				<a href="UNIT_FRENCH_FOREIGNLEGION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_FRENCH_FOREIGNLEGION.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_FRENCH_FOREIGNLEGION" class="menuitem">L&eacute;gion &eacute;trang&egrave;re</div></a>
+				<a href="UNIT_MACHINE_GUN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MACHINE_GUN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MACHINE_GUN" class="menuitem">Mitrailleuse</div></a>
+				<a href="UNIT_CARRIER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_CARRIER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_CARRIER" class="menuitem">Porte-avions</div></a>
+				<a href="UNIT_BRAZILIAN_PRACINHA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BRAZILIAN_PRACINHA.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BRAZILIAN_PRACINHA" class="menuitem">Pracinha</div></a>
+				<a href="UNIT_SUBMARINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SUBMARINE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SUBMARINE" class="menuitem">Sous-marin</div></a>
+				<a href="UNIT_TRIPLANE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_TRIPLANE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_TRIPLANE" class="menuitem">Triplan</div></a>
+				<a href="UNIT_WWI_TANK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_WWI_TANK.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_WWI_TANK" class="menuitem">V&eacute;hicule terrestre</div></a>
+			</div></div>
+			<div id="GROUP_ERA_POSTMODERN" class="menugroupcontainer"><a href="javascript:togglediv('ERA_POSTMODERN_CONTENT');"><div id="ERA_POSTMODERN" class="menugroup">&Egrave;re atomique</div></a><div id="ERA_POSTMODERN_CONTENT">
+				<a href="UNIT_AMERICAN_B17.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_AMERICAN_B17.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_AMERICAN_B17" class="menuitem">B-17</div></a>
+				<a href="UNIT_BAZOOKA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BAZOOKA.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BAZOOKA" class="menuitem">Bazooka</div></a>
+				<a href="UNIT_BOMBER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_BOMBER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_BOMBER" class="menuitem">Bombardier</div></a>
+				<a href="UNIT_ATOMIC_BOMB.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ATOMIC_BOMB.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ATOMIC_BOMB" class="menuitem">Bombe atomique</div></a>
+				<a href="UNIT_ANTI_TANK_GUN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ANTI_TANK_GUN.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ANTI_TANK_GUN" class="menuitem">Canon antichar</div></a>
+				<a href="UNIT_TANK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_TANK.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_TANK" class="menuitem">Char</div></a>
+				<a href="UNIT_FIGHTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_FIGHTER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_FIGHTER" class="menuitem">Chasseur</div></a>
+				<a href="UNIT_MARINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MARINE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MARINE" class="menuitem">Fusilier marin</div></a>
+				<a href="UNIT_HELICOPTER_GUNSHIP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_HELICOPTER_GUNSHIP.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_HELICOPTER_GUNSHIP" class="menuitem">H&eacute;licopt&egrave;re de combat</div></a>
+				<a href="UNIT_MOBILE_SAM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MOBILE_SAM.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MOBILE_SAM" class="menuitem">Lance-missiles SAM mobile</div></a>
+				<a href="UNIT_ROCKET_ARTILLERY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_ROCKET_ARTILLERY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_ROCKET_ARTILLERY" class="menuitem">Lance-roquettes</div></a>
+				<a href="UNIT_GERMAN_PANZER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GERMAN_PANZER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GERMAN_PANZER" class="menuitem">Panzer</div></a>
+				<a href="UNIT_PARATROOPER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_PARATROOPER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_PARATROOPER" class="menuitem">Parachutiste</div></a>
+				<a href="UNIT_JAPANESE_ZERO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_JAPANESE_ZERO.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_JAPANESE_ZERO" class="menuitem">Z&eacute;ro</div></a>
+			</div></div>
+			<div id="GROUP_ERA_FUTURE" class="menugroupcontainer"><a href="javascript:togglediv('ERA_FUTURE_CONTENT');"><div id="ERA_FUTURE" class="menugroup">&Egrave;re de l'info.</div></a><div id="ERA_FUTURE_CONTENT">
+				<a href="UNIT_MODERN_ARMOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MODERN_ARMOR.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MODERN_ARMOR" class="menuitem">Blind&eacute; moderne</div></a>
+				<a href="UNIT_STEALTH_BOMBER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_STEALTH_BOMBER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_STEALTH_BOMBER" class="menuitem">Bombardier furtif</div></a>
+				<a href="UNIT_SS_COCKPIT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SS_COCKPIT.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SS_COCKPIT" class="menuitem">Cabine (vaisseau spatial)</div></a>
+				<a href="UNIT_JET_FIGHTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_JET_FIGHTER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_JET_FIGHTER" class="menuitem">Chasseur &agrave; r&eacute;action</div></a>
+				<a href="UNIT_MISSILE_CRUISER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MISSILE_CRUISER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MISSILE_CRUISER" class="menuitem">Croiseur lance-missiles</div></a>
+				<a href="UNIT_XCOM_SQUAD.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_XCOM_SQUAD.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_XCOM_SQUAD" class="menuitem">Escouade XCOM</div></a>
+				<a href="UNIT_SS_BOOSTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SS_BOOSTER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SS_BOOSTER" class="menuitem">Fus&eacute;es de lancement</div></a>
+				<a href="UNIT_MECHANIZED_INFANTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MECHANIZED_INFANTRY.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MECHANIZED_INFANTRY" class="menuitem">Infanterie m&eacute;canis&eacute;e</div></a>
+				<a href="UNIT_MECH.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_MECH.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_MECH" class="menuitem">M&eacute;cacolosse de la mort</div></a>
+				<a href="UNIT_GUIDED_MISSILE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_GUIDED_MISSILE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_GUIDED_MISSILE" class="menuitem">Missile guid&eacute;</div></a>
+				<a href="UNIT_NUCLEAR_MISSILE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_NUCLEAR_MISSILE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_NUCLEAR_MISSILE" class="menuitem">Missile nucl&eacute;aire</div></a>
+				<a href="UNIT_SS_STASIS_CHAMBER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SS_STASIS_CHAMBER.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SS_STASIS_CHAMBER" class="menuitem">Module stase (vaisseau spatial)</div></a>
+				<a href="UNIT_SS_ENGINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_SS_ENGINE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_SS_ENGINE" class="menuitem">Moteur (vaisseau spatial)</div></a>
+				<a href="UNIT_NUCLEAR_SUBMARINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/UNIT_NUCLEAR_SUBMARINE.png\' />', true);" onmouseout="return hideTip();"><div id="UNIT_NUCLEAR_SUBMARINE" class="menuitem">Sous-marin nucl&eacute;aire</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

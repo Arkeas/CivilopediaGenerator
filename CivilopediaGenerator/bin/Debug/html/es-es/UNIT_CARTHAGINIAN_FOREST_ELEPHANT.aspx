@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Elefante de los bosques</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_CARTHAGINIAN_FOREST_ELEPHANT.png" alt="Elefante de los bosques" class="contentimage" />
+	<div class="contentleft">
+		<h2>Coste:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">100 <img src="/civilopedia/images/production.png" alt="production" /> / 200 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Tipo de combate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Unidades montadas</div></div></div></div></div></div></div></div>
+		<h2>Combate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Movimiento:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">3 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilizaci&oacute;n:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_CARTHAGE.aspx" onmouseover="return tooltip('Imperio Cartagin&eacute;s');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_CARTHAGE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Capacidades:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Sin bonificaciones defensivas por terreno');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Puede moverse despu&eacute;s de atacar');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Penalizaci&oacute;n al atacar ciudades (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_FEARED_ELEPHANT.aspx" onmouseover="return tooltip('Elefante temible');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_SPAWN_GENERALS_II.aspx" onmouseover="return tooltip('Grandes generales II');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Tecnolog&iacute;as necesarias:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_HORSEBACK_RIDING.aspx" onmouseover="return tooltip('Equitaci&oacute;n');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_HORSEBACK_RIDING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Queda obsoleta con:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Caballer&iacute;a');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Modernizar unidad</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_KNIGHT.aspx" onmouseover="return tooltip('Caballero');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_KNIGHT.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Sustituye a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_HORSEMAN.aspx" onmouseover="return tooltip('Jinete');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HORSEMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Elefante de los bosques</div>
+		<h2>Informaci&oacute;n de la partida:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Una unidad montada poderosa de las primeras fases del juego. Es d&eacute;bil contra Lanceros y solo la pueden crear los cartagineses. Tiene m&aacute;s Fuerza de combate <img src="/civilopedia/images/strength.png" alt="strength" /> que el Jinete, al que sustituye, e infunde miedo a las unidades enemigas que haya cerca. Ayuda a generar Grandes generales con m&aacute;s rapidez.</div></div></div></div></div></div></div></div>
+		<h2>Estrategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">El Elefante de los bosques africano es una unidad exclusiva cartaginesa que sustituye al Jinete. Los elefantes cartagineses son m&aacute;s lentos pero m&aacute;s fuertes que este, y pueden moverse despu&eacute;s de atacar. Tambi&eacute;n infunden miedo a las unidades enemigas que haya cerca, lo que les concede un modificador negativo al combate. Ganar un combate con un elefante aumenta la posibilidad de generar Grandes generales.</div></div></div></div></div></div></div></div>
+		<h2>Informaci&oacute;n hist&oacute;rica:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">El elefante era una bestia de carga y un arma peligrosa a la que las fuerzas cartaginesas recurr&iacute;an con frecuencia a las &oacute;rdenes del general An&iacute;bal durante sus campa&ntilde;as romanas. Fueron utilizados durante las Guerras P&uacute;nicas con diverso grado de &eacute;xito; los elefantes estaban entrenados para cargar contra las l&iacute;neas enemigas transportando soldados en g&oacute;ndolas montadas en sus lomos. A pesar de su gran tama&ntilde;o, los elefantes eran vulnerables al progreso de la infanter&iacute;a m&oacute;vil, y el cuidado y las atenciones que requer&iacute;an unos animales tan grandes sol&iacute;an provocar su muerte durante las largas marchas que emprend&iacute;a el ej&eacute;rcito cartagin&eacute;s.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

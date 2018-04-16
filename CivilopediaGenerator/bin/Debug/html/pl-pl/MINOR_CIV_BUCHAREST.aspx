@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Bukareszt</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Bukareszt</div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Bukareszt le&#380;y na brzegach rzeki Dymbowicy i jest stolic&#261; oraz najwi&#281;kszym miastem Rumunii. Wykopaliska archeologiczne pokaza&#322;y, &#380;e ludzie mieszkali na tych obszarach ju&#380; w roku 9 000 p.n.e., ale pierwsze wzmianki o mie&#347;cie Bukareszt pojawiaj&#261; si&#281; dopiero w roku 1459 naszej ery w dokumencie podpisanym przez W&#322;ada III Palownika. W tym okresie W&#322;ad III zbudowa&#322; w Bukareszcie pierwsz&#261; fortec&#281; oraz swoj&#261; rezydencj&#281; letni&#261;, pr&oacute;buj&#261;c utrzyma&#263; z dala zbli&#380;aj&#261;ce si&#281; wojska osma&#324;skie. Bez skutku. W pierwszych latach XVII wieku miasto zosta&#322;o spalone przez Turk&oacute;w osma&#324;skich, kt&oacute;rzy nast&#281;pnie podbili je i odbudowali.<br /><br />Pod ich rz&#261;dami Bukareszt szybko si&#281; rozwija&#322; i w roku 1659 zosta&#322; centrum gospodarczym podbitego regionu Wo&#322;oszczyzny. Przez nast&#281;pnych dwie&#347;cie lat miasto by&#322;o wielokrotnie niszczone przez kataklizmy (i uparcie za ka&#380;dym razem odbudowywane), przerzedzane przez epidemi&#281; d&#380;umy i zajmowane naprzemiennie przez Monarchi&#281; Habsbursk&#261; oraz Cesarstwo Rosyjskie. Ostatecznie znalaz&#322; si&#281; pod w&#322;adz&#261; tego ostatniego.<br /><br />Wo&#322;oszczyzna pozosta&#322;a pod rosyjsk&#261; kontrol&#261; do czasu, a&#380; seria zamieszek w Bukareszcie pozwoli&#322;a po&#322;&#261;czy&#263; Wo&#322;oszczyzn&#281; i Mo&#322;dawi&#281;, tworz&#261;c w roku 1859 pa&#324;stwo rumu&#324;skie. W roku 1862 Bukareszt zosta&#322; jego stolic&#261;. Do nowej stolicy ludno&#347;&#263; nap&#322;ywa&#322;a lawinowo, co zaowocowa&#322;o rozpocz&#281;ciem kilku projekt&oacute;w architektonicznych na wielk&#261; skal&#281;. Ekstrawagancja widoczna w budownictwie z tego okresu da&#322;a miastu przydomek „Pary&#380; Wschodu”.<br /><br />I wojna &#347;wiatowa zostawi&#322;a Bukareszt praktycznie nieuszkodzony, ale ju&#380; podczas drugiej powa&#380;nie ucierpia&#322; – przewa&#380;nie na skutek ci&#281;&#380;kich bombardowa&#324; alianckich. Po zako&#324;czeniu wojen wi&#281;kszo&#347;&#263; starego, historycznego rejonu miasta zosta&#322;a zburzona, aby zwolni&#263; miejsce pod wie&#380;owce mieszkaniowe, budow&#281; kt&oacute;rych rozpocz&#261;&#322; rz&#261;d komunistyczny. Wielkie trz&#281;sienie ziemi w 1977 zniszczy&#322;o wiele z historycznych zabudowa&#324;, kt&oacute;re osta&#322;y si&#281; po wojnie.<br /><br />Rewolucja Rumu&#324;ska w 1989 zako&#324;czy&#322;a rz&#261;dy komunist&oacute;w w Rumunii, gdy wielu odartych z iluzji i niezadowolonych protestuj&#261;cych zebra&#322;o si&#281; w Bukareszcie. W trakcie przemowy prezydenta Nicolae Ceaucescu protesty zmieni&#322;y si&#281; w zamieszki, kt&oacute;rych oddzia&#322;y policji nie by&#322;y w stanie st&#322;umi&#263;. Od chwili upadku komunizmu Bukareszt do&#347;wiadcza boomu ekonomicznego oraz okresu rozwoju, a lokalny samorz&#261;d stara si&#281; odnowi&#263; prawie kompletnie zniszczone centrum historyczne.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

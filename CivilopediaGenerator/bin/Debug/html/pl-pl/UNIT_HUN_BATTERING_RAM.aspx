@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Taran</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_HUN_BATTERING_RAM.png" alt="Taran" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">75 <img src="/civilopedia/images/production.png" alt="production" /> / 150 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Walcz&#261;ca wr&#281;cz</div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">10 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_HUNS.aspx" onmouseover="return tooltip('Imperium Hun&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_HUNS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_CITY_ASSAULT.aspx" onmouseover="return tooltip('Premia przeciwko miastom (300)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Bez terenowej premii do obrony');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_DEFENSE_PENALTY.aspx" onmouseover="return tooltip('Kara w obronie (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_SIGHT_PENALTY.aspx" onmouseover="return tooltip('Ograniczony zasi&#281;g widzenia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_COVER_1.aspx" onmouseover="return tooltip('Os&#322;ona I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_14.png" /></a><a href="PROMOTION_ONLY_ATTACKS_CITIES.aspx" onmouseover="return tooltip('Jednostka mo&#380;e atakowa&#263; tylko miasta');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_BRONZE_WORKING.aspx" onmouseover="return tooltip('Obr&oacute;bka br&#261;zu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_BRONZE_WORKING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wypierana przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PHYSICS.aspx" onmouseover="return tooltip('Fizyka');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PHYSICS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_TREBUCHET.aspx" onmouseover="return tooltip('Trebuszy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_TREBUCHET.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_SPEARMAN.aspx" onmouseover="return tooltip('W&#322;&oacute;cznik&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_SPEARMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Taran</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Jednostka obl&#281;&#380;nicza, zab&oacute;jcza dla miast w walce z bliska. Jedynie Hunowie mog&#261; j&#261; stworzy&#263;.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Tarany to unikatowa jednostka Hun&oacute;w zast&#281;puj&#261;ca w&#322;&oacute;cznik&oacute;w. U&#380;ywaj taran&oacute;w w celu niszczenia fortyfikacji miast. Awans os&#322;ony I zapewnia im ochron&#281; przed jednostkami dystansowymi; wysy&#322;aj przeciw nim jednostki walcz&#261;ce wr&#281;cz, aby je pokona&#263;.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Taran to machina obl&#281;&#380;nicza u&#380;ywana g&#322;&oacute;wnie w staro&#380;ytno&#347;ci. S&#322;u&#380;y&#322; wy&#322;&#261;cznie do jednego celu, kt&oacute;rym by&#322;o rozbijanie ci&#281;&#380;kich drewnianych bram &oacute;wczesnych budowli. Cho&#263; tarany r&oacute;&#380;ni&#322;y si&#281; kszta&#322;tem i form&#261;, wszystkie dzia&#322;a&#322;y na tej samej zasadzie. Na wozie lub innej platformie ko&#322;owej montowano ci&#281;&#380;ki pie&#324; lub s&#322;up, bujaj&#261;cy si&#281; na &#322;a&#324;cuchach lub linach. &#379;o&#322;nierze obs&#322;uguj&#261;cy taran odci&#261;gali pie&#324; i wypuszczali go z si&#322;&#261; niezb&#281;dn&#261; do rozbicia wr&oacute;t. Nie zachowa&#322;o si&#281; wiele &#378;r&oacute;de&#322; opisuj&#261;cych spos&oacute;b, w jaki Hunowie wykorzystywali t&#281; bro&#324; obl&#281;&#380;nicz&#261;, wiadomo jednak, &#380;e z powodzeniem wykorzystali tarany podczas obl&#281;&#380;e&#324; wielu du&#380;ych miast Europy.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

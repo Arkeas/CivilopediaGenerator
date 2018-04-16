@@ -1,0 +1,26 @@
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\bin\Debug\CivilopediaGenerator.exe
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\bin\Debug\CivilopediaGenerator.pdb
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.Form1.resources
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.Properties.Resources.resources
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.exe
+C:\Users\Keith\AppData\Local\Temporary Projects\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.pdb
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.exe
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.pdb
+D:\source\CivilopediaGenerator\CivilopediaGenerator\bin\Debug\CivilopediaGenerator.exe
+D:\source\CivilopediaGenerator\CivilopediaGenerator\bin\Debug\CivilopediaGenerator.pdb
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.Form1.resources
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.Properties.Resources.resources
+C:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.exe
+C:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.pdb
+C:\source\CivilopediaGenerator\CivilopediaGenerator\bin\Debug\CivilopediaGenerator.exe
+C:\source\CivilopediaGenerator\CivilopediaGenerator\bin\Debug\CivilopediaGenerator.pdb
+C:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.Form1.resources
+C:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.Properties.Resources.resources
+C:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.csproj.GenerateResource.Cache
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Debug\CivilopediaGenerator.csprojResolveAssemblyReference.cache

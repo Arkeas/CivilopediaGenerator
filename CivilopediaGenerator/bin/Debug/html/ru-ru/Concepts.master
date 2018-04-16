@@ -1,0 +1,673 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-ru">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,concept,concepts" />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('Игровые понятия');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_on.png" class="tab" id="tab01" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('Технологии');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('Юниты');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_off.png" class="tab" id="tab03" onmouseover="this.src='/civilopedia/images/tab_unit_on.png';" onmouseout="this.src='/civilopedia/images/tab_unit_off.png';" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('Повышения');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_off.png" class="tab" id="tab04" onmouseover="this.src='/civilopedia/images/tab_promotion_on.png';" onmouseout="this.src='/civilopedia/images/tab_promotion_off.png';" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('Здания');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('Чудеса');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('Общественные институты');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_off.png" class="tab" id="tab07" onmouseover="this.src='/civilopedia/images/tab_policy_on.png';" onmouseout="this.src='/civilopedia/images/tab_policy_off.png';" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('Специалисты и великие люди');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('Цивилизации и лидеры');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_off.png" class="tab" id="tab09" onmouseover="this.src='/civilopedia/images/tab_civilization_on.png';" onmouseout="this.src='/civilopedia/images/tab_civilization_off.png';" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('Города-государства');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_off.png" class="tab" id="tab10" onmouseover="this.src='/civilopedia/images/tab_city_state_on.png';" onmouseout="this.src='/civilopedia/images/tab_city_state_off.png';" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('Ландшафт и особенности');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('Ресурсы');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('Улучшения');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('Религия');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_off.png" class="tab" id="tab14" onmouseover="this.src='/civilopedia/images/tab_religion_on.png';" onmouseout="this.src='/civilopedia/images/tab_religion_off.png';" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('Всемирный конгресс');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">Игровые понятия
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="CONCEPT_HOME.aspx"><div id="CONCEPT_HOME" class="menuitem">Игровые понятия</div></a>
+			<div id="GROUP_HEADER_CITIES" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_CITIES_CONTENT');"><div id="HEADER_CITIES" class="menugroup">Города</div></a><div id="HEADER_CITIES_CONTENT">
+				<a href="CONCEPT_CITIES.aspx"><div id="CONCEPT_CITIES" class="menuitem">Города</div></a>
+				<a href="CONCEPT_FOUNDING_CITIES.aspx"><div id="CONCEPT_FOUNDING_CITIES" class="menuitem">Как строить города</div></a>
+				<a href="CONCEPT_WHERE_TO_FOUND_CITIES.aspx"><div id="CONCEPT_WHERE_TO_FOUND_CITIES" class="menuitem">Где основывать города</div></a>
+				<a href="CONCEPT_CITY_BANNER.aspx"><div id="CONCEPT_CITY_BANNER" class="menuitem">Мини-панель города</div></a>
+				<a href="CONCEPT_CITY_SCREEN.aspx"><div id="CONCEPT_CITY_SCREEN" class="menuitem">Экран города</div></a>
+				<a href="CONCEPT_CITY_COMBATUNITS.aspx"><div id="CONCEPT_CITY_COMBATUNITS" class="menuitem">Боевые юниты</div></a>
+				<a href="CONCEPT_CITY_CONSTRUCTION.aspx"><div id="CONCEPT_CITY_CONSTRUCTION" class="menuitem">Строительство в городах</div></a>
+				<a href="CONCEPT_CITY_BUILD.aspx"><div id="CONCEPT_CITY_BUILD" class="menuitem">Меню строительства</div></a>
+				<a href="CONCEPT_CITY_CHANGE_BUILD.aspx"><div id="CONCEPT_CITY_CHANGE_BUILD" class="menuitem">Смена строительства</div></a>
+				<a href="CONCEPT_CITY_PURCHASEITEM.aspx"><div id="CONCEPT_CITY_PURCHASEITEM" class="menuitem">Покупка объекта</div></a>
+				<a href="CONCEPT_CITY_CONSTRUCTING_UNITS.aspx"><div id="CONCEPT_CITY_CONSTRUCTING_UNITS" class="menuitem">Строительство юнитов</div></a>
+				<a href="CONCEPT_CITY_CONSTRUCTING_BUILDINGS.aspx"><div id="CONCEPT_CITY_CONSTRUCTING_BUILDINGS" class="menuitem">Строительство зданий</div></a>
+				<a href="CONCEPT_CITY_CONSTRUCTING_WONDERS.aspx"><div id="CONCEPT_CITY_CONSTRUCTING_WONDERS" class="menuitem">Строительство чудес</div></a>
+				<a href="CONCEPT_CITY_WORKINGLAND.aspx"><div id="CONCEPT_CITY_WORKINGLAND" class="menuitem">Работа на земле</div></a>
+				<a href="CONCEPT_CITY_ASSIGNINGCITIZENS.aspx"><div id="CONCEPT_CITY_ASSIGNINGCITIZENS" class="menuitem">Распределение горожан</div></a>
+				<a href="CONCEPT_CITY_IMPROVINGLAND.aspx"><div id="CONCEPT_CITY_IMPROVINGLAND" class="menuitem">Улучшение местности</div></a>
+				<a href="CONCEPT_CITY_SPECIALISTS.aspx"><div id="CONCEPT_CITY_SPECIALISTS" class="menuitem">Специалисты</div></a>
+				<a href="CONCEPT_CITY_SPECIALISTS_NOTWORKTILE.aspx"><div id="CONCEPT_CITY_SPECIALISTS_NOTWORKTILE" class="menuitem">Специалисты не на полях</div></a>
+				<a href="CONCEPT_CITY_SPECIALISTS_BENEFIT.aspx"><div id="CONCEPT_CITY_SPECIALISTS_BENEFIT" class="menuitem">Свойства специалистов</div></a>
+				<a href="CONCEPT_CITY_UNEMPLOYED_CITIZENS.aspx"><div id="CONCEPT_CITY_UNEMPLOYED_CITIZENS" class="menuitem">Безработные горожане</div></a>
+				<a href="CONCEPT_CITY_COMBAT.aspx"><div id="CONCEPT_CITY_COMBAT" class="menuitem">Сражение за город</div></a>
+				<a href="CONCEPT_CITY_ATTACKING_MELEE.aspx"><div id="CONCEPT_CITY_ATTACKING_MELEE" class="menuitem">Нападение на город</div></a>
+				<a href="CONCEPT_CITY_ATTACKING_RANGED.aspx"><div id="CONCEPT_CITY_ATTACKING_RANGED" class="menuitem">Дальнобойная атака</div></a>
+				<a href="CONCEPT_CITY_DEFENDING.aspx"><div id="CONCEPT_CITY_DEFENDING" class="menuitem">Оборона города</div></a>
+				<a href="CONCEPT_CITY_CONQUERING.aspx"><div id="CONCEPT_CITY_CONQUERING" class="menuitem">Завоевание города</div></a>
+				<a href="CONCEPT_CITY_DESTROY.aspx"><div id="CONCEPT_CITY_DESTROY" class="menuitem">Уничтожение города</div></a>
+				<a href="CONCEPT_CITY_INDESTRUCTABLE.aspx"><div id="CONCEPT_CITY_INDESTRUCTABLE" class="menuitem">Неразрушимые города</div></a>
+				<a href="CONCEPT_CITY_ANNEX.aspx"><div id="CONCEPT_CITY_ANNEX" class="menuitem">Аннексия города</div></a>
+				<a href="CONCEPT_CITY_PUPPET.aspx"><div id="CONCEPT_CITY_PUPPET" class="menuitem">Города-сателлиты</div></a>
+				<a href="CONCEPT_BUILDINGS.aspx"><div id="CONCEPT_BUILDINGS" class="menuitem">Здания</div></a>
+				<a href="CONCEPT_BUILDINGS_CONSTRUCTION.aspx"><div id="CONCEPT_BUILDINGS_CONSTRUCTION" class="menuitem">Как строить здания</div></a>
+				<a href="CONCEPT_BUILDINGS_PURCHASING.aspx"><div id="CONCEPT_BUILDINGS_PURCHASING" class="menuitem">Покупка построек</div></a>
+				<a href="CONCEPT_BUILDINGS_PREREQUISITES.aspx"><div id="CONCEPT_BUILDINGS_PREREQUISITES" class="menuitem">Условия строительства</div></a>
+				<a href="CONCEPT_BUILDINGS_MAINTENANCE.aspx"><div id="CONCEPT_BUILDINGS_MAINTENANCE" class="menuitem">Содержание зданий</div></a>
+				<a href="CONCEPT_BUILDINGS_PALACE.aspx"><div id="CONCEPT_BUILDINGS_PALACE" class="menuitem">Дворец</div></a>
+				<a href="CONCEPT_BUILDINGS_CAPTURED_CITIES.aspx"><div id="CONCEPT_BUILDINGS_CAPTURED_CITIES" class="menuitem">Захват городов</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_COMBAT" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_COMBAT_CONTENT');"><div id="HEADER_COMBAT" class="menugroup">Правила боя</div></a><div id="HEADER_COMBAT_CONTENT">
+				<a href="CONCEPT_COMBAT.aspx"><div id="CONCEPT_COMBAT" class="menuitem">Сражение</div></a>
+				<a href="CONCEPT_COMBAT_DECLARE_WAR.aspx"><div id="CONCEPT_COMBAT_DECLARE_WAR" class="menuitem">Объявление войны</div></a>
+				<a href="CONCEPT_COMBAT_DECLARE_WAR_DIPLOMATICALLY.aspx"><div id="CONCEPT_COMBAT_DECLARE_WAR_DIPLOMATICALLY" class="menuitem">Начало войны (дипломатия)</div></a>
+				<a href="CONCEPT_COMBAT_DECLARE_WAR_ATTACK_UNIT.aspx"><div id="CONCEPT_COMBAT_DECLARE_WAR_ATTACK_UNIT" class="menuitem">Нападение на юниты</div></a>
+				<a href="CONCEPT_COMBAT_DECLARE_WAR_ENTER_TERRITORY.aspx"><div id="CONCEPT_COMBAT_DECLARE_WAR_ENTER_TERRITORY" class="menuitem">Вторжение в границы</div></a>
+				<a href="CONCEPT_COMBAT_DECLARE_WAR_RECEIVED.aspx"><div id="CONCEPT_COMBAT_DECLARE_WAR_RECEIVED" class="menuitem">Вам объявляют войну</div></a>
+				<a href="CONCEPT_COMBAT_END_WAR.aspx"><div id="CONCEPT_COMBAT_END_WAR" class="menuitem">Окончание войны</div></a>
+				<a href="CONCEPT_COMBAT_WHICH_UNITS_CAN_FIGHT.aspx"><div id="CONCEPT_COMBAT_WHICH_UNITS_CAN_FIGHT" class="menuitem">Боевые подразделения</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_STATS.aspx"><div id="CONCEPT_COMBAT_UNIT_STATS" class="menuitem">Боевые показатели юнита</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_STATS_RANGED_COMBAT_STRENGTH.aspx"><div id="CONCEPT_COMBAT_UNIT_STATS_RANGED_COMBAT_STRENGTH" class="menuitem">Мощь дальнего боя</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_STATS_RANGE.aspx"><div id="CONCEPT_COMBAT_UNIT_STATS_RANGE" class="menuitem">Радиус</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_STATS_COMBAT_STRENGTH.aspx"><div id="CONCEPT_COMBAT_UNIT_STATS_COMBAT_STRENGTH" class="menuitem">Боевая мощь</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_STATS_HIT_POINTS.aspx"><div id="CONCEPT_COMBAT_UNIT_STATS_HIT_POINTS" class="menuitem">Очки здоровья</div></a>
+				<a href="CONCEPT_COMBAT_MELEE_COMBAT.aspx"><div id="CONCEPT_COMBAT_MELEE_COMBAT" class="menuitem">Ближний бой</div></a>
+				<a href="CONCEPT_COMBAT_MELEE_COMBAT_RESOLVE.aspx"><div id="CONCEPT_COMBAT_MELEE_COMBAT_RESOLVE" class="menuitem">Исход ближнего боя</div></a>
+				<a href="CONCEPT_COMBAT_MELEE_MULTIPLE_UNITS.aspx"><div id="CONCEPT_COMBAT_MELEE_MULTIPLE_UNITS" class="menuitem">Группы войск</div></a>
+				<a href="CONCEPT_COMBAT_COMBAT_INFORMATION_TABLE.aspx"><div id="CONCEPT_COMBAT_COMBAT_INFORMATION_TABLE" class="menuitem">Боевая сводка</div></a>
+				<a href="CONCEPT_COMBAT_MELEE_INITIATING_COMBAT.aspx"><div id="CONCEPT_COMBAT_MELEE_INITIATING_COMBAT" class="menuitem">Начало ближнего боя</div></a>
+				<a href="CONCEPT_COMBAT_MELEE_RESULTS.aspx"><div id="CONCEPT_COMBAT_MELEE_RESULTS" class="menuitem">Исход ближнего боя</div></a>
+				<a href="CONCEPT_COMBAT_RANGED_COMBAT.aspx"><div id="CONCEPT_COMBAT_RANGED_COMBAT" class="menuitem">Дальний бой</div></a>
+				<a href="CONCEPT_COMBAT_RANGED_COMBAT_STRENGTH.aspx"><div id="CONCEPT_COMBAT_RANGED_COMBAT_STRENGTH" class="menuitem">Мощь дальнего боя</div></a>
+				<a href="CONCEPT_COMBAT_RANGED_COMBAT_RANGE.aspx"><div id="CONCEPT_COMBAT_RANGED_COMBAT_RANGE" class="menuitem">Радиус</div></a>
+				<a href="CONCEPT_COMBAT_RANGED_LINE_OF_SIGHT.aspx"><div id="CONCEPT_COMBAT_RANGED_LINE_OF_SIGHT" class="menuitem">Радиус обзора</div></a>
+				<a href="CONCEPT_COMBAT_RANGED_INITIATING_COMBAT.aspx"><div id="CONCEPT_COMBAT_RANGED_INITIATING_COMBAT" class="menuitem">Начало дальнего боя</div></a>
+				<a href="CONCEPT_COMBAT_RANGED_RESULTS.aspx"><div id="CONCEPT_COMBAT_RANGED_RESULTS" class="menuitem">Результаты дальнего боя</div></a>
+				<a href="CONCEPT_COMBAT_BONUSES.aspx"><div id="CONCEPT_COMBAT_BONUSES" class="menuitem">Боевые бонусы</div></a>
+				<a href="CONCEPT_COMBAT_BONUSES_TERRAIN.aspx"><div id="CONCEPT_COMBAT_BONUSES_TERRAIN" class="menuitem">Влияние рельефа на бой</div></a>
+				<a href="CONCEPT_COMBAT_BONUSES_FORT.aspx"><div id="CONCEPT_COMBAT_BONUSES_FORT" class="menuitem">Форт</div></a>
+				<a href="CONCEPT_COMBAT_FORTIFICATION_EXPLANATION.aspx"><div id="CONCEPT_COMBAT_FORTIFICATION_EXPLANATION" class="menuitem">Укрепление</div></a>
+				<a href="CONCEPT_COMBAT_FORTIFICATION_WHICH_UNITS_CAN_FORTIFY.aspx"><div id="CONCEPT_COMBAT_FORTIFICATION_WHICH_UNITS_CAN_FORTIFY" class="menuitem">Кто может окапываться</div></a>
+				<a href="CONCEPT_COMBAT_BONUSES_FORTIFICATION.aspx"><div id="CONCEPT_COMBAT_BONUSES_FORTIFICATION" class="menuitem">Бонусы укрепления</div></a>
+				<a href="CONCEPT_COMBAT_ALERT.aspx"><div id="CONCEPT_COMBAT_ALERT" class="menuitem">"Встать на дежурство"</div></a>
+				<a href="CONCEPT_COMBAT_NAVAL.aspx"><div id="CONCEPT_COMBAT_NAVAL" class="menuitem">Морской бой</div></a>
+				<a href="CONCEPT_COMBAT_CITY_COMBAT_STRENGTH.aspx"><div id="CONCEPT_COMBAT_CITY_COMBAT_STRENGTH" class="menuitem">Бой с городом</div></a>
+				<a href="CONCEPT_COMBAT_CITY_HIT_POINTS.aspx"><div id="CONCEPT_COMBAT_CITY_HIT_POINTS" class="menuitem">Очки здоровья города</div></a>
+				<a href="CONCEPT_COMBAT_CITY_ATTACKING_WITH_RANGED_UNITS.aspx"><div id="CONCEPT_COMBAT_CITY_ATTACKING_WITH_RANGED_UNITS" class="menuitem">Дальняя атака на город</div></a>
+				<a href="CONCEPT_COMBAT_CITY_ATTACKING_WITH_MELEE_UNITS.aspx"><div id="CONCEPT_COMBAT_CITY_ATTACKING_WITH_MELEE_UNITS" class="menuitem">Атака в ближнем бою на город</div></a>
+				<a href="CONCEPT_COMBAT_CITY_GARRISON.aspx"><div id="CONCEPT_COMBAT_CITY_GARRISON" class="menuitem">Гарнизоны в городах</div></a>
+				<a href="CONCEPT_COMBAT_CITY_BOMBARD.aspx"><div id="CONCEPT_COMBAT_CITY_BOMBARD" class="menuitem">Атака города на врагов</div></a>
+				<a href="CONCEPT_COMBAT_CITY_CAPTURE.aspx"><div id="CONCEPT_COMBAT_CITY_CAPTURE" class="menuitem">Захват городов</div></a>
+				<a href="CONCEPT_COMBAT_CITY_CAPTURE_MORE.aspx"><div id="CONCEPT_COMBAT_CITY_CAPTURE_MORE" class="menuitem">Правила захвата городов</div></a>
+				<a href="CONCEPT_COMBAT_SIEGE.aspx"><div id="CONCEPT_COMBAT_SIEGE" class="menuitem">Осадные орудия</div></a>
+				<a href="CONCEPT_COMBAT_GREAT_GENERAL.aspx"><div id="CONCEPT_COMBAT_GREAT_GENERAL" class="menuitem">Великие полководцы</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_COMBAT_DAMAGE.aspx"><div id="CONCEPT_COMBAT_UNIT_COMBAT_DAMAGE" class="menuitem">Урон в бою</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_GROUND_HEALING_DAMAGE.aspx"><div id="CONCEPT_COMBAT_UNIT_GROUND_HEALING_DAMAGE" class="menuitem">Восстановление ОЗ</div></a>
+				<a href="CONCEPT_COMBAT_UNIT_NAVAL_HEALING_DAMAGE.aspx"><div id="CONCEPT_COMBAT_UNIT_NAVAL_HEALING_DAMAGE" class="menuitem">Восстановление ОЗ флота</div></a>
+				<a href="CONCEPT_COMBAT_FORTIFY_UNTIL_HEALED.aspx"><div id="CONCEPT_COMBAT_FORTIFY_UNTIL_HEALED" class="menuitem">"Укрепиться до излечения"</div></a>
+				<a href="CONCEPT_COMBAT_EXPERIENCE_AND_PROMOTIONS.aspx"><div id="CONCEPT_COMBAT_EXPERIENCE_AND_PROMOTIONS" class="menuitem">Очки опыта и повышения</div></a>
+				<a href="CONCEPT_COMBAT_EXPERIENCE_ACCUMULATING_COMBAT.aspx"><div id="CONCEPT_COMBAT_EXPERIENCE_ACCUMULATING_COMBAT" class="menuitem">Приобретение ОО в бою</div></a>
+				<a href="CONCEPT_COMBAT_EXPERIENCE_ACCUMULATING_OTHER.aspx"><div id="CONCEPT_COMBAT_EXPERIENCE_ACCUMULATING_OTHER" class="menuitem">Способы получить ОО</div></a>
+				<a href="CONCEPT_COMBAT_EXPERIENCE_SPENDING.aspx"><div id="CONCEPT_COMBAT_EXPERIENCE_SPENDING" class="menuitem">Расход ОО</div></a>
+				<a href="CONCEPT_COMBAT_PROMOTIONS.aspx"><div id="CONCEPT_COMBAT_PROMOTIONS" class="menuitem">Типы квалификации</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_TERRAIN" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_TERRAIN_CONTENT');"><div id="HEADER_TERRAIN" class="menugroup">Местность</div></a><div id="HEADER_TERRAIN_CONTENT">
+				<a href="CONCEPT_TERRAIN.aspx"><div id="CONCEPT_TERRAIN" class="menuitem">Ландшафт</div></a>
+				<a href="CONCEPT_TERRAIN_RESOURCES.aspx"><div id="CONCEPT_TERRAIN_RESOURCES" class="menuitem">Ресурсы</div></a>
+				<a href="CONCEPT_TERRAIN_TABLES.aspx"><div id="CONCEPT_TERRAIN_TABLES" class="menuitem">Таблицы ландшафта</div></a>
+				<a href="CONCEPT_TERRAIN_TYPES.aspx"><div id="CONCEPT_TERRAIN_TYPES" class="menuitem">Виды ландшафта</div></a>
+				<a href="CONCEPT_TERRAIN_VALUES.aspx"><div id="CONCEPT_TERRAIN_VALUES" class="menuitem">Показатели ландшафта</div></a>
+				<a href="CONCEPT_TERRAIN_COAST.aspx"><div id="CONCEPT_TERRAIN_COAST" class="menuitem">Побережье</div></a>
+				<a href="CONCEPT_TERRAIN_DESERT.aspx"><div id="CONCEPT_TERRAIN_DESERT" class="menuitem">Пустыня</div></a>
+				<a href="CONCEPT_TERRAIN_GRASSLAND.aspx"><div id="CONCEPT_TERRAIN_GRASSLAND" class="menuitem">Луга</div></a>
+				<a href="CONCEPT_TERRAIN_HILLS.aspx"><div id="CONCEPT_TERRAIN_HILLS" class="menuitem">Холмы</div></a>
+				<a href="CONCEPT_TERRAIN_MOUNTAINS.aspx"><div id="CONCEPT_TERRAIN_MOUNTAINS" class="menuitem">Горы</div></a>
+				<a href="CONCEPT_TERRAIN_OCEANS.aspx"><div id="CONCEPT_TERRAIN_OCEANS" class="menuitem">Океан</div></a>
+				<a href="CONCEPT_TERRAIN_PLAINS.aspx"><div id="CONCEPT_TERRAIN_PLAINS" class="menuitem">Равнина</div></a>
+				<a href="CONCEPT_TERRAIN_SNOW.aspx"><div id="CONCEPT_TERRAIN_SNOW" class="menuitem">Снег</div></a>
+				<a href="CONCEPT_TERRAIN_TUNDRA.aspx"><div id="CONCEPT_TERRAIN_TUNDRA" class="menuitem">Тундра</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURES.aspx"><div id="CONCEPT_TERRAIN_FEATURES" class="menuitem">Особенности</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_VALUES.aspx"><div id="CONCEPT_TERRAIN_FEATURE_VALUES" class="menuitem">Влияние особенностей</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_FALLOUT.aspx"><div id="CONCEPT_TERRAIN_FEATURE_FALLOUT" class="menuitem">Радиоактивное загрязнение</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_FLOOD_PLAINS.aspx"><div id="CONCEPT_TERRAIN_FEATURE_FLOOD_PLAINS" class="menuitem">Пойма</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_FORESTS.aspx"><div id="CONCEPT_TERRAIN_FEATURE_FORESTS" class="menuitem">Лес</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_ICE.aspx"><div id="CONCEPT_TERRAIN_FEATURE_ICE" class="menuitem">Ледник</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_JUNGLE.aspx"><div id="CONCEPT_TERRAIN_FEATURE_JUNGLE" class="menuitem">Джунгли</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_MARSH.aspx"><div id="CONCEPT_TERRAIN_FEATURE_MARSH" class="menuitem">Болото</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_NATURAL_WONDER.aspx"><div id="CONCEPT_TERRAIN_FEATURE_NATURAL_WONDER" class="menuitem">Чудеса природы</div></a>
+				<a href="CONCEPT_TERRAIN_FEATURE_OASIS.aspx"><div id="CONCEPT_TERRAIN_FEATURE_OASIS" class="menuitem">Оазис</div></a>
+				<a href="CONCEPT_TERRAIN_RIVERS.aspx"><div id="CONCEPT_TERRAIN_RIVERS" class="menuitem">Реки</div></a>
+				<a href="CONCEPT_TERRAIN_RIVERS_TILES.aspx"><div id="CONCEPT_TERRAIN_RIVERS_TILES" class="menuitem">Расположение рек</div></a>
+				<a href="CONCEPT_TERRAIN_RIVERS_YIELD.aspx"><div id="CONCEPT_TERRAIN_RIVERS_YIELD" class="menuitem">Производство в городе</div></a>
+				<a href="CONCEPT_TERRAIN_RIVERS_COMBAT.aspx"><div id="CONCEPT_TERRAIN_RIVERS_COMBAT" class="menuitem">Штраф к атаке</div></a>
+				<a href="CONCEPT_TERRAIN_RIVERS_MOVEMENT.aspx"><div id="CONCEPT_TERRAIN_RIVERS_MOVEMENT" class="menuitem">Влияние на перемещение</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_RESOURCES" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_RESOURCES_CONTENT');"><div id="HEADER_RESOURCES" class="menugroup">Ресурсы</div></a><div id="HEADER_RESOURCES_CONTENT">
+				<a href="CONCEPT_RESOURCES.aspx"><div id="CONCEPT_RESOURCES" class="menuitem">Ресурсы</div></a>
+				<a href="CONCEPT_RESOURCES_BONUS.aspx"><div id="CONCEPT_RESOURCES_BONUS" class="menuitem">Бонусные ресурсы</div></a>
+				<a href="CONCEPT_RESOURCES_LUXURY.aspx"><div id="CONCEPT_RESOURCES_LUXURY" class="menuitem">Редкие ресурсы</div></a>
+				<a href="CONCEPT_RESOURCES_CITY_REQUESTS.aspx"><div id="CONCEPT_RESOURCES_CITY_REQUESTS" class="menuitem">День любви к отчизне</div></a>
+				<a href="CONCEPT_RESOURCES_STRATEGIC.aspx"><div id="CONCEPT_RESOURCES_STRATEGIC" class="menuitem">Стратегические ресурсы</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_IMPROVEMENTS" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_IMPROVEMENTS_CONTENT');"><div id="HEADER_IMPROVEMENTS" class="menugroup">Постройка улучшений</div></a><div id="HEADER_IMPROVEMENTS_CONTENT">
+				<a href="CONCEPT_WORKERS.aspx"><div id="CONCEPT_WORKERS" class="menuitem">Рабочие и улучшения</div></a>
+				<a href="CONCEPT_WORKERS_CREATING.aspx"><div id="CONCEPT_WORKERS_CREATING" class="menuitem">Создание рабочих</div></a>
+				<a href="CONCEPT_WORKERS_COMBAT.aspx"><div id="CONCEPT_WORKERS_COMBAT" class="menuitem">Рабочие в бою</div></a>
+				<a href="CONCEPT_WORKERS_ACTION_PANEL.aspx"><div id="CONCEPT_WORKERS_ACTION_PANEL" class="menuitem">Панель действий рабочих</div></a>
+				<a href="CONCEPT_WORKERS_CLEARINGLAND.aspx"><div id="CONCEPT_WORKERS_CLEARINGLAND" class="menuitem">Очистка территории</div></a>
+				<a href="CONCEPT_WORKERS_CLEARINGLAND_TIME.aspx"><div id="CONCEPT_WORKERS_CLEARINGLAND_TIME" class="menuitem">Время очистки земли</div></a>
+				<a href="CONCEPT_WORKERS_ROADS.aspx"><div id="CONCEPT_WORKERS_ROADS" class="menuitem">Постройка дорог</div></a>
+				<a href="CONCEPT_WORKERS_ROADS_TIME.aspx"><div id="CONCEPT_WORKERS_ROADS_TIME" class="menuitem">Время постройки дороги</div></a>
+				<a href="CONCEPT_WORKERS_ROADS_TRADE_ROUTES.aspx"><div id="CONCEPT_WORKERS_ROADS_TRADE_ROUTES" class="menuitem">Дороги и торговые пути</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS" class="menuitem">Постройка улучшений</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS_WHERE.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS_WHERE" class="menuitem">Где строить улучшения</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS_TIME.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS_TIME" class="menuitem">Время постройки</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS_TIME_LEFT.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS_TIME_LEFT" class="menuitem">Сколько осталось времени?</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS_LEAVING.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS_LEAVING" class="menuitem">Приостановка постройки</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS_FARM.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS_FARM" class="menuitem">Улучшение "Ферма"</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS_MINE.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS_MINE" class="menuitem">Улучшение "Рудник"</div></a>
+				<a href="CONCEPT_WORKERS_IMPROVEMENTS_FORT.aspx"><div id="CONCEPT_WORKERS_IMPROVEMENTS_FORT" class="menuitem">Особое улучшение: форт</div></a>
+				<a href="CONCEPT_WORKERS_WORKBOATS.aspx"><div id="CONCEPT_WORKERS_WORKBOATS" class="menuitem">Рабочие лодки</div></a>
+				<a href="CONCEPT_WORKERS_PILLAGE.aspx"><div id="CONCEPT_WORKERS_PILLAGE" class="menuitem">Разграбление</div></a>
+				<a href="CONCEPT_WORKERS_REPAIR.aspx"><div id="CONCEPT_WORKERS_REPAIR" class="menuitem">Ремонт</div></a>
+				<a href="CONCEPT_WORKERS_REPAIR_WATER.aspx"><div id="CONCEPT_WORKERS_REPAIR_WATER" class="menuitem">Лодки и платформы</div></a>
+				<a href="CONCEPT_WORKERS_GREAT_PEOPLE.aspx"><div id="CONCEPT_WORKERS_GREAT_PEOPLE" class="menuitem">Улучшения великих людей</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_CITYGROWTH" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_CITYGROWTH_CONTENT');"><div id="HEADER_CITYGROWTH" class="menugroup">Пища и рост города</div></a><div id="HEADER_CITYGROWTH_CONTENT">
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH" class="menuitem">Пища и рост города</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_MECHANICS.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_MECHANICS" class="menuitem">Города и пища</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_GETTING_MORE_FOOD.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_GETTING_MORE_FOOD" class="menuitem">Больше пищи</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_BEST_FOOD_TILES.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_BEST_FOOD_TILES" class="menuitem">Лучшие клетки для пищи</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_BONUS.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_BONUS" class="menuitem">Бонусные ресурсы</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_OASIS.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_OASIS" class="menuitem">Оазисы</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_FLOOD_PLAINS.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_FLOOD_PLAINS" class="menuitem">Пойма</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_GRASSLAND_AND_JUNGLE.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_GRASSLAND_AND_JUNGLE" class="menuitem">Луга и джунгли</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_IMPROVEMENTS.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_IMPROVEMENTS" class="menuitem">Улучшения</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_BUILDINGS_WONDERS_SOCIAL_POLICIES.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_BUILDINGS_WONDERS_SOCIAL_POLICIES" class="menuitem">Здания, чудеса, институты</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_MARITIME_CITY_STATES.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_MARITIME_CITY_STATES" class="menuitem">Приморские города</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_WE_LOVE_THE_KING_DAY.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_WE_LOVE_THE_KING_DAY" class="menuitem">День любви к отчизне</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_UNHAPPINESS.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_UNHAPPINESS" class="menuitem">Настроение города</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_GROWTH.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_GROWTH" class="menuitem">Рост города</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_GROWTH_BUCKET.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_GROWTH_BUCKET" class="menuitem">Банк продовольствия</div></a>
+				<a href="CONCEPT_FOOD_AND_CITY_GROWTH_SETTLERS.aspx"><div id="CONCEPT_FOOD_AND_CITY_GROWTH_SETTLERS" class="menuitem">Поселенцы и пища</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_TECHNOLOGY" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_TECHNOLOGY_CONTENT');"><div id="HEADER_TECHNOLOGY" class="menugroup">Технологии</div></a><div id="HEADER_TECHNOLOGY_CONTENT">
+				<a href="CONCEPT_TECHNOLOGY.aspx"><div id="CONCEPT_TECHNOLOGY" class="menuitem">Технологии</div></a>
+				<a href="CONCEPT_TECHNOLOGY_TECH_AND_BEAKERS.aspx"><div id="CONCEPT_TECHNOLOGY_TECH_AND_BEAKERS" class="menuitem">Технологии и колбы</div></a>
+				<a href="CONCEPT_TECHNOLOGY_BEAKERS.aspx"><div id="CONCEPT_TECHNOLOGY_BEAKERS" class="menuitem">Производство очков науки</div></a>
+				<a href="CONCEPT_TECHNOLOGY_SPEEDING_UP_RESEARCH.aspx"><div id="CONCEPT_TECHNOLOGY_SPEEDING_UP_RESEARCH" class="menuitem">Ускорение исследований</div></a>
+				<a href="CONCEPT_TECHNOLOGY_ANCIENT_RUINS.aspx"><div id="CONCEPT_TECHNOLOGY_ANCIENT_RUINS" class="menuitem">Древние руины</div></a>
+				<a href="CONCEPT_TECHNOLOGY_TRADE.aspx"><div id="CONCEPT_TECHNOLOGY_TRADE" class="menuitem">Торговля и обмен</div></a>
+				<a href="CONCEPT_TECHNOLOGY_BUILDINGS.aspx"><div id="CONCEPT_TECHNOLOGY_BUILDINGS" class="menuitem">Здания</div></a>
+				<a href="CONCEPT_TECHNOLOGY_WONDERS.aspx"><div id="CONCEPT_TECHNOLOGY_WONDERS" class="menuitem">Чудеса</div></a>
+				<a href="CONCEPT_TECHNOLOGY_GREAT_SCIENTIST.aspx"><div id="CONCEPT_TECHNOLOGY_GREAT_SCIENTIST" class="menuitem">Великий ученый</div></a>
+				<a href="CONCEPT_TECHNOLOGY_SOCIAL_POLICIES.aspx"><div id="CONCEPT_TECHNOLOGY_SOCIAL_POLICIES" class="menuitem">Ветвь "Рационализм"</div></a>
+				<a href="CONCEPT_TECHNOLOGY_CHOOSING_TECH.aspx"><div id="CONCEPT_TECHNOLOGY_CHOOSING_TECH" class="menuitem">Выбор технологии</div></a>
+				<a href="CONCEPT_TECHNOLOGY_CHOOSE_RESEARCH_MENU.aspx"><div id="CONCEPT_TECHNOLOGY_CHOOSE_RESEARCH_MENU" class="menuitem">Меню выбора исследований</div></a>
+				<a href="CONCEPT_TECHNOLOGY_CHANGE_RESEARCH.aspx"><div id="CONCEPT_TECHNOLOGY_CHANGE_RESEARCH" class="menuitem">Изменение исследований</div></a>
+				<a href="CONCEPT_TECHNOLOGY_AVAILABLE.aspx"><div id="CONCEPT_TECHNOLOGY_AVAILABLE" class="menuitem">Доступные технологии</div></a>
+				<a href="CONCEPT_TECHNOLOGY_TECH_TREE.aspx"><div id="CONCEPT_TECHNOLOGY_TECH_TREE" class="menuitem">Дерево технологий</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_CULTURE" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_CULTURE_CONTENT');"><div id="HEADER_CULTURE" class="menugroup">Советник по культуре</div></a><div id="HEADER_CULTURE_CONTENT">
+				<a href="CONCEPT_CULTURE.aspx"><div id="CONCEPT_CULTURE" class="menuitem">Культура</div></a>
+				<a href="CONCEPT_CULTURE_GAINING.aspx"><div id="CONCEPT_CULTURE_GAINING" class="menuitem">Получение культуры</div></a>
+				<a href="CONCEPT_CULTURE_EXPANDING_TERRITORY.aspx"><div id="CONCEPT_CULTURE_EXPANDING_TERRITORY" class="menuitem">Расширение территории</div></a>
+				<a href="CONCEPT_CULTURE_ACQUIRING_SOCIAL_POLICY.aspx"><div id="CONCEPT_CULTURE_ACQUIRING_SOCIAL_POLICY" class="menuitem">Принятие институтов</div></a>
+				<a href="CONCEPT_CULTURE_VICTORY.aspx"><div id="CONCEPT_CULTURE_VICTORY" class="menuitem">Культурная победа</div></a>
+				<a href="CONCEPT_CULTURE_TOURISM.aspx"><div id="CONCEPT_CULTURE_TOURISM" class="menuitem">Туризм</div></a>
+				<a href="CONCEPT_CULTURE_TOURISM_AND_CULTURE.aspx"><div id="CONCEPT_CULTURE_TOURISM_AND_CULTURE" class="menuitem">Туризм и культурная победа</div></a>
+				<a href="CONCEPT_CULTURE_TOURISM_BENEFITS.aspx"><div id="CONCEPT_CULTURE_TOURISM_BENEFITS" class="menuitem">Преимущества туризма</div></a>
+				<a href="CONCEPT_CULTURE_GREAT_WORKS.aspx"><div id="CONCEPT_CULTURE_GREAT_WORKS" class="menuitem">Шедевры</div></a>
+				<a href="CONCEPT_CULTURE_GREAT_WORK_ART.aspx"><div id="CONCEPT_CULTURE_GREAT_WORK_ART" class="menuitem">Шедевр изобразительного искусства</div></a>
+				<a href="CONCEPT_CULTURE_GREAT_WORK_WRITING.aspx"><div id="CONCEPT_CULTURE_GREAT_WORK_WRITING" class="menuitem">Литературный шедевр</div></a>
+				<a href="CONCEPT_CULTURE_GREAT_WORK_MUSIC.aspx"><div id="CONCEPT_CULTURE_GREAT_WORK_MUSIC" class="menuitem">Музыкальный шедевр</div></a>
+				<a href="CONCEPT_CULTURE_MANAGE_GREAT_WORKS.aspx"><div id="CONCEPT_CULTURE_MANAGE_GREAT_WORKS" class="menuitem">Управление шедеврами</div></a>
+				<a href="CONCEPT_CULTURE_ARCH.aspx"><div id="CONCEPT_CULTURE_ARCH" class="menuitem">Археология</div></a>
+				<a href="CONCEPT_CULTURE_ANTIQUITY.aspx"><div id="CONCEPT_CULTURE_ANTIQUITY" class="menuitem">Исторические места</div></a>
+				<a href="CONCEPT_CULTURE_ARTIFACTS.aspx"><div id="CONCEPT_CULTURE_ARTIFACTS" class="menuitem">Артефакты</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_DIPLOMACY" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_DIPLOMACY_CONTENT');"><div id="HEADER_DIPLOMACY" class="menugroup">Дипломатия</div></a><div id="HEADER_DIPLOMACY_CONTENT">
+				<a href="CONCEPT_DIPLOMACY.aspx"><div id="CONCEPT_DIPLOMACY" class="menuitem">Дипломатия</div></a>
+				<a href="CONCEPT_DIPLOMACY_WHO_CAN_CONDUCT.aspx"><div id="CONCEPT_DIPLOMACY_WHO_CAN_CONDUCT" class="menuitem">Проведение переговоров</div></a>
+				<a href="CONCEPT_DIPLOMACY_INITIATING.aspx"><div id="CONCEPT_DIPLOMACY_INITIATING" class="menuitem">Начало переговоров</div></a>
+				<a href="CONCEPT_DIPLOMACY_WITH_CIVS.aspx"><div id="CONCEPT_DIPLOMACY_WITH_CIVS" class="menuitem">Отношения с державами</div></a>
+				<a href="CONCEPT_DIPLOMACY_DECLARE_WAR.aspx"><div id="CONCEPT_DIPLOMACY_DECLARE_WAR" class="menuitem">Объявление войны</div></a>
+				<a href="CONCEPT_DIPLOMACY_PEACE.aspx"><div id="CONCEPT_DIPLOMACY_PEACE" class="menuitem">Мирные переговоры</div></a>
+				<a href="CONCEPT_DIPLOMACY_TRADE.aspx"><div id="CONCEPT_DIPLOMACY_TRADE" class="menuitem">Торговля</div></a>
+				<a href="CONCEPT_DIPLOMACY_DEMAND.aspx"><div id="CONCEPT_DIPLOMACY_DEMAND" class="menuitem">Требования</div></a>
+				<a href="CONCEPT_DIPLOMACY_DISCUSS.aspx"><div id="CONCEPT_DIPLOMACY_DISCUSS" class="menuitem">Обсуждение</div></a>
+				<a href="CONCEPT_DIPLOMACY_DENOUNCE.aspx"><div id="CONCEPT_DIPLOMACY_DENOUNCE" class="menuitem">Осуждение</div></a>
+				<a href="CONCEPT_DIPLOMACY_FRIENDSHIP.aspx"><div id="CONCEPT_DIPLOMACY_FRIENDSHIP" class="menuitem">Декларация дружбы</div></a>
+				<a href="CONCEPT_DIPLOMACY_EXIT.aspx"><div id="CONCEPT_DIPLOMACY_EXIT" class="menuitem">Прощание</div></a>
+				<a href="CONCEPT_DIPLOMACY_TRADE_SCREEN.aspx"><div id="CONCEPT_DIPLOMACY_TRADE_SCREEN" class="menuitem">Окно торговли</div></a>
+				<a href="CONCEPT_DIPLOMACY_OPEN_BORDERS.aspx"><div id="CONCEPT_DIPLOMACY_OPEN_BORDERS" class="menuitem">Открытые границы</div></a>
+				<a href="CONCEPT_DIPLOMACY_DEFENSIVE_PACT.aspx"><div id="CONCEPT_DIPLOMACY_DEFENSIVE_PACT" class="menuitem">Оборонительный союз</div></a>
+				<a href="CONCEPT_DIPLOMACY_RESEARCH_AGREEMENT.aspx"><div id="CONCEPT_DIPLOMACY_RESEARCH_AGREEMENT" class="menuitem">Договор об исследованиях</div></a>
+				<a href="CONCEPT_DIPLOMACY_TRADE_CITIES.aspx"><div id="CONCEPT_DIPLOMACY_TRADE_CITIES" class="menuitem">Торговля городами</div></a>
+				<a href="CONCEPT_DIPLOMACY_OTHER_PLAYERS.aspx"><div id="CONCEPT_DIPLOMACY_OTHER_PLAYERS" class="menuitem">Другие игроки</div></a>
+				<a href="CONCEPT_DIPLOMACY_RESOURCES.aspx"><div id="CONCEPT_DIPLOMACY_RESOURCES" class="menuitem">Ресурсы и дипломатия</div></a>
+				<a href="CONCEPT_DIPLOMACY_CITY_STATE.aspx"><div id="CONCEPT_DIPLOMACY_CITY_STATE" class="menuitem">Переговоры с городами</div></a>
+				<a href="CONCEPT_DIPLOMACY_DECLARING_WAR.aspx"><div id="CONCEPT_DIPLOMACY_DECLARING_WAR" class="menuitem">Как объявить войну</div></a>
+				<a href="CONCEPT_DIPLOMACY_NEGOTIATE_PEACE.aspx"><div id="CONCEPT_DIPLOMACY_NEGOTIATE_PEACE" class="menuitem">Как заключить мир</div></a>
+				<a href="CONCEPT_DIPLOMACY_EMBASSY.aspx"><div id="CONCEPT_DIPLOMACY_EMBASSY" class="menuitem">Открытие посольств</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_HAPPINESS" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_HAPPINESS_CONTENT');"><div id="HEADER_HAPPINESS" class="menugroup">Настроение</div></a><div id="HEADER_HAPPINESS_CONTENT">
+				<a href="CONCEPT_HAPPINESS.aspx"><div id="CONCEPT_HAPPINESS" class="menuitem">Настроение</div></a>
+				<a href="CONCEPT_HAPPINESS_STARTING.aspx"><div id="CONCEPT_HAPPINESS_STARTING" class="menuitem">Начальное настроение</div></a>
+				<a href="CONCEPT_HAPPINESS_CAUSES_UNHAPPINESS.aspx"><div id="CONCEPT_HAPPINESS_CAUSES_UNHAPPINESS" class="menuitem">Причины недовольства</div></a>
+				<a href="CONCEPT_HAPPINESS_CAUSES_HAPPINESS.aspx"><div id="CONCEPT_HAPPINESS_CAUSES_HAPPINESS" class="menuitem">Что улучшает настроение</div></a>
+				<a href="CONCEPT_HAPPINESS_HAPPINESS_LEVELS.aspx"><div id="CONCEPT_HAPPINESS_HAPPINESS_LEVELS" class="menuitem">Уровни недовольства</div></a>
+				<a href="CONCEPT_HAPPINESS_UNHAHPPY.aspx"><div id="CONCEPT_HAPPINESS_UNHAHPPY" class="menuitem">Недовольство</div></a>
+				<a href="CONCEPT_HAPPINESS_VERY_UNHAPPY.aspx"><div id="CONCEPT_HAPPINESS_VERY_UNHAPPY" class="menuitem">Беспорядки</div></a>
+				<a href="CONCEPT_HAPPINESS_REVOLT.aspx"><div id="CONCEPT_HAPPINESS_REVOLT" class="menuitem">Бунт</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_FOW" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_FOW_CONTENT');"><div id="HEADER_FOW" class="menugroup">Туман войны</div></a><div id="HEADER_FOW_CONTENT">
+				<a href="CONCEPT_FOG_OF_WAR.aspx"><div id="CONCEPT_FOG_OF_WAR" class="menuitem">Туман войны</div></a>
+				<a href="CONCEPT_FOG_OF_WAR_THREE_STATES.aspx"><div id="CONCEPT_FOG_OF_WAR_THREE_STATES" class="menuitem">Три типа видимости</div></a>
+				<a href="CONCEPT_FOG_OF_WAR_STATE_VISIBLE.aspx"><div id="CONCEPT_FOG_OF_WAR_STATE_VISIBLE" class="menuitem">Видимые клетки</div></a>
+				<a href="CONCEPT_FOG_OF_WAR_STATE_REVEALED.aspx"><div id="CONCEPT_FOG_OF_WAR_STATE_REVEALED" class="menuitem">Открытые клетки</div></a>
+				<a href="CONCEPT_FOG_OF_WAR_STATE_FOG_OF_WAR.aspx"><div id="CONCEPT_FOG_OF_WAR_STATE_FOG_OF_WAR" class="menuitem">Туман войны на клетке</div></a>
+				<a href="CONCEPT_FOG_OF_WAR_SEEN.aspx"><div id="CONCEPT_FOG_OF_WAR_SEEN" class="menuitem">Что видно</div></a>
+				<a href="CONCEPT_FOG_OF_WAR_OBSCURING_TERRAIN.aspx"><div id="CONCEPT_FOG_OF_WAR_OBSCURING_TERRAIN" class="menuitem">Ограниченный обзор</div></a>
+				<a href="CONCEPT_FOG_OF_WAR_INDIRECT_FIRE.aspx"><div id="CONCEPT_FOG_OF_WAR_INDIRECT_FIRE" class="menuitem">Закрытые позиции</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_POLICIES" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_POLICIES_CONTENT');"><div id="HEADER_POLICIES" class="menugroup">Общественные институты</div></a><div id="HEADER_POLICIES_CONTENT">
+				<a href="CONCEPT_SOCIAL_POLICY.aspx"><div id="CONCEPT_SOCIAL_POLICY" class="menuitem">Общественные институты</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_GAINING.aspx"><div id="CONCEPT_SOCIAL_POLICY_GAINING" class="menuitem">Принятие общ. институтов</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCHES.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCHES" class="menuitem">Ветви общ. институтов</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_TRADITION.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_TRADITION" class="menuitem">Традиция</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_LIBERTY.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_LIBERTY" class="menuitem">Воля</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_HONOR.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_HONOR" class="menuitem">Честь</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_PIETY.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_PIETY" class="menuitem">Набожность</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_PATRONAGE.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_PATRONAGE" class="menuitem">Меценатство</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_COMMERCE.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_COMMERCE" class="menuitem">Коммерция</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_RATIONALISM.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_RATIONALISM" class="menuitem">Рационализм</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_FREEDOM.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_FREEDOM" class="menuitem">Свобода</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_ORDER.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_ORDER" class="menuitem">Порядок</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_AUTOCRACY.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_AUTOCRACY" class="menuitem">Автократия</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_VICTORY.aspx"><div id="CONCEPT_SOCIAL_POLICY_VICTORY" class="menuitem">Культурная победа</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_AESTHETICS.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_AESTHETICS" class="menuitem">Эстетика</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_EXPLORATION.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_EXPLORATION" class="menuitem">Мореплавание</div></a>
+				<a href="CONCEPT_SOCIAL_POLICY_BRANCH_IDEOLOGY.aspx"><div id="CONCEPT_SOCIAL_POLICY_BRANCH_IDEOLOGY" class="menuitem">Идеологии</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_GOLD" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_GOLD_CONTENT');"><div id="HEADER_GOLD" class="menugroup">Золото и экономика</div></a><div id="HEADER_GOLD_CONTENT">
+				<a href="CONCEPT_GOLD.aspx"><div id="CONCEPT_GOLD" class="menuitem">Золото</div></a>
+				<a href="CONCEPT_GOLD_WHERE_TO_GET.aspx"><div id="CONCEPT_GOLD_WHERE_TO_GET" class="menuitem">Где взять золото</div></a>
+				<a href="CONCEPT_GOLD_TERRAIN.aspx"><div id="CONCEPT_GOLD_TERRAIN" class="menuitem">Типы ландшафтов</div></a>
+				<a href="CONCEPT_GOLD_RESOURCES.aspx"><div id="CONCEPT_GOLD_RESOURCES" class="menuitem">Ресурсы</div></a>
+				<a href="CONCEPT_GOLD_TRADING_POST.aspx"><div id="CONCEPT_GOLD_TRADING_POST" class="menuitem">Торговый пост</div></a>
+				<a href="CONCEPT_GOLD_BUILDINGS.aspx"><div id="CONCEPT_GOLD_BUILDINGS" class="menuitem">Постройки</div></a>
+				<a href="CONCEPT_GOLD_WONDERS.aspx"><div id="CONCEPT_GOLD_WONDERS" class="menuitem">Чудеса</div></a>
+				<a href="CONCEPT_GOLD_TRADE_ROUTES.aspx"><div id="CONCEPT_GOLD_TRADE_ROUTES" class="menuitem">Торговые пути</div></a>
+				<a href="CONCEPT_GOLD_TRADE_ROUTES_BLOCKADE.aspx"><div id="CONCEPT_GOLD_TRADE_ROUTES_BLOCKADE" class="menuitem">Блокада</div></a>
+				<a href="CONCEPT_GOLD_BARBARIAN_CAMPS.aspx"><div id="CONCEPT_GOLD_BARBARIAN_CAMPS" class="menuitem">Лагерь варваров</div></a>
+				<a href="CONCEPT_GOLD_ANCIENT_RUINS.aspx"><div id="CONCEPT_GOLD_ANCIENT_RUINS" class="menuitem">Древние руины</div></a>
+				<a href="CONCEPT_GOLD_CITY_STATES.aspx"><div id="CONCEPT_GOLD_CITY_STATES" class="menuitem">Города-государства</div></a>
+				<a href="CONCEPT_GOLD_PILLAGE_IMPROVEMENTS.aspx"><div id="CONCEPT_GOLD_PILLAGE_IMPROVEMENTS" class="menuitem">Разграбление улучшений</div></a>
+				<a href="CONCEPT_GOLD_CITY_CAPTURE.aspx"><div id="CONCEPT_GOLD_CITY_CAPTURE" class="menuitem">Захват городов</div></a>
+				<a href="CONCEPT_GOLD_DIPLOMACY.aspx"><div id="CONCEPT_GOLD_DIPLOMACY" class="menuitem">Плата золотом</div></a>
+				<a href="CONCEPT_GOLD_TRADE_MISSION.aspx"><div id="CONCEPT_GOLD_TRADE_MISSION" class="menuitem">Торговые сделки</div></a>
+				<a href="CONCEPT_GOLD_SPENDING.aspx"><div id="CONCEPT_GOLD_SPENDING" class="menuitem">Траты золота</div></a>
+				<a href="CONCEPT_GOLD_UNIT_BUILDING_MAINTENANCE.aspx"><div id="CONCEPT_GOLD_UNIT_BUILDING_MAINTENANCE" class="menuitem">Содержание объектов</div></a>
+				<a href="CONCEPT_GOLD_ROAD_MAINTENANCE.aspx"><div id="CONCEPT_GOLD_ROAD_MAINTENANCE" class="menuitem">Содержание дорог</div></a>
+				<a href="CONCEPT_GOLD_PURCHASE_TILES.aspx"><div id="CONCEPT_GOLD_PURCHASE_TILES" class="menuitem">Покупка клеток</div></a>
+				<a href="CONCEPT_GOLD_PURCHASE_UNITS_BUILDINGS_WONDERS.aspx"><div id="CONCEPT_GOLD_PURCHASE_UNITS_BUILDINGS_WONDERS" class="menuitem">Покупка юнитов, зданий, чудес</div></a>
+				<a href="CONCEPT_GOLD_BUY_CITY_STATE_INFLUENCE.aspx"><div id="CONCEPT_GOLD_BUY_CITY_STATE_INFLUENCE" class="menuitem">Покупка влияния</div></a>
+				<a href="CONCEPT_GOLD_UPGRADE_UNITS.aspx"><div id="CONCEPT_GOLD_UPGRADE_UNITS" class="menuitem">Модернизация юнитов</div></a>
+				<a href="CONCEPT_GOLD_SPENDING_ON_DIPLOMACY.aspx"><div id="CONCEPT_GOLD_SPENDING_ON_DIPLOMACY" class="menuitem">Золото и дипломатия</div></a>
+				<a href="CONCEPT_GOLD_DIPLOMACY_FLAT_FEE.aspx"><div id="CONCEPT_GOLD_DIPLOMACY_FLAT_FEE" class="menuitem">Твердая сумма</div></a>
+				<a href="CONCEPT_GOLD_DIPLOMACY_PER_TURN.aspx"><div id="CONCEPT_GOLD_DIPLOMACY_PER_TURN" class="menuitem">Плата каждый ход</div></a>
+				<a href="CONCEPT_GOLD_CITY_CAPTURED_BY_BARBARIANS.aspx"><div id="CONCEPT_GOLD_CITY_CAPTURED_BY_BARBARIANS" class="menuitem">Ограбление!</div></a>
+				<a href="CONCEPT_GOLD_CITY_CAPTURED_BY_CIV.aspx"><div id="CONCEPT_GOLD_CITY_CAPTURED_BY_CIV" class="menuitem">Потеря города</div></a>
+				<a href="CONCEPT_GOLD_RUNNING_DEFICIT.aspx"><div id="CONCEPT_GOLD_RUNNING_DEFICIT" class="menuitem">Пустая казна</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_ADVISORS" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_ADVISORS_CONTENT');"><div id="HEADER_ADVISORS" class="menugroup">Советники</div></a><div id="HEADER_ADVISORS_CONTENT">
+				<a href="CONCEPT_ADVISORS.aspx"><div id="CONCEPT_ADVISORS" class="menuitem">Советники</div></a>
+				<a href="CONCEPT_ADVISORS_ECONOMIC.aspx"><div id="CONCEPT_ADVISORS_ECONOMIC" class="menuitem">Экономика</div></a>
+				<a href="CONCEPT_ADVISORS_MILITARY.aspx"><div id="CONCEPT_ADVISORS_MILITARY" class="menuitem">Война</div></a>
+				<a href="CONCEPT_ADVISORS_FOREIGN.aspx"><div id="CONCEPT_ADVISORS_FOREIGN" class="menuitem">Иностранные дела</div></a>
+				<a href="CONCEPT_ADVISORS_SCIENCE.aspx"><div id="CONCEPT_ADVISORS_SCIENCE" class="menuitem">Наука</div></a>
+				<a href="CONCEPT_ADVISORS_CONTACTING.aspx"><div id="CONCEPT_ADVISORS_CONTACTING" class="menuitem">Разговор с советником</div></a>
+				<a href="CONCEPT_ADVISORS_TURNINGOFF.aspx"><div id="CONCEPT_ADVISORS_TURNINGOFF" class="menuitem">Отключение советников</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_PEOPLE" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_PEOPLE_CONTENT');"><div id="HEADER_PEOPLE" class="menugroup">Великие люди, специалисты</div></a><div id="HEADER_PEOPLE_CONTENT">
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE" class="menuitem">Специалисты и великие люди</div></a>
+				<a href="CONCEPT_BUILDINGS_SPECIALISTS.aspx"><div id="CONCEPT_BUILDINGS_SPECIALISTS" class="menuitem">Специалисты и здания</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS" class="menuitem">Специалисты</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_ARTIST.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_ARTIST" class="menuitem">Художник</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_ENGINEER.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_ENGINEER" class="menuitem">Инженер</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_MERCHANT.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_MERCHANT" class="menuitem">Торговец</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_SCIENTIST.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_SCIENTIST" class="menuitem">Ученый</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_ASSIGNING.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_ASSIGNING" class="menuitem">Назначение специалистов</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_EFFECT.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_EFFECT" class="menuitem">Влияние специалистов</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE" class="menuitem">Великие люди</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GENERATING.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GENERATING" class="menuitem">Появление великих людей</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_ABILITIES.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_ABILITIES" class="menuitem">Умения великих людей</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GOLDEN_AGE.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GOLDEN_AGE" class="menuitem">Золотой век</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_SPECIAL_IMPROVEMENT.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_SPECIAL_IMPROVEMENT" class="menuitem">Особые улучшения</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_SPECIAL_ABILITY.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_SPECIAL_ABILITY" class="menuitem">Особые умения</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_MOVING_GREAT_PEOPLE.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_MOVING_GREAT_PEOPLE" class="menuitem">Движение великих людей</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_ARTIST.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_ARTIST" class="menuitem">Великий художник</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_LANDMARK.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_LANDMARK" class="menuitem">Памятник</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CULTURE_BOMB.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CULTURE_BOMB" class="menuitem">Специальное умение: золотой век</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_ENGINEER.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_ENGINEER" class="menuitem">Великий инженер</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_MANUFACTORY.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_MANUFACTORY" class="menuitem">Заводской комплекс</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_HURRY_PRODUCTION.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_HURRY_PRODUCTION" class="menuitem">Ускорение производства</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_MERCHANT.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_MERCHANT" class="menuitem">Великий торговец</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CUSTOMS_HOUSE.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CUSTOMS_HOUSE" class="menuitem">Таможня</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_TRADE_MISSION.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_TRADE_MISSION" class="menuitem">Торговая сделка</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_SCIENTIST.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_SCIENTIST" class="menuitem">Великий ученый</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_ACADEMY.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_ACADEMY" class="menuitem">Особое улучшение: академия</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_LEARN_NEW_TECH.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_LEARN_NEW_TECH" class="menuitem">Специальное умение: бесплатная технология</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_GENERAL.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_GENERAL" class="menuitem">Великий полководец</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CITADEL.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CITADEL" class="menuitem">Особ. улучшение: крепость</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_COMBAT_BONUS.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_COMBAT_BONUS" class="menuitem">Боевой бонус</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_WRITER.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_WRITER" class="menuitem">Писатель</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_MUSICIAN.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_SPECIALISTS_MUSICIAN" class="menuitem">Музыкант</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_ART_CREATEGW.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_ART_CREATEGW" class="menuitem">Особая способность: шедевр</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_WRITER.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_WRITER" class="menuitem">Великий писатель</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_WRITER_CREATEGW.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_WRITER_CREATEGW" class="menuitem">Особая способность: шедевр</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_TREATISE.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_TREATISE" class="menuitem">Особая способность: политический трактат</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_MUSICIAN.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_GREAT_MUSICIAN" class="menuitem">Великий музыкант</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_MUSICIAN_CREATEGW.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_MUSICIAN_CREATEGW" class="menuitem">Особая способность: шедевр</div></a>
+				<a href="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CONCERT_TOUR.aspx"><div id="CONCEPT_SPECIALISTS_AND_GREAT_PEOPLE_GREAT_PEOPLE_CONCERT_TOUR" class="menuitem">Особая способность: концертный тур</div></a>
+				<a href="CONCEPT_GREAT_ADMIRAL.aspx"><div id="CONCEPT_GREAT_ADMIRAL" class="menuitem">Великий флотоводец</div></a>
+				<a href="CONCEPT_GREAT_ADMIRAL_ABILITY.aspx"><div id="CONCEPT_GREAT_ADMIRAL_ABILITY" class="menuitem">Особое умение: боевой бонус</div></a>
+				<a href="CONCEPT_GREAT_ADMIRAL_ABILITY2.aspx"><div id="CONCEPT_GREAT_ADMIRAL_ABILITY2" class="menuitem">Специальное умение: восстановление флота</div></a>
+				<a href="CONCEPT_GREAT_PROPHET.aspx"><div id="CONCEPT_GREAT_PROPHET" class="menuitem">Великий пророк</div></a>
+				<a href="CONCEPT_GREAT_PROPHET_IMPROVEMENT.aspx"><div id="CONCEPT_GREAT_PROPHET_IMPROVEMENT" class="menuitem">Уникальное улучшение: святыня</div></a>
+				<a href="CONCEPT_GREAT_PROPHET_ABILITY.aspx"><div id="CONCEPT_GREAT_PROPHET_ABILITY" class="menuitem">Особое умение: распространение религии</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_CITYSTATE" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_CITYSTATE_CONTENT');"><div id="HEADER_CITYSTATE" class="menugroup">Города-государства</div></a><div id="HEADER_CITYSTATE_CONTENT">
+				<a href="CONCEPT_CITY_STATE.aspx"><div id="CONCEPT_CITY_STATE" class="menuitem">Города-государства</div></a>
+				<a href="CONCEPT_CITY_STATE_TYPES.aspx"><div id="CONCEPT_CITY_STATE_TYPES" class="menuitem">Типы городов-государств</div></a>
+				<a href="CONCEPT_CITY_STATE_TYPES_CULTURED.aspx"><div id="CONCEPT_CITY_STATE_TYPES_CULTURED" class="menuitem">Культурный</div></a>
+				<a href="CONCEPT_CITY_STATE_TYPES_MARITIME.aspx"><div id="CONCEPT_CITY_STATE_TYPES_MARITIME" class="menuitem">Приморский</div></a>
+				<a href="CONCEPT_CITY_STATE_TYPES_MILITARISTIC.aspx"><div id="CONCEPT_CITY_STATE_TYPES_MILITARISTIC" class="menuitem">Воинственный</div></a>
+				<a href="CONCEPT_CITY_STATE_COMMUNICATION.aspx"><div id="CONCEPT_CITY_STATE_COMMUNICATION" class="menuitem">Контакты с городами</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE" class="menuitem">Влияние на города</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_GIVE_GOLD.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_GIVE_GOLD" class="menuitem">Все золото в копилку!</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_GIVE_UNITS.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_GIVE_UNITS" class="menuitem">Юнит в подарок</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_DO_NOTHING.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_DO_NOTHING" class="menuitem">Бездействие</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_LEVELS.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_LEVELS" class="menuitem">Уровни влияния</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_PERMANENT_WAR.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_PERMANENT_WAR" class="menuitem">Настороженность</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_WAR.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_WAR" class="menuitem">Война</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_NEUTRAL.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_NEUTRAL" class="menuitem">Нейтралитет</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_FRIENDS.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_FRIENDS" class="menuitem">Друзья</div></a>
+				<a href="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_ALLIES.aspx"><div id="CONCEPT_CITY_STATE_INFLUENCE_LEVELS_ALLIES" class="menuitem">Союзники</div></a>
+				<a href="CONCEPT_CITY_STATE_MISSIONS.aspx"><div id="CONCEPT_CITY_STATE_MISSIONS" class="menuitem">Задания городов-государств</div></a>
+				<a href="CONCEPT_CITY_STATE_WAR.aspx"><div id="CONCEPT_CITY_STATE_WAR" class="menuitem">Война городов-государств</div></a>
+				<a href="CONCEPT_CITY_STATE_LIBERATING.aspx"><div id="CONCEPT_CITY_STATE_LIBERATING" class="menuitem">Освобождение городов</div></a>
+				<a href="CONCEPT_CITY_STATE_DIPLOMACY_VICTORY.aspx"><div id="CONCEPT_CITY_STATE_DIPLOMACY_VICTORY" class="menuitem">Дипломатическая победа</div></a>
+				<a href="CONCEPT_CITY_STATE_RELIGIOUS.aspx"><div id="CONCEPT_CITY_STATE_RELIGIOUS" class="menuitem">Религиозный</div></a>
+				<a href="CONCEPT_CITY_STATE_MERCANTILE.aspx"><div id="CONCEPT_CITY_STATE_MERCANTILE" class="menuitem">Торговый</div></a>
+				<a href="CONCEPT_CITY_STATE_BULLYING.aspx"><div id="CONCEPT_CITY_STATE_BULLYING" class="menuitem">Требование дани</div></a>
+				<a href="CONCEPT_CITY_STATE_SPREAD_RELIGION.aspx"><div id="CONCEPT_CITY_STATE_SPREAD_RELIGION" class="menuitem">Религия и влияние на города-государства</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_MOVEMENT" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_MOVEMENT_CONTENT');"><div id="HEADER_MOVEMENT" class="menugroup">Передвижение юнитов</div></a><div id="HEADER_MOVEMENT_CONTENT">
+				<a href="CONCEPT_MOVEMENT.aspx"><div id="CONCEPT_MOVEMENT" class="menuitem">Движение</div></a>
+				<a href="CONCEPT_MOVEMENT_HOW_TO_ORDER.aspx"><div id="CONCEPT_MOVEMENT_HOW_TO_ORDER" class="menuitem">Приказ на движение</div></a>
+				<a href="CONCEPT_MOVEMENT_RIGHT_CLICK.aspx"><div id="CONCEPT_MOVEMENT_RIGHT_CLICK" class="menuitem">Правая кнопка мыши</div></a>
+				<a href="CONCEPT_MOVEMENT_MOVE_MODE.aspx"><div id="CONCEPT_MOVEMENT_MOVE_MODE" class="menuitem">Режим передвижения</div></a>
+				<a href="CONCEPT_MOVEMENT_LEGAL_MOVES.aspx"><div id="CONCEPT_MOVEMENT_LEGAL_MOVES" class="menuitem">Виды перемещений</div></a>
+				<a href="CONCEPT_MOVEMENT_ILLEGAL_MOVES.aspx"><div id="CONCEPT_MOVEMENT_ILLEGAL_MOVES" class="menuitem">Невозможные перемещения</div></a>
+				<a href="CONCEPT_MOVEMENT_MULTIPLE_TURN_MOVES.aspx"><div id="CONCEPT_MOVEMENT_MULTIPLE_TURN_MOVES" class="menuitem">Многоходовое движение</div></a>
+				<a href="CONCEPT_MOVEMENT_MOVEMENT_POINTS.aspx"><div id="CONCEPT_MOVEMENT_MOVEMENT_POINTS" class="menuitem">Очки передвижения</div></a>
+				<a href="CONCEPT_MOVEMENT_EXPENDING_MOVEMENT_POINTS.aspx"><div id="CONCEPT_MOVEMENT_EXPENDING_MOVEMENT_POINTS" class="menuitem">Трата очков передвижения</div></a>
+				<a href="CONCEPT_MOVEMENT_ROADS_AND_RAILROADS.aspx"><div id="CONCEPT_MOVEMENT_ROADS_AND_RAILROADS" class="menuitem">Дороги и железные дороги</div></a>
+				<a href="CONCEPT_MOVEMENT_ROADS_AND_RAILROADS_AND_RIVERS.aspx"><div id="CONCEPT_MOVEMENT_ROADS_AND_RAILROADS_AND_RIVERS" class="menuitem">Дороги и реки</div></a>
+				<a href="CONCEPT_MOVEMENT_STACKING_LIMITS.aspx"><div id="CONCEPT_MOVEMENT_STACKING_LIMITS" class="menuitem">Ограничения расположения</div></a>
+				<a href="CONCEPT_MOVEMENT_COMBAT.aspx"><div id="CONCEPT_MOVEMENT_COMBAT" class="menuitem">Движение в бою</div></a>
+				<a href="CONCEPT_MOVEMENT_COMBAT_ATTACK_ORDERS.aspx"><div id="CONCEPT_MOVEMENT_COMBAT_ATTACK_ORDERS" class="menuitem">Приказы на атаку</div></a>
+				<a href="CONCEPT_MOVEMENT_COMBAT_ZONES_OF_CONTROL.aspx"><div id="CONCEPT_MOVEMENT_COMBAT_ZONES_OF_CONTROL" class="menuitem">Зоны контроля</div></a>
+				<a href="CONCEPT_MOVEMENT_NAVAL.aspx"><div id="CONCEPT_MOVEMENT_NAVAL" class="menuitem">Передвижение морских юнитов</div></a>
+				<a href="CONCEPT_MOVEMENT_EMBARKING.aspx"><div id="CONCEPT_MOVEMENT_EMBARKING" class="menuitem">Наземные юниты на борту</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_AIRCOMBAT" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_AIRCOMBAT_CONTENT');"><div id="HEADER_AIRCOMBAT" class="menugroup">Правила воздушного боя</div></a><div id="HEADER_AIRCOMBAT_CONTENT">
+				<a href="CONCEPT_AIR_POWER.aspx"><div id="CONCEPT_AIR_POWER" class="menuitem">Воздушная мощь</div></a>
+				<a href="CONCEPT_AIR_POWER_AIR_UNITS.aspx"><div id="CONCEPT_AIR_POWER_AIR_UNITS" class="menuitem">Воздушные юниты</div></a>
+				<a href="CONCEPT_AIR_POWER_HELICOPTER_GUNSHIPS.aspx"><div id="CONCEPT_AIR_POWER_HELICOPTER_GUNSHIPS" class="menuitem">Штурмовые вертолеты</div></a>
+				<a href="CONCEPT_AIR_POWER_HELICOPTER_GUNSHIPS_MOVEMENT.aspx"><div id="CONCEPT_AIR_POWER_HELICOPTER_GUNSHIPS_MOVEMENT" class="menuitem">Движение вертолетов</div></a>
+				<a href="CONCEPT_AIR_POWER_HELICOPTER_GUNSHIPS_ANTI_TANK.aspx"><div id="CONCEPT_AIR_POWER_HELICOPTER_GUNSHIPS_ANTI_TANK" class="menuitem">Противотанковый бонус</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES.aspx"><div id="CONCEPT_AIR_POWER_BASES" class="menuitem">Авиабазы</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_LOCATION.aspx"><div id="CONCEPT_AIR_POWER_BASES_LOCATION" class="menuitem">Расположение баз</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_FIGHTERS.aspx"><div id="CONCEPT_AIR_POWER_BASES_FIGHTERS" class="menuitem">Истребители</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_BOMBERS.aspx"><div id="CONCEPT_AIR_POWER_BASES_BOMBERS" class="menuitem">Бомбардировщики</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_STEALTH.aspx"><div id="CONCEPT_AIR_POWER_BASES_STEALTH" class="menuitem">Бомбардировщики "Стелс"</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_ATOMIC.aspx"><div id="CONCEPT_AIR_POWER_BASES_ATOMIC" class="menuitem">Атомные бомбы</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_MISSILES.aspx"><div id="CONCEPT_AIR_POWER_BASES_MISSILES" class="menuitem">Все ракеты</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT.aspx"><div id="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT" class="menuitem">Корабли как базы</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT_CARRIER.aspx"><div id="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT_CARRIER" class="menuitem">Авианосец</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT_MISSLE_CRUISER.aspx"><div id="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT_MISSLE_CRUISER" class="menuitem">Ракетный крейсер</div></a>
+				<a href="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT_NUCLEAR_SUBMARINE.aspx"><div id="CONCEPT_AIR_POWER_BASES_NAVAL_UNIT_NUCLEAR_SUBMARINE" class="menuitem">Атомная подводная лодка</div></a>
+				<a href="CONCEPT_AIR_POWER_STACKING.aspx"><div id="CONCEPT_AIR_POWER_STACKING" class="menuitem">Авиация на одной клетке</div></a>
+				<a href="CONCEPT_AIR_POWER_RANGE.aspx"><div id="CONCEPT_AIR_POWER_RANGE" class="menuitem">Радиус полета</div></a>
+				<a href="CONCEPT_AIR_POWER_RECON.aspx"><div id="CONCEPT_AIR_POWER_RECON" class="menuitem">Разведка</div></a>
+				<a href="CONCEPT_AIR_POWER_MISSIONS.aspx"><div id="CONCEPT_AIR_POWER_MISSIONS" class="menuitem">Задачи</div></a>
+				<a href="CONCEPT_AIR_POWER_REBASE.aspx"><div id="CONCEPT_AIR_POWER_REBASE" class="menuitem">Смена базы</div></a>
+				<a href="CONCEPT_AIR_POWER_AIR_STRIKE.aspx"><div id="CONCEPT_AIR_POWER_AIR_STRIKE" class="menuitem">Воздушный удар</div></a>
+				<a href="CONCEPT_AIR_POWER_AIR_SWEEP.aspx"><div id="CONCEPT_AIR_POWER_AIR_SWEEP" class="menuitem">Зачистка неба</div></a>
+				<a href="CONCEPT_AIR_POWER_INTERCEPTION.aspx"><div id="CONCEPT_AIR_POWER_INTERCEPTION" class="menuitem">Перехват</div></a>
+				<a href="CONCEPT_AIR_POWER_AIR_STRIKE_RULES.aspx"><div id="CONCEPT_AIR_POWER_AIR_STRIKE_RULES" class="menuitem">Воздушные удары</div></a>
+				<a href="CONCEPT_AIR_POWER_INTERCEPTION_RULES.aspx"><div id="CONCEPT_AIR_POWER_INTERCEPTION_RULES" class="menuitem">Перехват</div></a>
+				<a href="CONCEPT_AIR_POWER_AIR_SWEEPS_RULES.aspx"><div id="CONCEPT_AIR_POWER_AIR_SWEEPS_RULES" class="menuitem">Зачистки неба</div></a>
+				<a href="CONCEPT_AIR_POWER_MISSILES_RULES.aspx"><div id="CONCEPT_AIR_POWER_MISSILES_RULES" class="menuitem">Ракеты</div></a>
+				<a href="CONCEPT_AIR_POWER_ATOMIC_BOMBS_RULES.aspx"><div id="CONCEPT_AIR_POWER_ATOMIC_BOMBS_RULES" class="menuitem">Атомные бомбы</div></a>
+				<a href="CONCEPT_AIR_POWER_NUCLEAR_MISSILES_RULES.aspx"><div id="CONCEPT_AIR_POWER_NUCLEAR_MISSILES_RULES" class="menuitem">Ядерная ракета</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_RUBARB" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_RUBARB_CONTENT');"><div id="HEADER_RUBARB" class="menugroup">Руины и варвары</div></a><div id="HEADER_RUBARB_CONTENT">
+				<a href="CONCEPT_BARBARIANS_AND_ANCIENT_RUINS.aspx"><div id="CONCEPT_BARBARIANS_AND_ANCIENT_RUINS" class="menuitem">Руины и варвары</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS.aspx"><div id="CONCEPT_ANCIENT_RUINS" class="menuitem">Древние руины</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS" class="menuitem">Польза от руин</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS_FREE_TECHNOLOGY.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS_FREE_TECHNOLOGY" class="menuitem">Технология без затрат</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS_MAP.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS_MAP" class="menuitem">Карта</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS_WEAPONS.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS_WEAPONS" class="menuitem">Модернизация оружия</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS_SURVIVORS.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS_SURVIVORS" class="menuitem">Выжившие</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS_TREASURE.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS_TREASURE" class="menuitem">Сокровище</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS_CULTURE.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS_CULTURE" class="menuitem">Культура</div></a>
+				<a href="CONCEPT_ANCIENT_RUINS_BENEFITS_SETTLERS_AND_WORKERS.aspx"><div id="CONCEPT_ANCIENT_RUINS_BENEFITS_SETTLERS_AND_WORKERS" class="menuitem">Поселенцы и рабочие</div></a>
+				<a href="CONCEPT_BARBARIANS.aspx"><div id="CONCEPT_BARBARIANS" class="menuitem">Варвары</div></a>
+				<a href="CONCEPT_BARBARIANS_ENCAMPMENTS.aspx"><div id="CONCEPT_BARBARIANS_ENCAMPMENTS" class="menuitem">Лагеря варваров</div></a>
+				<a href="CONCEPT_BARBARIANS_ENCAMPMENTS_DESTROYING.aspx"><div id="CONCEPT_BARBARIANS_ENCAMPMENTS_DESTROYING" class="menuitem">Разрушение лагеря</div></a>
+				<a href="CONCEPT_BARBARIANS_ENCAMPMENTS_NEW.aspx"><div id="CONCEPT_BARBARIANS_ENCAMPMENTS_NEW" class="menuitem">Новые лагеря</div></a>
+				<a href="CONCEPT_BARBARIANS_UNITS.aspx"><div id="CONCEPT_BARBARIANS_UNITS" class="menuitem">Варварские юниты</div></a>
+				<a href="CONCEPT_BARBARIANS_UNITS_NAVAL.aspx"><div id="CONCEPT_BARBARIANS_UNITS_NAVAL" class="menuitem">Корабли варваров</div></a>
+				<a href="CONCEPT_BARBARIANS_CAPTURING_CIVILIANS.aspx"><div id="CONCEPT_BARBARIANS_CAPTURING_CIVILIANS" class="menuitem">Мирные жители в плену</div></a>
+				<a href="CONCEPT_BARBARIANS_EXPERIENCE_POINT_LIMITS.aspx"><div id="CONCEPT_BARBARIANS_EXPERIENCE_POINT_LIMITS" class="menuitem">Ограничение очков опыта</div></a>
+				<a href="CONCEPT_BARBARIANS_THE_END.aspx"><div id="CONCEPT_BARBARIANS_THE_END" class="menuitem">Конец варваров</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_UNITS" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_UNITS_CONTENT');"><div id="HEADER_UNITS" class="menugroup">Юниты</div></a><div id="HEADER_UNITS_CONTENT">
+				<a href="CONCEPT_UNITS.aspx"><div id="CONCEPT_UNITS" class="menuitem">Юниты</div></a>
+				<a href="CONCEPT_UNITS_CONSTRUCTING.aspx"><div id="CONCEPT_UNITS_CONSTRUCTING" class="menuitem">Постройка юнитов</div></a>
+				<a href="CONCEPT_UNITS_CHARACTERISTICS.aspx"><div id="CONCEPT_UNITS_CHARACTERISTICS" class="menuitem">Характеристики юнита</div></a>
+				<a href="CONCEPT_UNITS_MOVEMENT_SPEED.aspx"><div id="CONCEPT_UNITS_MOVEMENT_SPEED" class="menuitem">Скорость перемещения</div></a>
+				<a href="CONCEPT_UNITS_COMBAT_STRENGTH.aspx"><div id="CONCEPT_UNITS_COMBAT_STRENGTH" class="menuitem">Боевая мощь</div></a>
+				<a href="CONCEPT_UNITS_SPECIAL_ABILITIES.aspx"><div id="CONCEPT_UNITS_SPECIAL_ABILITIES" class="menuitem">Особые умения юнитов</div></a>
+				<a href="CONCEPT_UNITS_NATIONAL_UNITS.aspx"><div id="CONCEPT_UNITS_NATIONAL_UNITS" class="menuitem">Национальные юниты</div></a>
+				<a href="CONCEPT_UNITS_MOVEMENT.aspx"><div id="CONCEPT_UNITS_MOVEMENT" class="menuitem">Перемещение юнитов</div></a>
+				<a href="CONCEPT_UNITS_COMBAT.aspx"><div id="CONCEPT_UNITS_COMBAT" class="menuitem">Бой юнитов</div></a>
+				<a href="CONCEPT_UNITS_NON_COMBAT_UNITS.aspx"><div id="CONCEPT_UNITS_NON_COMBAT_UNITS" class="menuitem">Мирные жители</div></a>
+				<a href="CONCEPT_UNITS_COMBAT_UNITS.aspx"><div id="CONCEPT_UNITS_COMBAT_UNITS" class="menuitem">Боевые юниты</div></a>
+				<a href="CONCEPT_UNITS_NAVAL_UNITS.aspx"><div id="CONCEPT_UNITS_NAVAL_UNITS" class="menuitem">Корабли</div></a>
+				<a href="CONCEPT_UNITS_AIR_UNITS.aspx"><div id="CONCEPT_UNITS_AIR_UNITS" class="menuitem">Воздушные юниты</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_VICTORY" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_VICTORY_CONTENT');"><div id="HEADER_VICTORY" class="menugroup">Победа</div></a><div id="HEADER_VICTORY_CONTENT">
+				<a href="CONCEPT_TECHNOLOGY_VICTORY.aspx"><div id="CONCEPT_TECHNOLOGY_VICTORY" class="menuitem">Технологии и победа</div></a>
+				<a href="CONCEPT_VICTORY.aspx"><div id="CONCEPT_VICTORY" class="menuitem">Победа и поражение</div></a>
+				<a href="CONCEPT_VICTORY_CITY_STATES.aspx"><div id="CONCEPT_VICTORY_CITY_STATES" class="menuitem">Города-государства и победа</div></a>
+				<a href="CONCEPT_VICTORY_DEFEAT.aspx"><div id="CONCEPT_VICTORY_DEFEAT" class="menuitem">Как проиграть</div></a>
+				<a href="CONCEPT_VICTORY_DEFEAT_LOSING_LAST_CITY.aspx"><div id="CONCEPT_VICTORY_DEFEAT_LOSING_LAST_CITY" class="menuitem">Потеря последнего города</div></a>
+				<a href="CONCEPT_VICTORY_DEFEAT_ANOTHER_WINNER.aspx"><div id="CONCEPT_VICTORY_DEFEAT_ANOTHER_WINNER" class="menuitem">Победа другой державы</div></a>
+				<a href="CONCEPT_VICTORY_DEFEAT_TIME_OUT.aspx"><div id="CONCEPT_VICTORY_DEFEAT_TIME_OUT" class="menuitem">2050 год</div></a>
+				<a href="CONCEPT_VICTORY_VICTORY.aspx"><div id="CONCEPT_VICTORY_VICTORY" class="menuitem">Как выиграть</div></a>
+				<a href="CONCEPT_VICTORY_VICTORY_DOMINATION.aspx"><div id="CONCEPT_VICTORY_VICTORY_DOMINATION" class="menuitem">Военная победа</div></a>
+				<a href="CONCEPT_VICTORY_RAZING_ORIGINAL_CAPITAL.aspx"><div id="CONCEPT_VICTORY_RAZING_ORIGINAL_CAPITAL" class="menuitem">Уничтожение столицы</div></a>
+				<a href="CONCEPT_VICTORY_CAPITAL_AND_ORIGINAL_CAPITAL.aspx"><div id="CONCEPT_VICTORY_CAPITAL_AND_ORIGINAL_CAPITAL" class="menuitem">Историческая столица</div></a>
+				<a href="CONCEPT_VICTORY_VICTORY_SCIENCE.aspx"><div id="CONCEPT_VICTORY_VICTORY_SCIENCE" class="menuitem">Научная победа</div></a>
+				<a href="CONCEPT_VICTORY_SPACESHIP_PARTS.aspx"><div id="CONCEPT_VICTORY_SPACESHIP_PARTS" class="menuitem">Детали космич. корабля</div></a>
+				<a href="CONCEPT_VICTORY_VICTORY_CULTURAL.aspx"><div id="CONCEPT_VICTORY_VICTORY_CULTURAL" class="menuitem">Культурная победа</div></a>
+				<a href="CONCEPT_VICTORY_VICTORY_DIPLOMATIC.aspx"><div id="CONCEPT_VICTORY_VICTORY_DIPLOMATIC" class="menuitem">Дипломатическая победа</div></a>
+				<a href="CONCEPT_VICTORY_DIPLOMATIC_VOTING.aspx"><div id="CONCEPT_VICTORY_DIPLOMATIC_VOTING" class="menuitem">Делегаты</div></a>
+				<a href="CONCEPT_VICTORY_MINOR_CIV_LIBERATION.aspx"><div id="CONCEPT_VICTORY_MINOR_CIV_LIBERATION" class="menuitem">Освобождение</div></a>
+				<a href="CONCEPT_VICTORY_END_OF_TIME.aspx"><div id="CONCEPT_VICTORY_END_OF_TIME" class="menuitem">Конец времени</div></a>
+				<a href="CONCEPT_VICTORY_POINTS.aspx"><div id="CONCEPT_VICTORY_POINTS" class="menuitem">Определение рейтинга</div></a>
+				<a href="CONCEPT_SCORE.aspx"><div id="CONCEPT_SCORE" class="menuitem">Игровой рейтинг</div></a>
+				<a href="CONCEPT_SCORE_ELIMINATION.aspx"><div id="CONCEPT_SCORE_ELIMINATION" class="menuitem">Уничтожение</div></a>
+				<a href="CONCEPT_SCORE_TIME_TO_VICTORY.aspx"><div id="CONCEPT_SCORE_TIME_TO_VICTORY" class="menuitem">Время до победы</div></a>
+				<a href="CONCEPT_SCORE_VICTORY_POINTS.aspx"><div id="CONCEPT_SCORE_VICTORY_POINTS" class="menuitem">Очки победы</div></a>
+				<a href="CONCEPT_SCORE_MAP_SIZE.aspx"><div id="CONCEPT_SCORE_MAP_SIZE" class="menuitem">Карта и сложность игры</div></a>
+				<a href="CONCEPT_SCORE_CURRENT_SCORE.aspx"><div id="CONCEPT_SCORE_CURRENT_SCORE" class="menuitem">Ваш текущий рейтинг</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_ESPIONAGE" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_ESPIONAGE_CONTENT');"><div id="HEADER_ESPIONAGE" class="menugroup">Шпионаж</div></a><div id="HEADER_ESPIONAGE_CONTENT">
+				<a href="CONCEPT_ESPIONAGE_SPIES.aspx"><div id="CONCEPT_ESPIONAGE_SPIES" class="menuitem">Шпионы и дипломаты</div></a>
+				<a href="CONCEPT_ESPIONAGE_MOVING_SPIES.aspx"><div id="CONCEPT_ESPIONAGE_MOVING_SPIES" class="menuitem">Перемещение шпионов</div></a>
+				<a href="CONCEPT_ESPIONAGE_MORE.aspx"><div id="CONCEPT_ESPIONAGE_MORE" class="menuitem">Увеличение числа шпионов</div></a>
+				<a href="CONCEPT_ESPIONAGE_STEALING_TECHS.aspx"><div id="CONCEPT_ESPIONAGE_STEALING_TECHS" class="menuitem">Кража технологий</div></a>
+				<a href="CONCEPT_ESPIONAGE_CANT_STEAL_ANYMORE.aspx"><div id="CONCEPT_ESPIONAGE_CANT_STEAL_ANYMORE" class="menuitem">Менее развитые цивилизации</div></a>
+				<a href="CONCEPT_ESPIONAGE_RIG_ELECTION.aspx"><div id="CONCEPT_ESPIONAGE_RIG_ELECTION" class="menuitem">Шпионы в городах-государствах</div></a>
+				<a href="CONCEPT_ESPIONAGE_SURVEILLANCE.aspx"><div id="CONCEPT_ESPIONAGE_SURVEILLANCE" class="menuitem">Устанавливает наблюдение</div></a>
+				<a href="CONCEPT_ESPIONAGE_COUNTER_INTEL.aspx"><div id="CONCEPT_ESPIONAGE_COUNTER_INTEL" class="menuitem">Контрразведка</div></a>
+				<a href="CONCEPT_ESPIONAGE_POLICE_STATION.aspx"><div id="CONCEPT_ESPIONAGE_POLICE_STATION" class="menuitem">Жандармерия и полиция</div></a>
+				<a href="CONCEPT_ESPIONAGE_NATIONAL_INTELLIGENCE.aspx"><div id="CONCEPT_ESPIONAGE_NATIONAL_INTELLIGENCE" class="menuitem">ЦРУ</div></a>
+				<a href="CONCEPT_ESPIONAGE_GREAT_FIREWALL.aspx"><div id="CONCEPT_ESPIONAGE_GREAT_FIREWALL" class="menuitem">Золотой Щит</div></a>
+				<a href="CONCEPT_ESPIONAGE_PROMOTIONS.aspx"><div id="CONCEPT_ESPIONAGE_PROMOTIONS" class="menuitem">Опыт шпионов</div></a>
+				<a href="CONCEPT_ESPIONAGE_GETTING_CAUGHT.aspx"><div id="CONCEPT_ESPIONAGE_GETTING_CAUGHT" class="menuitem">Обнаружение шпиона</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_RELIGION" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_RELIGION_CONTENT');"><div id="HEADER_RELIGION" class="menugroup">Религия</div></a><div id="HEADER_RELIGION_CONTENT">
+				<a href="CONCEPT_RELIGION_FAITH_EARNING.aspx"><div id="CONCEPT_RELIGION_FAITH_EARNING" class="menuitem">Очки веры</div></a>
+				<a href="CONCEPT_RELIGION_PANTHEONS.aspx"><div id="CONCEPT_RELIGION_PANTHEONS" class="menuitem">Пантеоны</div></a>
+				<a href="CONCEPT_RELIGION_BELIEFS.aspx"><div id="CONCEPT_RELIGION_BELIEFS" class="menuitem">Верования</div></a>
+				<a href="CONCEPT_RELIGION_PANTHEON_BELIEFS.aspx"><div id="CONCEPT_RELIGION_PANTHEON_BELIEFS" class="menuitem">Верования пантеона</div></a>
+				<a href="CONCEPT_RELIGION_FOUNDER.aspx"><div id="CONCEPT_RELIGION_FOUNDER" class="menuitem">Верования основателя</div></a>
+				<a href="CONCEPT_RELIGION_FOLLOWER.aspx"><div id="CONCEPT_RELIGION_FOLLOWER" class="menuitem">Верования почитателей</div></a>
+				<a href="CONCEPT_RELIGION_ENHANCER.aspx"><div id="CONCEPT_RELIGION_ENHANCER" class="menuitem">Верования укрепления</div></a>
+				<a href="CONCEPT_RELIGION_FAITH_SPENDING.aspx"><div id="CONCEPT_RELIGION_FAITH_SPENDING" class="menuitem">Использование очков веры</div></a>
+				<a href="CONCEPT_RELIGION_FOUNDING_RELIGION.aspx"><div id="CONCEPT_RELIGION_FOUNDING_RELIGION" class="menuitem">Основание религии</div></a>
+				<a href="CONCEPT_RELIGION_ENHANCING_RELIGION.aspx"><div id="CONCEPT_RELIGION_ENHANCING_RELIGION" class="menuitem">Укрепление религии</div></a>
+				<a href="CONCEPT_RELIGION_SPREADING_RELIGION.aspx"><div id="CONCEPT_RELIGION_SPREADING_RELIGION" class="menuitem">Распространение религии</div></a>
+				<a href="CONCEPT_RELIGION_BUILDINGS.aspx"><div id="CONCEPT_RELIGION_BUILDINGS" class="menuitem">Религиозные постройки</div></a>
+				<a href="CONCEPT_RELIGION_UNITS.aspx"><div id="CONCEPT_RELIGION_UNITS" class="menuitem">Религиозные юниты</div></a>
+				<a href="CONCEPT_RELIGION_MAJORITY.aspx"><div id="CONCEPT_RELIGION_MAJORITY" class="menuitem">Доминирующая религия</div></a>
+				<a href="CONCEPT_RELIGION_DEFENDING.aspx"><div id="CONCEPT_RELIGION_DEFENDING" class="menuitem">Защита от религий</div></a>
+				<a href="CONCEPT_RELIGION_CITY_STATE_SPREAD_RELIGION.aspx"><div id="CONCEPT_RELIGION_CITY_STATE_SPREAD_RELIGION" class="menuitem">Религия и влияние на города-государства</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_TRADE" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_TRADE_CONTENT');"><div id="HEADER_TRADE" class="menugroup">Торговля</div></a><div id="HEADER_TRADE_CONTENT">
+				<a href="CONCEPT_TRADE_ROUTES.aspx"><div id="CONCEPT_TRADE_ROUTES" class="menuitem">Торговые пути</div></a>
+				<a href="CONCEPT_TRADE_CARAVAN.aspx"><div id="CONCEPT_TRADE_CARAVAN" class="menuitem">Караваны</div></a>
+				<a href="CONCEPT_TRADE_CARGO.aspx"><div id="CONCEPT_TRADE_CARGO" class="menuitem">Грузовые корабли</div></a>
+				<a href="CONCEPT_TRADE_EXTENDING.aspx"><div id="CONCEPT_TRADE_EXTENDING" class="menuitem">Увеличение длины торговых путей</div></a>
+				<a href="CONCEPT_TRADE_BOOST.aspx"><div id="CONCEPT_TRADE_BOOST" class="menuitem">Доход от построек</div></a>
+				<a href="CONCEPT_TRADE_WAR.aspx"><div id="CONCEPT_TRADE_WAR" class="menuitem">Влияние войны</div></a>
+				<a href="CONCEPT_TRADE_PILLAGE.aspx"><div id="CONCEPT_TRADE_PILLAGE" class="menuitem">Разграбление торгового пути</div></a>
+				<a href="CONCEPT_TRADE_RELIGION.aspx"><div id="CONCEPT_TRADE_RELIGION" class="menuitem">Торговые пути и религия</div></a>
+				<a href="CONCEPT_TRADE_SCIENCE.aspx"><div id="CONCEPT_TRADE_SCIENCE" class="menuitem">Торговые пути и наука</div></a>
+			</div></div>
+			<div id="GROUP_HEADER_WORLDCONGRESS" class="menugroupcontainer"><a href="javascript:togglediv('HEADER_WORLDCONGRESS_CONTENT');"><div id="HEADER_WORLDCONGRESS" class="menugroup">Всемирный конгресс</div></a><div id="HEADER_WORLDCONGRESS_CONTENT">
+				<a href="CONCEPT_CONGRESS.aspx"><div id="CONCEPT_CONGRESS" class="menuitem">Всемирный конгресс</div></a>
+				<a href="CONCEPT_CONGRESS_SESSIONS.aspx"><div id="CONCEPT_CONGRESS_SESSIONS" class="menuitem">Сессии</div></a>
+				<a href="CONCEPT_CONGRESS_RESOLUTIONS.aspx"><div id="CONCEPT_CONGRESS_RESOLUTIONS" class="menuitem">Резолюции</div></a>
+				<a href="CONCEPT_CONGRESS_PROJECTS.aspx"><div id="CONCEPT_CONGRESS_PROJECTS" class="menuitem">Международные проекты</div></a>
+				<a href="CONCEPT_CONGRESS_DELEGATES.aspx"><div id="CONCEPT_CONGRESS_DELEGATES" class="menuitem">Делегаты</div></a>
+				<a href="CONCEPT_CONGRESS_TRADING.aspx"><div id="CONCEPT_CONGRESS_TRADING" class="menuitem">Торговля голосами</div></a>
+				<a href="CONCEPT_CONGRESS_INTRIGUE.aspx"><div id="CONCEPT_CONGRESS_INTRIGUE" class="menuitem">Заговоры</div></a>
+				<a href="CONCEPT_CONGRESS_UN.aspx"><div id="CONCEPT_CONGRESS_UN" class="menuitem">ООН</div></a>
+				<a href="CONCEPT_CONGRESS_VICTORY.aspx"><div id="CONCEPT_CONGRESS_VICTORY" class="menuitem">Дипломатическая победа</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

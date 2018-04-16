@@ -1,0 +1,31 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Robotyka</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_ROBOTICS.png" alt="Robotyka" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">7700 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ROCKETRY.aspx" onmouseover="return tooltip('Technika rakietowa');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ROCKETRY.png" /></a><a href="TECH_COMPUTERS.aspx" onmouseover="return tooltip('Komputer&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMPUTERS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala wynale&#378;&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_NUCLEAR_FUSION.aspx" onmouseover="return tooltip('Reakcja termoj&#261;drowa');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_NUCLEAR_FUSION.png" /></a><a href="TECH_STEALTH.aspx" onmouseover="return tooltip('Technologia stealth');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_STEALTH.png" /></a><a href="TECH_NANOTECHNOLOGY.aspx" onmouseover="return tooltip('Nanotechnologia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_NANOTECHNOLOGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Odblokowuje jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_MISSILE_CRUISER.aspx" onmouseover="return tooltip('Kr&#261;&#380;ownik rakietowy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_MISSILE_CRUISER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala budowa&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_SPACESHIP_FACTORY.aspx" onmouseover="return tooltip('Fabryka SK');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_SPACESHIP_FACTORY.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Robotyka</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Robotyka to wa&#380;na technologia w wy&#347;cigu kosmicznym, umo&#380;liwiaj&#261;ca zbudowanie <span class="color_positive_text">fabryki SK</span>, przyspieszaj&#261;cej wytwarzanie cz&#281;&#347;ci statku kosmicznego. Pozwala te&#380; na wodowanie <span class="color_positive_text">kr&#261;&#380;ownik&oacute;w rakietowych</span>, kt&oacute;re mog&#261; przenosi&#263; do trzech pocisk&oacute;w i wykrywa&#263; wrogie okr&#281;ty podwodne.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cytat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />„1. Robot nie mo&#380;e skrzywdzi&#263; cz&#322;owieka, ani przez zaniechanie dzia&#322;ania dopu&#347;ci&#263;, aby cz&#322;owiek dozna&#322; krzywdy.<br />2. Robot musi by&#263; pos&#322;uszny rozkazom cz&#322;owieka, chyba &#380;e stoj&#261; one w sprzeczno&#347;ci z Pierwszym Prawem.<br />3. Robot musi chroni&#263; sam siebie, je&#347;li tylko nie stoi to w sprzeczno&#347;ci z Pierwszym lub Drugim Prawem.”<br /> – Isaac Asimov<br /></div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Cho&#263; pierwsze automaty i maszyny pojawi&#322;y si&#281; ju&#380; w I wieku naszej ery, to w pe&#322;ni samodzielna maszyna zosta&#322;a stworzona dopiero w po&#322;owie XX wieku. Pisarz science fiction Isaac Asimov, nie&#347;wiadomie u&#380;y&#322; terminu „robotyka” w swym opowiadaniu „K&#322;amca!” z 1941 roku, s&#261;dz&#261;c, &#380;e takie s&#322;owo musi ju&#380; istnie&#263;, skoro u&#380;ywamy takich wyraz&oacute;w jak „elektronika”. Robotyka zajmuje si&#281; badaniem wszystkich aspekt&oacute;w elektroniki, mechaniki i oprogramowania robot&oacute;w oraz sposob&oacute;w ich interakcji i postrzegania otaczaj&#261;cego je &#347;wiata.<br /><br />Proste roboty przemys&#322;owe s&#261; u&#380;ywane od pocz&#261;tku lat 60. XX wieku, ale wci&#261;&#380; konstruuje si&#281; wydajniejsze i bardziej wyspecjalizowane egzemplarze. Pr&oacute;cz tworzenia maszyn wykonuj&#261;cych w fabrykach zadania wymagaj&#261;ce precyzji i powtarzalno&#347;ci, robotyka zajmuje si&#281; te&#380; projektowaniem protez, humanoidalnych robot&oacute;w poruszaj&#261;cych si&#281; na dw&oacute;ch nogach i mog&#261;cych rozpoznawa&#263; i na&#347;ladowa&#263; ludzkie gesty, emocje i wyrazy twarzy.<br /><br /> Przemys&#322; rozrywkowy zarobi&#322; miliardy, graj&#261;c na obawach, &#380;e roboty kiedy&#347; si&#281; zbuntuj&#261; i zniewol&#261; swych dawnych pan&oacute;w, jednak robotyka jest wci&#261;&#380; bardzo ograniczona przez rozw&oacute;j sztucznej inteligencji. Roboty &#347;wietnie radz&#261; sobie z wykonywaniem serii zleconych zada&#324; lub polece&#324;, ale wci&#261;&#380; nie s&#261; zdolne do autonomicznego my&#347;lenia i rozumowania, co ogranicza ich zastosowanie w najbli&#380;szej przysz&#322;o&#347;ci (zdaje si&#281;, &#380;e minie troch&#281; czasu, nim pokonaj&#261; nas &#347;wiadome odkurzacze).
+      </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

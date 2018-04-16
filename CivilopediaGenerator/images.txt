@@ -1,0 +1,48 @@
+UNPACKING FILES
+
+Open Steam.
+Goto Library.
+Select Tools from the dropdown to the right of Search.
+Run Sid Meier's Civilization V SDK.
+Select Nexus.
+Select the Nexus tab.
+Select Script Browser.
+Select Extract PAK (*.fpk) files and choose Run Script.
+Run D:\utils\CivDDSUnpacker\CivDdsUnpacker.exe
+Input Directory > D:\Games\Steam\steamapps\common\sid meier's civilization v\resources\(directory to extract) - DX9 is where most of the files are.
+Output Directory > D:\temp\unpack (or desired directory)
+Click Unpack
+
+MAIN IMAGES (this has changed - left here in case need to do these manually, though size is now 256 x 256)
+
+Everything is wrapped in the techachievedframe.png file which is 220 x 220.
+
+When pulling images, use the 256 version of the image files.
+Crop out image to its 256 x 256 piece.
+Paste into new file.
+Resize to 210 x 210.
+Increase canvas size to 220 x 220, deleting the white background that is added around the edge.
+Copy image.
+Create a new layer in techachievedframe.png.
+Paste into new layer.
+Save as desired file in large directory.
+Resize to 64 x 64.
+Save as desired file in small directory.
+
+NEW METHOD FOR MAIN IMAGES
+
+Main images are now pulled from the PNG sheets in the D:\temp\unpack directory.
+There are some cases where a file may not be found. This will occur if the unpacker did not move a DDS file to a PNG in the unpack directory. When this happens, open the offending DDS file in Paint.NET and save it as a PNG to the D:\temp\unpack directory.
+
+TAB IMAGES
+
+All saved to images directory.
+tab_whatever_off.png is the off version
+tab_whatever_on.png is the on version
+All imagse are 42 x 49.
+
+RESOURCE IMAGES
+
+All saved to images directory.
+All images are 22 x 22.
+These can usually be found in fonticons.png

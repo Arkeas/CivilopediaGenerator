@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: гетайров</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_GREEK_COMPANIONCAVALRY.png" alt="гетайров" class="contentimage" />
+	<div class="contentleft">
+		<h2>Стоимость:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">75 <img src="/civilopedia/images/production.png" alt="production" /> / 150 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Тип юнита:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Конница</div></div></div></div></div></div></div></div>
+		<h2>Бой:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Перемещение:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Цивилизация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_GREECE.aspx" onmouseover="return tooltip('Греция');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_GREECE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Возможности:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Не получает бонусов от местности в обороне');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Может перемещаться после атаки');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_SPAWN_GENERALS_I.aspx" onmouseover="return tooltip('Великие полководцы I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Штраф при атаке городов (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Нужные ресурсы:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('лошадей');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Нужные технологии:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_HORSEBACK_RIDING.aspx" onmouseover="return tooltip('Верховая езда');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_HORSEBACK_RIDING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Устаревает после:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Рыцарство');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Модернизировать</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_KNIGHT.aspx" onmouseover="return tooltip('рыцарей');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_KNIGHT.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Замещает:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_HORSEMAN.aspx" onmouseover="return tooltip('всадников');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HORSEMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">гетайров</div>
+		<h2>Игровая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Быстрые и мощные конные подразделения начала игры. Уязвимы для копейщиков. Их могут создавать только греки. Эти подразделения быстрее и <img src="/civilopedia/images/strength.png" alt="strength" /> мощнее в бою, чем всадники, которых они замещают. Кроме того, они позволяют быстрее получать великих полководцев.</div></div></div></div></div></div></div></div>
+		<h2>Описание:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Гетайры - это уникальные греческие войска, замещающие всадников. Гетайры быстрее и мощнее обычных всадников, что делает их самой опасной кавалерией до появления рыцарей. Гетайры быстрее других подразделений порождают великого полководца. Кроме того, они могут перемещаться после атаки. Вместе с тем гетайры, как и все кавалерийские подразделения, уязвимы для копейщиков и пикинеров.</div></div></div></div></div></div></div></div>
+		<h2>Историческая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Гетайры, или "всадники-дружинники", это элитные кавалеристы, сопровождавшие в бою Александра Македонского. Термин "гетайры" происходит от названия македонской аристократии, из которой изначально формировались отряды конницы, хотя позже в нее входили представители благородных семейств союзников и покоренных народов. Каждый всадник был вооружен "ксистоном" (кавалерийским копьем) и "кописом" (изогнутым мечом) и носил бронзовую кирасу с наплечниками и шлем.<br /><br />Александр обычно выпускал своих дружинников на поле боя только тогда, когда все силы противника уже вступили в бой с фалангами. Гетайры наносили сокрушительный удар по вражескому флангу или тылу, и нередко атаки возглавлял сам Александр. Его противники так и не научились противодействовать такой тактике, что позволило Александру завоевать почти все земли, известные эллинистическому миру.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

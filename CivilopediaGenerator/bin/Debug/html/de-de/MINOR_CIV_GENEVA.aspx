@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Genf</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Genf</div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Urspr&uuml;nglich lag die Stadt auf einem H&uuml;gel &uuml;ber einem See. Der Ort wurde irgendwann in der Altsteinzeit besiedelt; sp&auml;ter lie&szlig; sich dort ein Stamm der ligurischen und pr&auml;keltischen Völker nieder. Um 500 v. Chr. war Genf eine von Kelten bewohnte befestigte Stadt, 121 v. Chr. wurde sie von den Römern eingenommen. Die Stadt wechselte in den kriegerischen Auseinandersetzungen der Nachbarstaaten mehrmals die Zugehörigkeit, bevor sie 1033 n. Chr. an den deutschen Kaiser fiel. Zu dieser Zeit war Genf bereits ein wichtiger Kirchensitz und der Bischof der Stadt war als F&uuml;rst mit L&auml;ndereien ein direkter Vasall des Kaisers des Heiligen Römischen Reichs.<br /><br />F&uuml;r die n&auml;chsten 500 Jahre stritten die Herzöge von Savoyen und der katholische Bischof um die Vorherrschaft in Genf. Als der letzte regierende Bischof 1533 fluchtartig die Stadt verlie&szlig;, unternahmen die B&uuml;rger von Genf den riskanten Versuch, gleichzeitig die katholische Regentschaft und die Savoyer loszuwerden - die Stadt verb&uuml;ndete sich mit dem protestantischen Staat Bern und rief 1536 die protestantische Genfer Republik aus. Auf diese Weise erhielt zwar die Bevölkerung von Genf die Macht zur&uuml;ck, wurde aber dadurch f&uuml;r Generationen von der umgebenden katholischen Schweizer Bevölkerung entfremdet. Noch im Jahr 1536 zog der protestantische Reformator Johannes Calvin in die Stadt und verweilte dort drei&szlig;ig Jahre lang bis zu seinem Tod. In Abwesenheit des Bischofs wurde er zum neuen geistlichen Oberhaupt. Die Stadt blieb noch viele Jahre sp&auml;ter eine Hochburg des protestantischen Glaubens, obgleich ein Gro&szlig;teil der Bevölkerung des historischen Teils bis zum fr&uuml;hen 17. Jahrhundert wieder zum Katholizismus &uuml;bertrat.<br /><br />Genf wurde w&auml;hrend der Französischen Revolution vor&uuml;bergehend von Frankreich annektiert. 1814 wurde es aber anl&auml;sslich des Wiener Kongresses in die Schweizer Konföderation aufgenommen; seine Gerichtsbarkeit wurde auf die f&uuml;nfzehn umliegenden Savoyer Gemeinden ausgedehnt. Der Kongress sah ausdr&uuml;cklich den Schutz dieser katholischen Savoyer Gemeinden vor religiöser Verfolgung vor. Im Gegenzug wurde die Neutralit&auml;t der Stadt garantiert. Dennoch hielten die Spannungen zwischen Katholiken und Protestanten an, bis 1907 in Genf ein Gesetz zur offiziellen Trennung von Kirche und Staat erlassen wurde. Seither hat hier keine Religionsgemeinschaft mehr Unterst&uuml;tzung von staatlicher bzw. st&auml;dtischer Seite erfahren.<br /><br />Nach dem Ersten Weltkrieg wurde Genf der Sitz des Völkerbundes und erhielt den Status einer "internationalen Stadt". Sein neuer Ruf setzte sich nach dem Zweiten Weltkrieg fort, als die Vereinten Nationen sich in der Stadt niederlie&szlig;en, mit zahlreichen anderen internationalen Körperschaften und Organisationen im Schlepptau. Seither ist Genf ein bl&uuml;hendes Wirtschafts- und Tourismuszentrum.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

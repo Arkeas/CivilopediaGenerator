@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Plastik</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_PLASTIC.png" alt="Plastik" class="contentimage" />
+	<div class="contentleft">
+		<h2>Kosten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">4100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Benötigte Technologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_RADIO.aspx" onmouseover="return tooltip('Funkwesen');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_RADIO.png" /></a><a href="TECH_REPLACEABLE_PARTS.aspx" onmouseover="return tooltip('Normbauteile');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_REPLACEABLE_PARTS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>F&uuml;hrt zu Technologien:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PENICILIN.aspx" onmouseover="return tooltip('Penicillin');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PENICILIN.png" /></a><a href="TECH_ATOMIC_THEORY.aspx" onmouseover="return tooltip('Atomtheorie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ATOMIC_THEORY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Freigeschaltete Einheiten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_INFANTRY.aspx" onmouseover="return tooltip('Infanterie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_INFANTRY.png" /></a><a href="UNIT_BRAZILIAN_PRACINHA.aspx" onmouseover="return tooltip('Pracinha');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_BRAZILIAN_PRACINHA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Freigeschaltete Geb&auml;ude:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_LABORATORY.aspx" onmouseover="return tooltip('Forschungslabor');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_LABORATORY.png" /></a><a href="BUILDING_CRISTO_REDENTOR.aspx" onmouseover="return tooltip('Cristo Redentor');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_CRISTO_REDENTOR.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Plastik</div>
+		<h2>Spielinformationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Ermöglicht den Bau des <span class="color_positive_text">Forschungslabors</span>, eines Geb&auml;udes, das die <img src="/civilopedia/images/research.png" alt="research" /> Wissenschaft in einer Stadt steigert. Ermöglicht au&szlig;erdem den Bau von <span class="color_positive_text">Infanterie</span>, einer einfachen Landeinheit im sp&auml;ten Spiel.</div></div></div></div></div></div></div></div>
+		
+		<h2>Zitat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Ich sag dir nur ein Wort, nur ein einziges Wort. Plastik!"<br /> - Buck Henry und Calder Willingham, Die Reifepr&uuml;fung<br /></div></div></div></div></div></div></div></div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Plastik ist ein leichtes, transparentes und widerstandsf&auml;higes Material, das Strom nur sehr schlecht leitet. Plastik gibt es in vielen verschiedenen Formen, einige h&auml;rter, andere biegsamer, wieder andere mit einer höheren oder niedrigeren Toleranz gegen&uuml;ber Hitze. Plastik kann geformt, gepresst oder in beinahe jede gew&uuml;nschte Form gedr&uuml;ckt werden. Es findet sich in jeder Facette des modernen Lebens und wird &uuml;berall genutzt, von Sto&szlig;d&auml;mpfern f&uuml;rs Auto &uuml;ber Prothesen und Beh&auml;lter f&uuml;r Babynahrung bis zu Infanterie-Waffen. Es ist einer der wichtigsten Bausteine des 21. Jahrhunderts.<br /><br />Das erste von Menschenhand erstellte Plastik wurde 1855 von dem Engl&auml;nder Alexander Parkes erfunden. Das Produkt, Parkesine, wurde aus Zellulose (Pflanzenzellen-Material) gemacht und als Ersatz f&uuml;r Elfenbein eingesetzt, welches aufgrund des weltweit schwindenden Walbestands immer schwerer zu bekommen war.<br /><br />Das erste vollkommen synthetische Plastik war Bakelit, erfunden im Jahre 1909 von dem belgisch-amerikanischen Erfinder Leo Hendrik Baekeland. Bakelit war g&uuml;nstig, stark und strapazierf&auml;hig. Es wurde benutzt, um Radios, Telefone, Griffe f&uuml;r Gebrauchsgegenst&auml;nde, Klaviertasten und Billardkugeln herzustellen. Obwohl es sehr widerstandsf&auml;hig ist, ist Bakelit auch sehr br&uuml;chig. Es wurde grö&szlig;tenteils durch g&uuml;nstigeres und biegsameres Plastik wie Polystyrol, PVC, Nylon und weitere exotischere Varianten, die im 20. Jahrhundert entstanden sind, ersetzt.<br /><br />Obwohl es im Moment &auml;u&szlig;erst g&uuml;nstig ist, bedarf das meiste Plastik f&uuml;r seine Herstellung vieler petrochemischer Produkte. Da dieser Treibstoff immer teurer wird, wird das Plastik es wohl auch werden. Es ist möglich, dass letztendlich irgendein neues Wundermaterial das allgegenw&auml;rtige Plastik irgendwann in der Zukunft ersetzen wird, aber vorerst bleibt Plastik unersetzlich.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

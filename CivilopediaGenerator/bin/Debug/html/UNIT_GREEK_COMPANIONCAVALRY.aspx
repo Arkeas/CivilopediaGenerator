@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Companion Cavalry</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_GREEK_COMPANIONCAVALRY.png" alt="Companion Cavalry" class="contentimage" />
+	<div class="contentleft">
+		<h2>Cost:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">75 <img src="/civilopedia/images/production.png" alt="production" /> / 150 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Combat Type:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Mounted Units</div></div></div></div></div></div></div></div>
+		<h2>Combat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Movement:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilization:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_GREECE.aspx" onmouseover="return tooltip('Greek Empire');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_GREECE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Abilities:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('No Defensive Terrain Bonuses');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Can Move After Attacking');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_SPAWN_GENERALS_I.aspx" onmouseover="return tooltip('Great Generals I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Penalty Attacking Cities (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Required Resources:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Horses');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Prerequisite Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_HORSEBACK_RIDING.aspx" onmouseover="return tooltip('Horseback Riding');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_HORSEBACK_RIDING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Becomes Obsolete with:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Chivalry');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Upgrade Unit</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_KNIGHT.aspx" onmouseover="return tooltip('Knight');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_KNIGHT.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Replaces:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_HORSEMAN.aspx" onmouseover="return tooltip('Horseman');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HORSEMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Companion Cavalry</div>
+		<h2>Game Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Fast and powerful early game Mounted Unit. Weak to Spearmen. Only the Greeks may build it. This Unit is faster, has a higher <img src="/civilopedia/images/strength.png" alt="strength" /> Combat Strength and helps produce Great Generals more quickly than the Horseman which it replaces.</div></div></div></div></div></div></div></div>
+		<h2>Strategy:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Companion Cavalry are Greek unique units, replacing the Horseman. Companion Cavalry are faster and more powerful than the Horseman unit, making them the most dangerous cavalry units until the arrival of the Knight. Companion Cavalry help generate Great Generals more rapidly than other units. In addition, they can move after attacking. Companion Cavalry are mounted, and still vulnerable to Spearmen and Pikemen attack.</div></div></div></div></div></div></div></div>
+		<h2>Historical Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">The hetairoi, or "companion cavalry," were elite horsemen who accompanied Alexander the Great into battle. The term "hetairoi" derives from the name of the Macedonian aristocracy, and the companion cavalry came from only the best Macedonian families (though later this was expanded to include the nobility of allied and subject peoples). Each cavalryman carried a "xyston" (thrusting spear), and "kopis" (curved sword), and wore a bronze cuirass, shoulder pads and helmet.<br /><br />In battle, Alexander usually held back the companions until the enemy was fully engaged with his phalanx units. Alexander himself would then lead his companions against the enemy's flank or rear, sowing confusion and dismay in the enemy army. The opposing forces never found a satisfactory answer to this combination, and with it Alexander conquered most of the known world.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

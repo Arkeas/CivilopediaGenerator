@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Авиация</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_FLIGHT.png" alt="Авиация" class="contentimage" />
+	<div class="contentleft">
+		<h2>Стоимость:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">3100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Нужные технологии:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_STEAM_POWER.aspx" onmouseover="return tooltip('Паровой двигатель');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_STEAM_POWER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ведет к технологиям:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_BALLISTICS.aspx" onmouseover="return tooltip('баллистических ракет');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_BALLISTICS.png" /></a><a href="TECH_ELECTRONICS.aspx" onmouseover="return tooltip('Электроника');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRONICS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Открывает юниты:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_TRIPLANE.aspx" onmouseover="return tooltip('Триплан');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_TRIPLANE.png" /></a><a href="UNIT_WWI_BOMBER.aspx" onmouseover="return tooltip('Двухмоторный бомбардировщик');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_WWI_BOMBER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Открывает здания:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_PRORA_RESORT.aspx" onmouseover="return tooltip('"Прорский колосс"');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_PRORA_RESORT.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Авиация</div>
+		<h2>Игровая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Позволяет строить <span class="color_positive_text">трипланы</span> - самолеты, способные добиться господства в воздухе, и <span class="color_positive_text">двухмоторные бомбардировщики</span>, которые эффективны против наземных войск и городов.</div></div></div></div></div></div></div></div>
+		<h2>Особые возможности:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Моаи Золото увеличивается на 1<br />Шато Культура увеличивается на 1<br />Шато Золото увеличивается на 2<br /></div></div></div></div></div></div></div></div>
+		<h2>Цитата:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Воздухоплавание не было ни наукой, ни отраслью промышленности. Оно было чудом".<br /> - Игорь Сикорский<br /></div></div></div></div></div></div></div></div>
+		<h2>Историческая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Человек всегда мечтал о покорении неба. Известны проекты летательных аппаратов Леонардо да Винчи, и этот мыслитель был не одинок. Первые энтузиасты авиации обращались к природе и предлагали машины, имитирующие форму и движение птичьих крыльев (они называются орнитоптеры). Но у них не было ни материалов, ни двигателей, ни знания аэродинамики, чтобы осуществить их честолюбивые проекты. <br /><br />В течение XVI-XIX веков аэродинамика развивалась благодаря ученым, среди которых были да Винчи, Галилей, Гюйгенс, Ньютон, Бернулли, Эйлер и Смитон. В 1804 году англичанин Джордж Кейли запустил в воздух дельтаплан с жестким крылом, а в 1853 он соорудил большой дельтаплан, на котором поднялся в воздух его кучер. <br /><br />В 1902 году братья Райт построили свой собственный летательный аппарат со сложным крылом. Производителя, готового собрать легкий бензиновый мотор по их инструкции, они не нашли, а потому сделали двигатель сами. 17 декабря 1903 года самолет братьев Райт совершил четыре полета на расстояния до 260 м. После братьев Райт авиация быстро шагнула вперед. В 1908 году американец Глен Кертис пролетел более километра, а в 1909 француз Луи Блерио пересек по воздуху Ла-Манш. <br /><br />В годы Первой мировой войны авиация быстро развивалась: были созданы истребители и первые бомбардировщики. В 20-е годы пилоты уже пересекали океаны, а в 1927 году Чарльз Линдберг совершил первый безостановочный трансатлантический перелет. Вторая мировая война вызвала очередной рывок прогресса: самолеты стали быстрее, прочнее, смертоноснее в бою, увеличилась дальность полета. К концу войны появились реактивные самолеты, высотные дальние бомбардировщики и вертолеты. <br /><br />Сегодня путешествия по воздуху стали обычным делом. Путь из США до Китая, лишь 75 лет назад казавшийся почти невозможным, теперь занимает несколько часов. И хотя авиакатастрофы, вызванные техническими неполадками, ошибками пилотов или действиями террористов, делают самолеты довольно опасным видом транспорта, миллионы людей по всему миру не отказываются от полетов. Самолет еще долго будет служить человечеству.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

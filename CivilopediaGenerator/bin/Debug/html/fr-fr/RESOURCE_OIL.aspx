@@ -1,0 +1,28 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Resources.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: P&eacute;trole</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/RESOURCE_OIL.png" alt="P&eacute;trole" class="contentimage" />
+	<div class="contentleft">
+		<h2>Produit :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">+1 <img src="/civilopedia/images/production.png" alt="production" /> </div></div></div></div></div></div></div></div>
+		
+<h2>Appara&icirc;t avec :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_BIOLOGY.aspx" onmouseover="return tooltip('Biologie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_BIOLOGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Terrains trouv&eacute;s sur :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="FEATURE_JUNGLE.aspx" onmouseover="return tooltip('Jungle');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_JUNGLE.png" /></a><a href="FEATURE_MARSH.aspx" onmouseover="return tooltip('Marais');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_MARSH.png" /></a><a href="TERRAIN_DESERT.aspx" onmouseover="return tooltip('D&eacute;sert');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_DESERT.png" /></a><a href="TERRAIN_TUNDRA.aspx" onmouseover="return tooltip('Toundra');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_TUNDRA.png" /></a><a href="TERRAIN_SNOW.aspx" onmouseover="return tooltip('Neige');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_SNOW.png" /></a><a href="TERRAIN_COAST.aspx" onmouseover="return tooltip('C&ocirc;te');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_COAST.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Am&eacute;nag&eacute; par :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_HOLY_SITE.aspx" onmouseover="return tooltip('Lieu saint');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_HOLY_SITE.png" /></a><a href="IMPROVEMENT_WELL.aspx" onmouseover="return tooltip('Puits de p&eacute;trole');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_WELL.png" /></a><a href="IMPROVEMENT_OFFSHORE_PLATFORM.aspx" onmouseover="return tooltip('Plateforme offshore');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_OFFSHORE_PLATFORM.png" /></a><a href="IMPROVEMENT_CUSTOMS_HOUSE.aspx" onmouseover="return tooltip('Bureau de douane');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_CUSTOMS_HOUSE.png" /></a><a href="IMPROVEMENT_ACADEMY.aspx" onmouseover="return tooltip('Acad&eacute;mie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_ACADEMY.png" /></a><a href="IMPROVEMENT_CITADEL.aspx" onmouseover="return tooltip('Citadelle');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_CITADEL.png" /></a><a href="IMPROVEMENT_MANUFACTORY.aspx" onmouseover="return tooltip('Manufacture');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_MANUFACTORY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">P&eacute;trole</div>
+		
+<h2>Informations de jeu :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Utilis&eacute; par les unit&eacute;s puissantes de fin de partie.</div></div></div></div></div></div></div></div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">
+        Le p&eacute;trole est une source d'&eacute;nergie liquide que l'on trouve sous forme de gisements de tailles diverses un peu partout sur la plan&egrave;te. Bien que l'on retrouve des traces de son utilisation chez certaines civilisations datant de 4 000 ans environ, aussi bien pour cr&eacute;er de l'asphalte que du naphte, ou comme source de lumi&egrave;re lorsqu'il est enflamm&eacute;, son usage actuel remonte &agrave; 1857, lorsque la toute premi&egrave;re raffinerie moderne fut construite &agrave; Pechelbronn, en Alsace. A la m&ecirc;me &eacute;poque, on creusait des puits un peu partout en Europe et en Am&eacute;rique du Nord. Au d&eacute;but du XXe si&egrave;cle, le p&eacute;trole &eacute;tait une ressource tr&egrave;s demand&eacute;e, en particulier parce qu'il servait &agrave; alimenter les moteurs &agrave; combustion interne utilis&eacute;s par les navires, les avions et les automobiles. Aujourd'hui, il r&eacute;git la politique internationale, puisque l'on rel&egrave;ve perp&eacute;tuellement des tensions entre les pays qui en poss&egrave;dent, et ceux qui en sont d&eacute;pourvus. Gardez toujours &agrave; l'esprit que le p&eacute;trole est une ressource strat&eacute;gique et qu'en tant que tel, il est utilis&eacute; pour la construction d'unit&eacute;s et de b&acirc;timents associ&eacute;s.
+      </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

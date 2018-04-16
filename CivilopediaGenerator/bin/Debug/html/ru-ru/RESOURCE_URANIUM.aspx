@@ -1,0 +1,26 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Resources.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Уран</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/RESOURCE_URANIUM.png" alt="Уран" class="contentimage" />
+	<div class="contentleft">
+		<h2>Производительность:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">+1 <img src="/civilopedia/images/production.png" alt="production" /> </div></div></div></div></div></div></div></div>
+		
+<h2>Открывается после:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ATOMIC_THEORY.aspx" onmouseover="return tooltip('Ядерная физика');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ATOMIC_THEORY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Местоположение:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="FEATURE_JUNGLE.aspx" onmouseover="return tooltip('джунглей');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_JUNGLE.png" /></a><a href="FEATURE_FOREST.aspx" onmouseover="return tooltip('Лес');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_FOREST.png" /></a><a href="FEATURE_MARSH.aspx" onmouseover="return tooltip('Болото');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_MARSH.png" /></a><a href="TERRAIN_HILL.aspx" onmouseover="return tooltip('холмов');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_HILL.png" /></a><a href="TERRAIN_GRASS.aspx" onmouseover="return tooltip('лугов');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_GRASS.png" /></a><a href="TERRAIN_PLAINS.aspx" onmouseover="return tooltip('Равнина');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_PLAINS.png" /></a><a href="TERRAIN_DESERT.aspx" onmouseover="return tooltip('Пустыня');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_DESERT.png" /></a><a href="TERRAIN_TUNDRA.aspx" onmouseover="return tooltip('Тундра');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_TUNDRA.png" /></a><a href="TERRAIN_SNOW.aspx" onmouseover="return tooltip('Снег');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_SNOW.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Улучшение:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_HOLY_SITE.aspx" onmouseover="return tooltip('Святыня');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_HOLY_SITE.png" /></a><a href="IMPROVEMENT_MINE.aspx" onmouseover="return tooltip('Рудник');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_MINE.png" /></a><a href="IMPROVEMENT_CUSTOMS_HOUSE.aspx" onmouseover="return tooltip('Таможня');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_CUSTOMS_HOUSE.png" /></a><a href="IMPROVEMENT_ACADEMY.aspx" onmouseover="return tooltip('Академия');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_ACADEMY.png" /></a><a href="IMPROVEMENT_CITADEL.aspx" onmouseover="return tooltip('Крепость');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_CITADEL.png" /></a><a href="IMPROVEMENT_MANUFACTORY.aspx" onmouseover="return tooltip('Заводской комплекс');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_MANUFACTORY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Уран</div>
+		
+<h2>Игровая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Нужен для ядерных бомб, АЭС и человекоподобных роботов.</div></div></div></div></div></div></div></div>
+		<h2>Историческая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Уран - это радиоактивный минерал, который после соответствующей обработки и обогащения служит источником энергии или начинкой атомных бомб. Он был открыт в XVIII веке, но только в XX, во время Второй мировой войны, ученые в Америке сумели превратить его в самое мощное взрывчатое вещество в истории. В качестве рабочего вещества ядерных реакторов уран считается "чистым" видом топлива, поскольку он не загрязняет воздух так, как уголь или нефть. Зато отработанное ядерное топливо крайне токсично и способно отравлять воду, воздух, почву и живые организмы на многие сотни лет. Не забывайте, что уран - стратегический ресурс, который нужен для создания определенных юнитов и построек.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

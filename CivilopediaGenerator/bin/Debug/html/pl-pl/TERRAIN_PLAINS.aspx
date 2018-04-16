@@ -1,0 +1,27 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Terrains.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: R&oacute;wnin</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TERRAIN_PLAINS.png" alt="R&oacute;wnin" class="contentimage" />
+	<div class="contentleft">
+		<h2>Dochody:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">1 <img src="/civilopedia/images/food.png" alt="food" /> 1 <img src="/civilopedia/images/production.png" alt="production" /> </div></div></div></div></div></div></div></div>
+		<h2>Koszt ruchu:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">1 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Modyfikator:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">-10%</div></div></div></div></div></div></div></div>
+		
+<h2>Artyku&#322;y na temat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="FEATURE_FOREST.aspx" onmouseover="return tooltip('Las');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_FOREST.png" /></a></div></div></div></div></div></div></div></div>
+		
+<h2>Mo&#380;e zawiera&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_IRON.aspx" onmouseover="return tooltip('&#379;elazo');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_IRON.png" /></a><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Koni');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a><a href="RESOURCE_COAL.aspx" onmouseover="return tooltip('W&#281;giel');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_COAL.png" /></a><a href="RESOURCE_ALUMINUM.aspx" onmouseover="return tooltip('Aluminium');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_ALUMINUM.png" /></a><a href="RESOURCE_URANIUM.aspx" onmouseover="return tooltip('Uran');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_URANIUM.png" /></a><a href="RESOURCE_WHEAT.aspx" onmouseover="return tooltip('Pszenica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_WHEAT.png" /></a><a href="RESOURCE_SHEEP.aspx" onmouseover="return tooltip('Owiec');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_SHEEP.png" /></a><a href="RESOURCE_STONE.aspx" onmouseover="return tooltip('Kamie&#324;');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_STONE.png" /></a><a href="RESOURCE_GOLD.aspx" onmouseover="return tooltip('Z&#322;oto');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_GOLD.png" /></a><a href="RESOURCE_GEMS.aspx" onmouseover="return tooltip('Kamieni szlachetnych');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_GEMS.png" /></a><a href="RESOURCE_MARBLE.aspx" onmouseover="return tooltip('Marmur');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_MARBLE.png" /></a><a href="RESOURCE_IVORY.aspx" onmouseover="return tooltip('Ko&#347;&#263; s&#322;oniowa');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_IVORY.png" /></a><a href="RESOURCE_COTTON.aspx" onmouseover="return tooltip('Bawe&#322;na');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_COTTON.png" /></a><a href="RESOURCE_WINE.aspx" onmouseover="return tooltip('Wino');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_WINE.png" /></a><a href="RESOURCE_INCENSE.aspx" onmouseover="return tooltip('Kadzid&#322;o');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_INCENSE.png" /></a><a href="RESOURCE_BISON.aspx" onmouseover="return tooltip('Bizon');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_BISON.png" /></a><a href="RESOURCE_COPPER.aspx" onmouseover="return tooltip('');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_COPPER.png" /></a><a href="RESOURCE_SALT.aspx" onmouseover="return tooltip('');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_SALT.png" /></a><a href="RESOURCE_CITRUS.aspx" onmouseover="return tooltip('');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_CITRUS.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">R&oacute;wnin</div>
+		
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">R&oacute;wniny zapewniaj&#261; pobliskiemu miastu mieszank&#281; po&#380;ywienia i produkcji. Miasto otoczone r&oacute;wninami b&#281;dzie si&#281; rozwija&#322;o wolniej ni&#380; te zbudowane na &#322;&#261;kach, ale b&#281;dzie za to du&#380;o bardziej produktywne. </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

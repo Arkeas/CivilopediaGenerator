@@ -1,0 +1,214 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-jp">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,building,buildings" />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('ゲームコンセプト');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_off.png" class="tab" id="tab01" onmouseover="this.src='/civilopedia/images/tab_concept_on.png';" onmouseout="this.src='/civilopedia/images/tab_concept_off.png';" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('テクノロジー');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('ユニット');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_off.png" class="tab" id="tab03" onmouseover="this.src='/civilopedia/images/tab_unit_on.png';" onmouseout="this.src='/civilopedia/images/tab_unit_off.png';" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('レベルアップ');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_off.png" class="tab" id="tab04" onmouseover="this.src='/civilopedia/images/tab_promotion_on.png';" onmouseout="this.src='/civilopedia/images/tab_promotion_off.png';" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('建造物');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('文化遺産');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('社会制度');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_off.png" class="tab" id="tab07" onmouseover="this.src='/civilopedia/images/tab_policy_on.png';" onmouseout="this.src='/civilopedia/images/tab_policy_off.png';" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('専門家と偉人');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('文明と指導者');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_off.png" class="tab" id="tab09" onmouseover="this.src='/civilopedia/images/tab_civilization_on.png';" onmouseout="this.src='/civilopedia/images/tab_civilization_off.png';" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('都市国家');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_off.png" class="tab" id="tab10" onmouseover="this.src='/civilopedia/images/tab_city_state_on.png';" onmouseout="this.src='/civilopedia/images/tab_city_state_off.png';" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('地形と特性');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('資源');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('資源活用施設');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('宗教');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_on.png" class="tab" id="tab14" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('世界議会');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">宗教
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+					<option value="zh-hant-hk">中文 (繁體)</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="RELIGION_HOME.aspx"><div id="RELIGION_HOME" class="menuitem">宗教ページ</div></a>
+			<div id="GROUP_RELIGION" class="menugroupcontainer"><a href="javascript:togglediv('RELIGION_CONTENT');"><div id="RELIGION" class="menugroup">宗教</div></a><div id="RELIGION_CONTENT">
+				<a href="RELIGION_ISLAM.aspx"><div id="RELIGION_ISLAM" class="menuitem">イスラム教</div></a>
+				<a href="RELIGION_CHRISTIANITY.aspx"><div id="RELIGION_CHRISTIANITY" class="menuitem">カトリック</div></a>
+				<a href="RELIGION_SIKHISM.aspx"><div id="RELIGION_SIKHISM" class="menuitem">シーク教</div></a>
+				<a href="RELIGION_ZOROASTRIANISM.aspx"><div id="RELIGION_ZOROASTRIANISM" class="menuitem">ゾロアスター教</div></a>
+				<a href="RELIGION_TENGRIISM.aspx"><div id="RELIGION_TENGRIISM" class="menuitem">テングリ教</div></a>
+				<a href="RELIGION_HINDUISM.aspx"><div id="RELIGION_HINDUISM" class="menuitem">ヒンドゥー教</div></a>
+				<a href="RELIGION_PROTESTANTISM.aspx"><div id="RELIGION_PROTESTANTISM" class="menuitem">プロテスタント</div></a>
+				<a href="RELIGION_JUDAISM.aspx"><div id="RELIGION_JUDAISM" class="menuitem">ユダヤ教</div></a>
+				<a href="RELIGION_BUDDHISM.aspx"><div id="RELIGION_BUDDHISM" class="menuitem">仏教</div></a>
+				<a href="RELIGION_CONFUCIANISM.aspx"><div id="RELIGION_CONFUCIANISM" class="menuitem">儒教</div></a>
+				<a href="RELIGION_ORTHODOXY.aspx"><div id="RELIGION_ORTHODOXY" class="menuitem">東方正教</div></a>
+				<a href="RELIGION_SHINTO.aspx"><div id="RELIGION_SHINTO" class="menuitem">神道</div></a>
+				<a href="RELIGION_TAOISM.aspx"><div id="RELIGION_TAOISM" class="menuitem">道教</div></a>
+			</div></div>
+			<div id="GROUP_PANTHEON" class="menugroupcontainer"><a href="javascript:togglediv('PANTHEON_CONTENT');"><div id="PANTHEON" class="menugroup">パンテオンの信仰の証</div></a><div id="PANTHEON_CONTENT">
+				<a href="BELIEF_DANCE_AURORA.aspx"><div id="BELIEF_DANCE_AURORA" class="menuitem">アウローラの舞い</div></a>
+				<a href="BELIEF_FAITH_HEALERS.aspx"><div id="BELIEF_FAITH_HEALERS" class="menuitem">信仰の癒し手</div></a>
+				<a href="BELIEF_RELIGIOUS_SETTLEMENTS.aspx"><div id="BELIEF_RELIGIOUS_SETTLEMENTS" class="menuitem">信仰の里</div></a>
+				<a href="BELIEF_FORMAL_LITURGY.aspx"><div id="BELIEF_FORMAL_LITURGY" class="menuitem">偶像</div></a>
+				<a href="BELIEF_EARTH_MOTHER.aspx"><div id="BELIEF_EARTH_MOTHER" class="menuitem">地母神</div></a>
+				<a href="BELIEF_OPEN_SKY.aspx"><div id="BELIEF_OPEN_SKY" class="menuitem">大空を統べる神</div></a>
+				<a href="BELIEF_SUN_GOD.aspx"><div id="BELIEF_SUN_GOD" class="menuitem">太陽神</div></a>
+				<a href="BELIEF_GODDESS_STRATEGY.aspx"><div id="BELIEF_GODDESS_STRATEGY" class="menuitem">守りの女神</div></a>
+				<a href="BELIEF_GODDESS_LOVE.aspx"><div id="BELIEF_GODDESS_LOVE" class="menuitem">愛の女神</div></a>
+				<a href="BELIEF_GOD_WAR.aspx"><div id="BELIEF_GOD_WAR" class="menuitem">戦の神</div></a>
+				<a href="BELIEF_GOD_SEA.aspx"><div id="BELIEF_GOD_SEA" class="menuitem">海の神</div></a>
+				<a href="BELIEF_GODDESS_HUNT.aspx"><div id="BELIEF_GODDESS_HUNT" class="menuitem">狩りの女神</div></a>
+				<a href="BELIEF_STONE_CIRCLES.aspx"><div id="BELIEF_STONE_CIRCLES" class="menuitem">環状列石</div></a>
+				<a href="BELIEF_DESERT_FOLKLORE.aspx"><div id="BELIEF_DESERT_FOLKLORE" class="menuitem">砂漠の民間伝承</div></a>
+				<a href="BELIEF_ANCESTOR_WORSHIP.aspx"><div id="BELIEF_ANCESTOR_WORSHIP" class="menuitem">祖霊崇拝</div></a>
+				<a href="BELIEF_GOD_FESTIVALS.aspx"><div id="BELIEF_GOD_FESTIVALS" class="menuitem">祝祭の女神</div></a>
+				<a href="BELIEF_MESSENGER_GODS.aspx"><div id="BELIEF_MESSENGER_GODS" class="menuitem">神々の御使い</div></a>
+				<a href="BELIEF_MONUMENT_GODS.aspx"><div id="BELIEF_MONUMENT_GODS" class="menuitem">神々を讃えるモニュメント</div></a>
+				<a href="BELIEF_TEARS_OF_GODS.aspx"><div id="BELIEF_TEARS_OF_GODS" class="menuitem">神の涙</div></a>
+				<a href="BELIEF_GOD_KING.aspx"><div id="BELIEF_GOD_KING" class="menuitem">神王</div></a>
+				<a href="BELIEF_SACRED_WATERS.aspx"><div id="BELIEF_SACRED_WATERS" class="menuitem">聖なる水</div></a>
+				<a href="BELIEF_SACRED_PATH.aspx"><div id="BELIEF_SACRED_PATH" class="menuitem">聖なる道</div></a>
+				<a href="BELIEF_GOD_CRAFTSMEN.aspx"><div id="BELIEF_GOD_CRAFTSMEN" class="menuitem">職人の神</div></a>
+				<a href="BELIEF_ONE_WITH_NATURE.aspx"><div id="BELIEF_ONE_WITH_NATURE" class="menuitem">自然との合一</div></a>
+				<a href="BELIEF_ORAL_TRADITION.aspx"><div id="BELIEF_ORAL_TRADITION" class="menuitem">言い伝え</div></a>
+				<a href="BELIEF_FERTILITY_RITES.aspx"><div id="BELIEF_FERTILITY_RITES" class="menuitem">豊作を祈る儀式</div></a>
+			</div></div>
+			<div id="GROUP_FOUNDER" class="menugroupcontainer"><a href="javascript:togglediv('FOUNDER_CONTENT');"><div id="FOUNDER" class="menugroup">創始者の信仰の証</div></a><div id="FOUNDER_CONTENT">
+				<a href="BELIEF_TITHE.aspx"><div id="BELIEF_TITHE" class="menuitem">10分の1税</div></a>
+				<a href="BELIEF_WORLD_CHURCH.aspx"><div id="BELIEF_WORLD_CHURCH" class="menuitem">世界教会運動</div></a>
+				<a href="BELIEF_INITIATION_RITES.aspx"><div id="BELIEF_INITIATION_RITES" class="menuitem">入信の儀式</div></a>
+				<a href="BELIEF_INTERFAITH_DIALOGUE.aspx"><div id="BELIEF_INTERFAITH_DIALOGUE" class="menuitem">宗教間対話</div></a>
+				<a href="BELIEF_PILGRIMAGE.aspx"><div id="BELIEF_PILGRIMAGE" class="menuitem">巡礼</div></a>
+				<a href="BELIEF_PEACE_LOVING.aspx"><div id="BELIEF_PEACE_LOVING" class="menuitem">平和主義</div></a>
+				<a href="BELIEF_CHURCH_PROPERTY.aspx"><div id="BELIEF_CHURCH_PROPERTY" class="menuitem">教会資産</div></a>
+				<a href="BELIEF_PAPAL_PRIMACY.aspx"><div id="BELIEF_PAPAL_PRIMACY" class="menuitem">教皇の首位性</div></a>
+				<a href="BELIEF_CEREMONIAL_BURIAL.aspx"><div id="BELIEF_CEREMONIAL_BURIAL" class="menuitem">葬儀</div></a>
+			</div></div>
+			<div id="GROUP_FOLLOWER" class="menugroupcontainer"><a href="javascript:togglediv('FOLLOWER_CONTENT');"><div id="FOLLOWER" class="menugroup">信徒の信仰の証</div></a><div id="FOLLOWER_CONTENT">
+				<a href="BELIEF_FEED_WORLD.aspx"><div id="BELIEF_FEED_WORLD" class="menuitem">この世界に糧を</div></a>
+				<a href="BELIEF_PAGODAS.aspx"><div id="BELIEF_PAGODAS" class="menuitem">パゴダ</div></a>
+				<a href="BELIEF_MOSQUES.aspx"><div id="BELIEF_MOSQUES" class="menuitem">モスク</div></a>
+				<a href="BELIEF_RELIGIOUS_CENTER.aspx"><div id="BELIEF_RELIGIOUS_CENTER" class="menuitem">信仰の中心</div></a>
+				<a href="BELIEF_MONASTERIES.aspx"><div id="BELIEF_MONASTERIES" class="menuitem">修道院</div></a>
+				<a href="BELIEF_SWORD_PLOWSHARES.aspx"><div id="BELIEF_SWORD_PLOWSHARES" class="menuitem">剣を鋤の刃に</div></a>
+				<a href="BELIEF_CHORAL_MUSIC.aspx"><div id="BELIEF_CHORAL_MUSIC" class="menuitem">合唱音楽</div></a>
+				<a href="BELIEF_CATHEDRALS.aspx"><div id="BELIEF_CATHEDRALS" class="menuitem">大聖堂</div></a>
+				<a href="BELIEF_RELIGIOUS_COMMUNITY.aspx"><div id="BELIEF_RELIGIOUS_COMMUNITY" class="menuitem">宗教共同体</div></a>
+				<a href="BELIEF_RELIGIOUS_ART.aspx"><div id="BELIEF_RELIGIOUS_ART" class="menuitem">宗教芸術</div></a>
+				<a href="BELIEF_GURUSHIP.aspx"><div id="BELIEF_GURUSHIP" class="menuitem">導師</div></a>
+				<a href="BELIEF_PEACE_GARDENS.aspx"><div id="BELIEF_PEACE_GARDENS" class="menuitem">平和の庭園</div></a>
+				<a href="BELIEF_HOLY_WARRIORS.aspx"><div id="BELIEF_HOLY_WARRIORS" class="menuitem">聖戦士</div></a>
+				<a href="BELIEF_LITURGICAL_DRAMA.aspx"><div id="BELIEF_LITURGICAL_DRAMA" class="menuitem">聖書劇</div></a>
+				<a href="BELIEF_ASCETISM.aspx"><div id="BELIEF_ASCETISM" class="menuitem">苦行</div></a>
+				<a href="BELIEF_DIVINE_INSPIRATION.aspx"><div id="BELIEF_DIVINE_INSPIRATION" class="menuitem">霊感</div></a>
+			</div></div>
+			<div id="GROUP_ENHANCER" class="menugroupcontainer"><a href="javascript:togglediv('ENHANCER_CONTENT');"><div id="ENHANCER" class="menugroup">拡大の信仰の証</div></a><div id="ENHANCER_CONTENT">
+				<a href="BELIEF_RELIGIOUS_UNITY.aspx"><div id="BELIEF_RELIGIOUS_UNITY" class="menuitem">信仰による結束</div></a>
+				<a href="BELIEF_DEFENDER_FAITH.aspx"><div id="BELIEF_DEFENDER_FAITH" class="menuitem">信仰の守護者</div></a>
+				<a href="BELIEF_RELIGIOUS_TEXTS.aspx"><div id="BELIEF_RELIGIOUS_TEXTS" class="menuitem">宗教書</div></a>
+				<a href="BELIEF_ITINERANT_PREACHERS.aspx"><div id="BELIEF_ITINERANT_PREACHERS" class="menuitem">巡回説教師</div></a>
+				<a href="BELIEF_MISSIONARY_ZEAL.aspx"><div id="BELIEF_MISSIONARY_ZEAL" class="menuitem">布教の情熱</div></a>
+				<a href="BELIEF_MESSIAH.aspx"><div id="BELIEF_MESSIAH" class="menuitem">救世主</div></a>
+				<a href="BELIEF_JUST_WAR.aspx"><div id="BELIEF_JUST_WAR" class="menuitem">正義の戦い</div></a>
+				<a href="BELIEF_HOLY_ORDER.aspx"><div id="BELIEF_HOLY_ORDER" class="menuitem">聖職叙任</div></a>
+				<a href="BELIEF_RELIQUARY.aspx"><div id="BELIEF_RELIQUARY" class="menuitem">聖骨箱</div></a>
+			</div></div>
+			<div id="GROUP_REFORMATION" class="menugroupcontainer"><a href="javascript:togglediv('REFORMATION_CONTENT');"><div id="REFORMATION" class="menugroup">改革の信仰の証</div></a><div id="REFORMATION_CONTENT">
+				<a href="BELIEF_JESUIT_EDUCATION.aspx"><div id="BELIEF_JESUIT_EDUCATION" class="menuitem">イエズス会による教育</div></a>
+				<a href="BELIEF_UNDERGROUND_SECT.aspx"><div id="BELIEF_UNDERGROUND_SECT" class="menuitem">地下宗派</div></a>
+				<a href="BELIEF_RELIGIOUS_FERVOR.aspx"><div id="BELIEF_RELIGIOUS_FERVOR" class="menuitem">宗教的情熱</div></a>
+				<a href="BELIEF_CHARITABLE_MISSIONS.aspx"><div id="BELIEF_CHARITABLE_MISSIONS" class="menuitem">慈善使節</div></a>
+				<a href="BELIEF_HEATHEN_CONVERSION.aspx"><div id="BELIEF_HEATHEN_CONVERSION" class="menuitem">異教徒の改宗</div></a>
+				<a href="BELIEF_TO_GLORY_OF_GOD.aspx"><div id="BELIEF_TO_GLORY_OF_GOD" class="menuitem">神の栄光のために</div></a>
+				<a href="BELIEF_EVANGELISM.aspx"><div id="BELIEF_EVANGELISM" class="menuitem">福音主義</div></a>
+				<a href="BELIEF_SACRED_SITES.aspx"><div id="BELIEF_SACRED_SITES" class="menuitem">聖地</div></a>
+				<a href="BELIEF_UNITY_OF_PROPHETS.aspx"><div id="BELIEF_UNITY_OF_PROPHETS" class="menuitem">預言者たちの団結</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

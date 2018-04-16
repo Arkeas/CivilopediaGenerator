@@ -1,0 +1,7 @@
+D:\source\CivilopediaGenerator\CivilopediaGenerator\bin\Release\CivilopediaGenerator.exe
+D:\source\CivilopediaGenerator\CivilopediaGenerator\bin\Release\CivilopediaGenerator.pdb
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Release\CivilopediaGenerator.Form1.resources
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Release\CivilopediaGenerator.Properties.Resources.resources
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Release\CivilopediaGenerator.csproj.GenerateResource.Cache
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Release\CivilopediaGenerator.exe
+D:\source\CivilopediaGenerator\CivilopediaGenerator\obj\x86\Release\CivilopediaGenerator.pdb

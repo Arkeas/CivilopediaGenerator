@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Gal&eacute;asse v&eacute;nitienne</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_VENETIAN_GALLEASS.png" alt="Gal&eacute;asse v&eacute;nitienne" class="contentimage" />
+	<div class="contentleft">
+		<h2>Co&ucirc;t :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">110 <img src="/civilopedia/images/production.png" alt="production" /></div></div></div></div></div></div></div></div>
+		<h2>Type de combat :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Unit&eacute; nav. combat dist.</div></div></div></div></div></div></div></div>
+		<h2>Combat :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">18 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		<h2>Combat &agrave; distance :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">20 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Port&eacute;e :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2</div></div></div></div></div></div></div></div>
+		<h2>D&eacute;placement :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">3 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilisation :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_VENICE.aspx" onmouseover="return tooltip('R&eacute;publique de Venise');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_VENICE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Comp&eacute;tences :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('Pas d\'attaque de combat rapproch&eacute;');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_OCEAN_IMPASSABLE.aspx" onmouseover="return tooltip('Oc&eacute;an inaccessible');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Technologies requises :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMPASS.aspx" onmouseover="return tooltip('Boussole');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMPASS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Rendue obsol&egrave;te par :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_NAVIGATION.aspx" onmouseover="return tooltip('Navigation');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_NAVIGATION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Am&eacute;liorer l'unit&eacute;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_FRIGATE.aspx" onmouseover="return tooltip('Fr&eacute;gate');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_FRIGATE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Remplace :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_GALLEASS.aspx" onmouseover="return tooltip('Gal&eacute;asse');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_GALLEASS.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Gal&eacute;asse v&eacute;nitienne</div>
+		<h2>Informations de jeu :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Exclusive &agrave; Venise, cette unit&eacute; navale m&eacute;di&eacute;vale est particuli&egrave;rement puissante, et ses attaques &agrave; distance lui permettent de contr&ocirc;ler les mers. Bien plus efficace en attaque et en d&eacute;fense que la gal&eacute;asse standard, qu'elle remplace, elle est &eacute;galement plus ch&egrave;re.</div></div></div></div></div></div></div></div>
+		<h2>Strat&eacute;gie :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Exclusive &agrave; Venise, la gal&eacute;asse v&eacute;nitienne poss&egrave;de une attaque &agrave; distance plus puissante, est plus r&eacute;sistante en combat, mais co&ucirc;te aussi plus ch&egrave;re que la gal&eacute;asse standard, qu'elle remplace.</div></div></div></div></div></div></div></div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Les plans originaux des gal&eacute;asses furent d&eacute;velopp&eacute;s &agrave; partir de ceux des larges gal&egrave;res marchandes, et rest&egrave;rent relativement inchang&eacute;s jusqu'en 1660, &agrave; l'&eacute;poque o&ugrave; Venise construisit son premier navire de ligne. Les gal&eacute;asses avaient habituellement trois m&acirc;ts &agrave; voiles latines, et &eacute;taient caract&eacute;ris&eacute;es par un gaillard d'avant, ainsi que par une dunette. &Eacute;quip&eacute; de plus de voiles et de rames qu'une gal&egrave;re classique pour une vitesse accrue, ces navires de guerre v&eacute;nitiens poss&eacute;daient &eacute;galement un pont-batterie au-dessus des rang&eacute;es de rameurs. En M&eacute;diterran&eacute;e, les gal&eacute;asses v&eacute;nitiennes rest&egrave;rent en service bien plus longtemps que dans d'autres nations, o&ugrave; elles furent remplac&eacute;es par des navires de guerre plus larges, plus solides et plus adapt&eacute;s &agrave; la navigation en mer.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

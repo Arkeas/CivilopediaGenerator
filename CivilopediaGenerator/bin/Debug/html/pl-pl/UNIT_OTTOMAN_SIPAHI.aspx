@@ -1,0 +1,36 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Spahis&oacute;w</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_OTTOMAN_SIPAHI.png" alt="Spahis&oacute;w" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">185 <img src="/civilopedia/images/production.png" alt="production" /> / 370 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Konna</div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">25 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_OTTOMAN.aspx" onmouseover="return tooltip('Imperium osma&#324;skie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_OTTOMAN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Bez terenowej premii do obrony');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_FREE_PILLAGE_MOVES.aspx" onmouseover="return tooltip('Nie traci ruchu za pl&#261;drowanie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_EXTRA_SIGHT_I.aspx" onmouseover="return tooltip('Wi&#281;kszy zasi&#281;g widzenia (1)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Mo&#380;e wykona&#263; ruch po ataku');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Kara przy atakowaniu miasta (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_FORMATION_1.aspx" onmouseover="return tooltip('Szyk I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_24.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wymagane surowce:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Koni');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_METALLURGY.aspx" onmouseover="return tooltip('Metalurgia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_METALLURGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wypierana przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBINED_ARMS.aspx" onmouseover="return tooltip('Po&#322;&#261;czonych rodzaj&oacute;w wojsk');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBINED_ARMS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_ANTI_TANK_GUN.aspx" onmouseover="return tooltip('Dzia&#322; przeciwpancernych');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ANTI_TANK_GUN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_LANCER.aspx" onmouseover="return tooltip('Lansjer&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_LANCER.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Spahis&oacute;w</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Kawaleria wyspecjalizowana w zwalczaniu innych jednostek tego typu. Tylko Turcy mog&#261; j&#261; rekrutowa&#263;. Jest ona szybsza i ma wi&#281;kszy zasi&#281;g widzenia ni&#380; lansjer, kt&oacute;rego zast&#281;puje.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">
+        Spahisi to unikatowa jednostka osma&#324;ska, zast&#281;puj&#261;ca lansjer&oacute;w. Spahisi s&#261; o wiele szybsi, maj&#261; zasi&#281;g widzenia wi&#281;kszy o jedno pole ni&#380; lansjerzy, ale tak samo jak oni, s&#261; s&#322;abi w obronie. Spahisi mog&#261; pl&#261;drowa&#263; nieprzyjacielskie ulepszenia, nie ponosz&#261;c dodatkowych koszt&oacute;w.
+      </div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Spahisi byli lansjerami Imperium Osma&#324;skiego. Formacja ta powsta&#322;a za panowania Murada I (1362-1389), a jej cz&#322;onkowie nale&#380;eli do szlachty i wywodzili si&#281; z etnicznej ludno&#347;ci tureckiej. Byli silnie zmotywowani i bardzo lojalni wobec su&#322;tana. Z tego powodu cz&#281;sto s&#322;u&#380;yli jako jego stra&#380; przyboczna. Spahisi byli wielkimi rywalami Janczar&oacute;w (inna specjalna jednostka Imperium Osma&#324;skiego), kt&oacute;rych rekrutowano spo&#347;r&oacute;d &#380;o&#322;nierzy wywodz&#261;cych si&#281; z ludno&#347;ci tureckiej, jak i innych narodowo&#347;ci. W 1826 ochoczo pomagali w krwawej likwidacji tej formacji, b&#281;d&#261;cej nast&#281;pstwem nieudanej rewolty przez ni&#261; wznieconej.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

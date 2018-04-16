@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Estocolmo</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Estocolmo</div>
+		<h2>Informaci&oacute;n hist&oacute;rica:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">La primera menci&oacute;n escrita de Estocolmo se remonta al 1252 d. C. y la describe como una ciudad en la que se comerciaba con hierro. Sin embargo, en algunas sagas vikingas se sostiene que es la ciudad perdida de Agnafit (donde el legendario rey Agni fue ahorcado por Skjalf, su prometida cautiva). Otra historia asevera que la ciudad la fund&oacute; el jarl sueco Birger (o "Birger jarl") para proteger al incipiente pa&iacute;s de las armadas invasoras. Sea cual sea la verdadera historia, lo cierto es que el lugar se convirti&oacute; r&aacute;pidamente en un centro comercial, minero y pesquero. Con el tiempo, Estocolmo se transform&oacute; en una importante ciudad danesa, ya que el comercio en el B&aacute;ltico floreci&oacute; con la llegada de la Liga Hanse&aacute;tica (un gremio de mercaderes).<br /><br />En el siglo XV, empez&oacute; a formarse en la ciudad un movimiento de independencia nacional, cuando el pueblo sueco aspir&oacute; a derrocar a sus gobernantes daneses. Por desgracia, la revoluci&oacute;n no sali&oacute; bien y, en 1520, el rey dan&eacute;s Cristi&aacute;n II entr&oacute; en la ciudad y propici&oacute; el Ba&ntilde;o de Sangre de Estocolmo, una terrible matanza de las fuerzas de oposici&oacute;n suecas. Los levantamientos que se sucedieron en el pa&iacute;s durante los a&ntilde;os siguientes tuvieron m&aacute;s &eacute;xito y disolvieron la Uni&oacute;n de Kalmar (el nombre "bonito" para designar el control de Escandinavia por parte de Dinamarca), y los suecos consiguieron independizarse de los daneses. El primer rey de Suecia, Gustavo Vasa, fue coronado en 1523, y la poblaci&oacute;n de Estocolmo empez&oacute; a crecer r&aacute;pidamente. En un centenar de a&ntilde;os, los habitantes de la ciudad se multiplicaron por seis.<br /><br />En 1634, Estocolmo se proclam&oacute; capital del Imperio Sueco y una serie de nuevas leyes mercantiles le dieron el control absoluto del comercio entre los mercaderes extranjeros y el propio territorio sueco. Esta "edad de oro" termin&oacute; abruptamente unos cuarenta a&ntilde;os despu&eacute;s, cuando la peste negra lleg&oacute; a la ciudad y estall&oacute; la guerra entre Suecia y sus aliados. Por efecto de las dos cat&aacute;strofes, Estocolmo se estanc&oacute; econ&oacute;micamente durante un tiempo, pero sigui&oacute; desarroll&aacute;ndose culturalmente. A la ciudad le cost&oacute; casi doscientos a&ntilde;os recuperar su papel de predominio econ&oacute;mico.<br /><br />Durante la segunda mitad del siglo XX, Estocolmo se convirti&oacute; en el centro tecnol&oacute;gico y econ&oacute;mico del pa&iacute;s. Para dejar espacio a una industria floreciente y al crecimiento poblacional, se derruyeron muchos edificios (gran parte de los cuales se remontaban a la Edad Media) y se sustituyeron con nuevas maravillas arquitect&oacute;nicas. La ciudad ha seguido apart&aacute;ndose de sus ra&iacute;ces pesqueras, mineras y de otras industrias laboriosas, y ha derivado hacia la electr&oacute;nica de alta tecnolog&iacute;a, la arquitectura y los servicios modernos.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

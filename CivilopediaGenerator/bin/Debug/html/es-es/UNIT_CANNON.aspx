@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Ca&ntilde;&oacute;n</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_CANNON.png" alt="Ca&ntilde;&oacute;n" class="contentimage" />
+	<div class="contentleft">
+		<h2>Coste:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">185 <img src="/civilopedia/images/production.png" alt="production" /> / 370 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Tipo de combate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Armas de asedio</div></div></div></div></div></div></div></div>
+		<h2>Combate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		<h2>Combate a distancia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">20 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Alcance:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2</div></div></div></div></div></div></div></div>
+		<h2>Movimiento:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		
+		<h2>Capacidades:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('No puede atacar cuerpo a cuerpo');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CITY_SIEGE.aspx" onmouseover="return tooltip('Bonificaci&oacute;n contra ciudades (200)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Sin bonificaciones defensivas por terreno');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_MUST_SET_UP.aspx" onmouseover="return tooltip('Desplegarse y atacar a distancia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_SIGHT_PENALTY.aspx" onmouseover="return tooltip('Visibilidad limitada');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Tecnolog&iacute;as necesarias:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHEMISTRY.aspx" onmouseover="return tooltip('Qu&iacute;mica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHEMISTRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Queda obsoleta con:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_DYNAMITE.aspx" onmouseover="return tooltip('Dinamita');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_DYNAMITE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Modernizar unidad</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_ARTILLERY.aspx" onmouseover="return tooltip('Artiller&iacute;a');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ARTILLERY.png" /></a></div></div></div></div></div></div></div></div>
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Ca&ntilde;&oacute;n</div>
+		<h2>Informaci&oacute;n de la partida:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Poderosa unidad de asedio del Renacimiento. Debe desplegarse antes de disparar.</div></div></div></div></div></div></div></div>
+		<h2>Estrategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">El Ca&ntilde;&oacute;n es una unidad de asedio importante a medias de la partida y resulta devastadora contra civilizaciones que a&uacute;n no lo tengan. Como otras unidades de asedio, debe gastar 1 PM para desplegarse antes de poder atacar. Sigue siendo potente en la era industrial, pero no puede ver tan lejos como otras unidades y debe protegerse con unidades de cuerpo a cuerpo.</div></div></div></div></div></div></div></div>
+		<h2>Informaci&oacute;n hist&oacute;rica:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Un ca&ntilde;&oacute;n es un arma con un gran tubo que usa p&oacute;lvora u otros explosivos para enviar un proyectil a una buena distancia y a gran velocidad. Se invent&oacute; en China aproximadamente en el siglo X d. C. Los mongoles fueron los primeros en adoptarlo y lo usaron con mucho &eacute;xito contra China y Corea. Es probable que fueran ellos los que introdujeron el ca&ntilde;&oacute;n en el mundo isl&aacute;mico y que los europeos lo aprendieran de los musulmanes. Los primeros ca&ntilde;ones eran enormes, poco manejables y sol&iacute;an explotar cuando se disparaban, lo que los convert&iacute;a en un gran peligro tanto para los artilleros como para sus objetivos. Pero, en el Renacimiento, la calidad del vaciado del metal ya hab&iacute;a avanzado lo bastante como para crear ca&ntilde;ones m&aacute;s peque&ntilde;os y muchos m&aacute;s fiables que pod&iacute;an llevarse al combate con recuas de caballos o a bordo de barcos.<br /><br />El rey Gustavo Adolfo de Suecia revolucion&oacute; el empleo de la artiller&iacute;a de campo, pues emple&oacute; gran n&uacute;mero de piezas m&aacute;s ligeras y peque&ntilde;as que superaron con creces a los ca&ntilde;ones m&aacute;s lentos y pesados. Tambi&eacute;n fue el primero en usar disparos de metralla contra la infanter&iacute;a, hecho por el que probablemente los soldados de todo el mundo habr&aacute;n maldecido su nombre.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

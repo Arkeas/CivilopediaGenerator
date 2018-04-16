@@ -1,0 +1,28 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Mass-m&eacute;dias</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_MASS_MEDIA.png" alt="Mass-m&eacute;dias" class="contentimage" />
+	<div class="contentleft">
+		<h2>Co&ucirc;t :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Technologies requises :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_RADIO.aspx" onmouseover="return tooltip('Radio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_RADIO.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>M&egrave;ne aux technologies :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMPUTERS.aspx" onmouseover="return tooltip('Informatique');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMPUTERS.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>B&acirc;timents d&eacute;bloqu&eacute;s :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_STADIUM.aspx" onmouseover="return tooltip('Stade');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_STADIUM.png" /></a><a href="BUILDING_SYDNEY_OPERA_HOUSE.aspx" onmouseover="return tooltip('Op&eacute;ra de Sydney');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_SYDNEY_OPERA_HOUSE.png" /></a></div></div></div></div></div></div></div></div>
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Mass-m&eacute;dias</div>
+		<h2>Informations de jeu :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permet la construction de <span class="color_positive_text">stades</span>. Ce b&acirc;timent am&eacute;liore le <img src="/civilopedia/images/happiness_1.png" alt="happiness" /> bonheur de tout votre empire, ce qui permet &agrave; vos villes de cro&icirc;tre plus rapidement et rend votre civilisation plus susceptible d'entrer dans un <img src="/civilopedia/images/golden_age.png" alt="golden age" /> &acirc;ge d'or. Permet &eacute;galement la construction de l'<span class="color_positive_text">op&eacute;ra de Sydney</span>, un merveille particuli&egrave;rement utile pour les civilisations cherchant &agrave; obtenir une <span class="color_positive_text">victoire culturelle</span>.</div></div></div></div></div></div></div></div>
+		<h2>Citation :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Les communications se font &agrave; une vitesse vertigineuse. Il est aussi vrai que la vitesse peut multiplier la distribution d'une information que l'on sait fausse."<br /> - Edward R. Murrow<br /></div></div></div></div></div></div></div></div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Si le terme "mass-m&eacute;dias" date des ann&eacute;es 1920 et de l'av&egrave;nement de la radio, l'id&eacute;e d'un m&eacute;dia destin&eacute; &agrave; une large audience remonte aux &oelig;uvres dramatiques du monde antique. Les mass-m&eacute;dias, &eacute;galement appel&eacute;s m&eacute;dias de masse, d&eacute;pendent directement de l'&eacute;volution technologique. Ainsi, les grandes avanc&eacute;es en mati&egrave;re de techniques d'imprimerie et de communication ont permis de toucher chaque fois des publics potentiels plus larges.<br /><br />Ne d&eacute;signant &agrave; l'origine que les moyens de communication comme la radio, les journaux et les magazines, les mass-m&eacute;dias regroupent aujourd'hui &eacute;galement la t&eacute;l&eacute;vision, le cin&eacute;ma, la musique, les livres de poche, les jeux vid&eacute;o et Internet. Avec l'av&egrave;nement de ces m&eacute;dias &agrave; port&eacute;e mondiale est n&eacute;e la possibilit&eacute; d'atteindre les masses populaires comme jamais auparavant (et pas toujours dans leur int&eacute;r&ecirc;t). Cette possibilit&eacute; d'influencer, voire de contr&ocirc;ler, de grandes quantit&eacute;s d'informations (que ce soit &agrave; travers l'utilisation d'une propagande malsaine ou la transformation d'opinions personnelles en v&eacute;rit&eacute;s absolues) devient un probl&egrave;me d'importance pour les organisations et gouvernements qui y sont confront&eacute;s. L'utilisation de techniques publicitaires invasives est un autre effet secondaire du d&eacute;veloppement des m&eacute;dias de masse, au grand dam des consommateurs du monde entier. S'il devient aujourd'hui de plus en plus facile pour le citoyen lambda de partager ses id&eacute;es ou ses &oelig;uvres, peu importe l'int&eacute;r&ecirc;t et la qualit&eacute; du message qu'il souhaite faire passer, se faire entendre dans le flot incessant d'informations disponibles revient, comme le dit le proverbe, &agrave; chercher une aiguille dans une botte de foin.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

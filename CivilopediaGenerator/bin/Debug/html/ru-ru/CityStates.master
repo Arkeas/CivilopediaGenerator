@@ -1,0 +1,187 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-ru">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,city-state,city-states" />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('Игровые понятия');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_off.png" class="tab" id="tab01" onmouseover="this.src='/civilopedia/images/tab_concept_on.png';" onmouseout="this.src='/civilopedia/images/tab_concept_off.png';" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('Технологии');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('Юниты');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_off.png" class="tab" id="tab03" onmouseover="this.src='/civilopedia/images/tab_unit_on.png';" onmouseout="this.src='/civilopedia/images/tab_unit_off.png';" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('Повышения');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_off.png" class="tab" id="tab04" onmouseover="this.src='/civilopedia/images/tab_promotion_on.png';" onmouseout="this.src='/civilopedia/images/tab_promotion_off.png';" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('Здания');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('Чудеса');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('Общественные институты');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_off.png" class="tab" id="tab07" onmouseover="this.src='/civilopedia/images/tab_policy_on.png';" onmouseout="this.src='/civilopedia/images/tab_policy_off.png';" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('Специалисты и великие люди');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('Цивилизации и лидеры');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_off.png" class="tab" id="tab09" onmouseover="this.src='/civilopedia/images/tab_civilization_on.png';" onmouseout="this.src='/civilopedia/images/tab_civilization_off.png';" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('Города-государства');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_on.png" class="tab" id="tab10" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('Ландшафт и особенности');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('Ресурсы');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('Улучшения');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('Религия');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_off.png" class="tab" id="tab14" onmouseover="this.src='/civilopedia/images/tab_religion_on.png';" onmouseout="this.src='/civilopedia/images/tab_religion_off.png';" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('Всемирный конгресс');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">Города-государства
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="CITY_STATE_HOME.aspx"><div id="CITY_STATE_HOME" class="menuitem">Города-государства</div></a>
+			<div id="GROUP_MINOR_TRAIT_MILITARISTIC" class="menugroupcontainer"><a href="javascript:togglediv('MINOR_TRAIT_MILITARISTIC_CONTENT');"><div id="MINOR_TRAIT_MILITARISTIC" class="menugroup">Воинств. города-гос.</div></a><div id="MINOR_TRAIT_MILITARISTIC_CONTENT">
+				<a href="MINOR_CIV_ALMATY.aspx"><div id="MINOR_CIV_ALMATY" class="menuitem">Алма-Ата</div></a>
+				<a href="MINOR_CIV_BELGRADE.aspx"><div id="MINOR_CIV_BELGRADE" class="menuitem">Белград</div></a>
+				<a href="MINOR_CIV_BUDAPEST.aspx"><div id="MINOR_CIV_BUDAPEST" class="menuitem">Будапешт</div></a>
+				<a href="MINOR_CIV_VALLETTA.aspx"><div id="MINOR_CIV_VALLETTA" class="menuitem">Валлетта</div></a>
+				<a href="MINOR_CIV_MBANZA_KONGO.aspx"><div id="MINOR_CIV_MBANZA_KONGO" class="menuitem">Мбанза-Конго</div></a>
+				<a href="MINOR_CIV_SIDON.aspx"><div id="MINOR_CIV_SIDON" class="menuitem">Сидон</div></a>
+				<a href="MINOR_CIV_SOFIA.aspx"><div id="MINOR_CIV_SOFIA" class="menuitem">София</div></a>
+				<a href="MINOR_CIV_HANOI.aspx"><div id="MINOR_CIV_HANOI" class="menuitem">Ханой</div></a>
+			</div></div>
+			<div id="GROUP_MINOR_TRAIT_CULTURED" class="menugroupcontainer"><a href="javascript:togglediv('MINOR_TRAIT_CULTURED_CONTENT');"><div id="MINOR_TRAIT_CULTURED" class="menugroup">Культурн. города-гос.</div></a><div id="MINOR_TRAIT_CULTURED_CONTENT">
+				<a href="MINOR_CIV_BOGOTA.aspx"><div id="MINOR_CIV_BOGOTA" class="menuitem">Богота</div></a>
+				<a href="MINOR_CIV_BRATISLAVA.aspx"><div id="MINOR_CIV_BRATISLAVA" class="menuitem">Братислава</div></a>
+				<a href="MINOR_CIV_BRUSSELS.aspx"><div id="MINOR_CIV_BRUSSELS" class="menuitem">Брюссель</div></a>
+				<a href="MINOR_CIV_BUCHAREST.aspx"><div id="MINOR_CIV_BUCHAREST" class="menuitem">Бухарест</div></a>
+				<a href="MINOR_CIV_BUENOS_AIRES.aspx"><div id="MINOR_CIV_BUENOS_AIRES" class="menuitem">Буэнос-Айрес</div></a>
+				<a href="MINOR_CIV_YEREVAN.aspx"><div id="MINOR_CIV_YEREVAN" class="menuitem">Ереван</div></a>
+				<a href="MINOR_CIV_KABUL.aspx"><div id="MINOR_CIV_KABUL" class="menuitem">Кабул</div></a>
+				<a href="MINOR_CIV_KIEV.aspx"><div id="MINOR_CIV_KIEV" class="menuitem">Киев</div></a>
+				<a href="MINOR_CIV_KUALA_LUMPUR.aspx"><div id="MINOR_CIV_KUALA_LUMPUR" class="menuitem">Куала-Лумпур</div></a>
+				<a href="MINOR_CIV_KYZYL.aspx"><div id="MINOR_CIV_KYZYL" class="menuitem">Кызыл</div></a>
+				<a href="MINOR_CIV_MILAN.aspx"><div id="MINOR_CIV_MILAN" class="menuitem">Милан</div></a>
+				<a href="MINOR_CIV_MONACO.aspx"><div id="MINOR_CIV_MONACO" class="menuitem">Монако</div></a>
+				<a href="MINOR_CIV_PRAGUE.aspx"><div id="MINOR_CIV_PRAGUE" class="menuitem">Прага</div></a>
+				<a href="MINOR_CIV_FLORENCE.aspx"><div id="MINOR_CIV_FLORENCE" class="menuitem">Флоренция</div></a>
+			</div></div>
+			<div id="GROUP_MINOR_TRAIT_MARITIME" class="menugroupcontainer"><a href="javascript:togglediv('MINOR_TRAIT_MARITIME_CONTENT');"><div id="MINOR_TRAIT_MARITIME" class="menugroup">Приморск. города-гос.</div></a><div id="MINOR_TRAIT_MARITIME_CONTENT">
+				<a href="MINOR_CIV_BYBLOS.aspx"><div id="MINOR_CIV_BYBLOS" class="menuitem">Библ</div></a>
+				<a href="MINOR_CIV_VANCOUVER.aspx"><div id="MINOR_CIV_VANCOUVER" class="menuitem">Ванкувер</div></a>
+				<a href="MINOR_CIV_WELLINGTON.aspx"><div id="MINOR_CIV_WELLINGTON" class="menuitem">Веллингтон</div></a>
+				<a href="MINOR_CIV_QUEBEC_CITY.aspx"><div id="MINOR_CIV_QUEBEC_CITY" class="menuitem">Квебек</div></a>
+				<a href="MINOR_CIV_CAPE_TOWN.aspx"><div id="MINOR_CIV_CAPE_TOWN" class="menuitem">Кейптаун</div></a>
+				<a href="MINOR_CIV_MANILA.aspx"><div id="MINOR_CIV_MANILA" class="menuitem">Манила</div></a>
+				<a href="MINOR_CIV_MOGADISHU.aspx"><div id="MINOR_CIV_MOGADISHU" class="menuitem">Могадишо</div></a>
+				<a href="MINOR_CIV_MOMBASA.aspx"><div id="MINOR_CIV_MOMBASA" class="menuitem">Момбаса</div></a>
+				<a href="MINOR_CIV_ORMUS.aspx"><div id="MINOR_CIV_ORMUS" class="menuitem">Ормуз</div></a>
+				<a href="MINOR_CIV_PANAMA_CITY.aspx"><div id="MINOR_CIV_PANAMA_CITY" class="menuitem">Панама</div></a>
+				<a href="MINOR_CIV_RAGUSA.aspx"><div id="MINOR_CIV_RAGUSA" class="menuitem">Рагуза</div></a>
+				<a href="MINOR_CIV_RIGA.aspx"><div id="MINOR_CIV_RIGA" class="menuitem">Рига</div></a>
+				<a href="MINOR_CIV_SYDNEY.aspx"><div id="MINOR_CIV_SYDNEY" class="menuitem">Сидней</div></a>
+				<a href="MINOR_CIV_UR.aspx"><div id="MINOR_CIV_UR" class="menuitem">Ур</div></a>
+			</div></div>
+			<div id="GROUP_MINOR_TRAIT_RELIGIOUS" class="menugroupcontainer"><a href="javascript:togglediv('MINOR_TRAIT_RELIGIOUS_CONTENT');"><div id="MINOR_TRAIT_RELIGIOUS" class="menugroup">Религ. города</div></a><div id="MINOR_TRAIT_RELIGIOUS_CONTENT">
+				<a href="MINOR_CIV_VATICAN_CITY.aspx"><div id="MINOR_CIV_VATICAN_CITY" class="menuitem">Ватикан</div></a>
+				<a href="MINOR_CIV_WITTENBERG.aspx"><div id="MINOR_CIV_WITTENBERG" class="menuitem">Виттенберг</div></a>
+				<a href="MINOR_CIV_GENEVA.aspx"><div id="MINOR_CIV_GENEVA" class="menuitem">Женева</div></a>
+				<a href="MINOR_CIV_JERUSALEM.aspx"><div id="MINOR_CIV_JERUSALEM" class="menuitem">Иерусалим</div></a>
+				<a href="MINOR_CIV_IFE.aspx"><div id="MINOR_CIV_IFE" class="menuitem">Ифе</div></a>
+				<a href="MINOR_CIV_KATHMANDU.aspx"><div id="MINOR_CIV_KATHMANDU" class="menuitem">Катманду</div></a>
+				<a href="MINOR_CIV_LA_VENTA.aspx"><div id="MINOR_CIV_LA_VENTA" class="menuitem">Ла-Вента</div></a>
+				<a href="MINOR_CIV_LHASA.aspx"><div id="MINOR_CIV_LHASA" class="menuitem">Лхаса</div></a>
+			</div></div>
+			<div id="GROUP_MINOR_TRAIT_MERCANTILE" class="menugroupcontainer"><a href="javascript:togglediv('MINOR_TRAIT_MERCANTILE_CONTENT');"><div id="MINOR_TRAIT_MERCANTILE" class="menugroup">Торг. города</div></a><div id="MINOR_TRAIT_MERCANTILE_CONTENT">
+				<a href="MINOR_CIV_ANTANANARIVO.aspx"><div id="MINOR_CIV_ANTANANARIVO" class="menuitem">Антананариву</div></a>
+				<a href="MINOR_CIV_ANTWERP.aspx"><div id="MINOR_CIV_ANTWERP" class="menuitem">Антверпен</div></a>
+				<a href="MINOR_CIV_VILNIUS.aspx"><div id="MINOR_CIV_VILNIUS" class="menuitem">Вильнюс</div></a>
+				<a href="MINOR_CIV_GENOA.aspx"><div id="MINOR_CIV_GENOA" class="menuitem">Генуя</div></a>
+				<a href="MINOR_CIV_HONG_KONG.aspx"><div id="MINOR_CIV_HONG_KONG" class="menuitem">Гонконг</div></a>
+				<a href="MINOR_CIV_ZANZIBAR.aspx"><div id="MINOR_CIV_ZANZIBAR" class="menuitem">Занзибар</div></a>
+				<a href="MINOR_CIV_CAHOKIA.aspx"><div id="MINOR_CIV_CAHOKIA" class="menuitem">Кахокия</div></a>
+				<a href="MINOR_CIV_COLOMBO.aspx"><div id="MINOR_CIV_COLOMBO" class="menuitem">Коломбо</div></a>
+				<a href="MINOR_CIV_MALACCA.aspx"><div id="MINOR_CIV_MALACCA" class="menuitem">Малакка</div></a>
+				<a href="MINOR_CIV_MELBOURNE.aspx"><div id="MINOR_CIV_MELBOURNE" class="menuitem">Мельбурн</div></a>
+				<a href="MINOR_CIV_SAMARKAND.aspx"><div id="MINOR_CIV_SAMARKAND" class="menuitem">Самарканд</div></a>
+				<a href="MINOR_CIV_SINGAPORE.aspx"><div id="MINOR_CIV_SINGAPORE" class="menuitem">Сингапур</div></a>
+				<a href="MINOR_CIV_TYRE.aspx"><div id="MINOR_CIV_TYRE" class="menuitem">Тир</div></a>
+				<a href="MINOR_CIV_ZURICH.aspx"><div id="MINOR_CIV_ZURICH" class="menuitem">Цюрих</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

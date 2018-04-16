@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Cz&#281;&#347;ci zamiennych</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_REPLACEABLE_PARTS.png" alt="Cz&#281;&#347;ci zamiennych" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">3100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_STEAM_POWER.aspx" onmouseover="return tooltip('Silnik parowy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_STEAM_POWER.png" /></a><a href="TECH_ELECTRICITY.aspx" onmouseover="return tooltip('Elektryczno&#347;&#263;');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRICITY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala wynale&#378;&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PLASTIC.aspx" onmouseover="return tooltip('Tworzywo sztuczne');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PLASTIC.png" /></a><a href="TECH_ELECTRONICS.aspx" onmouseover="return tooltip('Elektronika');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRONICS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Odblokowuje jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_GREAT_WAR_INFANTRY.aspx" onmouseover="return tooltip('Piechota z czas&oacute;w wielkiej wojny');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_GREAT_WAR_INFANTRY.png" /></a><a href="UNIT_FRENCH_FOREIGNLEGION.aspx" onmouseover="return tooltip('Legia Cudzoziemska');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_FRENCH_FOREIGNLEGION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala budowa&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_MILITARY_BASE.aspx" onmouseover="return tooltip('Baza wojskowa');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_MILITARY_BASE.png" /></a><a href="BUILDING_STATUE_OF_LIBERTY.aspx" onmouseover="return tooltip('Statua Wolno&#347;ci');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_STATUE_OF_LIBERTY.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Cz&#281;&#347;ci zamiennych</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Pozwala na szkolenie <span class="color_positive_text">piechoty z czas&oacute;w wielkiej wojny</span>, b&#281;d&#261;cej podstawow&#261; jednostk&#261; l&#261;dow&#261;, oraz budow&#281; <span class="color_positive_text">bazy wojskowej</span>, zwi&#281;kszaj&#261;cej si&#322;&#281; obrony miasta.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cytat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />„Nic nie jest trudne, je&#347;li podzieli si&#281; to na mniejsze zadania.”<br /> – Henry Ford<br /></div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Cz&#281;&#347;ci zamienne powstaj&#261; w procesie produkcyjnym, w kt&oacute;rym wytwarza si&#281; wiele kopii tego samego przedmiotu, a ka&#380;da z nich sk&#322;ada si&#281; z identycznych cz&#281;&#347;ci. Proces ten umo&#380;liwia znacz&#261;ce przyspieszenie i zwi&#281;kszenie zysk&oacute;w z produkcji, co sta&#322;o si&#281; motorem nap&#281;dowym rewolucji przemys&#322;owej w XIX wieku.<br /><br />Do upowszechnienia cz&#281;&#347;ci zamiennych przyczyni&#322;o si&#281; zapotrzebowanie na bro&#324; paln&#261; dla &#380;o&#322;nierzy. Pocz&#261;tkowo muszkiety by&#322;y wytwarzane przez rzemie&#347;lnik&oacute;w, ka&#380;da sztuka mog&#322;a nieznacznie r&oacute;&#380;ni&#263; si&#281; od innych – jeden rzemie&#347;lnik m&oacute;g&#322; produkowa&#263; d&#322;u&#380;sz&#261; bro&#324;, a inny montowa&#322; wi&#281;kszy lub mniejszy spust. Dla jednej osoby nie by&#322; to wielki problem – w razie awarii muszkietu mo&#380;na by&#322;o odda&#263; go do naprawy rzemie&#347;lnikowi, z kt&oacute;rego warsztatu pochodzi&#322;a bro&#324;. Oczywi&#347;cie by&#322;o to niewykonalne w przypadku armii z tysi&#261;cami muszkiet&oacute;w.<br /><br />Ale kiedy wszystkie by&#322;y identyczne, mo&#380;na by&#322;o wykorzysta&#263; cz&#281;&#347;&#263; z uszkodzonego muszkietu do naprawy innego. Ponadto &#380;o&#322;nierz wyszkolony w pos&#322;ugiwaniu si&#281; jednym muszkietem m&oacute;g&#322; wzi&#261;&#263; drugi i spodziewa&#263; si&#281;, &#380;e bro&#324; b&#281;dzie zachowywa&#263; si&#281; w podobny spos&oacute;b i nie trzeba b&#281;dzie zaznajamia&#263; si&#281; z jej indywidualnymi w&#322;a&#347;ciwo&#347;ciami.<br /><br />W tej chwili praktycznie wszystko, co produkuje si&#281; na naszej planecie, sk&#322;ada si&#281; z cz&#281;&#347;ci zamiennych. Rzemie&#347;lnicy zostali artystami, a ich towary s&#261; za drogie dla wi&#281;kszo&#347;ci przeci&#281;tnych nabywc&oacute;w.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

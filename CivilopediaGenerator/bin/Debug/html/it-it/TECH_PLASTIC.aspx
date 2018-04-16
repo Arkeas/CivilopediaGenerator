@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Plastica</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_PLASTIC.png" alt="Plastica" class="contentimage" />
+	<div class="contentleft">
+		<h2>Costo:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">4100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Tecnologie propedeutiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_RADIO.aspx" onmouseover="return tooltip('Radio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_RADIO.png" /></a><a href="TECH_REPLACEABLE_PARTS.aspx" onmouseover="return tooltip('dei Pezzi indipendenti');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_REPLACEABLE_PARTS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Conduce alle tecnologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PENICILIN.aspx" onmouseover="return tooltip('Penicillina');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PENICILIN.png" /></a><a href="TECH_ATOMIC_THEORY.aspx" onmouseover="return tooltip('Teoria atomica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ATOMIC_THEORY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unit&agrave; sbloccate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_INFANTRY.aspx" onmouseover="return tooltip('Fanteria');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_INFANTRY.png" /></a><a href="UNIT_BRAZILIAN_PRACINHA.aspx" onmouseover="return tooltip('Pracinha');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_BRAZILIAN_PRACINHA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Edifici sbloccati:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_LABORATORY.aspx" onmouseover="return tooltip('Laboratorio di ricerca');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_LABORATORY.png" /></a><a href="BUILDING_CRISTO_REDENTOR.aspx" onmouseover="return tooltip('Cristo Redentore');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_CRISTO_REDENTOR.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Plastica</div>
+		<h2>Informazione sulla partita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permette la costruzione del<span class="color_positive_text"> Laboratorio di ricerca</span>, un edificio che aumenta la <img src="/civilopedia/images/research.png" alt="research" /> Scienza in una citt&agrave;, e della <span class="color_positive_text">Fanteria</span>, unit&agrave; base terrestre nel finale di partita.</div></div></div></div></div></div></div></div>
+		
+		<h2>Citazione:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Ben, voglio solo dirti una parola... una sola: plastica."<br /> - Buck Henry e Calder Willingham, Il Laureato<br /></div></div></div></div></div></div></div></div>
+		<h2>Informazioni storiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">La plastica &egrave; un materiale leggero, trasparente e resistente, cattivo conduttore di elettricit&agrave;. La plastica può essere di molti tipi, alcuni pi&ugrave; duri, altri pi&ugrave; flessibili, altri ancora pi&ugrave; o meno resistenti al calore. La plastica può essere modellata, pressata o estrusa in praticamente qualsiasi forma desiderata. Oggigiorno la si trova dappertutto, dai paraurti delle auto alle protesi, dai barattoli dei cibi per neonati alle armi della fanteria: &egrave; certamente uno degli elementi fondamentali del XXI secolo.<br /><br />La prima plastica di creazione umana &egrave; stata inventata dall'inglese Alexander Parkes nel 1855. La sostanza, battezzata "parkensina", era ricavata dalla cellulosa (un materiale di origine vegetale) e veniva utilizzata per sostituire l'avorio, che diventava sempre pi&ugrave; difficile procurarsi visto che la popolazione mondiale delle balene stava scemando visibilmente.<br /><br />La prima plastica totalmente sintetica fu la bachelite, inventata nel 1909 dall'inventore belga-americano Leo Hendrik Baekeland. La bachelite era poco costosa, forte e durevole. Fu utilizzata per costruire radio, telefoni, manici di utensili, tasti per pianoforte, palle da biliardo. Anche se &egrave; molto dura, la bachelite &egrave; piuttosto fragile. Oggi &egrave; stata sostituita da plastiche meno costose e pi&ugrave; flessibili come il polistirene, il PVC, il nylon e altre varianti pi&ugrave; esotiche inventate nel corso del XX secolo.<br /><br />Anche se al momento &egrave; relativamente poco costosa, di solito la produzione della plastica richiede grandi quantit&agrave; di prodotti petrolchimici. Man mano che il petrolio diventer&agrave; pi&ugrave; caro, anche il costo della plastica si adeguer&agrave;. In futuro &egrave; prevedibile che un altro materiale miracoloso soppianti l'onnipresente plastica, che però per il momento resta insostituibile. </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

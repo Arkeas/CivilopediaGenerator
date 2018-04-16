@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Cossack</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_RUSSIAN_COSSACK.png" alt="Cossack" class="contentimage" />
+	<div class="contentleft">
+		<h2>Cost:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">225 <img src="/civilopedia/images/production.png" alt="production" /> / 450 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Combat Type:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Mounted Units</div></div></div></div></div></div></div></div>
+		<h2>Combat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">34 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Movement:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">4 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilization:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_RUSSIA.aspx" onmouseover="return tooltip('Russian Empire');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_RUSSIA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Abilities:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('No Defensive Terrain Bonuses');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Can Move After Attacking');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_STRONGER_VS_DAMAGED.aspx" onmouseover="return tooltip('Damaged Enemy Bonus (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Penalty Attacking Cities (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Required Resources:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Horses');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Prerequisite Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MILITARY_SCIENCE.aspx" onmouseover="return tooltip('Military Science');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MILITARY_SCIENCE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Becomes Obsolete with:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBUSTION.aspx" onmouseover="return tooltip('Combustion');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBUSTION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Upgrade Unit</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_WWI_TANK.aspx" onmouseover="return tooltip('Landship');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_WWI_TANK.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Replaces:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CAVALRY.aspx" onmouseover="return tooltip('Cavalry');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CAVALRY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Cossack</div>
+		<h2>Game Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Mounted Unit capable of fighting toe-to-toe with contemporary infantry units. <br /><br />Only the Russians may build it. This Unit has a combat bonus when fighting enemies that have already taken damage.</div></div></div></div></div></div></div></div>
+		<h2>Strategy:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">The Cossack is a Russian unique unit, replacing the Cavalry. They are the same strength as Cavalry and can also move after attacking. However, Cossack units get a strong combat bonus when battling damaged units. This makes Cossacks exceptionally strong at counter-attacking - let the enemy chew up the front-line peasants, then tear the weakened foe apart with a Cossack charge!</div></div></div></div></div></div></div></div>
+		<h2>Historical Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">The Cossacks were military communities living in the wilds of the Ukraine and Russia. Originally the term referred specifically to Tatar tribesmen, but by the end of the 15th century it was also used to refer to a number of peasants who had fled from serfdom in Poland, Lithuania and Moscow and had established homes in the wild. Some of the greatest natural horsemen since the Mongols, the Cossacks served in the Russian military in return for special privileges for themselves and their communities. The Russian military employed the Cossack cavalry in all of their major external and internal conflicts right up to the 20th century, and Cossack units fought on both sides during the Russian Civil War. The Cossacks were all but wiped out under Stalinism. Some survivors, however, are attempting to regain their heritage following the collapse of the Soviet Union.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

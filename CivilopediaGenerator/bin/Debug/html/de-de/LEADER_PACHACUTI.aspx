@@ -1,0 +1,32 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Civilizations.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Pachac&uacute;tec</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/LEADER_PACHACUTI.png" alt="Pachac&uacute;tec" class="contentimage" />
+	<div class="contentleft">
+		<h2>Lebte:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">ca. 1410-1471 n. Chr.</div></div></div></div></div></div></div></div>
+		<h2>Titel:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Sapa Inca</div></div></div></div></div></div></div></div>
+		<h2>Zivilisation:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_INCA.aspx" onmouseover="return tooltip('Inkareich');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_INCA.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Pachac&uacute;tec</div>
+		<div class="title">Staatsoberhaupt der Inka</div>
+		<h2>Spielinformationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Inka-Pfad<br /><br />Keine Gel&auml;ndekosten f&uuml;r Einheiten auf H&uuml;gelfeldern. Keine Unterhaltskosten f&uuml;r Modernisierungen auf H&uuml;geln. Kosten auf anderen Feldern halbiert.</div></div></div></div></div></div></div></div>
+		
+<h2>Geschichte</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Pachac&uacute;tec war der neunte Herrscher &uuml;ber das Königreich von Cusco, und w&auml;hrend seiner Regentschaft baute er das kleine Königreich zu einem gewaltigen Imperium namens Tawantinsuyu aus. Pachac&uacute;tecs Inkareich erstreckte sich vom heutigen Chile bis nach Ecuador und deckte gro&szlig;e Teile von Peru, Bolivien und Nordargentinien ab. Er legte den Grundstein daf&uuml;r, dass das Inkareich sp&auml;ter noch weiter wachsen sollte.</div></div></div></div></div></div></div></div>
+<h2>Thronbesteigung</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">
+				Pachac&uacute;tec war der Sohn des Inka Wiraqucha und zweiter in der Thronfolge nach seinem &auml;lteren Bruder Urco. Das Königreich von Cusco war zu diesem Zeitpunkt eher klein und unbedeutend und wurde vom benachbarten Stamm der Chankas bedroht. Von Pachac&uacute;tecs fr&uuml;hen Jahren ist nicht viel bekannt, bis er die Chance erhielt, seinen Vater w&auml;hrend einer Invasion der Chankas zu beeindrucken. W&auml;hrend sein Vater und sein Bruder vom Schlachtfeld flohen, trommelte Pachac&uacute;tec die verbliebenen Truppen zusammen und gewann nicht nur diese Schlacht, sondern vernichtete die Chankas so gr&uuml;ndlich, dass der Legende nach die Erde selbst sich erhob, um f&uuml;r ihn zu k&auml;mpfen. Pachac&uacute;tec, der "Weltenver&auml;nderer", wurde zum neuen Kronprinzen und Teilherrscher von Cusco ernannt.
+			</div></div></div></div></div></div></div></div>
+<h2>Errichtung eines Reiches</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">
+				Im Jahr 1438 wurde Pachac&uacute;tec durch den Tod seines Vaters zum Alleinherrscher des Königreichs und begann unverz&uuml;glich mit einer Reihe von Angriffen auf die benachbarten Königreiche. Sein neues Reich erstreckte sich von Ecuador bis Chile und wuchs zu einem der beeindruckendsten Königreiche S&uuml;damerikas heran.<br /><br />Obwohl viele Königreiche durch Eroberung einverleibt wurden, verfolgte Pachac&uacute;tec auch raffiniertere Strategien, um neue Gebiete zu gewinnen. Zuerst entsandte er Spione in Gebiete, die ihn interessierten, um Informationen &uuml;ber Wohlstand und milit&auml;rische St&auml;rke zu sammeln. Wenn ihm ein Land gefiel, bot er den jeweiligen Herrschern an, sich kampflos zu ergeben, und pries die Vorz&uuml;ge eines Lebens unter der Herrschaft der Inka an. Viele willigten ein (um nicht das Schicksal der Chankas zu teilen) und schickten ihre Kinder nach Cusco, die dort aufzuwuchsen und nach Inkarecht erzogen wurden. Sie wurden indoktriniert und mit adeligen Inka verheiratet, bevor sie in ihre Herkunftsl&auml;nder zur&uuml;ckgeschickt wurden, um dort zu herrschen. Dies sicherte Frieden und die Ausdehnung des Reiches.<br /><br />Um sein neues Land zu kontrollieren, teilte Pachac&uacute;tec es in vier Provinzen ein, die jeweils von einem Gouverneur verwaltet wurden, der sich vor Ort um die allt&auml;glichen Belange k&uuml;mmerte. Er schuf au&szlig;erdem geteilte Machtbereiche f&uuml;r das Priestertum und die Armee, was es zu einem der ersten Systeme zur gegenseitigen Kontrolle machte. Cusco selbst wurde neu errichtet, um dem Reich als Hauptstadt zu dienen, und jeder Provinz wurde ein Teil der Stadt gewidmet. In dieser Zeit lie&szlig; er auch die ber&uuml;hmte Stadt Machu Picchu errichten, die ihm persönlich als Anwesen in den Bergen gedient haben soll.<br /><br />Nach seinem Tod im Jahr 1471 wurde Pachac&uacute;tecs j&uuml;ngerer Sohn Tupac zum neuen Herrscher des Inkareichs. Sein &auml;lterer Sohn Amaru wurde &uuml;bergangen, da er kein Krieger wie sein Vater war.
+			</div></div></div></div></div></div></div></div>
+<h2>Historische Bewertung</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Pachac&uacute;tec wird in Peru als Nationalheld verehrt, und viele von ihm errichtete Monumente stehen noch heute. Er war vor allem f&uuml;r seine politischen und milit&auml;rischen F&auml;higkeiten bekannt, galt jedoch nie als besonders g&uuml;tiger Herrscher. Um den Fortbestand seines Reichs zu sichern, siedelte er Hunderttausende von Menschen an Pl&auml;tze in seinem Reich um, die ihm sinnvoll erschienen. Trotz seiner Fehler leitete Pachac&uacute;tec die grö&szlig;te Eroberungsphase der Inka ein und erweiterte das Reich, bis es sich fast &uuml;ber das gesamte bekannte und bewohnte S&uuml;damerika erstreckte.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

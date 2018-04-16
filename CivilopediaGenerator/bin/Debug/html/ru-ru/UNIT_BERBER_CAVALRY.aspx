@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Конница берберов</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_BERBER_CAVALRY.png" alt="Конница берберов" class="contentimage" />
+	<div class="contentleft">
+		<h2>Стоимость:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">225 <img src="/civilopedia/images/production.png" alt="production" /> / 450 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Тип юнита:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Конница</div></div></div></div></div></div></div></div>
+		<h2>Бой:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">34 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Перемещение:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">4 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Цивилизация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_MOROCCO.aspx" onmouseover="return tooltip('Марокканская империя');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_MOROCCO.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Возможности:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Не получает бонусов от местности в обороне');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Может перемещаться после атаки');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Штраф при атаке городов (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_DESERT_WARRIOR.aspx" onmouseover="return tooltip('Воители пустыни');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_EXP_1.png" /></a><a href="PROMOTION_HOMELAND_GUARDIAN.aspx" onmouseover="return tooltip('Страж родины');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_EXP_10.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Нужные ресурсы:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('лошадей');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Нужные технологии:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MILITARY_SCIENCE.aspx" onmouseover="return tooltip('Военная наука');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MILITARY_SCIENCE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Устаревает после:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBUSTION.aspx" onmouseover="return tooltip('Двигатель ВС');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBUSTION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Модернизировать</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_WWI_TANK.aspx" onmouseover="return tooltip('танкеток');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_WWI_TANK.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Замещает:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CAVALRY.aspx" onmouseover="return tooltip('кавалеристов');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CAVALRY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Конница берберов</div>
+		<h2>Игровая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Конный юнит, специализирующийся на войне в пустыне и защите марокканских земель. Боевая мощь увеличивается при сражении на клетках пустыни и при сражении на марокканской территории. Может быть построена только в Марокко.</div></div></div></div></div></div></div></div>
+		<h2>Описание:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Этот конный юнит заменяет конницу и является яростным воином из марокканских пустынь. Боевая мощь увеличивается при сражении на клетках пустыни и при сражении на марокканской территории (эти бонусы суммируются).</div></div></div></div></div></div></div></div>
+		<h2>Историческая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Берберы уже много веков живут в исторической области Магриб на северо-западе Африки. Яростные воины-берберы властвовали в горах Эр-Риф и в западной части Сахары. Берберы были отличными всадниками. Они вывели специальную, очень выносливую породу лошадей - берберийскую. Берберы носили легкую одежду, отлично подходящую для жаркого и сухого климата Северной Африки, которую зимой дополняли плащи. Оружие берберов напоминало арабское: длинный прямой меч, искривленный кинжал с орнаментом и огнестрельное оружие с длинным стволом (гладким или нарезным). Чаще всего берберы нападали на караваны и прибрежные поселения, но они принимали участие и в серьезных сражениях. В некоторых битвах они показали тяжеловооруженным и закованным в броню европейскими рыцарям, на что способна легкая конница берберов.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

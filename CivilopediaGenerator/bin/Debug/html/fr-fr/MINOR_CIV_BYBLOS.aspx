@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Byblos</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Byblos</div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Des fouilles arch&eacute;ologiques ont r&eacute;v&eacute;l&eacute; que les premiers habitants du site de Byblos, sur la c&ocirc;te m&eacute;diterran&eacute;enne, dataient de l'&egrave;re n&eacute;olithique. D&egrave;s le IVe si&egrave;cle av. J.-C., le site devint une importante colonie capable de subvenir &agrave; ses propres besoins gr&acirc;ce &agrave; la p&ecirc;che et &agrave; l'agriculture. Au cours des mill&eacute;naires qui suivirent, l'exportation de c&egrave;dre vers l'&Eacute;gypte devint de plus en plus importante, le bois servant &agrave; la fabrication de bateaux et de quais, et l'huile de c&egrave;dre &eacute;tant utilis&eacute;e dans le processus de momification des corps. Aux alentours de 2150 av. J.-C., les Amorrites incendi&egrave;rent le site au cours de leur invasion, provoquant l'abandon du site pendant pr&egrave;s de deux si&egrave;cles avant que les Ph&eacute;niciens ne reconstruisent le port, rebaptisant la ville Gebal. La ville contribua de mani&egrave;re cruciale au d&eacute;veloppement de la civilisation gr&acirc;ce &agrave; la cr&eacute;ation d'un alphabet phon&eacute;tique &agrave; 22 caract&egrave;res, qui allait remplacer le complexe syst&egrave;me cun&eacute;iforme utilis&eacute; dans la r&eacute;gion.<br /><br />Centre marchand majeur, Gebal devint encore plus importante apr&egrave;s les occupations successives des Assyriens, des Babyloniens, des Ach&eacute;m&eacute;nides et des Perses. Apr&egrave;s avoir &eacute;t&eacute; conquise par Alexandre, Byblos prosp&eacute;ra en tant que cit&eacute; hell&eacute;nique, ses citoyens ayant adopt&eacute; le style vestimentaire, la langue et les croyances des Grecs. En plus du c&egrave;dre, des c&eacute;r&eacute;ales et des fruits, la ville devint c&eacute;l&egrave;bre pour la production et l'exportation de papyrus, qui lui valut son nom grec de Byblos. Au cours de l'&egrave;re romaine, la ville perdit sa supr&eacute;matie commerciale, mais son r&ocirc;le religieux augmenta gr&acirc;ce aux nombreux groupes de p&egrave;lerins qui y faisaient escale lors de leurs p&eacute;riples vers divers sites sacr&eacute;s.<br /><br />En 395 av. J.-C., bien que n'&eacute;tant qu'un petit port secondaire, Byblos devint partie int&eacute;grante de l'Empire byzantin, jusqu'&agrave; ce que les Musulmans l'envahissent en 637. Sous le r&eacute;gime musulman, la richesse et l'influence de la ville, rebaptis&eacute;e Jbeil, continu&egrave;rent &agrave; d&eacute;cliner, et elle finit par &ecirc;tre abandonn&eacute;e. Byblos disparut dans l'oubli jusqu'&agrave; ce qu'un historien fran&ccedil;ais, Ernest Renan, la mette au jour dans les ann&eacute;es 1860. M&ecirc;me si Byblos ne sera plus jamais un puissant port maritime, elle rena&icirc;t en tant que destination touristique de choix, et accueille de nombreux vacanciers attir&eacute;s par ses plages de sable blanc, son climat cl&eacute;ment et ses ruines datant du temps des Romains, des Musulmans et des Croisades.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

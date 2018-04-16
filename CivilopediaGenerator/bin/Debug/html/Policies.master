@@ -1,0 +1,246 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,social policy,social policies,policy,policies," />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('Game Concepts');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_off.png" class="tab" id="tab01" onmouseover="this.src='/civilopedia/images/tab_concept_on.png';" onmouseout="this.src='/civilopedia/images/tab_concept_off.png';" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('Technologies');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('Units');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_off.png" class="tab" id="tab03" onmouseover="this.src='/civilopedia/images/tab_unit_on.png';" onmouseout="this.src='/civilopedia/images/tab_unit_off.png';" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('Promotions');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_off.png" class="tab" id="tab04" onmouseover="this.src='/civilopedia/images/tab_promotion_on.png';" onmouseout="this.src='/civilopedia/images/tab_promotion_off.png';" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('Buildings');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('Wonders');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('Social Policies');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_on.png" class="tab" id="tab07" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('Specialists and Great People');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('Civilizations and Leaders');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_off.png" class="tab" id="tab09" onmouseover="this.src='/civilopedia/images/tab_civilization_on.png';" onmouseout="this.src='/civilopedia/images/tab_civilization_off.png';" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('City-States');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_off.png" class="tab" id="tab10" onmouseover="this.src='/civilopedia/images/tab_city_state_on.png';" onmouseout="this.src='/civilopedia/images/tab_city_state_off.png';" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('Terrain and Features');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('Resources');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('Improvements');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('Religion');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_off.png" class="tab" id="tab14" onmouseover="this.src='/civilopedia/images/tab_religion_on.png';" onmouseout="this.src='/civilopedia/images/tab_religion_off.png';" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('World Congress');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">Social Policies
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+					<option value="zh-hant-hk">中文 (繁體)</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="POLICY_HOME.aspx"><div id="POLICY_HOME" class="menuitem">Policies Home Page</div></a>
+			<div id="GROUP_POLICY_BRANCH_TRADITION" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_TRADITION_CONTENT');"><div id="POLICY_BRANCH_TRADITION" class="menugroup">Tradition</div></a><div id="POLICY_BRANCH_TRADITION_CONTENT">
+				<a href="POLICY_ARISTOCRACY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ARISTOCRACY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ARISTOCRACY" class="menuitem">Aristocracy</div></a>
+				<a href="POLICY_LANDED_ELITE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_LANDED_ELITE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_LANDED_ELITE" class="menuitem">Landed Elite</div></a>
+				<a href="POLICY_LEGALISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_LEGALISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_LEGALISM" class="menuitem">Legalism</div></a>
+				<a href="POLICY_MONARCHY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MONARCHY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MONARCHY" class="menuitem">Monarchy</div></a>
+				<a href="POLICY_OLIGARCHY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_OLIGARCHY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_OLIGARCHY" class="menuitem">Oligarchy</div></a>
+				<a href="POLICY_TRADITION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_TRADITION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_TRADITION" class="menuitem">Tradition</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_LIBERTY" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_LIBERTY_CONTENT');"><div id="POLICY_BRANCH_LIBERTY" class="menugroup">Liberty</div></a><div id="POLICY_BRANCH_LIBERTY_CONTENT">
+				<a href="POLICY_CITIZENSHIP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CITIZENSHIP.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CITIZENSHIP" class="menuitem">Citizenship</div></a>
+				<a href="POLICY_COLLECTIVE_RULE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_COLLECTIVE_RULE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_COLLECTIVE_RULE" class="menuitem">Collective Rule</div></a>
+				<a href="POLICY_LIBERTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_LIBERTY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_LIBERTY" class="menuitem">Liberty</div></a>
+				<a href="POLICY_MERITOCRACY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MERITOCRACY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MERITOCRACY" class="menuitem">Meritocracy</div></a>
+				<a href="POLICY_REPRESENTATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_REPRESENTATION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_REPRESENTATION" class="menuitem">Representation</div></a>
+				<a href="POLICY_REPUBLIC.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_REPUBLIC.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_REPUBLIC" class="menuitem">Republic</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_HONOR" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_HONOR_CONTENT');"><div id="POLICY_BRANCH_HONOR" class="menugroup">Honor</div></a><div id="POLICY_BRANCH_HONOR_CONTENT">
+				<a href="POLICY_DISCIPLINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_DISCIPLINE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_DISCIPLINE" class="menuitem">Discipline</div></a>
+				<a href="POLICY_HONOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_HONOR.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_HONOR" class="menuitem">Honor</div></a>
+				<a href="POLICY_MILITARY_CASTE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MILITARY_CASTE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MILITARY_CASTE" class="menuitem">Military Caste</div></a>
+				<a href="POLICY_MILITARY_TRADITION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MILITARY_TRADITION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MILITARY_TRADITION" class="menuitem">Military Tradition</div></a>
+				<a href="POLICY_PROFESSIONAL_ARMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_PROFESSIONAL_ARMY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_PROFESSIONAL_ARMY" class="menuitem">Professional Army</div></a>
+				<a href="POLICY_WARRIOR_CODE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_WARRIOR_CODE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_WARRIOR_CODE" class="menuitem">Warrior Code</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_PIETY" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_PIETY_CONTENT');"><div id="POLICY_BRANCH_PIETY" class="menugroup">Piety</div></a><div id="POLICY_BRANCH_PIETY_CONTENT">
+				<a href="POLICY_MANDATE_OF_HEAVEN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MANDATE_OF_HEAVEN.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MANDATE_OF_HEAVEN" class="menuitem">Mandate of Heaven</div></a>
+				<a href="POLICY_ORGANIZED_RELIGION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ORGANIZED_RELIGION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ORGANIZED_RELIGION" class="menuitem">Organized Religion</div></a>
+				<a href="POLICY_PIETY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_PIETY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_PIETY" class="menuitem">Piety</div></a>
+				<a href="POLICY_REFORMATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_REFORMATION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_REFORMATION" class="menuitem">Reformation</div></a>
+				<a href="POLICY_FREE_RELIGION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_FREE_RELIGION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_FREE_RELIGION" class="menuitem">Religious Tolerance</div></a>
+				<a href="POLICY_THEOCRACY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_THEOCRACY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_THEOCRACY" class="menuitem">Theocracy</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_PATRONAGE" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_PATRONAGE_CONTENT');"><div id="POLICY_BRANCH_PATRONAGE" class="menugroup">Patronage</div></a><div id="POLICY_BRANCH_PATRONAGE_CONTENT">
+				<a href="POLICY_CONSULATES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CONSULATES.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CONSULATES" class="menuitem">Consulates</div></a>
+				<a href="POLICY_CULTURAL_DIPLOMACY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CULTURAL_DIPLOMACY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CULTURAL_DIPLOMACY" class="menuitem">Cultural Diplomacy</div></a>
+				<a href="POLICY_MERCHANT_CONFEDERACY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MERCHANT_CONFEDERACY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MERCHANT_CONFEDERACY" class="menuitem">Merchant Confederacy</div></a>
+				<a href="POLICY_PATRONAGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_PATRONAGE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_PATRONAGE" class="menuitem">Patronage</div></a>
+				<a href="POLICY_PHILANTHROPY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_PHILANTHROPY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_PHILANTHROPY" class="menuitem">Philanthropy</div></a>
+				<a href="POLICY_SCHOLASTICISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SCHOLASTICISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SCHOLASTICISM" class="menuitem">Scholasticism</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_AESTHETICS" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_AESTHETICS_CONTENT');"><div id="POLICY_BRANCH_AESTHETICS" class="menugroup">Aesthetics</div></a><div id="POLICY_BRANCH_AESTHETICS_CONTENT">
+				<a href="POLICY_AESTHETICS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_AESTHETICS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_AESTHETICS" class="menuitem">Aesthetics</div></a>
+				<a href="POLICY_ARTISTIC_GENIUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ARTISTIC_GENIUS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ARTISTIC_GENIUS" class="menuitem">Artistic Genius</div></a>
+				<a href="POLICY_CULTURAL_CENTERS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CULTURAL_CENTERS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CULTURAL_CENTERS" class="menuitem">Cultural Centers</div></a>
+				<a href="POLICY_ETHICS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ETHICS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ETHICS" class="menuitem">Cultural Exchange</div></a>
+				<a href="POLICY_FINE_ARTS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_FINE_ARTS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_FINE_ARTS" class="menuitem">Fine Arts</div></a>
+				<a href="POLICY_FLOURISHING_OF_ARTS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_FLOURISHING_OF_ARTS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_FLOURISHING_OF_ARTS" class="menuitem">Flourishing of the Arts</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_COMMERCE" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_COMMERCE_CONTENT');"><div id="POLICY_BRANCH_COMMERCE" class="menugroup">Commerce</div></a><div id="POLICY_BRANCH_COMMERCE_CONTENT">
+				<a href="POLICY_COMMERCE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_COMMERCE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_COMMERCE" class="menuitem">Commerce</div></a>
+				<a href="POLICY_ENTREPRENEURSHIP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ENTREPRENEURSHIP.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ENTREPRENEURSHIP" class="menuitem">Entrepreneurship</div></a>
+				<a href="POLICY_MERCANTILISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MERCANTILISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MERCANTILISM" class="menuitem">Mercantilism</div></a>
+				<a href="POLICY_TRADE_UNIONS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_TRADE_UNIONS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_TRADE_UNIONS" class="menuitem">Mercenary Army</div></a>
+				<a href="POLICY_PROTECTIONISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_PROTECTIONISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_PROTECTIONISM" class="menuitem">Protectionism</div></a>
+				<a href="POLICY_CARAVANS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CARAVANS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CARAVANS" class="menuitem">Wagon Trains</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_EXPLORATION" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_EXPLORATION_CONTENT');"><div id="POLICY_BRANCH_EXPLORATION" class="menugroup">Exploration</div></a><div id="POLICY_BRANCH_EXPLORATION_CONTENT">
+				<a href="POLICY_EXPLORATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_EXPLORATION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_EXPLORATION" class="menuitem">Exploration</div></a>
+				<a href="POLICY_MARITIME_INFRASTRUCTURE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MARITIME_INFRASTRUCTURE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MARITIME_INFRASTRUCTURE" class="menuitem">Maritime Infrastructure</div></a>
+				<a href="POLICY_MERCHANT_NAVY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MERCHANT_NAVY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MERCHANT_NAVY" class="menuitem">Merchant Navy</div></a>
+				<a href="POLICY_NAVAL_TRADITION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_NAVAL_TRADITION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_NAVAL_TRADITION" class="menuitem">Naval Tradition</div></a>
+				<a href="POLICY_NAVIGATION_SCHOOL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_NAVIGATION_SCHOOL.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_NAVIGATION_SCHOOL" class="menuitem">Navigation School</div></a>
+				<a href="POLICY_TREASURE_FLEETS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_TREASURE_FLEETS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_TREASURE_FLEETS" class="menuitem">Treasure Fleets</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_RATIONALISM" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_RATIONALISM_CONTENT');"><div id="POLICY_BRANCH_RATIONALISM" class="menugroup">Rationalism</div></a><div id="POLICY_BRANCH_RATIONALISM_CONTENT">
+				<a href="POLICY_FREE_THOUGHT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_FREE_THOUGHT.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_FREE_THOUGHT" class="menuitem">Free Thought</div></a>
+				<a href="POLICY_HUMANISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_HUMANISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_HUMANISM" class="menuitem">Humanism</div></a>
+				<a href="POLICY_RATIONALISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_RATIONALISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_RATIONALISM" class="menuitem">Rationalism</div></a>
+				<a href="POLICY_SCIENTIFIC_REVOLUTION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SCIENTIFIC_REVOLUTION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SCIENTIFIC_REVOLUTION" class="menuitem">Scientific Revolution</div></a>
+				<a href="POLICY_SECULARISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SECULARISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SECULARISM" class="menuitem">Secularism</div></a>
+				<a href="POLICY_SOVEREIGNTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SOVEREIGNTY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SOVEREIGNTY" class="menuitem">Sovereignty</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_FREEDOM" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_FREEDOM_CONTENT');"><div id="POLICY_BRANCH_FREEDOM" class="menugroup">Freedom</div></a><div id="POLICY_BRANCH_FREEDOM_CONTENT">
+				<a href="POLICY_ARSENAL_DEMOCRACY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ARSENAL_DEMOCRACY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ARSENAL_DEMOCRACY" class="menuitem">Arsenal of Democracy</div></a>
+				<a href="POLICY_OPEN_SOCIETY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_OPEN_SOCIETY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_OPEN_SOCIETY" class="menuitem">Avant Garde</div></a>
+				<a href="POLICY_CAPITALISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CAPITALISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CAPITALISM" class="menuitem">Capitalism</div></a>
+				<a href="POLICY_CIVIL_SOCIETY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CIVIL_SOCIETY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CIVIL_SOCIETY" class="menuitem">Civil Society</div></a>
+				<a href="POLICY_COVERT_ACTION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_COVERT_ACTION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_COVERT_ACTION" class="menuitem">Covert Action</div></a>
+				<a href="POLICY_CREATIVE_EXPRESSION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CREATIVE_EXPRESSION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CREATIVE_EXPRESSION" class="menuitem">Creative Expression</div></a>
+				<a href="POLICY_ECONOMIC_UNION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ECONOMIC_UNION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ECONOMIC_UNION" class="menuitem">Economic Union</div></a>
+				<a href="POLICY_MEDIA_CULTURE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MEDIA_CULTURE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MEDIA_CULTURE" class="menuitem">Media Culture</div></a>
+				<a href="POLICY_NEW_DEAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_NEW_DEAL.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_NEW_DEAL" class="menuitem">New Deal</div></a>
+				<a href="POLICY_SPACE_PROCUREMENTS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SPACE_PROCUREMENTS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SPACE_PROCUREMENTS" class="menuitem">Space Procurements</div></a>
+				<a href="POLICY_THEIR_FINEST_HOUR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_THEIR_FINEST_HOUR.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_THEIR_FINEST_HOUR" class="menuitem">Their Finest Hour</div></a>
+				<a href="POLICY_TREATY_ORGANIZATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_TREATY_ORGANIZATION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_TREATY_ORGANIZATION" class="menuitem">Treaty Organization</div></a>
+				<a href="POLICY_UNIVERSAL_HEALTHCARE_F.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_UNIVERSAL_HEALTHCARE_F.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_UNIVERSAL_HEALTHCARE_F" class="menuitem">Universal Healthcare</div></a>
+				<a href="POLICY_UNIVERSAL_SUFFRAGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_UNIVERSAL_SUFFRAGE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_UNIVERSAL_SUFFRAGE" class="menuitem">Universal Suffrage</div></a>
+				<a href="POLICY_URBANIZATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_URBANIZATION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_URBANIZATION" class="menuitem">Urbanization</div></a>
+				<a href="POLICY_VOLUNTEER_ARMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_VOLUNTEER_ARMY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_VOLUNTEER_ARMY" class="menuitem">Volunteer Army</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_ORDER" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_ORDER_CONTENT');"><div id="POLICY_BRANCH_ORDER" class="menugroup">Order</div></a><div id="POLICY_BRANCH_ORDER_CONTENT">
+				<a href="POLICY_ACADEMY_SCIENCES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ACADEMY_SCIENCES.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ACADEMY_SCIENCES" class="menuitem">Academy of Sciences</div></a>
+				<a href="POLICY_CULTURAL_REVOLUTION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CULTURAL_REVOLUTION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CULTURAL_REVOLUTION" class="menuitem">Cultural Revolution</div></a>
+				<a href="POLICY_DICTATORSHIP_PROLETARIAT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_DICTATORSHIP_PROLETARIAT.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_DICTATORSHIP_PROLETARIAT" class="menuitem">Dictatorship of the Proletariat</div></a>
+				<a href="POLICY_DOUBLE_AGENTS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_DOUBLE_AGENTS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_DOUBLE_AGENTS" class="menuitem">Double Agents</div></a>
+				<a href="POLICY_FIVE_YEAR_PLAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_FIVE_YEAR_PLAN.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_FIVE_YEAR_PLAN" class="menuitem">Five-Year Plan</div></a>
+				<a href="POLICY_HERO_OF_THE_PEOPLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_HERO_OF_THE_PEOPLE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_HERO_OF_THE_PEOPLE" class="menuitem">Hero of the People</div></a>
+				<a href="POLICY_IRON_CURTAIN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_IRON_CURTAIN.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_IRON_CURTAIN" class="menuitem">Iron Curtain</div></a>
+				<a href="POLICY_PARTY_LEADERSHIP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_PARTY_LEADERSHIP.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_PARTY_LEADERSHIP" class="menuitem">Party Leadership</div></a>
+				<a href="POLICY_PATRIOTIC_WAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_PATRIOTIC_WAR.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_PATRIOTIC_WAR" class="menuitem">Patriotic War</div></a>
+				<a href="POLICY_RESETTLEMENT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_RESETTLEMENT.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_RESETTLEMENT" class="menuitem">Resettlement</div></a>
+				<a href="POLICY_SKYSCRAPERS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SKYSCRAPERS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SKYSCRAPERS" class="menuitem">Skyscrapers</div></a>
+				<a href="POLICY_SOCIALIST_REALISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SOCIALIST_REALISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SOCIALIST_REALISM" class="menuitem">Socialist Realism</div></a>
+				<a href="POLICY_SPACEFLIGHT_PIONEERS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_SPACEFLIGHT_PIONEERS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_SPACEFLIGHT_PIONEERS" class="menuitem">Spaceflight Pioneers</div></a>
+				<a href="POLICY_UNIVERSAL_HEALTHCARE_O.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_UNIVERSAL_HEALTHCARE_O.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_UNIVERSAL_HEALTHCARE_O" class="menuitem">Universal Healthcare</div></a>
+				<a href="POLICY_WORKERS_FACULTIES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_WORKERS_FACULTIES.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_WORKERS_FACULTIES" class="menuitem">Workers' Faculties</div></a>
+				<a href="POLICY_YOUNG_PIONEERS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_YOUNG_PIONEERS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_YOUNG_PIONEERS" class="menuitem">Young Pioneers</div></a>
+			</div></div>
+			<div id="GROUP_POLICY_BRANCH_AUTOCRACY" class="menugroupcontainer"><a href="javascript:togglediv('POLICY_BRANCH_AUTOCRACY_CONTENT');"><div id="POLICY_BRANCH_AUTOCRACY" class="menugroup">Autocracy</div></a><div id="POLICY_BRANCH_AUTOCRACY_CONTENT">
+				<a href="POLICY_NEW_ORDER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_NEW_ORDER.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_NEW_ORDER" class="menuitem">Clausewitz's Legacy</div></a>
+				<a href="POLICY_CULT_PERSONALITY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_CULT_PERSONALITY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_CULT_PERSONALITY" class="menuitem">Cult of Personality</div></a>
+				<a href="POLICY_ELITE_FORCES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_ELITE_FORCES.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_ELITE_FORCES" class="menuitem">Elite Forces</div></a>
+				<a href="POLICY_FORTIFIED_BORDERS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_FORTIFIED_BORDERS.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_FORTIFIED_BORDERS" class="menuitem">Fortified Borders</div></a>
+				<a href="POLICY_FUTURISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_FUTURISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_FUTURISM" class="menuitem">Futurism</div></a>
+				<a href="POLICY_GUNBOAT_DIPLOMACY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_GUNBOAT_DIPLOMACY.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_GUNBOAT_DIPLOMACY" class="menuitem">Gunboat Diplomacy</div></a>
+				<a href="POLICY_INDUSTRIAL_ESPIONAGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_INDUSTRIAL_ESPIONAGE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_INDUSTRIAL_ESPIONAGE" class="menuitem">Industrial Espionage</div></a>
+				<a href="POLICY_LIGHTNING_WARFARE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_LIGHTNING_WARFARE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_LIGHTNING_WARFARE" class="menuitem">Lightning Warfare</div></a>
+				<a href="POLICY_MILITARISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MILITARISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MILITARISM" class="menuitem">Militarism</div></a>
+				<a href="POLICY_MOBILIZATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_MOBILIZATION.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_MOBILIZATION" class="menuitem">Mobilization</div></a>
+				<a href="POLICY_NATIONALISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_NATIONALISM.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_NATIONALISM" class="menuitem">Nationalism</div></a>
+				<a href="POLICY_POLICE_STATE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_POLICE_STATE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_POLICE_STATE" class="menuitem">Police State</div></a>
+				<a href="POLICY_THIRD_ALTERNATIVE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_THIRD_ALTERNATIVE.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_THIRD_ALTERNATIVE" class="menuitem">Third Alternative</div></a>
+				<a href="POLICY_TOTAL_WAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_TOTAL_WAR.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_TOTAL_WAR" class="menuitem">Total War</div></a>
+				<a href="POLICY_UNITED_FRONT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_UNITED_FRONT.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_UNITED_FRONT" class="menuitem">United Front</div></a>
+				<a href="POLICY_UNIVERSAL_HEALTHCARE_A.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/POLICY_UNIVERSAL_HEALTHCARE_A.png\' />', true);" onmouseout="return hideTip();"><div id="POLICY_UNIVERSAL_HEALTHCARE_A" class="menuitem">Universal Healthcare</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

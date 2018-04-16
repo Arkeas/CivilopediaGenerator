@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Radio</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_RADIO.png" alt="Radio" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">3100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ELECTRICITY.aspx" onmouseover="return tooltip('Elektryczno&#347;&#263;');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRICITY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala wynale&#378;&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PLASTIC.aspx" onmouseover="return tooltip('Tworzywo sztuczne');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PLASTIC.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Pozwala budowa&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_INTELLIGENCE_AGENCY.aspx" onmouseover="return tooltip('Narodowa Agencja Wywiadu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_INTELLIGENCE_AGENCY.png" /></a><a href="BUILDING_BROADCAST_TOWER.aspx" onmouseover="return tooltip('Wie&#380;a transmisyjna');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_BROADCAST_TOWER.png" /></a><a href="BUILDING_EIFFEL_TOWER.aspx" onmouseover="return tooltip('Wie&#380;a Eiffla');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_EIFFEL_TOWER.png" /></a><a href="BUILDING_BROADWAY.aspx" onmouseover="return tooltip('Broadway');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_BROADWAY.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Radio</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Umo&#380;liwia zbudowanie <span class="color_positive_text">wie&#380;y transmisyjnej</span>, budowli znacznie zwi&#281;kszaj&#261;cej ilo&#347;&#263; punkt&oacute;w <img src="/civilopedia/images/culture.png" alt="culture" /> kultury wytwarzanych przez miasto.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cytat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />„Radio po&#322;&#261;czy&#322;o ca&#322;y kraj. Wszyscy s&#322;uchali&#347;my tych samych bohater&oacute;w, komediant&oacute;w i piosenkarzy. To byli giganci.”<br /> – Woody Allen<br /></div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Radio to technologia nadawania informacji do odleg&#322;ego odbiorcy poprzez modyfikacj&#281; amplitudy, cz&#281;stotliwo&#347;ci lub d&#322;ugo&#347;ci „fali no&#347;nej”. W mniej technicznym &#380;argonie oznacza to, &#380;e nadajnik przetwarza d&#378;wi&#281;ki na fale, kt&oacute;re wysy&#322;a do atmosfery. Zdalne odbiorniki radiowe mog&#261; wy&#322;apywa&#263; te fale i na powr&oacute;t zamienia&#263; je w d&#378;wi&#281;k.<br /><br />Radio to skomplikowana i zawi&#322;a maszyna. Powsta&#322;a w wyniku setek lat bada&#324; i rozwoju, prowadzonych przez takich naukowc&oacute;w i fizyk&oacute;w jak Michael Faraday, James Maxwell, Heinrich Hertz i Guglielmo Marconi.<br /><br />Marconi by&#322; w&#322;oskim fizykiem pracuj&#261;cym nad bezprzewodowym telegrafem. W 1894 r. Marconiemu uda&#322;o si&#281; wys&#322;a&#263; sygna&#322; na odleg&#322;o&#347;&#263; oko&#322;o 30 metr&oacute;w. Kontynuowa&#322; ulepszanie swojego urz&#261;dzenia i w 1901 roku przes&#322;a&#322; sygna&#322; na drug&#261; stron&#281; Oceanu Atlantyckiego. Pracowa&#322; dalej i na pocz&#261;tku lat dwudziestych zacz&#261;&#322; prace nad bezprzewodow&#261; kr&oacute;tkofal&oacute;wk&#261;, na kt&oacute;rej opiera si&#281; wi&#281;kszo&#347;&#263; wsp&oacute;&#322;czesnej &#322;&#261;czno&#347;ci radiowej dalekiego zasi&#281;gu.<br /><br />Pierwszy program radiowy nadano w Wigili&#281; 1906 r. Pierwsze wiadomo&#347;ci nadano 31 sierpnia 1920 roku w Detroit, w stanie Michigan. Pod koniec lat dwudziestych radioodbiorniki sta&#322;y si&#281; powszechne w Stanach Zjednoczonych i Europie.<br /><br />Radia odegra&#322;y wa&#380;n&#261; rol&#281; w II wojnie &#347;wiatowej. Umo&#380;liwia&#322;y &#322;&#261;czno&#347;&#263; mi&#281;dzy samolotami i okr&#281;tami oraz pozwala&#322;y walcz&#261;cym rz&#261;dom nadawa&#263; wiadomo&#347;ci i propagand&#281; do obywateli i wrog&oacute;w. Hitler, Churchill i Roosevelt byli mistrzami tego medium. Radio by&#322;o te&#380; popularne w okresie powojennym, szczeg&oacute;lnie w Stanach Zjednoczonych, gdzie powsta&#322;o wiele sieci i stacji nadawczych. By&#322;a to g&#322;&oacute;wna rozrywka przed pojawieniem si&#281; telewizji w latach pi&#281;&#263;dziesi&#261;tych.<br /><br />Cho&#263; radio zosta&#322;o przy&#263;mione przez telewizj&#281; i Internet, wci&#261;&#380; jest wa&#380;nym &#378;r&oacute;d&#322;em wiadomo&#347;ci i rozrywki dla ludzi na ca&#322;ym &#347;wiecie. Radio jest jak rock and roll, nigdy nie zginie.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Archeologia</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_ARCHAEOLOGY.png" alt="Archeologia" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">1600 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_NAVIGATION.aspx" onmouseover="return tooltip('Nawigacja');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_NAVIGATION.png" /></a><a href="TECH_ARCHITECTURE.aspx" onmouseover="return tooltip('Architektura');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ARCHITECTURE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala wynale&#378;&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_BIOLOGY.aspx" onmouseover="return tooltip('Biologia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_BIOLOGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Odblokowuje jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_ARCHAEOLOGIST.aspx" onmouseover="return tooltip('Archeolog&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ARCHAEOLOGIST.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala budowa&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_MUSEUM.aspx" onmouseover="return tooltip('Muzeum');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_MUSEUM.png" /></a><a href="BUILDING_LOUVRE.aspx" onmouseover="return tooltip('Luwr');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_LOUVRE.png" /></a></div></div></div></div></div></div></div></div>
+        
+		<h2>Odkrywa surowce:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_ARTIFACTS.aspx" onmouseover="return tooltip('&#346;lad&oacute;w przesz&#322;o&#347;ci');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_ARTIFACTS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala robotnikom:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_ARCHAEOLOGY_DIG.aspx" onmouseover="return tooltip('Za&#322;o&#380;enie wykopaliska');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_ARCHAEOLOGY_DIG.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Archeologia</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Pozwala na budow&#281; <span class="color_positive_text">muzeum</span>, kt&oacute;re zapewnia du&#380;y dodatek do <img src="/civilopedia/images/culture.png" alt="culture" /> kultury w danym mie&#347;cie. Zapewnia r&oacute;wnie&#380; inne premie zwi&#261;zane z <img src="/civilopedia/images/culture.png" alt="culture" /> kultur&#261;.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cytat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />„Ci, kt&oacute;rzy nie pami&#281;taj&#261; o przesz&#322;o&#347;ci, s&#261; skazani na jej powtarzanie.”<br /> – George Santayana<br /></div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Archeologia zajmuje si&#281; studiowaniem pozosta&#322;o&#347;ci po staro&#380;ytnych ludach celem poznania ich kultury, sztuki, architektury i historii. Archeolodzy badaj&#261; ruiny budowli, mogi&#322;, pozosta&#322;o&#347;ci &#347;mieci, staro&#380;ytnych malunk&oacute;w jaskiniowych i dawno zatopionych statk&oacute;w na dnie ocean&oacute;w.<br /><br />Chocia&#380; ludzie od zawsze wyra&#380;ali zainteresowanie &#380;yciem swoich przodk&oacute;w, archeologia jako nauka pojawi&#322;a si&#281; w XV wieku w Europie renesansu, gdy ludzie zacz&#281;li poznawa&#263; i na&#347;ladowa&#263; sztuk&#281; i architektur&#281; staro&#380;ytnej Grecji i Rzymu, a bogata arystokracja W&#322;och – papie&#380;e, kupcy i g&#322;owy pa&#324;stw – zacz&#281;&#322;a kolekcjonowa&#263; antyki. Gdy te stawa&#322;y si&#281; coraz rzadsze, finansowali wykopaliska, by znale&#378;&#263; nowe &#322;upy.<br /><br />Archeologia sta&#322;a si&#281; faktyczn&#261; nauk&#261; w XIX wieku dzi&#281;ki wysi&#322;kom niemieckich uczonych, takich jak Heinrich Schliemann, kt&oacute;ry bada&#322; wczesn&#261; cywilizacj&#281; Grecji w Troi i Mykenach.<br /><br />Dzisiejsi archeolodzy studiuj&#261; ka&#380;dy aspekt staro&#380;ytnej ludzko&#347;ci, pocz&#261;wszy od naszych najdawniejszych przodk&oacute;w, ko&#324;cz&#261;c na naszych prapradziadkach. Narz&#281;dzia tych badaczy sta&#322;y si&#281; nieprawdopodobnie wyrafinowane, co pozwoli&#322;o na lepszy wgl&#261;d w &#380;ycie naszych przodk&oacute;w.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

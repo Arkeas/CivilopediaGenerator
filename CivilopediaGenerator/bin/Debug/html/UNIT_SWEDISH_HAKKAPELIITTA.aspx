@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Hakkapeliitta</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_SWEDISH_HAKKAPELIITTA.png" alt="Hakkapeliitta" class="contentimage" />
+	<div class="contentleft">
+		<h2>Cost:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">185 <img src="/civilopedia/images/production.png" alt="production" /> / 370 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Combat Type:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Mounted Units</div></div></div></div></div></div></div></div>
+		<h2>Combat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">25 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Movement:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">4 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilization:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_SWEDEN.aspx" onmouseover="return tooltip('Swedish Empire');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_SWEDEN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Abilities:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_MOVEMENT_TO_GENERAL.aspx" onmouseover="return tooltip('Transfer Movement to General');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_GENERAL_STACKING.aspx" onmouseover="return tooltip('Great General Combat Bonus');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('No Defensive Terrain Bonuses');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Can Move After Attacking');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Penalty Attacking Cities (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_FORMATION_1.aspx" onmouseover="return tooltip('Formation I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_24.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Required Resources:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Horses');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Prerequisite Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_METALLURGY.aspx" onmouseover="return tooltip('Metallurgy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_METALLURGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Becomes Obsolete with:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBINED_ARMS.aspx" onmouseover="return tooltip('Combined Arms');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBINED_ARMS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Upgrade Unit</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_ANTI_TANK_GUN.aspx" onmouseover="return tooltip('Anti-Tank Gun');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ANTI_TANK_GUN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Replaces:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_LANCER.aspx" onmouseover="return tooltip('Lancer');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_LANCER.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Hakkapeliitta</div>
+		<h2>Game Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Elite mounted Unit that specializes in working with Great Generals. Only the Swedish may build it.</div></div></div></div></div></div></div></div>
+		<h2>Strategy:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Hakkapeliitta are the elite mounted units of the late Renaissance Swedish army. Stack a Great General with them if possible. The Great General receives the movement allowance of the Hakkapeliitta if they start the turn stacked. In addition, the Hakkapeliitta receive a 15% combat bonus when stacked with a Great General.</div></div></div></div></div></div></div></div>
+		<h2>Historical Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">The snowy North is their fatherland; there, their heart crackles on the stormy beach.  The Hakkapeliitta were a division of Finnish, light cavalrymen employed by King Gustavus Adolphus of Sweden during the Thirty Years War.  They were highly trained, and excelled at raiding, spying, lightning-quick attacks, and most especially, charging.  Attacking at full gallop, the Hakkapeliitta would fire pistol shots as they approached the enemy lines, drawing their sword once the horse made contact.  The small, sturdy, and powerful horses ridden in the Hakkapeliitta were some of the founding members the modern Finnhorse breed, the national horse of Finland.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

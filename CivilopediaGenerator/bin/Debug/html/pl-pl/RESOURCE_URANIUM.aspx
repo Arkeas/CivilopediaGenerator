@@ -1,0 +1,28 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Resources.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Uran</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/RESOURCE_URANIUM.png" alt="Uran" class="contentimage" />
+	<div class="contentleft">
+		<h2>Dochody:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">+1 <img src="/civilopedia/images/production.png" alt="production" /> </div></div></div></div></div></div></div></div>
+		
+<h2>Odkryte przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ATOMIC_THEORY.aspx" onmouseover="return tooltip('Teoria atomu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ATOMIC_THEORY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pojawia si&#281; na:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="FEATURE_JUNGLE.aspx" onmouseover="return tooltip('D&#380;ungla');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_JUNGLE.png" /></a><a href="FEATURE_FOREST.aspx" onmouseover="return tooltip('Las');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_FOREST.png" /></a><a href="FEATURE_MARSH.aspx" onmouseover="return tooltip('Mokrad&#322;o');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/FEATURE_MARSH.png" /></a><a href="TERRAIN_HILL.aspx" onmouseover="return tooltip('Wzg&oacute;rze');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_HILL.png" /></a><a href="TERRAIN_GRASS.aspx" onmouseover="return tooltip('&#321;&#261;ka');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_GRASS.png" /></a><a href="TERRAIN_PLAINS.aspx" onmouseover="return tooltip('R&oacute;wnin');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_PLAINS.png" /></a><a href="TERRAIN_DESERT.aspx" onmouseover="return tooltip('Pustynia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_DESERT.png" /></a><a href="TERRAIN_TUNDRA.aspx" onmouseover="return tooltip('Tundra');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_TUNDRA.png" /></a><a href="TERRAIN_SNOW.aspx" onmouseover="return tooltip('&#346;nieg');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TERRAIN_SNOW.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepszone przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_HOLY_SITE.aspx" onmouseover="return tooltip('&#346;wi&#281;te miejsce');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_HOLY_SITE.png" /></a><a href="IMPROVEMENT_MINE.aspx" onmouseover="return tooltip('Kopalnia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_MINE.png" /></a><a href="IMPROVEMENT_CUSTOMS_HOUSE.aspx" onmouseover="return tooltip('Urz&#261;d celny');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_CUSTOMS_HOUSE.png" /></a><a href="IMPROVEMENT_ACADEMY.aspx" onmouseover="return tooltip('Akademia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_ACADEMY.png" /></a><a href="IMPROVEMENT_CITADEL.aspx" onmouseover="return tooltip('Cytadela');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_CITADEL.png" /></a><a href="IMPROVEMENT_MANUFACTORY.aspx" onmouseover="return tooltip('Manufaktura');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_MANUFACTORY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Uran</div>
+		
+<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">U&#380;ywany w broni nuklearnej i elektrowniach j&#261;drowych.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">
+ Uran jest promieniotw&oacute;rczym minera&#322;em, kt&oacute;ry wydobyty i wzbogacony mo&#380;e by&#263; wykorzystywany w energetyce lub do wysadzania r&oacute;&#380;nych rzeczy w powietrze. Zosta&#322; odkryty w XVIII w., ale dopiero w wieku XX, podczas drugiej wojny &#347;wiatowej, ameryka&#324;scy naukowcy znale&#378;li spos&oacute;b, by wykorzysta&#263; jego potencja&#322; do zadawania &#347;mierci na masow&#261; skal&#281;. Gdy wykorzystuje si&#281; go w energetyce, produkuje czyst&#261; energi&#281;, poniewa&#380; nie wydziela du&#380;ych ilo&#347;ci zanieczyszcze&#324; jak w&#281;giel czy benzyna. Z drugiej strony, odpady radioaktywne s&#261; niesamowicie toksyczne i powoduj&#261; ska&#380;enie gleby, powietrza, wody i wszelkich pobliskich organizm&oacute;w, wi&#281;c to te&#380; jest w pewnym sensie problem. Warto pami&#281;ta&#263;, &#380;e uran nale&#380;y do grupy surowc&oacute;w o znaczeniu strategicznym, kt&oacute;re s&#261; potrzebne do wznoszenia pewnych budowli i szkolenia niekt&oacute;rych jednostek.
+ </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

@@ -1,0 +1,29 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Telegrafo</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_TELEGRAPH.png" alt="Telegrafo" class="contentimage" />
+	<div class="contentleft">
+		<h2>Costo:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">4100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Tecnologie propedeutiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ELECTRICITY.aspx" onmouseover="return tooltip('Elettricit&agrave;');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRICITY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Conduce alle tecnologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ELECTRONICS.aspx" onmouseover="return tooltip('Elettronica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRONICS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unit&agrave; sbloccate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_BATTLESHIP.aspx" onmouseover="return tooltip('Corazzata');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_BATTLESHIP.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Edifici sbloccati:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_MILITARY_BASE.aspx" onmouseover="return tooltip('Base militare');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_MILITARY_BASE.png" /></a><a href="BUILDING_CRISTO_REDENTOR.aspx" onmouseover="return tooltip('Cristo Redentore');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_CRISTO_REDENTOR.png" /></a></div></div></div></div></div></div></div></div>
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Telegrafo</div>
+		<h2>Informazione sulla partita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permette la costruzione della <span class="color_positive_text">Corazzata</span>, la pi&ugrave; potente nave da guerra di prima linea del gioco. Inoltre ti permette di costruire la <span class="color_positive_text">Base militare</span> nelle tue citt&agrave;, aumentando la loro <img src="/civilopedia/images/strength.png" alt="strength" /> forza di combattimento e rendendole pi&ugrave; difficili da catturare.</div></div></div></div></div></div></div></div>
+		<h2>Citazione:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Una volta mandai a una dozzina di amici un telegramma che diceva: 'Fuggi subito. Hanno scoperto tutto.' Ognuno di loro lasciò immediatamente la citt&agrave;."<br /> - Mark Twain<br /></div></div></div></div></div></div></div></div>
+		<h2>Informazioni storiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Il telegrafo elettrico fu il primo dispositivo meccanico in grado di trasmettere informazioni rapidamente a distanze maggiori di dove l'occhio potesse arrivare. Prima del telegrafo, il modo pi&ugrave; veloce per trasmettere le informazioni tra Europa e Nord America erano i clipper, in grado di coprire la distanza in 10-20 giorni, a seconda delle condizioni meteorologiche. Dopo l'introduzione del telegrafo transatlantico, le medesime informazioni poterono essere trasmesse nel giro di minuti.<br /><br />Per spianare la strada al telegrafo fu necessaria una serie di importanti invenzioni. Nel 1800 l'italiano Alessandro Volta inventò la cella voltaica; nel 1820 il danese Hans Christian Orsted scoprì che un ago magneticamente caricato poteva essere deviato da un filo elettrico attraversato dalla corrente; infine, nel 1831 il britannico Faraday e l'americano Henry approfondirono la conoscenza dell'elettromagnetismo abbastanza da permettere la creazione di dispositivi elettromagnetici.<br /><br />Nel 1837, l'americano Samuel Morse ottenne il brevetto per il telegrafo elettronico; contemporaneamente, i britannici William Cooke e Charles Wheatstone ottennero il brevetto britannico per un diverso sistema telegrafico. Nel 1844 Morse fece stendere un cavo lungo la ferrovia che collegava Washington, DC a Baltimora, nel Maryland. Il primo messaggio inviato fu "What hath God Wrought!" ("Cosa ha concepito Dio!") Nel giro di pochi anni, linee del telegrafo furono stese lungo la maggior parte delle ferrovie americane e britanniche, diffondendosi rapidamente anche nel resto del mondo. Negli anni '60 dell'Ottocento furono stesi i primi cavi transatlantici.<br /><br />Il telegrafo rimase il principale mezzo di comunicazione a lunga distanza per quasi un secolo, finch&eacute; non fu rimpiazzato da altre invenzioni come telefono e radio. Nel corso della sua esistenza riuscì a unire il mondo come mai prima nella storia dell'uomo,  tanto che si può sostenere che da allora nessun'altra invenzione (Internet compresa) abbia avuto effetti così profondi sulla civilt&agrave; umana.
+      </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

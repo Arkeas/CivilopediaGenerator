@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Kanone</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_CANNON.png" alt="Kanone" class="contentimage" />
+	<div class="contentleft">
+		<h2>Kosten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">185 <img src="/civilopedia/images/production.png" alt="production" /> / 370 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Kampftyp:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Belagerungswaffen</div></div></div></div></div></div></div></div>
+		<h2>Kampf:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		<h2>Fernkampf:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">20 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Reichweite:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2</div></div></div></div></div></div></div></div>
+		<h2>Fortbewegung:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		
+		<h2>F&auml;higkeiten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('Kann keine Nahkampfangriffe ausf&uuml;hren');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CITY_SIEGE.aspx" onmouseover="return tooltip('Bonus gegen St&auml;dte (200)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Keine defensiven Gel&auml;nde-Bonusse');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_MUST_SET_UP.aspx" onmouseover="return tooltip('Muss f&uuml;r Fernkampf in Stellung gehen');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_SIGHT_PENALTY.aspx" onmouseover="return tooltip('Eingeschr&auml;nkte Sicht');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Benötigte Technologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHEMISTRY.aspx" onmouseover="return tooltip('Chemie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHEMISTRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wird veraltet durch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_DYNAMITE.aspx" onmouseover="return tooltip('Dynamit');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_DYNAMITE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Einheit modernisieren</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_ARTILLERY.aspx" onmouseover="return tooltip('Artillerie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ARTILLERY.png" /></a></div></div></div></div></div></div></div></div>
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Kanone</div>
+		<h2>Spielinformationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">M&auml;chtige Belagerungseinheit der Renaissance. Muss vor dem Feuern in Stellung gehen.</div></div></div></div></div></div></div></div>
+		<h2>Strategie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Die Kanone ist eine wichtige Belagerungseinheit im mittleren Abschnitt des Spiels und besonders vernichtend gegen Zivilisationen, die sie noch nicht entdeckt haben. Wie die meisten Belagerungswaffen benötigt die Kanone 1 FP zum Aufbau, bevor sie angreifen kann. Kanonen behalten bis zum Industriezeitalter ihre Bedeutung. Sie können nicht so weit sehen wie andere Einheiten und sollten stets von Nahkampfeinheiten begleitet werden.</div></div></div></div></div></div></div></div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Kanonen sind gro&szlig;e, röhrenförmige Schusswaffen, die mit Schwarzpulver oder anderen Explosivstoffen ein Projektil &uuml;ber weite Entfernungen bei hoher Geschwindigkeit verschie&szlig;en. Sie wurden etwa im 12. Jahrhundert n. Chr. in China erfunden. Die Mongolen &uuml;bernahmen die Kanonen recht bald und setzten sie sehr effektiv in China und Korea ein. Es ist wahrscheinlich, dass die Mongolen die Kanone in die islamische Welt brachten und die Europ&auml;er sie wiederum von den Muslimen &uuml;bernahmen. Die ersten Kanonen waren riesige, unhandliche, gef&auml;hrliche Angelegenheiten, die oft beim Schie&szlig;en explodierten und damit zu einer ebenso gro&szlig;en Gefahr f&uuml;r die Feuernden wie f&uuml;r die Beschossenen wurden. Doch bis zur Renaissance war die Qualit&auml;t des Metallgusses weit genug fortgeschritten, um kleinere und weitaus verl&auml;sslichere Kanonen herzustellen, die man auch mit Pferden in die Schlacht ziehen oder auf Schiffen anbringen konnte.<br /><br />König Gustav Adolf von Schweden revolutionierte den Einsatz der Feldartillerie, indem er viele kleine und leichte Gesch&uuml;tze einsetzte, die den schwereren und somit langsameren feindlichen Kanonen &uuml;berlegen waren. Au&szlig;erdem f&uuml;hrte er die Kart&auml;tsche als Munition gegen gegnerische Infanterie ein, wof&uuml;r ihn Fu&szlig;soldaten wahrscheinlich &uuml;berall verfluchten.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

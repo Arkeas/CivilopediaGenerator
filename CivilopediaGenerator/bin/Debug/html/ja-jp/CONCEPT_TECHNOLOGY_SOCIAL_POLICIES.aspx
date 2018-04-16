@@ -1,0 +1,19 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Concepts.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: 合理主義の分岐</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+		&nbsp;
+	</div>
+	<div class="contentright">
+		<div class="title">合理主義の分岐</div>
+		<h2>概要:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">社会制度の分岐のひとつである合理主義には、テクノロジーの研究を助ける政策が多く存在している。この分岐はルネサンス時代に使用可能になる。詳細については社会制度の項目を参照のこと。</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

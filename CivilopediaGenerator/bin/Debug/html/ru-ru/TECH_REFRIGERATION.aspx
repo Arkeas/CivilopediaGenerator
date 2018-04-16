@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Криогеника</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_REFRIGERATION.png" alt="Криогеника" class="contentimage" />
+	<div class="contentleft">
+		<h2>Стоимость:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">3100 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Нужные технологии:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ELECTRICITY.aspx" onmouseover="return tooltip('Электричество');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ELECTRICITY.png" /></a><a href="TECH_BIOLOGY.aspx" onmouseover="return tooltip('Биология');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_BIOLOGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ведет к технологиям:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PENICILIN.aspx" onmouseover="return tooltip('Пенициллин');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PENICILIN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Открывает юниты:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_SUBMARINE.aspx" onmouseover="return tooltip('Подводная лодка');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_SUBMARINE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Открывает здания:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_STADIUM.aspx" onmouseover="return tooltip('Стадион');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_STADIUM.png" /></a><a href="BUILDING_HOTEL.aspx" onmouseover="return tooltip('Отель');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_HOTEL.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		<h2>Открывает действия:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_OFFSHORE_PLATFORM.aspx" onmouseover="return tooltip('Создать нефт. платформу');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_OFFSHORE_PLATFORM.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Криогеника</div>
+		<h2>Игровая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Позволяет строить <span class="color_positive_text">подводные лодки</span>. Их могут обнаружить только эсминцы или другие подводные лодки. Также дает возможность создавать <span class="color_positive_text">стадионы</span>, которые повышают <img src="/civilopedia/images/happiness_1.png" alt="happiness" /> настроение в городе. Кроме того, с появлением этой технологии рабочие лодки могут строить нефтяные платформы.</div></div></div></div></div></div></div></div>
+		
+		<h2>Цитата:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Метели, снега и туманы <br />Покорны морозу всегда, <br />Пойду на моря-окияны - <br />Построю дворцы изо льда".<br /> - Николай Некрасов<br /></div></div></div></div></div></div></div></div>
+		<h2>Историческая информация:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Замораживание - процесс охлаждения закрытого пространства или объекта. Основная его цель - сохранение пищи. Во второй половине XX века популярным стало также кондиционирование воздуха в помещениях. <br /><br />До изобретения охлаждающих машин в зажиточных цивилизациях обычно хранили пищу в подвалах, щели которых забивались соломой. Для поддержания низкой температуры могли использовать лед, принесенный с гор. В Древнем Египте и Индии использовали водяное охлаждение - мелкие бассейны наполняли водой. По мере испарения оставшаяся вода охлаждалась. Таким способом можно было добиться прохлады даже в самой жаркой стране. <br /><br />Автоматы для охлаждения используют эффект от быстрого расширения инертного газа (фреона и других). Впервые автомат для охлаждения был продемонстрирован в 1748 году в Шотландии Уильямом Калленом. Однако прошел еще один век до создания первых холодильников, которые изобрел американец Александр Твиннинг в 1856 году. Через пару лет холодильники появились в мясной и пивоваренной промышленности; к 1914 году они были распространены почти повсеместно. К середине XX века грузовики-рефрижераторы заменили старые машины со льдом. Домашние холодильники появились в 1920-ых, и к 1950-ому году ящики со льдом ушли в небытие. <br /><br />Современный кондиционер был изобретен в 1902 году американцем Уиллисом Кэрриером. Изначально его использовали для поддержания нужной температуры на промышленных объектах. К двадцатым годам размер и стоимость устройств уменьшились, и их стали массово устанавливать в кинотеатрах. Домашние кондиционеры появились в США после Второй мировой войны, и к пятидесятым годам их было установлено более миллиона. <br /><br />Холодильники часто принимают как должное, но без этого крайне важного изобретения жизнь людей была бы куда сложнее.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

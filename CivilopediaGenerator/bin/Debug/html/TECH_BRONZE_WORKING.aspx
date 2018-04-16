@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Bronze Working</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_BRONZE_WORKING.png" alt="Bronze Working" class="contentimage" />
+	<div class="contentleft">
+		<h2>Cost:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">55 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Prerequisite Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MINING.aspx" onmouseover="return tooltip('Mining');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MINING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Leads to Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_IRON_WORKING.aspx" onmouseover="return tooltip('Iron Working');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_IRON_WORKING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Units Unlocked:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CELT_PICTISH_WARRIOR.aspx" onmouseover="return tooltip('Pictish Warrior');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CELT_PICTISH_WARRIOR.png" /></a><a href="UNIT_HUN_BATTERING_RAM.aspx" onmouseover="return tooltip('Battering Ram');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HUN_BATTERING_RAM.png" /></a><a href="UNIT_SPEARMAN.aspx" onmouseover="return tooltip('Spearman');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_SPEARMAN.png" /></a><a href="UNIT_GREEK_HOPLITE.aspx" onmouseover="return tooltip('Hoplite');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_GREEK_HOPLITE.png" /></a><a href="UNIT_PERSIAN_IMMORTAL.aspx" onmouseover="return tooltip('Immortal');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_PERSIAN_IMMORTAL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Buildings Unlocked:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_STATUE_ZEUS.aspx" onmouseover="return tooltip('Statue of Zeus');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_STATUE_ZEUS.png" /></a><a href="BUILDING_KREPOST.aspx" onmouseover="return tooltip('Krepost');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_KREPOST.png" /></a><a href="BUILDING_BARRACKS.aspx" onmouseover="return tooltip('Barracks');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_BARRACKS.png" /></a><a href="BUILDING_IKANDA.aspx" onmouseover="return tooltip('Ikanda');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_IKANDA.png" /></a></div></div></div></div></div></div></div></div>
+        
+		<h2>Resources Revealed:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_IRON.aspx" onmouseover="return tooltip('Iron');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_IRON.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Worker Actions Allowed:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CONCEPT_WORKERS_CLEARINGLAND.aspx" onmouseover="return tooltip('Remove Jungle');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_REMOVE_JUNGLE.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Bronze Working</div>
+		<h2>Game Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Reveals <img src="/civilopedia/images/res_iron.png" alt="iron" /> <span class="color_positive_text">Iron</span> and allows your Workers to <span class="color_positive_text">Chop Jungle</span>, clearing the map tile so other improvements can be constructed. Also allows you to build the <span class="color_positive_text">Spearman</span>, a military unit strong against mounted enemies.</div></div></div></div></div></div></div></div>
+		
+		<h2>Quote:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Here Hector entered, with a spear eleven cubits long in his hand; the bronze point gleamed in front of him, and was fastened to the shaft of the spear by a ring of gold."<br />  - Homer<br /></div></div></div></div></div></div></div></div>
+		<h2>Historical Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Bronze is a metal "alloy" (mixture) of copper and tin. The resulting material is harder and tougher than either of the original metals and it is easier to melt and cast (e.g., pour into molds to make spear tips and other useful items). Copper was probably first used in Egypt before 5,000 BC. The first evidence of bronze appears some 1,300 years later in the form of a bronze rod found in a pyramid dating from 3700 BC. Bronze appeared in Asia much later, around 1,500 BC, and in the Americas later still, between 100-200 AD.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

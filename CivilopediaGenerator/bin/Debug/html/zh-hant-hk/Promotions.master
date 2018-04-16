@@ -1,0 +1,347 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant-hk">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,promotion,promotions" />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('遊戲概念');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_off.png" class="tab" id="tab01" onmouseover="this.src='/civilopedia/images/tab_concept_on.png';" onmouseout="this.src='/civilopedia/images/tab_concept_off.png';" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('科技');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('單位');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_off.png" class="tab" id="tab03" onmouseover="this.src='/civilopedia/images/tab_unit_on.png';" onmouseout="this.src='/civilopedia/images/tab_unit_off.png';" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('強化');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_on.png" class="tab" id="tab04" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('建築');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('奇跡');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('社會政策');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_off.png" class="tab" id="tab07" onmouseover="this.src='/civilopedia/images/tab_policy_on.png';" onmouseout="this.src='/civilopedia/images/tab_policy_off.png';" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('專家和偉人');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('文明和領袖');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_off.png" class="tab" id="tab09" onmouseover="this.src='/civilopedia/images/tab_civilization_on.png';" onmouseout="this.src='/civilopedia/images/tab_civilization_off.png';" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('城邦');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_off.png" class="tab" id="tab10" onmouseover="this.src='/civilopedia/images/tab_city_state_on.png';" onmouseout="this.src='/civilopedia/images/tab_city_state_off.png';" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('地形和地貌');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('資源');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('改良設施');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('宗教');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_off.png" class="tab" id="tab14" onmouseover="this.src='/civilopedia/images/tab_religion_on.png';" onmouseout="this.src='/civilopedia/images/tab_religion_off.png';" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('世界議會');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">強化
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+					<option value="zh-hant-hk">中文 (繁體)</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="PROMOTION_HOME.aspx"><div id="PROMOTION_HOME" class="menuitem">強化首頁</div></a>
+			<div id="GROUP_PEDIA_MELEE" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_MELEE_CONTENT');"><div id="PEDIA_MELEE" class="menugroup">近戰強化</div></a><div id="PEDIA_MELEE_CONTENT">
+				<a href="PROMOTION_AMBUSH_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMBUSH_1" class="menuitem">伏擊一級</div></a>
+				<a href="PROMOTION_AMBUSH_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMBUSH_2" class="menuitem">伏擊二級</div></a>
+				<a href="PROMOTION_FORMATION_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS24.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FORMATION_1" class="menuitem">列陣一級</div></a>
+				<a href="PROMOTION_FORMATION_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS25.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FORMATION_2" class="menuitem">列陣二級</div></a>
+				<a href="PROMOTION_DRILL_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS19.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DRILL_1" class="menuitem">操練一級</div></a>
+				<a href="PROMOTION_DRILL_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS21.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DRILL_3" class="menuitem">操練三級</div></a>
+				<a href="PROMOTION_DRILL_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS20.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DRILL_2" class="menuitem">操練二級</div></a>
+				<a href="PROMOTION_SIEGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS40.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SIEGE" class="menuitem">攻城能力</div></a>
+				<a href="PROMOTION_WOODSMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS56.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOODSMAN" class="menuitem">林地作戰</div></a>
+				<a href="PROMOTION_SHOCK_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS44.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SHOCK_1" class="menuitem">衝擊一級</div></a>
+				<a href="PROMOTION_SHOCK_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS46.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SHOCK_3" class="menuitem">衝擊三級</div></a>
+				<a href="PROMOTION_SHOCK_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS45.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SHOCK_2" class="menuitem">衝擊二級</div></a>
+				<a href="PROMOTION_CHARGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS13.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CHARGE" class="menuitem">衝鋒</div></a>
+				<a href="PROMOTION_BLITZ.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BLITZ" class="menuitem">閃電戰</div></a>
+				<a href="PROMOTION_COVER_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS14.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COVER_1" class="menuitem">隱蔽一級</div></a>
+				<a href="PROMOTION_COVER_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS15.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COVER_2" class="menuitem">隱蔽二級</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_RANGED" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_RANGED_CONTENT');"><div id="PEDIA_RANGED" class="menugroup">遠程強化</div></a><div id="PEDIA_RANGED_CONTENT">
+				<a href="PROMOTION_RANGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS34.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RANGE" class="menuitem">射程拓展</div></a>
+				<a href="PROMOTION_BARRAGE_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS6.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BARRAGE_1" class="menuitem">彈幕一級</div></a>
+				<a href="PROMOTION_BARRAGE_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS8.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BARRAGE_3" class="menuitem">彈幕三級</div></a>
+				<a href="PROMOTION_BARRAGE_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS7.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BARRAGE_2" class="menuitem">彈幕二級</div></a>
+				<a href="PROMOTION_LOGISTICS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS30.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_LOGISTICS" class="menuitem">後勤補給</div></a>
+				<a href="PROMOTION_MOBILITY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOBILITY" class="menuitem">機動性</div></a>
+				<a href="PROMOTION_ACCURACY_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ACCURACY_1" class="menuitem">精準一級</div></a>
+				<a href="PROMOTION_ACCURACY_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ACCURACY_3" class="menuitem">精準三級</div></a>
+				<a href="PROMOTION_ACCURACY_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ACCURACY_2" class="menuitem">精準二級</div></a>
+				<a href="PROMOTION_BOMBARDMENT_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS10.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOMBARDMENT_1" class="menuitem">轟炸一級</div></a>
+				<a href="PROMOTION_BOMBARDMENT_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS12.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOMBARDMENT_3" class="menuitem">轟炸三級</div></a>
+				<a href="PROMOTION_BOMBARDMENT_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS11.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOMBARDMENT_2" class="menuitem">轟炸二級</div></a>
+				<a href="PROMOTION_VOLLEY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS55.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_VOLLEY" class="menuitem">齊射能力</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_NAVAL" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_NAVAL_CONTENT');"><div id="PEDIA_NAVAL" class="menugroup">海上單位強化</div></a><div id="PEDIA_NAVAL_CONTENT">
+				<a href="PROMOTION_AMPHIBIOUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMPHIBIOUS" class="menuitem">兩棲作戰</div></a>
+				<a href="PROMOTION_COASTAL_RAIDER_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COASTAL_RAIDER_1" class="menuitem">海岸侵襲一級</div></a>
+				<a href="PROMOTION_COASTAL_RAIDER_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COASTAL_RAIDER_3" class="menuitem">海岸侵襲三級</div></a>
+				<a href="PROMOTION_COASTAL_RAIDER_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COASTAL_RAIDER_2" class="menuitem">海岸侵襲二級</div></a>
+				<a href="PROMOTION_TARGETING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS52.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TARGETING_1" class="menuitem">照準一級</div></a>
+				<a href="PROMOTION_TARGETING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS54.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TARGETING_3" class="menuitem">照準三級</div></a>
+				<a href="PROMOTION_TARGETING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS53.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TARGETING_2" class="menuitem">照準二級</div></a>
+				<a href="PROMOTION_BOARDING_PARTY_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOARDING_PARTY_1" class="menuitem">登船搜查一級</div></a>
+				<a href="PROMOTION_BOARDING_PARTY_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOARDING_PARTY_3" class="menuitem">登船搜查三級</div></a>
+				<a href="PROMOTION_BOARDING_PARTY_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOARDING_PARTY_2" class="menuitem">登船搜查二級</div></a>
+				<a href="PROMOTION_SUPPLY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS48.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SUPPLY" class="menuitem">補給</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_HEAL" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_HEAL_CONTENT');"><div id="PEDIA_HEAL" class="menugroup">回復強化</div></a><div id="PEDIA_HEAL_CONTENT">
+				<a href="PROMOTION_REPAIR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS36.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_REPAIR" class="menuitem">修理能力</div></a>
+				<a href="PROMOTION_SURVIVALISM_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS49.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SURVIVALISM_1" class="menuitem">生存一級</div></a>
+				<a href="PROMOTION_SURVIVALISM_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS51.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SURVIVALISM_3" class="menuitem">生存三級</div></a>
+				<a href="PROMOTION_SURVIVALISM_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS50.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SURVIVALISM_2" class="menuitem">生存二級</div></a>
+				<a href="PROMOTION_AIR_REPAIR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS36.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_REPAIR" class="menuitem">空中修理</div></a>
+				<a href="PROMOTION_INSTA_HEAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS26.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INSTA_HEAL" class="menuitem">立即回復</div></a>
+				<a href="PROMOTION_MARCH.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS31.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MARCH" class="menuitem">行軍能力</div></a>
+				<a href="PROMOTION_MEDIC.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS32.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MEDIC" class="menuitem">醫療能力</div></a>
+				<a href="PROMOTION_MEDIC_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS32.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MEDIC_II" class="menuitem">醫療能力二級</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_SCOUTING" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_SCOUTING_CONTENT');"><div id="PEDIA_SCOUTING" class="menugroup">偵察強化</div></a><div id="PEDIA_SCOUTING_CONTENT">
+				<a href="PROMOTION_SCOUTING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS37.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SCOUTING_1" class="menuitem">偵察一級</div></a>
+				<a href="PROMOTION_SCOUTING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS39.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SCOUTING_3" class="menuitem">偵察三級</div></a>
+				<a href="PROMOTION_SCOUTING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS38.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SCOUTING_2" class="menuitem">偵察二級</div></a>
+				<a href="PROMOTION_SENTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS43.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SENTRY" class="menuitem">崗哨</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_AIR" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_AIR_CONTENT');"><div id="PEDIA_AIR" class="menugroup">空中單位強化</div></a><div id="PEDIA_AIR_CONTENT">
+				<a href="PROMOTION_AIR_LOGISTICS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS30.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_LOGISTICS" class="menuitem">後勤補給</div></a>
+				<a href="PROMOTION_INTERCEPTION_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS27.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_1" class="menuitem">攔截一級</div></a>
+				<a href="PROMOTION_INTERCEPTION_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS29.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_3" class="menuitem">攔截三級</div></a>
+				<a href="PROMOTION_INTERCEPTION_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS28.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_2" class="menuitem">攔截二級</div></a>
+				<a href="PROMOTION_AIR_SIEGE_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS40.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SIEGE_1" class="menuitem">攻城一級</div></a>
+				<a href="PROMOTION_AIR_SIEGE_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS42.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SIEGE_3" class="menuitem">攻城三級</div></a>
+				<a href="PROMOTION_AIR_SIEGE_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS41.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SIEGE_2" class="menuitem">攻城二級</div></a>
+				<a href="PROMOTION_HELI_MOBILITY_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HELI_MOBILITY_1" class="menuitem">機動一級</div></a>
+				<a href="PROMOTION_HELI_MOBILITY_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HELI_MOBILITY_2" class="menuitem">機動二級</div></a>
+				<a href="PROMOTION_AIR_AMBUSH_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_AMBUSH_1" class="menuitem">空中伏擊一級</div></a>
+				<a href="PROMOTION_AIR_AMBUSH_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_AMBUSH_2" class="menuitem">空中伏擊二級</div></a>
+				<a href="PROMOTION_AIR_TARGETING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS52.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_TARGETING_1" class="menuitem">空中定位一級</div></a>
+				<a href="PROMOTION_AIR_TARGETING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS53.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_TARGETING_2" class="menuitem">空中定位二級</div></a>
+				<a href="PROMOTION_DOGFIGHTING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS16.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOGFIGHTING_1" class="menuitem">纏鬥一級</div></a>
+				<a href="PROMOTION_DOGFIGHTING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS18.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOGFIGHTING_3" class="menuitem">纏鬥三級</div></a>
+				<a href="PROMOTION_DOGFIGHTING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS17.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOGFIGHTING_2" class="menuitem">纏鬥二級</div></a>
+				<a href="PROMOTION_AIR_RANGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS34.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_RANGE" class="menuitem">航程拓展</div></a>
+				<a href="PROMOTION_EVASION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS23.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVASION" class="menuitem">規避能力</div></a>
+				<a href="PROMOTION_SORTIE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS47.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SORTIE" class="menuitem">連續出擊</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_SHARED" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_SHARED_CONTENT');"><div id="PEDIA_SHARED" class="menugroup">共享升級強化</div></a><div id="PEDIA_SHARED_CONTENT">
+				<a href="PROMOTION_ALLWATER_EMBARKATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS22.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ALLWATER_EMBARKATION" class="menuitem">乘風破浪</div></a>
+				<a href="PROMOTION_GREAT_LIGHTHOUSE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GREAT_LIGHTHOUSE" class="menuitem">大燈塔</div></a>
+				<a href="PROMOTION_HIMEJI_CASTLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HIMEJI_CASTLE" class="menuitem">姬路城</div></a>
+				<a href="PROMOTION_STATUE_ZEUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_STATUE_ZEUS" class="menuitem">宙斯神像</div></a>
+				<a href="PROMOTION_MORALE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MORALE" class="menuitem">強化士氣</div></a>
+				<a href="PROMOTION_NAVAL_TRADITION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NAVAL_TRADITION" class="menuitem">探索</div></a>
+				<a href="PROMOTION_FAST_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FAST_GENERAL" class="menuitem">機動型將軍</div></a>
+				<a href="PROMOTION_FAST_ADMIRAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FAST_ADMIRAL" class="menuitem">機動型海軍上將</div></a>
+				<a href="PROMOTION_EMBARKATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS22.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EMBARKATION" class="menuitem">海運能力</div></a>
+				<a href="PROMOTION_DEFENSIVE_EMBARKATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS22.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DEFENSIVE_EMBARKATION" class="menuitem">海運防禦</div></a>
+				<a href="PROMOTION_NATIONALISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NATIONALISM" class="menuitem">衛國戰爭</div></a>
+				<a href="PROMOTION_ADJACENT_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ADJACENT_BONUS" class="menuitem">軍事紀律</div></a>
+				<a href="PROMOTION_INDIRECT_FIRE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS35.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INDIRECT_FIRE" class="menuitem">間接攻擊</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_ATTRIBUTES" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_ATTRIBUTES_CONTENT');"><div id="PEDIA_ATTRIBUTES" class="menugroup">單位屬性</div></a><div id="PEDIA_ATTRIBUTES_CONTENT">
+				<a href="PROMOTION_ENEMY_BLADE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ENEMY_BLADE" class="menuitem">仇敵之刃</div></a>
+				<a href="PROMOTION_HOMELAND_GUARDIAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS10.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HOMELAND_GUARDIAN" class="menuitem">保家衛國</div></a>
+				<a href="PROMOTION_SNEAK_ATTACK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS8.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SNEAK_ATTACK" class="menuitem">側翼奇襲</div></a>
+				<a href="PROMOTION_FLANK_ATTACK_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLANK_ATTACK_BONUS" class="menuitem">側翼強襲</div></a>
+				<a href="PROMOTION_HOMELAND_GUARDIAN_BOOGALOO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS10.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HOMELAND_GUARDIAN_BOOGALOO" class="menuitem">先祖榮耀</div></a>
+				<a href="PROMOTION_GOLDEN_AGE_POINTS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GOLDEN_AGE_POINTS" class="menuitem">勝利狂歡</div></a>
+				<a href="PROMOTION_UNWELCOME_EVANGELIST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_UNWELCOME_EVANGELIST" class="menuitem">受難使徒</div></a>
+				<a href="PROMOTION_PARADROP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_PARADROP" class="menuitem">可以進行空投</div></a>
+				<a href="PROMOTION_SEE_INVISIBLE_SUBMARINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SEE_INVISIBLE_SUBMARINE" class="menuitem">可偵測到潛艇</div></a>
+				<a href="PROMOTION_CAN_MOVE_IMPASSABLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CAN_MOVE_IMPASSABLE" class="menuitem">可入浮冰單元格</div></a>
+				<a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CAN_MOVE_AFTER_ATTACKING" class="menuitem">可攻擊後移動</div></a>
+				<a href="PROMOTION_RIVAL_TERRITORY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RIVAL_TERRITORY" class="menuitem">可進入敵方領土</div></a>
+				<a href="PROMOTION_CARGO_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_I" class="menuitem">可運載1個單位</div></a>
+				<a href="PROMOTION_CARGO_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_II" class="menuitem">可運載2個單位</div></a>
+				<a href="PROMOTION_CARGO_III.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_III" class="menuitem">可運載3個單位</div></a>
+				<a href="PROMOTION_CARGO_IV.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_IV" class="menuitem">可運載4個單位</div></a>
+				<a href="PROMOTION_MOVEMENT_TO_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOVEMENT_TO_GENERAL" class="menuitem">同步護衛</div></a>
+				<a href="PROMOTION_HAKA_WAR_DANCE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HAKA_WAR_DANCE" class="menuitem">哈卡戰舞</div></a>
+				<a href="PROMOTION_FOREIGN_LANDS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FOREIGN_LANDS" class="menuitem">國境外加成</div></a>
+				<a href="PROMOTION_GOODY_HUT_PICKER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GOODY_HUT_PICKER" class="menuitem">土語精通</div></a>
+				<a href="PROMOTION_OPEN_TERRAIN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OPEN_TERRAIN" class="menuitem">在開闊地形上可獲得戰鬥加成</div></a>
+				<a href="PROMOTION_DOUBLE_PLUNDER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOUBLE_PLUNDER" class="menuitem">城市掠奪</div></a>
+				<a href="PROMOTION_INVULNERABIILITY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INVULNERABIILITY" class="menuitem">堅不可摧</div></a>
+				<a href="PROMOTION_GENERAL_STACKING.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GENERAL_STACKING" class="menuitem">大將風範</div></a>
+				<a href="PROMOTION_EXTENDED_PARADROP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS7.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTENDED_PARADROP" class="menuitem">天際遊俠</div></a>
+				<a href="PROMOTION_RESTLESSNESS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS7.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RESTLESSNESS" class="menuitem">奮戰不懈</div></a>
+				<a href="PROMOTION_STRONGER_VS_DAMAGED.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_STRONGER_VS_DAMAGED" class="menuitem">對受傷敵人加成（33）</div></a>
+				<a href="PROMOTION_CITY_SIEGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_SIEGE" class="menuitem">對城市加成（200）</div></a>
+				<a href="PROMOTION_CITY_SIEGE_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_SIEGE_II" class="menuitem">對城市加成（250）</div></a>
+				<a href="PROMOTION_CITY_ASSAULT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_ASSAULT" class="menuitem">對城市加成（300）</div></a>
+				<a href="PROMOTION_FIRE_SUPPORT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FIRE_SUPPORT" class="menuitem">對城市加成（33）</div></a>
+				<a href="PROMOTION_HEAVY_PAYLOAD.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEAVY_PAYLOAD" class="menuitem">對城市加成（50）</div></a>
+				<a href="PROMOTION_ANTI_TANK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_TANK" class="menuitem">對戰車加成（100）</div></a>
+				<a href="PROMOTION_ANTI_FIGHTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_FIGHTER" class="menuitem">對戰鬥機加成（33）</div></a>
+				<a href="PROMOTION_NAVAL_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NAVAL_BONUS" class="menuitem">對海上單位加成</div></a>
+				<a href="PROMOTION_NAVAL_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NAVAL_PENALTY" class="menuitem">對海上單位減益（50）</div></a>
+				<a href="PROMOTION_ANTI_SUBMARINE_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_SUBMARINE_II" class="menuitem">對潛艇加成（100）</div></a>
+				<a href="PROMOTION_ANTI_SUBMARINE_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_SUBMARINE_I" class="menuitem">對潛艇加成（33）</div></a>
+				<a href="PROMOTION_ANTI_HELICOPTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_HELICOPTER" class="menuitem">對直升機加成</div></a>
+				<a href="PROMOTION_ANTI_AIR_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_AIR_II" class="menuitem">對轟炸機/直升機加成（150）</div></a>
+				<a href="PROMOTION_ANTI_AIR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_AIR" class="menuitem">對飛機/直升機加成（150）</div></a>
+				<a href="PROMOTION_ANTI_MOUNTED_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_MOUNTED_II" class="menuitem">對騎乘單位加成（100）</div></a>
+				<a href="PROMOTION_ANTI_MOUNTED_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_MOUNTED_I" class="menuitem">對騎乘單位加成（50）</div></a>
+				<a href="PROMOTION_MOUNTED_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOUNTED_PENALTY" class="menuitem">對騎乘單位減益（33）</div></a>
+				<a href="PROMOTION_ROUGH_TERRAIN_ENDS_TURN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ROUGH_TERRAIN_ENDS_TURN" class="menuitem">崎嶇地形減益</div></a>
+				<a href="PROMOTION_FEARED_ELEPHANT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FEARED_ELEPHANT" class="menuitem">巨象之懼</div></a>
+				<a href="PROMOTION_WEAK_RANGED.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WEAK_RANGED" class="menuitem">弱化遠程攻擊</div></a>
+				<a href="PROMOTION_MEDIC_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MEDIC_GENERAL" class="menuitem">強力回復</div></a>
+				<a href="PROMOTION_IGNORE_TERRAIN_COST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_IGNORE_TERRAIN_COST" class="menuitem">忽略地形消耗</div></a>
+				<a href="PROMOTION_HOVERING_UNIT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HOVERING_UNIT" class="menuitem">懸停單位</div></a>
+				<a href="PROMOTION_WITHDRAW_BEFORE_MELEE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WITHDRAW_BEFORE_MELEE" class="menuitem">戰略撤退</div></a>
+				<a href="PROMOTION_SAPPER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS6.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SAPPER" class="menuitem">戰鬥工兵</div></a>
+				<a href="PROMOTION_FREE_PILLAGE_MOVES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FREE_PILLAGE_MOVES" class="menuitem">掠奪不消耗移動力</div></a>
+				<a href="PROMOTION_OCEAN_MOVEMENT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OCEAN_MOVEMENT" class="menuitem">揚帆遠航</div></a>
+				<a href="PROMOTION_ANTI_GUNPOWDER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_GUNPOWDER" class="menuitem">擲矛攻擊</div></a>
+				<a href="PROMOTION_INTERCEPTION_IV.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_IV" class="menuitem">攔截能力（100）</div></a>
+				<a href="PROMOTION_INTERCEPTION_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_I" class="menuitem">攔截能力（20）</div></a>
+				<a href="PROMOTION_INTERCEPTION_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_II" class="menuitem">攔截能力（40）</div></a>
+				<a href="PROMOTION_INTERCEPTION_III.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_III" class="menuitem">攔截能力（50）</div></a>
+				<a href="PROMOTION_ONLY_ATTACKS_CITIES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ONLY_ATTACKS_CITIES" class="menuitem">攻城專用</div></a>
+				<a href="PROMOTION_SMALL_CITY_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SMALL_CITY_PENALTY" class="menuitem">攻城減益（25）</div></a>
+				<a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_PENALTY" class="menuitem">攻城減益（33）</div></a>
+				<a href="PROMOTION_SILENT_HUNTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SILENT_HUNTER" class="menuitem">攻擊加成（75）</div></a>
+				<a href="PROMOTION_ATTACK_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ATTACK_BONUS" class="menuitem">攻擊時戰鬥加成（25）</div></a>
+				<a href="PROMOTION_RECRUITMENT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS6.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RECRUITMENT" class="menuitem">新兵徵募</div></a>
+				<a href="PROMOTION_MOHAWK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOHAWK" class="menuitem">林間遊俠（33）</div></a>
+				<a href="PROMOTION_JAGUAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_JAGUAR" class="menuitem">林間遊俠（33）</div></a>
+				<a href="PROMOTION_SKI_INFANTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SKI_INFANTRY" class="menuitem">極地先鋒</div></a>
+				<a href="PROMOTION_DESERT_WARRIOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DESERT_WARRIOR" class="menuitem">沙漠戰士</div></a>
+				<a href="PROMOTION_GREAT_ADMIRAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GREAT_ADMIRAL" class="menuitem">海軍統御</div></a>
+				<a href="PROMOTION_PARTIAL_HEAL_IF_DESTROY_ENEMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_PARTIAL_HEAL_IF_DESTROY_ENEMY" class="menuitem">消滅一個單位回復25點傷害。</div></a>
+				<a href="PROMOTION_HEAL_IF_DESTROY_ENEMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEAL_IF_DESTROY_ENEMY" class="menuitem">消滅一個單位回復50點傷害。</div></a>
+				<a href="PROMOTION_MOON_STRIKER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOON_STRIKER" class="menuitem">滿月獵手</div></a>
+				<a href="PROMOTION_NO_CAPTURE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NO_CAPTURE" class="menuitem">無法佔領城市</div></a>
+				<a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ONLY_DEFENSIVE" class="menuitem">無法近戰</div></a>
+				<a href="PROMOTION_FOLIAGE_IMPASSABLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FOLIAGE_IMPASSABLE" class="menuitem">無法進入森林或叢林</div></a>
+				<a href="PROMOTION_OCEAN_IMPASSABLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OCEAN_IMPASSABLE" class="menuitem">無法進入遠洋</div></a>
+				<a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NO_DEFENSIVE_BONUSES" class="menuitem">無防禦地形加成</div></a>
+				<a href="PROMOTION_AMBITION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMBITION" class="menuitem">狂莽衝動</div></a>
+				<a href="PROMOTION_WOLFPACK_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS18.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOLFPACK_1" class="menuitem">狼群戰術一級</div></a>
+				<a href="PROMOTION_WOLFPACK_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS20.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOLFPACK_3" class="menuitem">狼群戰術三級</div></a>
+				<a href="PROMOTION_WOLFPACK_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS19.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOLFPACK_2" class="menuitem">狼群戰術二級</div></a>
+				<a href="PROMOTION_MYSTIC_BLADE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MYSTIC_BLADE" class="menuitem">神秘之刃</div></a>
+				<a href="PROMOTION_AIR_RECON.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_RECON" class="menuitem">空中偵察</div></a>
+				<a href="PROMOTION_AIR_SWEEP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SWEEP" class="menuitem">空中掃蕩</div></a>
+				<a href="PROMOTION_FLAT_MOVEMENT_COST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLAT_MOVEMENT_COST" class="menuitem">穿行任何單元格都只消耗1點移動值</div></a>
+				<a href="PROMOTION_SPAWN_GENERALS_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SPAWN_GENERALS_I" class="menuitem">統帥一級</div></a>
+				<a href="PROMOTION_SPAWN_GENERALS_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SPAWN_GENERALS_II" class="menuitem">統帥二級</div></a>
+				<a href="PROMOTION_PRIZE_SHIPS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_PRIZE_SHIPS" class="menuitem">船隻獎賞</div></a>
+				<a href="PROMOTION_HEROISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEROISM" class="menuitem">英雄主義</div></a>
+				<a href="PROMOTION_ARMOR_PLATING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS12.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ARMOR_PLATING_1" class="menuitem">裝甲強化一級</div></a>
+				<a href="PROMOTION_ARMOR_PLATING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS14.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ARMOR_PLATING_3" class="menuitem">裝甲強化三級</div></a>
+				<a href="PROMOTION_ARMOR_PLATING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS13.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ARMOR_PLATING_2" class="menuitem">裝甲強化二級</div></a>
+				<a href="PROMOTION_EVASION_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVASION_II" class="menuitem">規避（100）</div></a>
+				<a href="PROMOTION_EVASION_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVASION_I" class="menuitem">規避（50）</div></a>
+				<a href="PROMOTION_SIGHT_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SIGHT_PENALTY" class="menuitem">視野受限</div></a>
+				<a href="PROMOTION_TRADE_MISSION_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS8.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TRADE_MISSION_BONUS" class="menuitem">貿易巨頭</div></a>
+				<a href="PROMOTION_WAR_CANOES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WAR_CANOES" class="menuitem">軍用輕舟</div></a>
+				<a href="PROMOTION_STEAM_POWERED.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_STEAM_POWERED" class="menuitem">近海移動加倍</div></a>
+				<a href="PROMOTION_SELL_EXOTIC_GOODS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS11.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SELL_EXOTIC_GOODS" class="menuitem">遠海貿易</div></a>
+				<a href="PROMOTION_RANGED_SUPPORT_FIRE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RANGED_SUPPORT_FIRE" class="menuitem">遠程火力支援</div></a>
+				<a href="PROMOTION_EVIL_SPIRITS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVIL_SPIRITS" class="menuitem">邪靈纏身</div></a>
+				<a href="PROMOTION_HEAVY_CHARGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEAVY_CHARGE" class="menuitem">重裝強襲</div></a>
+				<a href="PROMOTION_BUFFALO_CHEST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BUFFALO_CHEST" class="menuitem">野牛之胸</div></a>
+				<a href="PROMOTION_BUFFALO_LOINS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BUFFALO_LOINS" class="menuitem">野牛之腰</div></a>
+				<a href="PROMOTION_BUFFALO_HORNS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BUFFALO_HORNS" class="menuitem">野牛之角</div></a>
+				<a href="PROMOTION_LIGHTNING_WARFARE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_LIGHTNING_WARFARE" class="menuitem">閃電急襲</div></a>
+				<a href="PROMOTION_DEFENSE_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DEFENSE_PENALTY" class="menuitem">防禦減益（33）</div></a>
+				<a href="PROMOTION_GREAT_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GREAT_GENERAL" class="menuitem">陸軍統禦</div></a>
+				<a href="PROMOTION_INVISIBLE_SUBMARINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INVISIBLE_SUBMARINE" class="menuitem">隱形（潛艇）</div></a>
+				<a href="PROMOTION_FASTER_HEAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FASTER_HEAL" class="menuitem">雙倍回復</div></a>
+				<a href="PROMOTION_SECOND_ATTACK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SECOND_ATTACK" class="menuitem">雙重打擊</div></a>
+				<a href="PROMOTION_MUST_SET_UP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MUST_SET_UP" class="menuitem">需架設後才可遠程攻擊</div></a>
+				<a href="PROMOTION_OCEAN_IMPASSABLE_UNTIL_ASTRONOMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OCEAN_IMPASSABLE_UNTIL_ASTRONOMY" class="menuitem">需要天文學</div></a>
+				<a href="PROMOTION_DEFEND_NEAR_CAPITAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DEFEND_NEAR_CAPITAL" class="menuitem">靠近首都加成</div></a>
+				<a href="PROMOTION_EMBARKED_SIGHT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EMBARKED_SIGHT" class="menuitem">額外海上視野</div></a>
+				<a href="PROMOTION_EXTRA_MOVES_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_MOVES_I" class="menuitem">額外移動</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_I" class="menuitem">額外視野（1）</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_II" class="menuitem">額外視野（2）</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_III.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_III" class="menuitem">額外視野（3）</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_IV.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_IV" class="menuitem">額外視野（4）</div></a>
+				<a href="PROMOTION_FLIGHT_DECK_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS15.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLIGHT_DECK_1" class="menuitem">飛行甲板一級</div></a>
+				<a href="PROMOTION_FLIGHT_DECK_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS17.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLIGHT_DECK_3" class="menuitem">飛行甲板三級</div></a>
+				<a href="PROMOTION_FLIGHT_DECK_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS16.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLIGHT_DECK_2" class="menuitem">飛行甲板二級</div></a>
+				<a href="PROMOTION_ALTITUDE_TRAINING.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ALTITUDE_TRAINING" class="menuitem">高地訓練</div></a>
+				<a href="PROMOTION_GAIN_EXPERIENCE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GAIN_EXPERIENCE" class="menuitem">高效訓練</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

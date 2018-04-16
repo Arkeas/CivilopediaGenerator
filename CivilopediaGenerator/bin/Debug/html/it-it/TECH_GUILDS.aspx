@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: delle Gilde</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_GUILDS.png" alt="delle Gilde" class="contentimage" />
+	<div class="contentleft">
+		<h2>Costo:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">275 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Tecnologie propedeutiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CURRENCY.aspx" onmouseover="return tooltip('Valuta');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CURRENCY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Conduce alle tecnologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Codice cavalleresco');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a><a href="TECH_MACHINERY.aspx" onmouseover="return tooltip('Meccanica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MACHINERY.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Edifici sbloccati:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_NATIONAL_TREASURY.aspx" onmouseover="return tooltip('Compagnia Indie Orientali');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_NATIONAL_TREASURY.png" /></a><a href="BUILDING_MACHU_PICHU.aspx" onmouseover="return tooltip('Machu Picchu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_MACHU_PICHU.png" /></a><a href="BUILDING_ARTISTS_GUILD.aspx" onmouseover="return tooltip('Gilda degli Artisti');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_ARTISTS_GUILD.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		<h2>Azioni permesse:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_POLDER.aspx" onmouseover="return tooltip('Costruisci un Polder');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_POLDER.png" /></a><a href="IMPROVEMENT_TRADING_POST.aspx" onmouseover="return tooltip('Costruire Base commer.');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_TRADING_POST.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">delle Gilde</div>
+		<h2>Informazione sulla partita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permette ai Lavoratori di costruire la <span class="color_positive_text">Base commerciale</span>, che aumenta la resa d'<img src="/civilopedia/images/gold.png" alt="gold" /> Oro delle caselle. Inoltre permette alle tue citt&agrave; di convertire la <img src="/civilopedia/images/production.png" alt="production" /> Produzione in <img src="/civilopedia/images/gold.png" alt="gold" /> Oro anzich&eacute; usarla per costruire unit&agrave; o edifici.</div></div></div></div></div></div></div></div>
+		
+		<h2>Citazione:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"I mercanti e i bottegai sono arrivati; i loro profitti sono prestabiliti..."<br /> - Sri Guru Granth Sahib<br /></div></div></div></div></div></div></div></div>
+		<h2>Informazioni storiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Nelle citt&agrave; pre-industriali gli artigiani tendevano a formare associazioni o gilde in base alla loro professione; queste gilde avevano lo scopo di proteggere i segreti delle arti e promuovere l'influenza e il benessere dei loro membri. Alcune organizzazioni che si possono considerare precorritrici delle gilde si ritrovano gi&agrave; nel III secolo a.C. a Roma e nella Cina del periodo Han. Nel 300 d.C. la pratica degli artigiani di riunirsi in gruppi per ottenere pi&ugrave; potere si era diffusa nell'India della dinastia Gupta e nell'Egitto dei Tolomei. Nel Medioevo le gilde si diffusero rapidamente dall'Italia in tutta Europa; i registri del XII secolo mostrano che in citt&agrave; come Parigi e Londra ce n'erano pi&ugrave; di cento. In alcuni casi le gilde divennero così potenti da acquisire il governo stesso, come indica la coincidenza tra municipio e palazzo delle corporazioni in molte citt&agrave; tedesche, svizzere e olandesi.<br /><br />Le gilde avevano il compito di salvaguardare la qualit&agrave; e organizzare la trasmissione dell'arte che rappresentavano, accompagnando ogni fase della vita dei loro membri da apprendista a grande maestro. Per assicurare la qualit&agrave; dei prodotti venne sviluppato un sistema di marchi di fabbrica, che dimostravano che un oggetto aveva superato i controlli della gilda e del governo. Tuttavia, nel corso del tempo l'influenza e il potere delle gilde andò scemando con l'arrivo di nuovi mestieri, sistemi di governo e mezzi di produzione industriale. In Francia, per esempio, le gilde furono abolite nel 1791 dalla legge Le Chapelier; ben presto le altre nazioni fecero lo stesso. Nell'epoca industriale le gilde sono state in gran parte soppiantate dai sindacati, ma qualcuna sopravvive ancor oggi, pi&ugrave; che altro nel campo del cinema, dell'arte e di altre professioni artistiche.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

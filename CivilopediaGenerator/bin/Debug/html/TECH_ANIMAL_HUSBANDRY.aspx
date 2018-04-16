@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Animal Husbandry</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_ANIMAL_HUSBANDRY.png" alt="Animal Husbandry" class="contentimage" />
+	<div class="contentleft">
+		<h2>Cost:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">35 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Prerequisite Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_AGRICULTURE.aspx" onmouseover="return tooltip('Agriculture');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_AGRICULTURE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Leads to Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_TRAPPING.aspx" onmouseover="return tooltip('Trapping');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_TRAPPING.png" /></a><a href="TECH_THE_WHEEL.aspx" onmouseover="return tooltip('The Wheel');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_THE_WHEEL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Units Unlocked:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CARAVAN.aspx" onmouseover="return tooltip('Caravan');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CARAVAN.png" /></a></div></div></div></div></div></div></div></div>
+		
+        
+		<h2>Resources Revealed:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Horses');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Worker Actions Allowed:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_PASTURE.aspx" onmouseover="return tooltip('Construct a Pasture');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_PASTURE.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Animal Husbandry</div>
+		<h2>Game Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Allows you to build the <span class="color_positive_text">Caravan</span>, used to establish lucrative Trade Routes. Also allows Workers to construct <span class="color_positive_text">Pastures</span> on <img src="/civilopedia/images/res_cow.png" alt="cow" /> <span class="color_positive_text">Cows</span> and <img src="/civilopedia/images/res_sheep.png" alt="sheep" /> <span class="color_positive_text">Sheep</span>. Also reveals <img src="/civilopedia/images/res_horses.png" alt="horses" /> Horses, which are used to build powerful mounted units.</div></div></div></div></div></div></div></div>
+		
+		<h2>Quote:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Thou shalt not muzzle the ox when he treadeth out the corn."<br />  - The Bible, Deuteronomy, 25:4<br /></div></div></div></div></div></div></div></div>
+		<h2>Historical Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Animal husbandry appears to have occurred at about the same time as the invention of agriculture. The dog appears to be the earliest domesticated animal, probably bred to assist in hunting and killing game. Evidence suggests that they were first tamed and bred in China - in fact, geneticists believe that about 95% of the dogs living today are descended from just a few common Chinese animals. Goats and sheep were domesticated in the Middle East perhaps by about 10,000 BC.<br /><br />To be successfully domesticated, an animal must fit certain criteria: it should be able to consume food that is less attractive to humans, say, grass or vermin or leftover table scraps. It should mature rapidly, so that it becomes useful quickly and so that it can be genetically altered through repeated generations of breeding. It should have a pleasant disposition. It shouldn't panic easily, or if it does, it should stay together with others of its kind, making it possible for humans or dogs to herd them in a group. Finally, it's extremely useful if the animal can be trained to think of a human as its pack leader.<br /><br />Scientists believe that the horse was first domesticated in the Ukraine region in approximately 4000-3500 BC. It is possible that the first horses were kept for their meat rather than as working animals. Within about half a millennium, the horse was being employed as a draft animal across much of Europe and Asia. Over the several thousands of years, intensive breeding programs resulted in a domesticated animal which was much larger and stronger than the original wild horse. And with the invention of the horse collar and later the saddle and stirrups, the horse became the most important domesticated animal in human history. (At least in Eurasia and Northern Africa, that is: the aboriginal North, Central and South Americans ate all of their horses before they domesticated them.)</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

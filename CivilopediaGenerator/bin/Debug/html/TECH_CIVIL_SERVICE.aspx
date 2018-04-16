@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Civil Service</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_CIVIL_SERVICE.png" alt="Civil Service" class="contentimage" />
+	<div class="contentleft">
+		<h2>Cost:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">275 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Prerequisite Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_DRAMA.aspx" onmouseover="return tooltip('Drama and Poetry');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_DRAMA.png" /></a><a href="TECH_HORSEBACK_RIDING.aspx" onmouseover="return tooltip('Horseback Riding');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_HORSEBACK_RIDING.png" /></a><a href="TECH_CURRENCY.aspx" onmouseover="return tooltip('Currency');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CURRENCY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Leads to Techs:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_EDUCATION.aspx" onmouseover="return tooltip('Education');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_EDUCATION.png" /></a><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Chivalry');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Units Unlocked:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_PIKEMAN.aspx" onmouseover="return tooltip('Pikeman');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_PIKEMAN.png" /></a><a href="UNIT_GERMAN_LANDSKNECHT.aspx" onmouseover="return tooltip('Landsknecht');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_GERMAN_LANDSKNECHT.png" /></a><a href="UNIT_ZULU_IMPI.aspx" onmouseover="return tooltip('Impi');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_ZULU_IMPI.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Buildings Unlocked:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_CHICHEN_ITZA.aspx" onmouseover="return tooltip('Chichen Itza');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_CHICHEN_ITZA.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Civil Service</div>
+		<h2>Game Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><span class="color_positive_text">Farms</span> next to rivers and lakes produce +1 <img src="/civilopedia/images/food.png" alt="food" /> Food, an extremely useful bonus. Also allows you to build the <span class="color_positive_text">Pikeman</span>, a unit deadly against mounted enemies like the Horseman and Knight.</div></div></div></div></div></div></div></div>
+		<h2>Special Abilities:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Fresh water Terrace Farm yield improved by 1<br />Fresh water Farm yield improved by 1<br />Allows Open Borders treaties<br /></div></div></div></div></div></div></div></div>
+		<h2>Quote:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"The only thing that saves us from the bureaucracy is its inefficiency."<br />  - Eugene McCarthy<br /></div></div></div></div></div></div></div></div>
+		<h2>Historical Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">The term "civil service" is generally used to describe the parts of a government in which individuals are employed on the basis of merit rather than because of political patronage or being born into a certain class or because the person is related to the current ruler. In the United States federal government, for instance, the highest posts in the bureaucracy are appointed by the president. They are "political appointments" and will likely change with each new administration. Ranks below the highest points are filled with permanent "civil servants," who generally hold their positions from administration to administration, no matter which party wins.<br /><br />One of the earliest examples of a civil service can be found in the Qin Dynasty of China (ca. 210 BC), under which employment in the bureaucracy was merit-based. Over time this system gradually was corrupted and employment in the bureaucracy once again became based upon class rather than merit. Three hundred years later the merit system was reapplied (under the Sui and Tang Dynasties), and it remained in effect for some centuries.<br /><br />Historically, many civilizations have followed a similar pattern to the Chinese: over time the bureaucracy becomes increasingly corrupt and inefficient until eventually stringent reforms are enacted to improve the government's efficiency. These make things better for a while until standards begin to be relaxed in favor of family or connections, and the cycle begins all over again.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

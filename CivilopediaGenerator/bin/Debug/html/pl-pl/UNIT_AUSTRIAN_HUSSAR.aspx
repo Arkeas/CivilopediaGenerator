@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Huzar&oacute;w</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_AUSTRIAN_HUSSAR.png" alt="Huzar&oacute;w" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">225 <img src="/civilopedia/images/production.png" alt="production" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Konna</div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">34 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_AUSTRIA.aspx" onmouseover="return tooltip('Cesarstwo Austriackie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_AUSTRIA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Bez terenowej premii do obrony');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Mo&#380;e wykona&#263; ruch po ataku');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Kara przy atakowaniu miasta (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_EXTRA_SIGHT_I.aspx" onmouseover="return tooltip('Wi&#281;kszy zasi&#281;g widzenia (1)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_FLANK_ATTACK_BONUS.aspx" onmouseover="return tooltip('Natarcie na flank&#281;');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wymagane surowce:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Koni');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MILITARY_SCIENCE.aspx" onmouseover="return tooltip('Nauk militarnych');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MILITARY_SCIENCE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wypierana przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBUSTION.aspx" onmouseover="return tooltip('Silnik spalinowy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBUSTION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_WWI_TANK.aspx" onmouseover="return tooltip('Okr&#281;t&oacute;w l&#261;dowych');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_WWI_TANK.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CAVALRY.aspx" onmouseover="return tooltip('Kawaleria');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CAVALRY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Huzar&oacute;w</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Szybka jednostka konna u&#380;ywana do zwiad&oacute;w i dzia&#322;a&#324; polegaj&#261;cych na ataku i ucieczce. Zab&oacute;jczy przy atakach z flanki. Jedynie Austriacy mog&#261; tworzy&#263; te jednostki.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Huzarzy s&#261; &#347;wietnymi zwiadowcami i dobrze atakuj&#261; z flanki. S&#261; nieco szybsi ni&#380; kawaleria, dla kt&oacute;rej s&#261; zast&#281;pstwem. Rozpoczynaj&#261; z awansami, kt&oacute;re daj&#261; im +1 do zasi&#281;gu widzenia oraz zwi&#281;kszaj&#261; ich premi&#281; przy ataku z flanki o 50%.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">W&#281;gierska lekka kawaleria zwana huzarami wzi&#281;&#322;a sw&#261; nazw&#281; od &#322;aci&#324;skiego s&#322;owa „cursarius”, oznaczaj&#261;cego „je&#378;d&#378;ca”. Formacja ta s&#322;u&#380;y&#322;a cesarstwu Habsburg&oacute;w i Austrii w XVII i XVIII w. Na&#347;ladowani przez liczne jednostki kawaleryjskie Europy, huzarzy zostali stworzeni jako nieregularny pu&#322;k wytrawnych je&#378;d&#378;c&oacute;w korzystaj&#261;cy z taktyki szybkich atak&oacute;w n&#281;kaj&#261;cych. Z czasem huzarzy stali si&#281; formaln&#261; jednostk&#261;, rekrutowanym ludziom i koniom stawiano okre&#347;lone wymagania. Pu&#322;ki huzar&oacute;w masowo wykorzystywano podczas wojen napoleo&#324;skich, formacja ta s&#322;u&#380;y&#322;a w armiach Europy i Azji jeszcze w XIX w.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Agricultura</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_AGRICULTURE.png" alt="Agricultura" class="contentimage" />
+	<div class="contentleft">
+		<h2>Coste:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">20 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		
+		<h2>Lleva a las tecnolog&iacute;as:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_POTTERY.aspx" onmouseover="return tooltip('Alfarer&iacute;a');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_POTTERY.png" /></a><a href="TECH_ANIMAL_HUSBANDRY.aspx" onmouseover="return tooltip('Ganader&iacute;a');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ANIMAL_HUSBANDRY.png" /></a><a href="TECH_ARCHERY.aspx" onmouseover="return tooltip('Tiro con arco');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ARCHERY.png" /></a><a href="TECH_MINING.aspx" onmouseover="return tooltip('Miner&iacute;a');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MINING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unidades desbloqueadas:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_MAYAN_ATLATLIST.aspx" onmouseover="return tooltip('Lanzadardos');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_MAYAN_ATLATLIST.png" /></a></div></div></div></div></div></div></div></div>
+		
+        
+		
+		<h2>Acciones permitidas:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_FARM.aspx" onmouseover="return tooltip('Construir una Granja');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_FARM.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Agricultura</div>
+		<h2>Informaci&oacute;n de la partida:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permite a los Trabajadores construir <span class="color_positive_text">Granjas</span>, que son vitales para aumentar la producci&oacute;n de <span class="color_positive_text">Alimentos</span> <img src="/civilopedia/images/food.png" alt="food" /> de las casillas del mapa.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Donde aparece la labranza, la siguen las dem&aacute;s artes. Los campesinos son, por tanto, los fundadores de la civilizaci&oacute;n humana."<br />  - Daniel Webster<br /></div></div></div></div></div></div></div></div>
+		<h2>Informaci&oacute;n hist&oacute;rica:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">La agricultura es el cultivo de plantas, principalmente para obtener alimentos, pero tambi&eacute;n para conseguir ropa, refugio, medicinas, diversiones y otros usos diversos. Las t&eacute;cnicas de cultivo probablemente se desarrollaron de manera independiente en numerosos lugares. La primera evidencia de agricultura encontrada hasta el momento se remonta a finales de la Edad de Hielo, hace 10.000 a&ntilde;os, aproximadamente. Lo m&aacute;s interesante es que, al parecer, no se la inventaron cazadores-recolectores hambrientos que buscaban desesperadamente nuevos medios de procurarse el sustento, sino que los indicios sugieren que los primeros agricultores eran cazadores-recolectores acomodados que probablemente ya ten&iacute;an a mano gran cantidad de alimentos. Tiene sentido: los pueblos con excedentes de alimentos pueden permitirse el lujo de experimentar con nuevas tecnolog&iacute;as, mientras que los que pasan hambre van a dedicar todas sus energ&iacute;as a los m&eacute;todos contrastados y fiables de procurarse el sustento.<br /><br />En sus albores, la agricultura era un proceso lento y c&iacute;clico. Se sembraba en primavera, se cuidaban los campos y se regaban hasta que las cosechas estuvieran listas para recogerse, varios meses m&aacute;s tarde. Como hay pocos lugares que tengan un clima apropiado para dar productos agr&iacute;colas durante todo el a&ntilde;o, los agricultores ten&iacute;an que guardar los alimentos para los flacos meses de invierno o intercambiarlos con aquellos que ten&iacute;an comida todo el a&ntilde;o gracias a la caza, la pesca, etc. Los agricultores siempre han estado a merced de la naturaleza y el tiempo: si un a&ntilde;o no llov&iacute;a o las plagas se com&iacute;an la cosecha, una familia pod&iacute;a morirse de hambre.<br /><br />La agricultura moderna (o "agroindustria") es una ciencia compleja y detallista que incluye manipulaci&oacute;n gen&eacute;tica, fertilizantes e insecticidas muy avanzados, sistemas de regad&iacute;o computerizados y cosechadoras rob&oacute;ticas. Los avances en tecnolog&iacute;a han aumentado mucho la producci&oacute;n de alimentos de un acre de tierra, por lo que muchos pa&iacute;ses, incluyendo Estados Unido, suelen sufrir en ocasiones no de hambre, sino de exceso de alimentos, lo que conlleva la obesidad cr&oacute;nica de sus ciudadanos y unos precios tan bajos que ponen en peligro el medio de vida de los propios agricultores que est&aacute;n cultivando toda la comida.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

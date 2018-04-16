@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Gez morski</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_DUTCH_SEA_BEGGAR.png" alt="Gez morski" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">150 <img src="/civilopedia/images/production.png" alt="production" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Walka bezpo&#347;rednia</div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">25 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_NETHERLANDS.aspx" onmouseover="return tooltip('Imperium holenderskie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_NETHERLANDS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_COASTAL_RAIDER_1.aspx" onmouseover="return tooltip('Morski grabie&#380;ca I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_EXP_3.png" /></a><a href="PROMOTION_COASTAL_RAIDER_2.aspx" onmouseover="return tooltip('Morski grabie&#380;ca II');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_EXP_4.png" /></a><a href="PROMOTION_PRIZE_SHIPS.aspx" onmouseover="return tooltip('Statki zdobyczne');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_SUPPLY.aspx" onmouseover="return tooltip('Zaopatrzenie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_48.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_NAVIGATION.aspx" onmouseover="return tooltip('Nawigacja');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_NAVIGATION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wypierana przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBUSTION.aspx" onmouseover="return tooltip('Silnik spalinowy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBUSTION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_DESTROYER.aspx" onmouseover="return tooltip('Niszczyciel');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_DESTROYER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_PRIVATEER.aspx" onmouseover="return tooltip('Kaper');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_PRIVATEER.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Gez morski</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Jednostka morska wyspecjalizowana w atakowaniu miast przybrze&#380;nych w celu zdobycia z&#322;ota i w zajmowaniu wrogich statk&oacute;w. Jedynie Holendrzy mog&#261; j&#261; wytworzy&#263;.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Jednostka morska wyspecjalizowana w atakowaniu miast przybrze&#380;nych w celu zdobycia z&#322;ota i w zajmowaniu wrogich statk&oacute;w. Jedynie Holendrzy mog&#261; j&#261; wytworzy&#263;. Leczy obra&#380;enia poza przyjaznym terytorium. Rozpoczyna z pierwszymi dwoma awansami „Morski naje&#378;d&#378;ca”, dzi&#281;ki czemu zyskuje z&#322;oto podczas atak&oacute;w na przybrze&#380;ne miasta. Potrafi pojma&#263; pokonane wrogie jednostki morskie.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">&#379;ebracy morscy, znani tak&#380;e jako gezowie, byli grup&#261; korsarzy, kt&oacute;rzy w czasie wojny osiemdziesi&#281;cioletniej sprzeciwiali si&#281; hiszpa&#324;skiej kontroli nad Niderlandami. Ich nazwa pochodzi od grupy holenderskich szlachcic&oacute;w, kt&oacute;rzy ruszyli marszem do diuszesy Parmy z list&#261; za&#380;ale&#324; i pr&oacute;&#347;b. Doradcy w&#322;adczyni nazwali grup&#281; &#380;ebrakami - nazwa ta przylgn&#281;&#322;a do uczestnik&oacute;w marszu na sta&#322;e.<br /><br />W 1569 r. &#380;ebracy otrzymali od Wilhelma Ora&#324;skiego oficjalne listy kaperskie, na mocy kt&oacute;rych przystosowano do dzia&#322;a&#324; wojennych 84 okr&#281;ty. &#379;ebracy morscy pocz&#261;tkowo ograniczali si&#281; do zwyk&#322;ego &#322;upienia, lecz w chwili desperacji zdobyli te&#380; si&#322;&#261; hiszpa&#324;skie miasto i garnizon. Upojeni swoim zwyci&#281;stwem rozpocz&#281;li kampani&#281; podboju, zdobywaj&#261;c kolejne miasta wzd&#322;u&#380; linii brzegowej. Sukcesy morskich &#380;ebrak&oacute;w podzia&#322;a&#322;y mobilizuj&#261;co na innych Holendr&oacute;w i sprawi&#322;y, &#380;e rewolucja wybuch&#322;a w ca&#322;ym kraju. Zdobycie hiszpa&#324;skiego garnizonu w Brielle przez &#380;ebrak&oacute;w morskich uwa&#380;a si&#281; za pocz&#261;tek wojny o niepodleg&#322;o&#347;&#263; Holandii.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

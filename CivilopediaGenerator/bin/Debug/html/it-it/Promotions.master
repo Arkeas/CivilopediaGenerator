@@ -1,0 +1,347 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it-it">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,promotion,promotions" />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('Nozioni di gioco');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_off.png" class="tab" id="tab01" onmouseover="this.src='/civilopedia/images/tab_concept_on.png';" onmouseout="this.src='/civilopedia/images/tab_concept_off.png';" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('Tecnologie');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('Unit&agrave;');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_off.png" class="tab" id="tab03" onmouseover="this.src='/civilopedia/images/tab_unit_on.png';" onmouseout="this.src='/civilopedia/images/tab_unit_off.png';" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('Promozioni');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_on.png" class="tab" id="tab04" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('Edifici');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('Meraviglie');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('Politiche Sociali');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_off.png" class="tab" id="tab07" onmouseover="this.src='/civilopedia/images/tab_policy_on.png';" onmouseout="this.src='/civilopedia/images/tab_policy_off.png';" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('Specialisti e Grandi Personaggi');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('Civilt&agrave; e leader');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_off.png" class="tab" id="tab09" onmouseover="this.src='/civilopedia/images/tab_civilization_on.png';" onmouseout="this.src='/civilopedia/images/tab_civilization_off.png';" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('Citt&agrave;-stato');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_off.png" class="tab" id="tab10" onmouseover="this.src='/civilopedia/images/tab_city_state_on.png';" onmouseout="this.src='/civilopedia/images/tab_city_state_off.png';" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('Terreni e caratteristiche');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('Risorse');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('Miglioramenti');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('Religione');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_off.png" class="tab" id="tab14" onmouseover="this.src='/civilopedia/images/tab_religion_on.png';" onmouseout="this.src='/civilopedia/images/tab_religion_off.png';" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('Congresso Mondiale');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">Promozioni
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+					<option value="zh-hant-hk">中文 (繁體)</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="PROMOTION_HOME.aspx"><div id="PROMOTION_HOME" class="menuitem">Premessa alle Promozioni</div></a>
+			<div id="GROUP_PEDIA_MELEE" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_MELEE_CONTENT');"><div id="PEDIA_MELEE" class="menugroup">Promozioni combatt. ravvicinato</div></a><div id="PEDIA_MELEE_CONTENT">
+				<a href="PROMOTION_DRILL_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS19.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DRILL_1" class="menuitem">Addestramento I</div></a>
+				<a href="PROMOTION_DRILL_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS20.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DRILL_2" class="menuitem">Addestramento II</div></a>
+				<a href="PROMOTION_DRILL_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS21.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DRILL_3" class="menuitem">Addestramento III</div></a>
+				<a href="PROMOTION_SHOCK_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS44.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SHOCK_1" class="menuitem">Assalto I</div></a>
+				<a href="PROMOTION_SHOCK_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS45.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SHOCK_2" class="menuitem">Assalto II</div></a>
+				<a href="PROMOTION_SHOCK_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS46.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SHOCK_3" class="menuitem">Assalto III</div></a>
+				<a href="PROMOTION_SIEGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS40.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SIEGE" class="menuitem">Assedio</div></a>
+				<a href="PROMOTION_CHARGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS13.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CHARGE" class="menuitem">Carica</div></a>
+				<a href="PROMOTION_COVER_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS14.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COVER_1" class="menuitem">Copertura I</div></a>
+				<a href="PROMOTION_COVER_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS15.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COVER_2" class="menuitem">Copertura II</div></a>
+				<a href="PROMOTION_WOODSMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS56.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOODSMAN" class="menuitem">Forestali</div></a>
+				<a href="PROMOTION_FORMATION_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS24.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FORMATION_1" class="menuitem">Formazione I</div></a>
+				<a href="PROMOTION_FORMATION_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS25.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FORMATION_2" class="menuitem">Formazione II</div></a>
+				<a href="PROMOTION_AMBUSH_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMBUSH_1" class="menuitem">Imboscata I</div></a>
+				<a href="PROMOTION_AMBUSH_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMBUSH_2" class="menuitem">Imboscata II</div></a>
+				<a href="PROMOTION_BLITZ.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BLITZ" class="menuitem">Incursione</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_RANGED" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_RANGED_CONTENT');"><div id="PEDIA_RANGED" class="menugroup">Promozioni combatt. a distanza</div></a><div id="PEDIA_RANGED_CONTENT">
+				<a href="PROMOTION_BOMBARDMENT_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS10.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOMBARDMENT_1" class="menuitem">Bombardamento I</div></a>
+				<a href="PROMOTION_BOMBARDMENT_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS11.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOMBARDMENT_2" class="menuitem">Bombardamento II</div></a>
+				<a href="PROMOTION_BOMBARDMENT_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS12.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOMBARDMENT_3" class="menuitem">Bombardamento III</div></a>
+				<a href="PROMOTION_BARRAGE_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS6.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BARRAGE_1" class="menuitem">Fuoco di fila I</div></a>
+				<a href="PROMOTION_BARRAGE_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS7.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BARRAGE_2" class="menuitem">Fuoco di fila II</div></a>
+				<a href="PROMOTION_BARRAGE_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS8.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BARRAGE_3" class="menuitem">Fuoco di fila III</div></a>
+				<a href="PROMOTION_LOGISTICS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS30.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_LOGISTICS" class="menuitem">Logistica</div></a>
+				<a href="PROMOTION_MOBILITY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOBILITY" class="menuitem">Mobilit&agrave;</div></a>
+				<a href="PROMOTION_ACCURACY_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ACCURACY_1" class="menuitem">Precisione I</div></a>
+				<a href="PROMOTION_ACCURACY_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ACCURACY_2" class="menuitem">Precisione II</div></a>
+				<a href="PROMOTION_ACCURACY_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ACCURACY_3" class="menuitem">Precisione III</div></a>
+				<a href="PROMOTION_VOLLEY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS55.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_VOLLEY" class="menuitem">Raffica</div></a>
+				<a href="PROMOTION_RANGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS34.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RANGE" class="menuitem">Raggio di tiro ampliato</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_NAVAL" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_NAVAL_CONTENT');"><div id="PEDIA_NAVAL" class="menugroup">Promozioni navali</div></a><div id="PEDIA_NAVAL_CONTENT">
+				<a href="PROMOTION_BOARDING_PARTY_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOARDING_PARTY_1" class="menuitem">Abbordaggio I</div></a>
+				<a href="PROMOTION_BOARDING_PARTY_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOARDING_PARTY_2" class="menuitem">Abbordaggio II</div></a>
+				<a href="PROMOTION_BOARDING_PARTY_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BOARDING_PARTY_3" class="menuitem">Abbordaggio III</div></a>
+				<a href="PROMOTION_SUPPLY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS48.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SUPPLY" class="menuitem">Approvvigionamento</div></a>
+				<a href="PROMOTION_AMPHIBIOUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMPHIBIOUS" class="menuitem">Attacco anfibio</div></a>
+				<a href="PROMOTION_COASTAL_RAIDER_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COASTAL_RAIDER_1" class="menuitem">Incursione costiera I</div></a>
+				<a href="PROMOTION_COASTAL_RAIDER_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COASTAL_RAIDER_2" class="menuitem">Incursione costiera II</div></a>
+				<a href="PROMOTION_COASTAL_RAIDER_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_COASTAL_RAIDER_3" class="menuitem">Incursione costiera III</div></a>
+				<a href="PROMOTION_TARGETING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS52.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TARGETING_1" class="menuitem">Puntamento I</div></a>
+				<a href="PROMOTION_TARGETING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS53.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TARGETING_2" class="menuitem">Puntamento II</div></a>
+				<a href="PROMOTION_TARGETING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS54.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TARGETING_3" class="menuitem">Puntamento III</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_HEAL" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_HEAL_CONTENT');"><div id="PEDIA_HEAL" class="menugroup">Promozioni curative</div></a><div id="PEDIA_HEAL_CONTENT">
+				<a href="PROMOTION_INSTA_HEAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS26.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INSTA_HEAL" class="menuitem">Cura istantanea</div></a>
+				<a href="PROMOTION_MARCH.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS31.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MARCH" class="menuitem">Marcia</div></a>
+				<a href="PROMOTION_MEDIC.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS32.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MEDIC" class="menuitem">Medico</div></a>
+				<a href="PROMOTION_MEDIC_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS32.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MEDIC_II" class="menuitem">Medico II</div></a>
+				<a href="PROMOTION_REPAIR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS36.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_REPAIR" class="menuitem">Riparazione</div></a>
+				<a href="PROMOTION_AIR_REPAIR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS36.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_REPAIR" class="menuitem">Riparazione aerea</div></a>
+				<a href="PROMOTION_SURVIVALISM_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS49.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SURVIVALISM_1" class="menuitem">Sopravvivenza I</div></a>
+				<a href="PROMOTION_SURVIVALISM_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS50.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SURVIVALISM_2" class="menuitem">Sopravvivenza II</div></a>
+				<a href="PROMOTION_SURVIVALISM_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS51.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SURVIVALISM_3" class="menuitem">Sopravvivenza III</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_SCOUTING" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_SCOUTING_CONTENT');"><div id="PEDIA_SCOUTING" class="menugroup">Promozioni per l'esplorazione</div></a><div id="PEDIA_SCOUTING_CONTENT">
+				<a href="PROMOTION_SCOUTING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS37.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SCOUTING_1" class="menuitem">Esplorazione I</div></a>
+				<a href="PROMOTION_SCOUTING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS38.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SCOUTING_2" class="menuitem">Esplorazione II</div></a>
+				<a href="PROMOTION_SCOUTING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS39.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SCOUTING_3" class="menuitem">Esplorazione III</div></a>
+				<a href="PROMOTION_SENTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS43.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SENTRY" class="menuitem">Sentinella</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_AIR" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_AIR_CONTENT');"><div id="PEDIA_AIR" class="menugroup">Promozioni aeree</div></a><div id="PEDIA_AIR_CONTENT">
+				<a href="PROMOTION_AIR_SIEGE_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS40.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SIEGE_1" class="menuitem">Assedio I</div></a>
+				<a href="PROMOTION_AIR_SIEGE_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS41.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SIEGE_2" class="menuitem">Assedio II</div></a>
+				<a href="PROMOTION_AIR_SIEGE_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS42.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SIEGE_3" class="menuitem">Assedio III</div></a>
+				<a href="PROMOTION_DOGFIGHTING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS16.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOGFIGHTING_1" class="menuitem">Duello aereo I</div></a>
+				<a href="PROMOTION_DOGFIGHTING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS17.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOGFIGHTING_2" class="menuitem">Duello aereo II</div></a>
+				<a href="PROMOTION_DOGFIGHTING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS18.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOGFIGHTING_3" class="menuitem">Duello aereo III</div></a>
+				<a href="PROMOTION_AIR_AMBUSH_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_AMBUSH_1" class="menuitem">Imboscata aerea I</div></a>
+				<a href="PROMOTION_AIR_AMBUSH_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_AMBUSH_2" class="menuitem">Imboscata aerea II</div></a>
+				<a href="PROMOTION_INTERCEPTION_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS27.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_1" class="menuitem">Intercettazione I</div></a>
+				<a href="PROMOTION_INTERCEPTION_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS28.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_2" class="menuitem">Intercettazione II</div></a>
+				<a href="PROMOTION_INTERCEPTION_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS29.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_3" class="menuitem">Intercettazione III</div></a>
+				<a href="PROMOTION_AIR_LOGISTICS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS30.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_LOGISTICS" class="menuitem">Logistica</div></a>
+				<a href="PROMOTION_EVASION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS23.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVASION" class="menuitem">Manovre evasive</div></a>
+				<a href="PROMOTION_HELI_MOBILITY_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HELI_MOBILITY_1" class="menuitem">Mobilit&agrave; I</div></a>
+				<a href="PROMOTION_HELI_MOBILITY_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HELI_MOBILITY_2" class="menuitem">Mobilit&agrave; II</div></a>
+				<a href="PROMOTION_AIR_TARGETING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS52.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_TARGETING_1" class="menuitem">Puntamento aereo I</div></a>
+				<a href="PROMOTION_AIR_TARGETING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS53.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_TARGETING_2" class="menuitem">Puntamento aereo II</div></a>
+				<a href="PROMOTION_AIR_RANGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS34.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_RANGE" class="menuitem">Raggio d'azione ampliato</div></a>
+				<a href="PROMOTION_SORTIE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS47.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SORTIE" class="menuitem">Sortita</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_SHARED" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_SHARED_CONTENT');"><div id="PEDIA_SHARED" class="menugroup">Promozioni condivise</div></a><div id="PEDIA_SHARED_CONTENT">
+				<a href="PROMOTION_FAST_ADMIRAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FAST_ADMIRAL" class="menuitem">Ammiraglio mobile</div></a>
+				<a href="PROMOTION_HIMEJI_CASTLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HIMEJI_CASTLE" class="menuitem">Castello di Himeji</div></a>
+				<a href="PROMOTION_ADJACENT_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ADJACENT_BONUS" class="menuitem">Disciplina</div></a>
+				<a href="PROMOTION_NAVAL_TRADITION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NAVAL_TRADITION" class="menuitem">Esplorazione</div></a>
+				<a href="PROMOTION_INDIRECT_FIRE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS35.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INDIRECT_FIRE" class="menuitem">Fuoco indiretto</div></a>
+				<a href="PROMOTION_FAST_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FAST_GENERAL" class="menuitem">Generale mobile</div></a>
+				<a href="PROMOTION_GREAT_LIGHTHOUSE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS33.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GREAT_LIGHTHOUSE" class="menuitem">Grande Faro</div></a>
+				<a href="PROMOTION_NATIONALISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NATIONALISM" class="menuitem">Guerra patriottica</div></a>
+				<a href="PROMOTION_EMBARKATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS22.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EMBARKATION" class="menuitem">Imbarco</div></a>
+				<a href="PROMOTION_DEFENSIVE_EMBARKATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS22.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DEFENSIVE_EMBARKATION" class="menuitem">Imbarco con difesa</div></a>
+				<a href="PROMOTION_ALLWATER_EMBARKATION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS22.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ALLWATER_EMBARKATION" class="menuitem">Imbarco con movim. in mare aperto</div></a>
+				<a href="PROMOTION_MORALE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MORALE" class="menuitem">Morale</div></a>
+				<a href="PROMOTION_STATUE_ZEUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_STATUE_ZEUS" class="menuitem">Statua di Zeus</div></a>
+			</div></div>
+			<div id="GROUP_PEDIA_ATTRIBUTES" class="menugroupcontainer"><a href="javascript:togglediv('PEDIA_ATTRIBUTES_CONTENT');"><div id="PEDIA_ATTRIBUTES" class="menugroup">Attributi delle unit&agrave;</div></a><div id="PEDIA_ATTRIBUTES_CONTENT">
+				<a href="PROMOTION_OCEAN_IMPASSABLE_UNTIL_ASTRONOMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OCEAN_IMPASSABLE_UNTIL_ASTRONOMY" class="menuitem">&Egrave; necessario conoscere l'Astronomia</div></a>
+				<a href="PROMOTION_EXTRA_MOVES_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_MOVES_I" class="menuitem">1 Movimento extra</div></a>
+				<a href="PROMOTION_ALTITUDE_TRAINING.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ALTITUDE_TRAINING" class="menuitem">Addestramento in altura</div></a>
+				<a href="PROMOTION_AMBITION.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS0.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AMBITION" class="menuitem">Ambizione</div></a>
+				<a href="PROMOTION_GAIN_EXPERIENCE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GAIN_EXPERIENCE" class="menuitem">Apprendimento rapido</div></a>
+				<a href="PROMOTION_WEAK_RANGED.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WEAK_RANGED" class="menuitem">Attacco a distanza debole</div></a>
+				<a href="PROMOTION_SNEAK_ATTACK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS8.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SNEAK_ATTACK" class="menuitem">Attacco a sorpresa</div></a>
+				<a href="PROMOTION_ANTI_SUBMARINE_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_SUBMARINE_II" class="menuitem">Attacco contro Sottomarini (100)</div></a>
+				<a href="PROMOTION_ANTI_SUBMARINE_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_SUBMARINE_I" class="menuitem">Attacco contro Sottomarini (33)</div></a>
+				<a href="PROMOTION_WOLFPACK_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS18.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOLFPACK_1" class="menuitem">Attacco in massa I</div></a>
+				<a href="PROMOTION_WOLFPACK_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS19.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOLFPACK_2" class="menuitem">Attacco in massa II</div></a>
+				<a href="PROMOTION_WOLFPACK_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS20.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WOLFPACK_3" class="menuitem">Attacco in massa III</div></a>
+				<a href="PROMOTION_ATTACK_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ATTACK_BONUS" class="menuitem">Bonus al combattimento in attacco (25)</div></a>
+				<a href="PROMOTION_SILENT_HUNTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SILENT_HUNTER" class="menuitem">Bonus al combattimento in attacco (75)</div></a>
+				<a href="PROMOTION_MOHAWK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOHAWK" class="menuitem">Bonus combat. in Foresta/Giungla (33)</div></a>
+				<a href="PROMOTION_JAGUAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_JAGUAR" class="menuitem">Bonus combat. in Foresta/Giungla (33)</div></a>
+				<a href="PROMOTION_GENERAL_STACKING.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GENERAL_STACKING" class="menuitem">Bonus combatt. dei Grandi Generali</div></a>
+				<a href="PROMOTION_OPEN_TERRAIN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OPEN_TERRAIN" class="menuitem">Bonus combattimento in terreno aperto</div></a>
+				<a href="PROMOTION_ANTI_AIR_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_AIR_II" class="menuitem">Bonus contro bombardieri ed elicotteri (150)</div></a>
+				<a href="PROMOTION_ANTI_FIGHTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_FIGHTER" class="menuitem">Bonus contro Caccia (33)</div></a>
+				<a href="PROMOTION_ANTI_TANK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_TANK" class="menuitem">Bonus contro Carri armati (100)</div></a>
+				<a href="PROMOTION_ANTI_HELICOPTER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_HELICOPTER" class="menuitem">Bonus contro Elicotteri</div></a>
+				<a href="PROMOTION_CITY_SIEGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_SIEGE" class="menuitem">Bonus contro le citt&agrave; (200)</div></a>
+				<a href="PROMOTION_CITY_SIEGE_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_SIEGE_II" class="menuitem">Bonus contro le citt&agrave; (250)</div></a>
+				<a href="PROMOTION_CITY_ASSAULT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_ASSAULT" class="menuitem">Bonus contro le citt&agrave; (300)</div></a>
+				<a href="PROMOTION_FIRE_SUPPORT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FIRE_SUPPORT" class="menuitem">Bonus contro le citt&agrave; (33)</div></a>
+				<a href="PROMOTION_HEAVY_PAYLOAD.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEAVY_PAYLOAD" class="menuitem">Bonus contro le citt&agrave; (50)</div></a>
+				<a href="PROMOTION_STRONGER_VS_DAMAGED.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_STRONGER_VS_DAMAGED" class="menuitem">Bonus contro nemici feriti (33)</div></a>
+				<a href="PROMOTION_ANTI_MOUNTED_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_MOUNTED_II" class="menuitem">Bonus contro unit&agrave; a cavallo (100)</div></a>
+				<a href="PROMOTION_ANTI_MOUNTED_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_MOUNTED_I" class="menuitem">Bonus contro unit&agrave; a cavallo (50)</div></a>
+				<a href="PROMOTION_NAVAL_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NAVAL_BONUS" class="menuitem">Bonus contro unit&agrave; navali</div></a>
+				<a href="PROMOTION_ANTI_AIR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_AIR" class="menuitem">Bonus contro unit&agrave; volanti ed elicotteri (150)</div></a>
+				<a href="PROMOTION_FLANK_ATTACK_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLANK_ATTACK_BONUS" class="menuitem">Bonus di accerchiamento potenziato</div></a>
+				<a href="PROMOTION_SKI_INFANTRY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SKI_INFANTRY" class="menuitem">Bonus in Neve, Tundra e Collina</div></a>
+				<a href="PROMOTION_FOREIGN_LANDS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FOREIGN_LANDS" class="menuitem">Bonus in terra straniera</div></a>
+				<a href="PROMOTION_TRADE_MISSION_BONUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS8.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_TRADE_MISSION_BONUS" class="menuitem">Bonus per la Missione commerciale</div></a>
+				<a href="PROMOTION_DEFEND_NEAR_CAPITAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DEFEND_NEAR_CAPITAL" class="menuitem">Bonus vicino alla capitale</div></a>
+				<a href="PROMOTION_WAR_CANOES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WAR_CANOES" class="menuitem">Canoe da guerra</div></a>
+				<a href="PROMOTION_HEAVY_CHARGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEAVY_CHARGE" class="menuitem">Carica travolgente</div></a>
+				<a href="PROMOTION_PRIZE_SHIPS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_PRIZE_SHIPS" class="menuitem">Cattura delle navi</div></a>
+				<a href="PROMOTION_GREAT_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GREAT_GENERAL" class="menuitem">Comando</div></a>
+				<a href="PROMOTION_GREAT_ADMIRAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GREAT_ADMIRAL" class="menuitem">Comando navale</div></a>
+				<a href="PROMOTION_ARMOR_PLATING_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS12.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ARMOR_PLATING_1" class="menuitem">Corazza I</div></a>
+				<a href="PROMOTION_ARMOR_PLATING_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS13.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ARMOR_PLATING_2" class="menuitem">Corazza II</div></a>
+				<a href="PROMOTION_ARMOR_PLATING_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS14.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ARMOR_PLATING_3" class="menuitem">Corazza III</div></a>
+				<a href="PROMOTION_BUFFALO_HORNS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BUFFALO_HORNS" class="menuitem">Corna del bisonte</div></a>
+				<a href="PROMOTION_PARTIAL_HEAL_IF_DESTROY_ENEMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_PARTIAL_HEAL_IF_DESTROY_ENEMY" class="menuitem">Cura 25 punti se uccide un'altra unit&agrave;</div></a>
+				<a href="PROMOTION_HEAL_IF_DESTROY_ENEMY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEAL_IF_DESTROY_ENEMY" class="menuitem">Cura 50 punti di danno se uccide un'altra unit&agrave;</div></a>
+				<a href="PROMOTION_FASTER_HEAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FASTER_HEAL" class="menuitem">Cura a doppia velocit&agrave;</div></a>
+				<a href="PROMOTION_HAKA_WAR_DANCE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HAKA_WAR_DANCE" class="menuitem">Danza di guerra Haka</div></a>
+				<a href="PROMOTION_MUST_SET_UP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MUST_SET_UP" class="menuitem">Deve eseguire l'allestimento per attaccare a distanza</div></a>
+				<a href="PROMOTION_AIR_SWEEP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_SWEEP" class="menuitem">Distruzione difese antiaeree</div></a>
+				<a href="PROMOTION_FEARED_ELEPHANT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FEARED_ELEPHANT" class="menuitem">Elefante spaventoso</div></a>
+				<a href="PROMOTION_HEROISM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HEROISM" class="menuitem">Eroismo</div></a>
+				<a href="PROMOTION_UNWELCOME_EVANGELIST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_UNWELCOME_EVANGELIST" class="menuitem">Evangelista sgradito</div></a>
+				<a href="PROMOTION_BUFFALO_LOINS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BUFFALO_LOINS" class="menuitem">Fianchi del bisonte</div></a>
+				<a href="PROMOTION_RANGED_SUPPORT_FIRE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RANGED_SUPPORT_FIRE" class="menuitem">Fuoco di supporto</div></a>
+				<a href="PROMOTION_SAPPER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS6.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SAPPER" class="menuitem">Geniere</div></a>
+				<a href="PROMOTION_ANTI_GUNPOWDER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ANTI_GUNPOWDER" class="menuitem">Giavellotti</div></a>
+				<a href="PROMOTION_SPAWN_GENERALS_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SPAWN_GENERALS_I" class="menuitem">Grandi Generali I</div></a>
+				<a href="PROMOTION_SPAWN_GENERALS_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SPAWN_GENERALS_II" class="menuitem">Grandi Generali II</div></a>
+				<a href="PROMOTION_HOMELAND_GUARDIAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS10.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HOMELAND_GUARDIAN" class="menuitem">Guardiano della terra natia</div></a>
+				<a href="PROMOTION_LIGHTNING_WARFARE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_LIGHTNING_WARFARE" class="menuitem">Guerra lampo</div></a>
+				<a href="PROMOTION_DESERT_WARRIOR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DESERT_WARRIOR" class="menuitem">Guerriero del Deserto</div></a>
+				<a href="PROMOTION_IGNORE_TERRAIN_COST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_IGNORE_TERRAIN_COST" class="menuitem">Ignora il costo del terreno</div></a>
+				<a href="PROMOTION_INTERCEPTION_IV.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_IV" class="menuitem">Intercettazione (100) </div></a>
+				<a href="PROMOTION_INTERCEPTION_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_I" class="menuitem">Intercettazione (20)</div></a>
+				<a href="PROMOTION_INTERCEPTION_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_II" class="menuitem">Intercettazione (40)</div></a>
+				<a href="PROMOTION_INTERCEPTION_III.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INTERCEPTION_III" class="menuitem">Intercettazione (50)</div></a>
+				<a href="PROMOTION_INVISIBLE_SUBMARINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INVISIBLE_SUBMARINE" class="menuitem">Invisibile (Sottomarino)</div></a>
+				<a href="PROMOTION_INVULNERABIILITY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS4.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_INVULNERABIILITY" class="menuitem">Invulnerabilit&agrave;</div></a>
+				<a href="PROMOTION_RESTLESSNESS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS7.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RESTLESSNESS" class="menuitem">Irrequietezza</div></a>
+				<a href="PROMOTION_MYSTIC_BLADE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS5.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MYSTIC_BLADE" class="menuitem">Lama mistica</div></a>
+				<a href="PROMOTION_ENEMY_BLADE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS1.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ENEMY_BLADE" class="menuitem">Lama nemica</div></a>
+				<a href="PROMOTION_GOLDEN_AGE_POINTS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GOLDEN_AGE_POINTS" class="menuitem">Le vittorie avvicinano l'Et&agrave; dell'Oro</div></a>
+				<a href="PROMOTION_GOODY_HUT_PICKER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_GOODY_HUT_PICKER" class="menuitem">Lingua dei nativi</div></a>
+				<a href="PROMOTION_EVASION_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVASION_II" class="menuitem">Manovre evasive (100)</div></a>
+				<a href="PROMOTION_EVASION_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVASION_I" class="menuitem">Manovre evasive (50)</div></a>
+				<a href="PROMOTION_MEDIC_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MEDIC_GENERAL" class="menuitem">Medico esperto</div></a>
+				<a href="PROMOTION_SELL_EXOTIC_GOODS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS11.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SELL_EXOTIC_GOODS" class="menuitem">Merci esotiche</div></a>
+				<a href="PROMOTION_STEAM_POWERED.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_STEAM_POWERED" class="menuitem">Movimento doppio lungo la costa</div></a>
+				<a href="PROMOTION_OCEAN_MOVEMENT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OCEAN_MOVEMENT" class="menuitem">Movimento navale</div></a>
+				<a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NO_DEFENSIVE_BONUSES" class="menuitem">Nessun bonus difensivo per terreno</div></a>
+				<a href="PROMOTION_FREE_PILLAGE_MOVES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FREE_PILLAGE_MOVES" class="menuitem">Nessun costo di PM per il saccheggio</div></a>
+				<a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ONLY_DEFENSIVE" class="menuitem">Non può attaccare in mischia</div></a>
+				<a href="PROMOTION_NO_CAPTURE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NO_CAPTURE" class="menuitem">Non può catturare le citt&agrave;</div></a>
+				<a href="PROMOTION_OCEAN_IMPASSABLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_OCEAN_IMPASSABLE" class="menuitem">Non può entrare in mare aperto</div></a>
+				<a href="PROMOTION_FOLIAGE_IMPASSABLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FOLIAGE_IMPASSABLE" class="menuitem">Non può entrare nelle foreste e nella giungla</div></a>
+				<a href="PROMOTION_HOMELAND_GUARDIAN_BOOGALOO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS10.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HOMELAND_GUARDIAN_BOOGALOO" class="menuitem">Orgoglio degli antichi</div></a>
+				<a href="PROMOTION_DEFENSE_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DEFENSE_PENALTY" class="menuitem">Penalit&agrave; alla difesa (33)</div></a>
+				<a href="PROMOTION_MOUNTED_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOUNTED_PENALTY" class="menuitem">Penalit&agrave; contro unit&agrave; a cavallo (33)</div></a>
+				<a href="PROMOTION_NAVAL_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_NAVAL_PENALTY" class="menuitem">Penalit&agrave; contro unit&agrave; navali (50)</div></a>
+				<a href="PROMOTION_SMALL_CITY_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SMALL_CITY_PENALTY" class="menuitem">Penalit&agrave; in attacco contro le citt&agrave; (25)</div></a>
+				<a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CITY_PENALTY" class="menuitem">Penalit&agrave; in attacco contro le citt&agrave; (33)</div></a>
+				<a href="PROMOTION_ROUGH_TERRAIN_ENDS_TURN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ROUGH_TERRAIN_ENDS_TURN" class="menuitem">Penalit&agrave; su terreno accidentato</div></a>
+				<a href="PROMOTION_BUFFALO_CHEST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS9.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_BUFFALO_CHEST" class="menuitem">Petto del bisonte</div></a>
+				<a href="PROMOTION_FLIGHT_DECK_1.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS15.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLIGHT_DECK_1" class="menuitem">Ponte di volo I</div></a>
+				<a href="PROMOTION_FLIGHT_DECK_2.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS16.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLIGHT_DECK_2" class="menuitem">Ponte di volo II</div></a>
+				<a href="PROMOTION_FLIGHT_DECK_3.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS17.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLIGHT_DECK_3" class="menuitem">Ponte di volo III</div></a>
+				<a href="PROMOTION_SECOND_ATTACK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SECOND_ATTACK" class="menuitem">Può attaccare due volte</div></a>
+				<a href="PROMOTION_ONLY_ATTACKS_CITIES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_ONLY_ATTACKS_CITIES" class="menuitem">Può attaccare solo le citt&agrave;</div></a>
+				<a href="PROMOTION_RIVAL_TERRITORY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RIVAL_TERRITORY" class="menuitem">Può entrare nel territorio di altre civilt&agrave;</div></a>
+				<a href="PROMOTION_CAN_MOVE_IMPASSABLE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CAN_MOVE_IMPASSABLE" class="menuitem">Può entrare nelle caselle di Ghiaccio</div></a>
+				<a href="PROMOTION_PARADROP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_PARADROP" class="menuitem">Può lanciarsi col paracadute</div></a>
+				<a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CAN_MOVE_AFTER_ATTACKING" class="menuitem">Può muoversi dopo aver attaccato</div></a>
+				<a href="PROMOTION_CARGO_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_I" class="menuitem">Può trasportare 1 Carico</div></a>
+				<a href="PROMOTION_CARGO_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_II" class="menuitem">Può trasportare 2 Carichi</div></a>
+				<a href="PROMOTION_CARGO_III.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_III" class="menuitem">Può trasportare 3 Carichi</div></a>
+				<a href="PROMOTION_CARGO_IV.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_CARGO_IV" class="menuitem">Può trasportare 4 Carichi</div></a>
+				<a href="PROMOTION_SEE_INVISIBLE_SUBMARINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SEE_INVISIBLE_SUBMARINE" class="menuitem">Può vedere i sottomarini</div></a>
+				<a href="PROMOTION_RECRUITMENT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS6.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_RECRUITMENT" class="menuitem">Reclutamento</div></a>
+				<a href="PROMOTION_AIR_RECON.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_AIR_RECON" class="menuitem">Ricognizione aerea</div></a>
+				<a href="PROMOTION_WITHDRAW_BEFORE_MELEE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_WITHDRAW_BEFORE_MELEE" class="menuitem">Ritirata dalla mischia</div></a>
+				<a href="PROMOTION_DOUBLE_PLUNDER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_DOUBLE_PLUNDER" class="menuitem">Saccheggio delle citt&agrave;</div></a>
+				<a href="PROMOTION_MOON_STRIKER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_PROMOTION_ATLAS3.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOON_STRIKER" class="menuitem">Scorribande alla luce della luna</div></a>
+				<a href="PROMOTION_EXTENDED_PARADROP.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_EXPANSION2_PROMOTION_ATLAS7.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTENDED_PARADROP" class="menuitem">Skyranger</div></a>
+				<a href="PROMOTION_EVIL_SPIRITS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_KRIS_SWORDSMAN_PROMOTION_ATLAS2.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EVIL_SPIRITS" class="menuitem">Spiriti maligni</div></a>
+				<a href="PROMOTION_MOVEMENT_TO_GENERAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_MOVEMENT_TO_GENERAL" class="menuitem">Trasferisce il movimento al generale</div></a>
+				<a href="PROMOTION_FLAT_MOVEMENT_COST.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_FLAT_MOVEMENT_COST" class="menuitem">Tutte le caselle costano 1 PM</div></a>
+				<a href="PROMOTION_HOVERING_UNIT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS58.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_HOVERING_UNIT" class="menuitem">Unit&agrave; fluttuante</div></a>
+				<a href="PROMOTION_SIGHT_PENALTY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS57.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_SIGHT_PENALTY" class="menuitem">Visibilit&agrave; limitata</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_I" class="menuitem">Visione extra (1)</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_II.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_II" class="menuitem">Visione extra (2)</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_III.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_III" class="menuitem">Visione extra (3)</div></a>
+				<a href="PROMOTION_EXTRA_SIGHT_IV.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EXTRA_SIGHT_IV" class="menuitem">Visione extra (4)</div></a>
+				<a href="PROMOTION_EMBARKED_SIGHT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/PROMOTION_ABILITY_ATLAS59.png\' />', true);" onmouseout="return hideTip();"><div id="PROMOTION_EMBARKED_SIGHT" class="menuitem">Visione extra quando imbarcata</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

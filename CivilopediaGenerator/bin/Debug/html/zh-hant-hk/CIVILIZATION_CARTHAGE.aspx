@@ -1,0 +1,37 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Civilizations.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: 迦太基</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/CIVILIZATION_CARTHAGE.png" alt="迦太基" class="contentimage" />
+	<div class="contentleft">
+		<h2>領袖：</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="LEADER_DIDO.aspx" onmouseover="return tooltip('狄多');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/LEADER_DIDO.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>特色單位：</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CARTHAGINIAN_FOREST_ELEPHANT.aspx" onmouseover="return tooltip('非洲森林戰象');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CARTHAGINIAN_FOREST_ELEPHANT.png" /></a><a href="UNIT_CARTHAGINIAN_QUINQUEREME.aspx" onmouseover="return tooltip('五列槳戰船');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CARTHAGINIAN_QUINQUEREME.png" /></a></div></div></div></div></div></div></div></div>
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">迦太基</div>
+		
+<h2>歷史</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">由傳說中的女王狄多所建的迦太基王國，最初只是個由流放者組成的小型聚落，持續發展到成為可媲美羅馬帝國的強大文明。迦太基身處非洲北岸理想位置，在西元前1000年逐漸成為地中海沿岸不可或缺的貿易中心。然而，這種成功終究付出了代價，迦太基引起希臘和羅馬的憤怒，之後與這些令人生畏的對手之間的衝突也極富傳奇性。</div></div></div></div></div></div></div></div>
+<h2>地理和氣候</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">從北非突尼斯灣發跡的迦太基，位於能充分利用現有地中海地區貿易路線的理想位置。迦太基城本身即是當時最大的都市，有著宏偉的城牆以及多個港口以方便運輸和接收貨物。迦太基位處地理環境和氣候多元之地，當時的氣候一如今日的該地區，夏季乾熱而冬季溫和。</div></div></div></div></div></div></div></div>
+<h2>基礎</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">最先定居在迦太基的居民來自泰爾王國，屬於古腓尼基文明的一部分。迦太基的建立與第一任女王狄多錯綜複雜的傳說是數個世紀以來不斷的被訴說的歷史和民間故事。狄多施技逃離泰爾，最後在北非定居的故事堪稱是對此地建城過程最生動有趣的描述，不過傳統史學家認為此城的建立應歸功於腓尼基殖民者。對於城市最早的定居記錄方面倒是沒有太大爭議，一般認為時間點約是西元前814年。城市名字源於腓尼基語「Qart-hadast」，意為「新城」。在狄多的傳說中，據說她想向當地的國王買地，而國王答應賣給她能以一塊牛皮覆蓋的所有土地。狄多很快地將牛皮裁成細條，然後連接圈起了大片山丘及其鄰近土地，迦太基就這樣誕生了。</div></div></div></div></div></div></div></div>
+<h2>勢力擴張</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">迦太基位於埃及、希臘和羅馬之間蓬勃發展的商路之上，很快地便發展成該地區中強大的新興帝國。西元前4和5世紀他們原屬腓尼基的先人遭到征服與驅逐之後，屹立的迦太基便成為剩餘殖民地中最強盛的勢力，並且迅速在那些曾忠於泰爾的地區稱霸。迦太基企圖控制殘存的腓尼基殖民地。此舉很快引起希臘和羅馬的不滿，當時這兩大勢力試圖將資源豐富的西西里島和義大利南部據為己有。</div></div></div></div></div></div></div></div>
+<h2>與希臘的戰爭</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">因爭奪西西里控制權而與希臘之間引起的一連串衝突，也就是日後所稱的西西里戰爭。在西元前7世紀，儘管與迦太基爭端不斷，希臘仍因貿易的繁榮持續在義大利南部和西西里東部擴張殖民地。最後，迦太基被迫面對希臘人持續侵占腓尼基昔日領土的問題，其目的不單單是為了確保收入穩定，也是要彰顯迦太基將以武力保衛其餘的腓尼基殖民地。<br /><br />雖然兩國衝突的相關記錄有限，迦太基與希臘的戰爭主要發生在西西里本島。最初迦太基只是協助殖民地以自己的力量抵抗希臘入侵，直到西元前480年在西西里島爆發了希梅拉戰役。在這一役，迦太基的哈米爾卡馬戈對上由叙拉古統治者領軍的希臘。雖然細節依然不明，但希臘軍隊在這一役中把迦太基打得落花流水，據說造成的死傷人數達數十萬。哈米爾卡戰死，在這場大戰後迦太基也被迫撤退，並且對希臘付出賠款，以此保有對其殖民地的控制權。<br /><br />西元前410年，迦太基再次在哈米爾卡馬戈的孫子漢尼拔領軍之下，為取得西西里島的控制權而出兵希臘。漢尼拔馬戈獲得超越其祖父的成功，在返回迦太基之前征服了數個由希臘控制的城市。西元前405年，馬戈試圖席捲整個西西里島，但他和他的軍隊染上了瘟疫，馬戈本人不久就去世了。<br /><br />與希臘的戰爭一直持續到西元前4世紀，迦太基最後終於完全控制了西西里。不過，希臘和迦太基持續在領土問題上起衝突。兩國間的歧見日深最終爆發了皮洛士戰爭。</div></div></div></div></div></div></div></div>
+<h2>羅馬：盟友到對手</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">在希臘人和迦太基人持續爆發衝突的這段時期，羅馬卻轉而確立了全義霸主的地位。在西元前3世紀，羅馬捲入了希臘伊庇魯斯的衝突，協防塔倫圖姆這個與羅馬外交爭端日益緊張的義大利殖民地。幾艘羅馬戰船在塔倫圖姆港遭到擊沉，羅馬旋即對殖民地宣戰，也將伊庇魯斯捲入戰火之中。希臘的統治者伊庇魯斯的皮洛士在多個與羅馬間的早期戰爭之中獲勝，其中也包括了西元前280年的赫拉克利亞戰役。羅馬向迦太基尋求增援，而迦太基也同意與其結盟對抗希臘。之後在西元前279年爆發的阿斯庫路姆戰役，皮洛士再次成功擊退羅馬軍隊，但也因此付出慘烈代價。所謂的「皮洛士式勝利」便是衍生自這場因衝突而喪失數千條人命的戰役，意謂著代價過於慘烈的勝利。在五年內，皮洛士便被迫全然撤退，而羅馬也獲得義大利的絕對掌控權。到這時候，對羅馬在地中海地區的霸權而言，迦太基已是最大的威脅。</div></div></div></div></div></div></div></div>
+<h2>布匿戰爭的來臨</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">皮洛士戰爭結束後不久，羅馬的持續擴張激怒了迦太基。因為這兩個競爭對手爭的不只是領土和貿易控制權，還有作為該地區主要強權的威信。一系列不斷升溫的衝突，後來終於在西元前264年爆發布匿戰爭，當時雙方正為了西西里島上墨西拿城的控制權糾纏不清。雖然羅馬人擅長陸戰，但迦太基擁有當時最令人生畏的海軍，因此羅馬人被迫應變以求勝過迦太基艦隊。羅馬人利用安裝在船隻上的登船平臺，得以在海上重現其步兵技能。第一次布匿戰爭於西元前241年結束，迦太基吃了幾次敗戰後，羅馬的聲勢便扶搖直上。為了和平，迦太基被迫以可觀的代價向羅馬換取和平，導致國內經濟上和軍事基礎都不穩定。</div></div></div></div></div></div></div></div>
+<h2>傭兵崛起</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">第一次布匿戰爭後，迦太基人轉而面對內部的衝突。縱觀其歷史，因迦太基專注於維持海軍優勢，只能仰賴僱傭兵充當其步兵來源。西元前240年，參與了第一次布匿戰爭卻未獲得報酬的迦太基僱傭軍武裝暴動，動亂很快地就遍及迦太基領土。在隨後的衝突中，傳奇人物漢尼拔將軍的父親哈米爾卡·巴卡英勇的率領為數不多的迦太基人部隊擊敗叛亂軍，這都要歸功於巴卡的天才戰術。成功平息叛軍使巴卡家族名聲遠播，對其子後來成為迦太基最偉大的將軍有直接的貢獻。</div></div></div></div></div></div></div></div>
+<h2>再次布匿戰爭</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">第二次布匿戰爭於西元前218年開打，再度導因於區域內的爭議，這次的導火線是位於伊比利亞半島（西班牙）上的希臘城市薩貢托。此時，傳奇人物漢尼拔將軍已經晉升為迦太基的軍事指揮官。面對持續不斷針對城市控制權而起的爭端，漢尼拔率軍前往伊比利亞，圍攻薩貢托。漢尼拔成功佔領薩貢托並在此建立了行動基地，這事件促使羅馬即刻宣戰。在一次戰術機動突襲後，漢尼拔決定帶領其軍隊行軍前往義大利，這項著名的行動也成為漢尼拔對抗羅馬的代表。漢尼拔領軍不按常規前進，計劃趁其不備入侵義大利，對羅馬人發動奇襲。超過10萬的步兵和騎兵忍受艱苦徒步穿越庇里牛斯山和阿爾卑斯山後，許多人已經犧牲了，而且許多珍貴的戰象從苦寒的山中跌落。<br /><br />羅馬和迦太基的軍隊最終於西元前218年晚期在義大利北部開啟特雷比亞河戰役。儘管在行軍到義大利途中損失了一些軍隊，漢尼拔從高盧部落招募了熱衷於對抗羅馬敵軍的部眾，加強自身武力。雖然關於此戰役的細節紀錄有出入，還是可以肯定地說，羅馬儘管擁有比迦太基規模更大的軍隊，仍遭到徹底擊敗，有成千上萬的人犧牲。<br /><br />隨著戰事持續，漢尼拔繼續獲勝，贏得了坎尼之戰之前的一些早期的小規模衝突，這也許是他在此戰役中最大的勝利。這場在義大利東南沿海的坎尼村開打的戰役是此戰中規模最大的其中之一，當時羅馬試圖派出數目龐大的軍團以對抗節節逼近的漢尼拔。不幸的是，羅馬方面並未提供戰士們正確方向就讓他們上陣，因此無法取得任何優勢，而漢尼拔的戰術則很快就戰勝了羅馬。在決定性的一擊中，迦太基人摧毀了羅馬縱隊，導致數萬人員傷亡。<br /><br />於坎尼那場士氣受挫的失利之後，羅馬人開始針對漢尼拔的軍隊進行消耗戰，最終雙方僵持在義大利，沒有一方佔有優勢。儘管漢尼拔成功地佔領幾個義大利的殖民地，羅馬人也大舉在伊比利亞半島上征服了幾個關鍵的迦太基定居點。羅馬人在伊比利亞半島的勝仗恢復其在戰爭方面的努力，並在大西庇阿的領導下，奠定了入侵非洲的計畫。<br /><br />漢尼拔於西元前203年返回迦太基處理西庇阿逼近的威脅。在札馬戰役中，漢尼拔精疲力竭的軍隊遭到羅馬重整強健的軍隊所擊敗。雖然漢尼拔成功活著逃離戰場，但他的軍隊卻遭到摧毀。而且由於此次失利發生在自家門前，超過十年烽火不斷的第二次布匿戰爭很快就劃下終點。</div></div></div></div></div></div></div></div>
+<h2>衰落與毀滅</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">羅馬同意和平解決與迦太基的衝突，換取對方的鉅額賠償和持續進貢。迦太基失去了伊比利亞半島的掌控權，在世界舞臺上的地位也大幅降低。然而，兩國間的長期爭端並未因此告終，而是一直要到第三次布匿戰爭開始的約50年後才確定告結。<br /><br />西元前149年，羅馬重新挑起衝突，並以地區性的摩擦為理由，最終征服了迦太基及其人民。羅馬提出了多項不合理要求，也許是因為心知迦太基不會同意，並且以此為由圍城三年。直到西元前146年，陷入困境的迦太基人終究被迫投降。迦太基城被夷為平地，剩餘人口遭到屠殺，倖存者則轉賣為奴。迦太基這個偉大的帝國，古代世界最強大的國家，或許也是羅馬帝國的首要強敵就此滅亡。</div></div></div></div></div></div></div></div>
+<h2>遺產</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">迦太基從一個由出身卑微的流亡者和浪人組成的聚落，力爭上游成為貿易中心和古代世界的海權霸主。古迦太基和其人民至今最為人熟知的就是挑戰了絕對強權的羅馬。</div></div></div></div></div></div></div></div>
+		
+<h2>逸聞</h2>
+		<div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">「布匿」（Punic）這個字衍生於羅馬稱呼迦太基時所用的拉丁文名字「布匿斯」（Punici），而這個字則源自於原本專門用來指稱腓尼基人的「布厄匿斯」（Poenici）。<br /><br />迦太基人崇拜巴力哈蒙，其地位高於其他眾神，而公羊就是祂的表徵。巴力哈蒙是孕育之神和天空的代表。<br /><br />據說漢尼拔在行軍到意大利時，一隻眼睛在通過沼澤時遭到感染而失去視力，但顯然他的野心並未因此稍減。</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

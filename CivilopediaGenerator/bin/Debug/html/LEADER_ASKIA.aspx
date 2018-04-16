@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Civilizations.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Askia</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/LEADER_ASKIA.png" alt="Askia" class="contentimage" />
+	<div class="contentleft">
+		<h2>Lived:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">c. 1440 - 1538 AD</div></div></div></div></div></div></div></div>
+		<h2>Titles:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Askia (Usurper)</div></div></div></div></div></div></div></div>
+		<h2>Civilization:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_SONGHAI.aspx" onmouseover="return tooltip('Songhai Empire');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_SONGHAI.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Askia</div>
+		<div class="title">Leader of Songhai</div>
+		<h2>Game Info:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">River Warlord<br /><br />Receive triple <img src="/civilopedia/images/gold.png" alt="gold" /> Gold from Barbarian encampments and pillaging Cities. Land units gain the War Canoe and Amphibious promotions, strengthening them while embarked.</div></div></div></div></div></div></div></div>
+		
+<h2>History</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Mohammad ibn Abi Bakr Ture, also known as Mohammad I Askia (reigned 1493 - 1528), welded the central region of the western Sudan into a single Songhai empire, the largest in African history. Although he fought several military campaigns, he is primarily remembered for reorganizing, modernizing and bringing stability to the Songhai. He is also remembered for making a famous pilgrimage to Mecca.</div></div></div></div></div></div></div></div>
+<h2>Early History</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Askia was a general under Sunni Ali, the first great leader of the Songhai Empire. Ali extended Songhai control along the Niger River, capturing the wealthy cities of Timbuktu and Jenne. Although nominally a Muslim, Ali continued to practice African animism as well, tolerating Muslim and non-Muslims within his kingdom. In 1492 Ali died in a freak accident; he and his horse fell in a river and were swept over a waterfall. Ali was succeeded by his son, Sunni Baru. Askia almost immediately began plotting Baru's overthrow, successfully gaining power in 1493 with the assistance of Muslim rebels.</div></div></div></div></div></div></div></div>
+<h2>Pilgrimage to Mecca</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">1495, two years after he took the throne, Askia undertook a pilgrimage to Mecca. This pilgrimage has become famous for the pomp, style and wealth Askia displayed during the long journey. In Mecca Askia met the Caliph of Egypt, who appointed him the Caliph's religious representative, giving him the title "Caliph of West Africa." In a more colorful version of the events, the chronicler Mahmud Kati, who accompanied Muhammad, wrote that the jinn (demons) of Mecca had Askia named caliph.<br /><br />By the time Askia returned to Songhai in 1497, he was deeply committed to Islam. During his reign Askia enthusiastically supported the religious universities in Timbuktu, and he opened many mosques and religious schools across Songhai.</div></div></div></div></div></div></div></div>
+<h2>Military Expansion</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">During his reign Askia expanded the empire to the north, south, and west, fighting successful campaigns against various neighboring cities and kingdoms. Not all of his battles were successful, however, and he is generally acknowledged to be an adequate but not exceptional military leader.</div></div></div></div></div></div></div></div>
+<h2>Organization of the Empire</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">As the empire grew, it became increasingly difficult to manage. Askia divided the regions into provinces, each under a governor. He expanded the Songhai court, creating the posts of directors of finance, justice, interior, agriculture, waters and forests, and of the "tribes of the white race" (the Moors and Taureg subjects of Songhai). He also created a standing army and navy (the latter consisting of war canoes).<br /><br />In addition, Askia restructured the tax system and imposed regulations on agriculture, hunting and fishing.</div></div></div></div></div></div></div></div>
+<h2>Verdict of History</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Askia ruled for some thirty-five years. In 1528, old and blind, he was deposed by one of his sons, dying some 10 years later. He is judged to be an extremely competent administrator, his reign a golden age for religion and knowledge in Western Africa. While not a great general, he was able to expand his empire and to hold on to what he had taken until age robbed him of his powers. Overall, Askia is generally considered to be one of the best sub-Saharan rulers in history.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

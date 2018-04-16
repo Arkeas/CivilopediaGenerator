@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Zer</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_JAPANESE_ZERO.png" alt="Zer" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">375 <img src="/civilopedia/images/production.png" alt="production" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">My&#347;liwiec</div></div></div></div></div></div></div></div>
+		
+		<h2>Si&#322;a ostrza&#322;u:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">45 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Zasi&#281;g:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">8</div></div></div></div></div></div></div></div>
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_JAPAN.aspx" onmouseover="return tooltip('Cesarstwo japo&#324;skie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_JAPAN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_INTERCEPTION_IV.aspx" onmouseover="return tooltip('Przechwytywanie (100)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_58.png" /></a><a href="PROMOTION_ANTI_FIGHTER.aspx" onmouseover="return tooltip('Premia przeciwko my&#347;liwcom (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_AIR_SWEEP.aspx" onmouseover="return tooltip('Czyszczenie nieba');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_58.png" /></a><a href="PROMOTION_AIR_RECON.aspx" onmouseover="return tooltip('Rozpoznanie powietrzne');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_58.png" /></a><a href="PROMOTION_ANTI_AIR_II.aspx" onmouseover="return tooltip('Premia przeciwko bombowcom i &#347;mig&#322;. (150)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_RADAR.aspx" onmouseover="return tooltip('Radar');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_RADAR.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_JET_FIGHTER.aspx" onmouseover="return tooltip('My&#347;liwiec odrzutowy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_JET_FIGHTER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_FIGHTER.aspx" onmouseover="return tooltip('My&#347;liwc&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_FIGHTER.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Zer</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Jednostka lotnicza przeznaczona do walki o panowanie w powietrzu i przechwytywania nadlatuj&#261;cych maszyn wroga. Mog&#261; j&#261; budowa&#263; tylko Japo&#324;czycy. Jednostka otrzymuje premi&#281; do walki z innymi my&#347;liwcami i nie wymaga ropy naftowej.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Zero jest wyj&#261;tkow&#261; i do&#347;&#263; mocn&#261; jednostk&#261; lotnicz&#261; Japo&#324;czyk&oacute;w, kt&oacute;ra zast&#281;puje my&#347;liwce oraz otrzymuje du&#380;e premie do walki z innymi my&#347;liwcami, a <span class="color_positive_text">do budowy nie wymaga &#378;r&oacute;d&#322;a ropy naftowej</span>. Mo&#380;e stacjonowa&#263; w ka&#380;dym posiadanym przez ciebie mie&#347;cie lub na pok&#322;adzie lotniskowca. Mo&#380;e porusza&#263; si&#281; z miasta do miasta (lub lotniskowca), a tak&#380;e wykonywa&#263; misje w odleg&#322;o&#347;ci do 8 p&oacute;l. W zasadach dotycz&#261;cych jednostek powietrznych znajduje si&#281; wi&#281;cej informacji.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">My&#347;liwiec Mitsubishi A6M Zero by&#322; u&#380;ywany przez Japoni&#281; przez ca&#322;&#261; II wojn&#281; &#347;wiatow&#261;. Zaprojektowano go do startu z lotniskowca. Na pocz&#261;tku II wojny &#347;wiatowej by&#322; najlepszym my&#347;liwcem na &#347;wiecie operuj&#261;cym z lotniskowca. Zero &#322;&#261;czy&#322; zwrotno&#347;&#263; i daleki zasi&#281;g, by&#322; doskona&#322;y w walce powietrznej, &#322;atwo pokonywa&#322; znacznie gorsze ameryka&#324;skie i brytyjskie samoloty. Z up&#322;ywem czasu alianckie my&#347;liwce zosta&#322;y znacznie ulepszone, tymczasem japo&#324;skie lotnictwo cierpia&#322;o ze wzgl&#281;du na niedob&oacute;r materia&#322;&oacute;w i si&#322;y roboczej. Pod koniec wojny Zero by&#322; ju&#380; o wiele gorszy na tle rywali, ale w swoim najlepszym momencie by&#322; naprawd&#281; doskona&#322;ym my&#347;liwcem i panowa&#322; na niebie Pacyfiku.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

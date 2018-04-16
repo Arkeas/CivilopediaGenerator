@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Samuraj&oacute;w</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_JAPANESE_SAMURAI.png" alt="Samuraj&oacute;w" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">120 <img src="/civilopedia/images/production.png" alt="production" /> / 240 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Walcz&#261;ca wr&#281;cz</div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">21 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_JAPAN.aspx" onmouseover="return tooltip('Cesarstwo japo&#324;skie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_JAPAN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_SHOCK_1.aspx" onmouseover="return tooltip('Szturm I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_44.png" /></a><a href="PROMOTION_SPAWN_GENERALS_II.aspx" onmouseover="return tooltip('Wielkich genera&#322;&oacute;w II');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wymagane surowce:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_IRON.aspx" onmouseover="return tooltip('&#379;elazo');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_IRON.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_STEEL.aspx" onmouseover="return tooltip('Stal');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_STEEL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wypierana przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_RIFLING.aspx" onmouseover="return tooltip('Gwintowanie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_RIFLING.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_RIFLEMAN.aspx" onmouseover="return tooltip('Strzelc&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_RIFLEMAN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_LONGSWORDSMAN.aspx" onmouseover="return tooltip('Ci&#281;&#380;kozbrojnych');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_LONGSWORDSMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Samuraj&oacute;w</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Pot&#281;&#380;na &#347;redniowieczna jednostka piechoty. Mog&#261; j&#261; wyprodukowa&#263; tylko Japo&#324;czycy. Walczy o wiele skuteczniej i pozwala szybciej wyprodukowa&#263; wielkich genera&#322;&oacute;w, ni&#380; ci&#281;&#380;kozbrojni, kt&oacute;rych zast&#281;puje. Zaokr&#281;towani samurajowie mog&#261; budowa&#263; &#322;odzie rybackie w ci&#261;gu jednej tury i nie zostaj&#261; p&oacute;&#378;niej poch&#322;oni&#281;ci (dzi&#281;ki czemu przydaj&#261; si&#281; nawet w czasie pokoju).</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Samurajowie to unikalna jednostka japo&#324;ska zast&#281;puj&#261;ca ci&#281;&#380;kozbrojnych. S&#261; r&oacute;wnie silni jak zbrojni i automatycznie otrzymuj&#261; awans „Szturm I”, daj&#261;cy im premi&#281; do walki w terenie otwartym. Sukces w walce samurajami zapewnia wi&#281;ksze szanse stworzenia wielkich genera&#322;&oacute;w. Mog&#261; budowa&#263; &#322;odzie rybackie i nie s&#261; przy tym poch&#322;aniani.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Japo&#324;scy samurajowie uznawani s&#261; za najlepszych wojownik&oacute;w od czasu rzymskich legion&oacute;w, a&#380; do momentu wynalezienia prochu. Ich powstanie datuje si&#281; na XII wiek. Byli kast&#261; wojownik&oacute;w, przestrzegaj&#261;cych kodeksu bushido, kt&oacute;rego kluczowymi elementami by&#322;y: odwaga, honor, lojalno&#347;&#263;, kt&oacute;re by&#322;y wa&#380;niejsze ni&#380; w&#322;asne &#380;ycie. Samurajowie korzystali zazwyczaj z dw&oacute;ch ostrzy, katany i kr&oacute;tszego wakizashi, w p&oacute;&#378;niejszym okresie u&#380;ywanego do rytua&#322;u „seppuku” (samob&oacute;jstwo). Oba te ostrza by&#322;y o wiele pot&#281;&#380;niejsze od zachodnich odpowiednik&oacute;w. Niekt&oacute;rzy samuraje korzystali te&#380; z &#322;uk&oacute;w, w&#322;&oacute;czni, a p&oacute;&#378;niej r&oacute;wnie&#380; z broni palnej. W zale&#380;no&#347;ci od okresu (oraz zamo&#380;no&#347;ci), samuraj nosi&#322; szat&#281;, lakowany lub nawet metalowy pancerz.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

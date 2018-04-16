@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Schie&szlig;pulver</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_GUNPOWDER.png" alt="Schie&szlig;pulver" class="contentimage" />
+	<div class="contentleft">
+		<h2>Kosten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">780 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Benötigte Technologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PHYSICS.aspx" onmouseover="return tooltip('Physik');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PHYSICS.png" /></a><a href="TECH_STEEL.aspx" onmouseover="return tooltip('Stahl');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_STEEL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>F&uuml;hrt zu Technologien:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHEMISTRY.aspx" onmouseover="return tooltip('Chemie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHEMISTRY.png" /></a><a href="TECH_METALLURGY.aspx" onmouseover="return tooltip('Metallverarbeitung');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_METALLURGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Freigeschaltete Einheiten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_SPANISH_TERCIO.aspx" onmouseover="return tooltip('Tercio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_SPANISH_TERCIO.png" /></a><a href="UNIT_MUSKETMAN.aspx" onmouseover="return tooltip('Musketier');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_MUSKETMAN.png" /></a><a href="UNIT_AMERICAN_MINUTEMAN.aspx" onmouseover="return tooltip('Minuteman');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_AMERICAN_MINUTEMAN.png" /></a><a href="UNIT_FRENCH_MUSKETEER.aspx" onmouseover="return tooltip('Französischer Musketier');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_FRENCH_MUSKETEER.png" /></a><a href="UNIT_OTTOMAN_JANISSARY.aspx" onmouseover="return tooltip('Janitschar');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_OTTOMAN_JANISSARY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Freigeschaltete Geb&auml;ude:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_HIMEJI_CASTLE.aspx" onmouseover="return tooltip('Burg Himeji');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_HIMEJI_CASTLE.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Schie&szlig;pulver</div>
+		<h2>Spielinformationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Ermöglicht die Ausbildung von <span class="color_positive_text">Musketieren</span>, der ersten Einheit im Spiel, die Feuerwaffen verwendet.</div></div></div></div></div></div></div></div>
+		
+		<h2>Zitat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Der Tag, an dem zwei Armeen sich in einer Sekunde vernichten können, ist der Tag, an dem, so bleibt zu hoffen, alle zivilisierten Nationen umdenken und ihre Truppen auflösen."<br /> - Alfred Nobel<br /></div></div></div></div></div></div></div></div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Schie&szlig;pulver, auch bekannt als Schwarzpulver, wurde in China vermutlich schon im 9. Jahrhundert v. Chr. von Alchemisten erfunden, die ein Elixier f&uuml;r Unsterblichkeit suchten (was nicht geklappt hat). Schie&szlig;pulver ist eine Mixtur aus Schwefel, Holzkohle und Kaliumnitrat und verbrennt sehr schnell, wenn es einer offenen Flamme ausgesetzt wird. Dabei setzt es gro&szlig;e Mengen von Gas und nicht verdampfbaren Bestandteilen frei, was genutzt werden kann, um Feuerwaffen und Feuerwerk anzutreiben. In China wurde das Schie&szlig;pulver genutzt, um primitive Bomben und Raketen gegen die Mongolen einzusetzen, und als diese China erst mal erobert hatten, setzten sie sie gegen alle anderen ein.<br /><br />Bis zur ersten H&auml;lfte des 12. Jahrhunderts hatte die arabische Welt das Wissen &uuml;ber Schie&szlig;pulver erlangt. Einige historische Texte behaupten, dass die Mameluken in der Schlacht von Ain Djalut im Jahr 1260 n. Chr. die erste Kanone gegen die Mongolen einsetzten, verifiziert ist diese Behauptung jedoch noch nicht endg&uuml;ltig. Die erste "Handkanone" wird in einem arabischen Manuskript aus dem 14. Jahrhundert erw&auml;hnt.<br /><br />Auch Europa erlangte das Wissen &uuml;ber Schie&szlig;pulver in der Mitte des 12. Jahrhunderts. Die Europ&auml;er verbesserten die Qualit&auml;t des Pulvers, indem sie es durch Hinzuf&uuml;gen von Fl&uuml;ssigkeit körnten, also grö&szlig;ere Körner herstellten, was die Stabilit&auml;t des Sprengstoffs erhöhte.<br /><br />Schie&szlig;pulver blieb bis zur Erfindung des raucharmen Pulvers im 19. Jahrhundert das Sprengmittel in Kanonen und Feuerwaffen. Das neue Produkt brannte sauberer und erzeugte weniger Rauch, was es dem alten Schwarzpulver gegen&uuml;ber &uuml;berlegen machte.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

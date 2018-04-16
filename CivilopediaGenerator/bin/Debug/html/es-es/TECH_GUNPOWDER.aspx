@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: P&oacute;lvora</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_GUNPOWDER.png" alt="P&oacute;lvora" class="contentimage" />
+	<div class="contentleft">
+		<h2>Coste:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">780 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Tecnolog&iacute;as necesarias:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PHYSICS.aspx" onmouseover="return tooltip('F&iacute;sica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PHYSICS.png" /></a><a href="TECH_STEEL.aspx" onmouseover="return tooltip('Acero');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_STEEL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Lleva a las tecnolog&iacute;as:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHEMISTRY.aspx" onmouseover="return tooltip('Qu&iacute;mica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHEMISTRY.png" /></a><a href="TECH_METALLURGY.aspx" onmouseover="return tooltip('Metalurgia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_METALLURGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unidades desbloqueadas:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_SPANISH_TERCIO.aspx" onmouseover="return tooltip('Tercio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_SPANISH_TERCIO.png" /></a><a href="UNIT_MUSKETMAN.aspx" onmouseover="return tooltip('Mosquete');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_MUSKETMAN.png" /></a><a href="UNIT_AMERICAN_MINUTEMAN.aspx" onmouseover="return tooltip('Miliciano');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_AMERICAN_MINUTEMAN.png" /></a><a href="UNIT_FRENCH_MUSKETEER.aspx" onmouseover="return tooltip('Mosquetero');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_FRENCH_MUSKETEER.png" /></a><a href="UNIT_OTTOMAN_JANISSARY.aspx" onmouseover="return tooltip('Jen&iacute;zaro');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_OTTOMAN_JANISSARY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Edificios desbloqueados:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_HIMEJI_CASTLE.aspx" onmouseover="return tooltip('Castillo Himeji');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_HIMEJI_CASTLE.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">P&oacute;lvora</div>
+		<h2>Informaci&oacute;n de la partida:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Te permite crear el <span class="color_positive_text">Mosquete</span>, la primera unidad del juego que lleva armas de fuego.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"El d&iacute;a en que dos ej&eacute;rcitos puedan aniquilarse en un segundo, es de esperar que todas las naciones civilizadas renuncien a la guerra y disuelvan sus tropas."<br />  - Alfred Nobel<br /></div></div></div></div></div></div></div></div>
+		<h2>Informaci&oacute;n hist&oacute;rica:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">La p&oacute;lvora (o "p&oacute;lvora negra") se invent&oacute; en China posiblemente en el siglo IX d. C. Los art&iacute;fices fueron los alquimistas que buscaban un elixir de la inmortalidad (cosa que no era). Es una mezcla de azufre, carb&oacute;n vegetal y nitrato de potasio, arde r&aacute;pidamente cuando se expone a una llama y produce una gran cantidad de gases y s&oacute;lidos que puede usarse como gas propelente de las armas de fuego y de los fuegos artificiales. Los chinos usaron la p&oacute;lvora en bombas y cohetes primitivos que lanzaban contra los invasores mongoles y, cuando &eacute;stos conquistaron China, las usaron contra todos los dem&aacute;s.<br /><br />Durante la primera mitad del siglo XII d. C., el mundo &aacute;rabe aprendi&oacute; a fabricar p&oacute;lvora. Algunos textos hist&oacute;ricos aseveran que fueron los mamelucos los que usaron el primer ca&ntilde;&oacute;n de la historia; fue contra los mongoles durante la batalla de Ain Jalut en 1260 d. C., aunque a&uacute;n no hay consenso. El primer "ca&ntilde;&oacute;n de mano" aparece en un manuscrito &aacute;rabe del siglo XIV.<br /><br />Europa tambi&eacute;n aprendi&oacute; a fabricarla a mediados del siglo XII. Mejoraron la calidad de la p&oacute;lvora "granul&aacute;ndola", es decir, a&ntilde;adi&eacute;ndole un l&iacute;quido para crear granos m&aacute;s grandes, lo que aumentaba la estabilidad del explosivo.<br /><br />La p&oacute;lvora sigui&oacute; siendo el explosivo predilecto para ca&ntilde;ones y armas de fuego hasta la aparici&oacute;n de la p&oacute;lvora "sin humo", en el siglo XIX. El nuevo producto quemaba m&aacute;s limpiamente y produc&iacute;a mucho menos humo, resultando superior a la antigua p&oacute;lvora negra.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

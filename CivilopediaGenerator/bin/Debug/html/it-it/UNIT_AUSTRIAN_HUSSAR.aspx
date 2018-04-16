@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Ussaro</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_AUSTRIAN_HUSSAR.png" alt="Ussaro" class="contentimage" />
+	<div class="contentleft">
+		<h2>Costo:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">225 <img src="/civilopedia/images/production.png" alt="production" /></div></div></div></div></div></div></div></div>
+		<h2>Tipo di combattimento:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Unit&agrave; a cavallo</div></div></div></div></div></div></div></div>
+		<h2>Combattimento:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">34 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Movimento:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilt&agrave;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_AUSTRIA.aspx" onmouseover="return tooltip('Impero Austriaco');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_AUSTRIA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Abilit&agrave;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Nessun bonus difensivo per terreno');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Può muoversi dopo aver attaccato');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Penalit&agrave; in attacco contro le citt&agrave; (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_EXTRA_SIGHT_I.aspx" onmouseover="return tooltip('Visione extra (1)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_FLANK_ATTACK_BONUS.aspx" onmouseover="return tooltip('Bonus di accerchiamento potenziato');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Risorse richieste:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Cavalli');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Tecnologie propedeutiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MILITARY_SCIENCE.aspx" onmouseover="return tooltip('Scienza militare');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MILITARY_SCIENCE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Diventa obsoleto con:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBUSTION.aspx" onmouseover="return tooltip('Combustione');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBUSTION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Aggiorna unit&agrave;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_WWI_TANK.aspx" onmouseover="return tooltip('Nave di terra');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_WWI_TANK.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Sostituisce:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CAVALRY.aspx" onmouseover="return tooltip('Cavalleria');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CAVALRY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Ussaro</div>
+		<h2>Informazione sulla partita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Una veloce unit&agrave; a cavallo usata per la ricognizione e per attacchi rapidi e imprevisti. Particolarmente letale quando attacca con accerchiamento. Solo gli austriaci possono costruirla.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Gli Ussari sono ottimi per la ricognizione e l'attacco sui fianchi. Sono leggermente pi&ugrave; veloci della Cavalleria che sostituiscono. Inoltre entrano in gioco gi&agrave; muniti di promozioni che aumentano di 1 casella il raggio visivo e del 50% il bonus all'attacco con accerchiamento.</div></div></div></div></div></div></div></div>
+		<h2>Informazioni storiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Gli ussari, la temibile cavalleria leggera ungherese, prendono il nome dal termine latino "cursarius", che significa "incursore". Gli ussari servirono l'Austria e l'impero asburgico per tutto il XVII e XVIII secolo. Imitati ma mai eguagliati dalle unit&agrave; di cavalleria di tutta Europa, gli ussari formavano un reggimento irregolare di cavalieri provetti che si affidavano a tattiche imprevedibili, attaccando e ritirandosi prima che il nemico potesse organizzare una difesa. Con il tempo l'unit&agrave; si formalizzò: le reclute dovevano soddisfare precisi requisiti, che riguardavano il cavaliere ma anche il cavallo. I reggimenti di ussari furono ampiamente utilizzati durante le guerre napoleoniche, servendo gli eserciti in Europa e Asia fino al XIX secolo inoltrato.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

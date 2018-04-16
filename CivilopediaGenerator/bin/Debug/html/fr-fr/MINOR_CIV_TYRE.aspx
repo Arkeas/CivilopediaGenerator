@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Tyr</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Tyr</div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Tyr est une ancienne cit&eacute; ph&eacute;nicienne situ&eacute;e dans la partie sud du Liban, pr&egrave;s de 20 km au nord de la fronti&egrave;re libano-isra&eacute;lienne. Tyr fut construite &agrave; la fois sur les terres et sur une &icirc;le proche. Fond&eacute;e vers 2700 av. J.-C. par des colons de Sidon, la ville grandit et devint vite une rivale de son a&icirc;n&eacute;e. Elle finit m&ecirc;me par la surpasser, devenant un important centre de p&ecirc;che et de commerce ph&eacute;nicien. Au IXe si&egrave;cle av. J.-C., des colons de Tyr fond&egrave;rent la ville de Carthage en Afrique du Nord.<br /><br />Comme Sidon, Tyr est de nombreuses fois cit&eacute;e dans la Bible. Les rapports entre Isra&euml;l et Tyr furent g&eacute;n&eacute;ralement cordiaux. D'ailleurs, Hiram Ier, roi de Tyr, fournit bon nombre de mat&eacute;riaux pour la construction du Temple de Salomon &agrave; J&eacute;rusalem.<br /><br />Comme elle &eacute;tait riche et id&eacute;alement situ&eacute;e, Tyr fut la cible de tentatives d'annexion r&eacute;p&eacute;t&eacute;es, les puissances saccageant la r&eacute;gion tentant leur chance les unes apr&egrave;s les autres. Aux VIIIe et VIIe si&egrave;cles av. J.-C., la ville connut une domination assyrienne. Au VIe si&egrave;cle av. J.-C., elle r&eacute;sista &agrave; un long si&egrave;ge men&eacute; par le roi babylonien Nabuchodonosor II, mais fut prise peu de temps plus tard par les Perses. Au IIIe si&egrave;cle av. J.-C., Alexandre le Grand de Mac&eacute;doine entra en sc&egrave;ne &agrave; la t&ecirc;te de son arm&eacute;e.<br /><br />Le si&egrave;ge de Tyr par Alexandre dura sept mois. Pour vaincre les d&eacute;fenseurs z&eacute;l&eacute;s de la ville, il d&eacute;truisit totalement la partie de la cit&eacute; situ&eacute;e sur les terres, puis utilisa les d&eacute;combres pour construire une chauss&eacute;e jusqu'&agrave; l'&icirc;le. Apr&egrave;s avoir pris la ville, Alexandre le Grand montra combien il avait appr&eacute;ci&eacute; &agrave; leur juste valeur l'honneur et le courage des citoyens : il en mit 10 000 &agrave; mort et en vendit 30 000 autres comme esclaves. Si la ville eut un regain de vitalit&eacute; sous les r&egrave;gnes &eacute;gyptien et romain, elle ne se remit jamais vraiment de l'extr&eacute;misme d'Alexandre.<br /> <br />Aujourd'hui, Tyr compte pr&egrave;s de 120 000 habitants. En raison de sa proximit&eacute; avec Isra&euml;l, elle tend &agrave; souffrir quasi syst&eacute;matiquement d&egrave;s que la violence &eacute;clate le long de la fronti&egrave;re libano-isra&eacute;lienne. Malheureusement, cela est tristement fr&eacute;quent, et les bombes, balles et autres missiles des deux camps laissent chaque fois la cit&eacute; un peu plus en ruine. Cela &eacute;tant, Tyr a d&eacute;j&agrave; surv&eacute;cu &agrave; pire (bien pire) que ce dont elle souffre aujourd'hui. Esp&eacute;rons qu'elle survive encore assez longtemps pour conna&icirc;tre &agrave; nouveau paix et prosp&eacute;rit&eacute;.  </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

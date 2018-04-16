@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Rydwan&oacute;w bojowych</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_EGYPTIAN_WARCHARIOT.png" alt="Rydwan&oacute;w bojowych" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">56 <img src="/civilopedia/images/production.png" alt="production" /> / 112 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Typ jednostki:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">&#321;ucznicza</div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">6 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		<h2>Si&#322;a ostrza&#322;u:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">10 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Zasi&#281;g:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2</div></div></div></div></div></div></div></div>
+		<h2>Ruch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Cywilizacja:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_EGYPT.aspx" onmouseover="return tooltip('Imperium egipskie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_EGYPT.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Umiej&#281;tno&#347;ci:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_ROUGH_TERRAIN_ENDS_TURN.aspx" onmouseover="return tooltip('Kara za trudny teren');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Bez terenowej premii do obrony');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('Nie mo&#380;e atakowa&#263; wr&#281;cz');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_THE_WHEEL.aspx" onmouseover="return tooltip('Ko&#322;o');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_THE_WHEEL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wypierana przez:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Rycerstwo');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ulepsz jednostk&#281;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_KNIGHT.aspx" onmouseover="return tooltip('Rycerzy');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_KNIGHT.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Zast&#281;puje:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CHARIOT_ARCHER.aspx" onmouseover="return tooltip('Strzelc&oacute;w rydwanowych');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CHARIOT_ARCHER.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Rydwan&oacute;w bojowych</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Szybka jednostka dystansowa. Tylko Egipcjanie mog&#261; j&#261; rekrutowa&#263;. W przeciwie&#324;stwie do strzelc&oacute;w rydwanowych nie wymaga <img src="/civilopedia/images/res_horses.png" alt="horses" /> koni.</div></div></div></div></div></div></div></div>
+		<h2>Strategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Rydwany bojowe to unikatowa jednostka egipska zast&#281;puj&#261;ca strzelc&oacute;w rydwanowych. Jest od nich szybsza, a Egipcjanie mog&#261; j&#261; stworzy&#263; nawet, je&#347;li nie maj&#261; <img src="/civilopedia/images/res_horses.png" alt="horses" /> koni. Jako jednostka kawalerii s&#261; podatne na ataki w&#322;&oacute;cznik&oacute;w.</div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Egipcjanie byli wczesnymi mistrzami rydwan&oacute;w, a ich przeciwnicy mieli wszelkie podstawy, by obawia&#263; si&#281; mocy rydwan&oacute;w bojowych. Cz&#281;sto na takich rydwanach osobi&#347;cie uczestniczyli w walce faraonowie. Amenhotep II przechwala&#322; si&#281;, &#380;e z rozp&#281;dzonego rydwanu trafi&#322; cztery cele, oddalone od siebie o trzydzie&#347;ci st&oacute;p z tak&#261; si&#322;a, &#380;e strza&#322;y przebi&#322;y siedem centymetr&oacute;w miedzi stanowi&#261;cych tarcz&#281;. Dok&#322;adnie jak ka&#380;da inna jazda, rydwany bojowe szczeg&oacute;lnie przydawa&#322;y si&#281; w po&#347;cigu za wycofuj&#261;cym si&#281; przeciwnikiem. Gdy wr&oacute;g ucieka&#322;, nie m&oacute;g&#322; ochroni&#263; si&#281; tarcz&#261; i stawa&#322; si&#281; kompletnie bezbronny przed ogniem z &#322;uk&oacute;w albo po prostu m&oacute;g&#322; zosta&#263; zmia&#380;d&#380;ony pod ko&#322;ami p&#281;dz&#261;cego rydwanu.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

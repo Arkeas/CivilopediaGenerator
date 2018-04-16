@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Polvere da sparo</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_GUNPOWDER.png" alt="Polvere da sparo" class="contentimage" />
+	<div class="contentleft">
+		<h2>Costo:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">780 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Tecnologie propedeutiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PHYSICS.aspx" onmouseover="return tooltip('Fisica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PHYSICS.png" /></a><a href="TECH_STEEL.aspx" onmouseover="return tooltip('Acciaio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_STEEL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Conduce alle tecnologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHEMISTRY.aspx" onmouseover="return tooltip('Chimica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHEMISTRY.png" /></a><a href="TECH_METALLURGY.aspx" onmouseover="return tooltip('Metallurgia');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_METALLURGY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Unit&agrave; sbloccate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_SPANISH_TERCIO.aspx" onmouseover="return tooltip('Tercio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_SPANISH_TERCIO.png" /></a><a href="UNIT_MUSKETMAN.aspx" onmouseover="return tooltip('Soldato con moschetto');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_MUSKETMAN.png" /></a><a href="UNIT_AMERICAN_MINUTEMAN.aspx" onmouseover="return tooltip('Minuteman');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_AMERICAN_MINUTEMAN.png" /></a><a href="UNIT_FRENCH_MUSKETEER.aspx" onmouseover="return tooltip('Moschettiere');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_FRENCH_MUSKETEER.png" /></a><a href="UNIT_OTTOMAN_JANISSARY.aspx" onmouseover="return tooltip('Giannizzero');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_OTTOMAN_JANISSARY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Edifici sbloccati:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_HIMEJI_CASTLE.aspx" onmouseover="return tooltip('Castello di Himeji');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_HIMEJI_CASTLE.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Polvere da sparo</div>
+		<h2>Informazione sulla partita:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Permette la costruzione del <span class="color_positive_text">Soldato con moschetto</span>, la prima unit&agrave; del gioco munita di armi da fuoco.</div></div></div></div></div></div></div></div>
+		
+		<h2>Citazione:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />"Il giorno in cui due eserciti potranno distruggersi l'un l'altro in un solo secondo, si può sperare che tutte le nazioni civilizzate rifuggiranno la guerra e scioglieranno le loro truppe."<br /> - Alfred Nobel<br /></div></div></div></div></div></div></div></div>
+		<h2>Informazioni storiche:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">La polvere da sparo, chiamata anche polvere pirica o polvere nera, &egrave; stata inventata in Cina forse gi&agrave; nel IX secolo d.C. da alcuni alchimisti che cercavano l'elisir dell'immortalit&agrave; (e hanno trovato ben altro). Costituita da una miscela di salnitro (nitrato di potassio), zolfo e carbone, la polvere da sparo brucia molto rapidamente quando viene esposta a una fiamma, producendo grandi quantit&agrave; di gas e polveri che possono essere usate come propellenti per armi da fuoco o fuochi artificiali. I cinesi utilizzarono la polvere da sparo contro i mongoli sotto forma di razzi e bombe primitive: una volta conquistata la Cina, i mongoli la usarono contro il resto del mondo.<br /><br />Nella prima met&agrave; del XII secolo il mondo arabo acquisì la tecnologia della polvere da sparo. Alcuni testi storici affermano che i mamelucchi usarono il primo cannone contro i mongoli nella battaglia di Ain Jalut nel 1260 d.C., ma su questo gli esperti discutono ancora. Il primo "cannone a mano" &egrave; citato in un manoscritto arabo del XIV secolo.<br /><br />Verso la met&agrave; del XII secolo anche l'Europa acquisì la conoscenza della polvere da sparo. Gli europei ne migliorarono la qualit&agrave; sviluppando un procedimento che, mediante l'aggiunta di liquido, permette di ottenere grani pi&ugrave; grandi, aumentando così la stabilit&agrave; dell'esplosivo.<br /><br />La polvere nera rimase l'esplosivo principale per i cannoni e le armi da fuoco finch&eacute; nel XIX secolo fu creata la polvere senza fumo. Questo nuovo prodotto non produce quasi fumi ed &egrave; tre volte pi&ugrave; potente della polvere nera.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

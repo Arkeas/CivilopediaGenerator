@@ -1,0 +1,210 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl-pl">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<meta name="keywords" content="civilopedia,civilopedia online,civilization,civilization V,civilization 5,civilization5,civilization,civilizations,leader,leaders" />
+	<meta name="description" content="Civilization V CIVILOPEDIA ONLINE" />
+	<link rel="Stylesheet" type="text/css" href="/civilopedia/styles.css" />
+	<script type="text/javascript">
+		function doSearch() {
+			if (document.getElementById("txtSearch").value == "") {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			if (document.getElementById("txtSearch").value.length < 4) {
+				document.getElementById("searchresults").innerHTML = "";
+				document.getElementById("searchresults").style.display = "hidden";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				xmlhttp = new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var x, i, strName, strURL;
+					x = xmlhttp.responseXML.documentElement.getElementsByTagName("page");
+					document.getElementById("searchresults").innerHTML = "";
+					if (x.length > 0) {
+						document.getElementById("searchresults").style.display = "inline";
+						for (i = 0; i < x.length; i++) {
+							strName = x[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+							strURL = x[i].getElementsByTagName("url")[0].firstChild.nodeValue;
+							document.getElementById("searchresults").innerHTML += "<a href='" + strURL + ".aspx'><div class='menuitem'>" + strName + "</div></a><br />";
+						}
+					}
+					else {
+						document.getElementById("searchresults").style.display = "hidden";
+					}
+				}
+			}
+			xmlhttp.open("GET", "search.aspx?url=&search=" + document.getElementById("txtSearch").value, true);
+			xmlhttp.send();
+		}
+	</script>
+	<script type="text/javascript" src="/civilopedia/skinnytip.js" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<script type="text/javascript">
+
+	</script>
+	<div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div>
+	<div class="container">
+		<div class="header"><a href="default.aspx" class="titlelink">Civilization V CIVILOPEDIA Online</a></div>
+		<div class="tabrow">
+			<a href="CONCEPT_HOME.aspx" onmouseover="return tooltip('Za&#322;o&#380;enia gry');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_concept_off.png" class="tab" id="tab01" onmouseover="this.src='/civilopedia/images/tab_concept_on.png';" onmouseout="this.src='/civilopedia/images/tab_concept_off.png';" /></a>
+			<a href="TECH_HOME.aspx" onmouseover="return tooltip('Technologie');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_tech_off.png" class="tab" id="tab02" onmouseover="this.src='/civilopedia/images/tab_tech_on.png';" onmouseout="this.src='/civilopedia/images/tab_tech_off.png';" /></a>
+			<a href="UNIT_HOME.aspx" onmouseover="return tooltip('Jednostki');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_unit_off.png" class="tab" id="tab03" onmouseover="this.src='/civilopedia/images/tab_unit_on.png';" onmouseout="this.src='/civilopedia/images/tab_unit_off.png';" /></a>
+			<a href="PROMOTION_HOME.aspx" onmouseover="return tooltip('Awanse');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_promotion_off.png" class="tab" id="tab04" onmouseover="this.src='/civilopedia/images/tab_promotion_on.png';" onmouseout="this.src='/civilopedia/images/tab_promotion_off.png';" /></a>
+			<a href="BUILDING_HOME.aspx" onmouseover="return tooltip('Budowle');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_building_off.png" class="tab" id="tab05" onmouseover="this.src='/civilopedia/images/tab_building_on.png';" onmouseout="this.src='/civilopedia/images/tab_building_off.png';" /></a>
+			<a href="WONDER_HOME.aspx" onmouseover="return tooltip('Cuda &#347;wiata');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_wonder_off.png" class="tab" id="tab06" onmouseover="this.src='/civilopedia/images/tab_wonder_on.png';" onmouseout="this.src='/civilopedia/images/tab_wonder_off.png';" /></a>
+			<a href="POLICY_HOME.aspx" onmouseover="return tooltip('Ustroje');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_policy_off.png" class="tab" id="tab07" onmouseover="this.src='/civilopedia/images/tab_policy_on.png';" onmouseout="this.src='/civilopedia/images/tab_policy_off.png';" /></a>
+			<a href="GREAT_PERSON_HOME.aspx" onmouseover="return tooltip('Specjali&#347;ci i wielcy ludzie');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_great_people_off.png" class="tab" id="tab08" onmouseover="this.src='/civilopedia/images/tab_great_people_on.png';" onmouseout="this.src='/civilopedia/images/tab_great_people_off.png';" /></a>
+			<a href="CIVILIZATION_HOME.aspx" onmouseover="return tooltip('Cywilizacje i przyw&oacute;dcy');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_civilization_on.png" class="tab" id="tab09" /></a>
+			<a href="CITY_STATE_HOME.aspx" onmouseover="return tooltip('Pa&#324;stwa-miasta');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_city_state_off.png" class="tab" id="tab10" onmouseover="this.src='/civilopedia/images/tab_city_state_on.png';" onmouseout="this.src='/civilopedia/images/tab_city_state_off.png';" /></a>
+			<a href="TERRAIN_HOME.aspx" onmouseover="return tooltip('Teren i jego cechy');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_terrain_off.png" class="tab" id="tab11" onmouseover="this.src='/civilopedia/images/tab_terrain_on.png';" onmouseout="this.src='/civilopedia/images/tab_terrain_off.png';" /></a>
+			<a href="RESOURCE_HOME.aspx" onmouseover="return tooltip('Surowce');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resources_off.png" class="tab" id="tab12" onmouseover="this.src='/civilopedia/images/tab_resources_on.png';" onmouseout="this.src='/civilopedia/images/tab_resources_off.png';" /></a>
+			<a href="IMPROVEMENT_HOME.aspx" onmouseover="return tooltip('Ulepszenia');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_improvement_off.png" class="tab" id="tab13" onmouseover="this.src='/civilopedia/images/tab_improvement_on.png';" onmouseout="this.src='/civilopedia/images/tab_improvement_off.png';" /></a>
+            <a href="RELIGION_HOME.aspx" onmouseover="return tooltip('Religia');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_religion_off.png" class="tab" id="tab14" onmouseover="this.src='/civilopedia/images/tab_religion_on.png';" onmouseout="this.src='/civilopedia/images/tab_religion_off.png';" /></a>
+			<a href="RESOLUTION_HOME.aspx" onmouseover="return tooltip('Kongres &#346;wiatowy');" onmouseout="return hideTip();"><img src="/civilopedia/images/tab_resolution_off.png" class="tab" id="tab15" onmouseover="this.src='/civilopedia/images/tab_resolution_on.png';" onmouseout="this.src='/civilopedia/images/tab_resolution_off.png';" /></a>
+			<input type="text" id="txtSearch" onkeyup="doSearch();" class="searchbox" />
+			<span style="display: none; position: absolute; top: 77px; left: 720px; width: 272px; float: left;" id="searchresults">
+			</span>
+		</div>
+		<div class="bordertop">Cywilizacje i przyw&oacute;dcy
+			<div style="position: absolute; top: 78px; left: 860px;">
+				<select name="cboLanguage" id="cboLanguage" style="float: left; margin-top: 20px;" onchange="cboLanguage_SelectedIndexChanged();">
+					<option value="">Language:</option>
+					<option value="">English</option>
+					<option value="de-de">Deutsch</option>
+					<option value="es-es">Español</option>
+					<option value="fr-fr">Français</option>
+					<option value="it-it">Italiano</option>
+					<option value="ja-jp">日本語</option>
+					<option value="ko-kr">한국어</option>
+					<option value="pl-pl">Polski</option>
+					<option value="ru-ru">Русский</option>
+					<option value="zh-hant-hk">中文 (繁體)</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				
+				<a href="CIVILIZATION_HOME.aspx"><div id="CIVILIZATION_HOME" class="menuitem">Strona g&#322;&oacute;wna cywilizacji i przyw&oacute;dc&oacute;w</div></a>
+			<div id="GROUP_CIVILIZATIONS" class="menugroupcontainer"><a href="javascript:togglediv('CIVILIZATIONS_CONTENT');"><div id="CIVILIZATIONS" class="menugroup">Cywilizacje</div></a><div id="CIVILIZATIONS_CONTENT">
+				<a href="CIVILIZATION_AMERICA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_AMERICA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_AMERICA" class="menuitem">Ameryka</div></a>
+				<a href="CIVILIZATION_ENGLAND.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_ENGLAND.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_ENGLAND" class="menuitem">Anglia</div></a>
+				<a href="CIVILIZATION_ARABIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_ARABIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_ARABIA" class="menuitem">Arabia</div></a>
+				<a href="CIVILIZATION_ASSYRIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_ASSYRIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_ASSYRIA" class="menuitem">Asyria</div></a>
+				<a href="CIVILIZATION_AUSTRIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_AUSTRIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_AUSTRIA" class="menuitem">Austria</div></a>
+				<a href="CIVILIZATION_BABYLON.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_BABYLON.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_BABYLON" class="menuitem">Babilon</div></a>
+				<a href="CIVILIZATION_BYZANTIUM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_BYZANTIUM.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_BYZANTIUM" class="menuitem">Bizancjum</div></a>
+				<a href="CIVILIZATION_BRAZIL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_BRAZIL.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_BRAZIL" class="menuitem">Brazylia</div></a>
+				<a href="CIVILIZATION_CELTS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_CELTS.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_CELTS" class="menuitem">Celt&oacute;w</div></a>
+				<a href="CIVILIZATION_CHINA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_CHINA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_CHINA" class="menuitem">Chin</div></a>
+				<a href="CIVILIZATION_DENMARK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_DENMARK.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_DENMARK" class="menuitem">Dania</div></a>
+				<a href="CIVILIZATION_EGYPT.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_EGYPT.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_EGYPT" class="menuitem">Egipt</div></a>
+				<a href="CIVILIZATION_ETHIOPIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_ETHIOPIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_ETHIOPIA" class="menuitem">Etiopia</div></a>
+				<a href="CIVILIZATION_FRANCE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_FRANCE.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_FRANCE" class="menuitem">Francja</div></a>
+				<a href="CIVILIZATION_GREECE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_GREECE.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_GREECE" class="menuitem">Grecja</div></a>
+				<a href="CIVILIZATION_SPAIN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_SPAIN.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_SPAIN" class="menuitem">Hiszpania</div></a>
+				<a href="CIVILIZATION_NETHERLANDS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_NETHERLANDS.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_NETHERLANDS" class="menuitem">Holandia</div></a>
+				<a href="CIVILIZATION_HUNS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_HUNS.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_HUNS" class="menuitem">Hun&oacute;w</div></a>
+				<a href="CIVILIZATION_AZTEC.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_AZTEC.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_AZTEC" class="menuitem">Imperium azteckie</div></a>
+				<a href="CIVILIZATION_INCA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_INCA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_INCA" class="menuitem">Imperium Ink&oacute;w</div></a>
+				<a href="CIVILIZATION_IROQUOIS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_IROQUOIS.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_IROQUOIS" class="menuitem">Imperium irokeskie</div></a>
+				<a href="CIVILIZATION_OTTOMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_OTTOMAN.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_OTTOMAN" class="menuitem">Imperium osma&#324;skie</div></a>
+				<a href="CIVILIZATION_INDIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_INDIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_INDIA" class="menuitem">Indii</div></a>
+				<a href="CIVILIZATION_INDONESIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_INDONESIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_INDONESIA" class="menuitem">Indonezja</div></a>
+				<a href="CIVILIZATION_JAPAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_JAPAN.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_JAPAN" class="menuitem">Japonia</div></a>
+				<a href="CIVILIZATION_CARTHAGE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_CARTHAGE.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_CARTHAGE" class="menuitem">Kartagina</div></a>
+				<a href="CIVILIZATION_KOREA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_KOREA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_KOREA" class="menuitem">Korea</div></a>
+				<a href="CIVILIZATION_MAYA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_MAYA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_MAYA" class="menuitem">Maj&oacute;w</div></a>
+				<a href="CIVILIZATION_MOROCCO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_MOROCCO.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_MOROCCO" class="menuitem">Maroko</div></a>
+				<a href="CIVILIZATION_MONGOL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_MONGOL.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_MONGOL" class="menuitem">Mongolia</div></a>
+				<a href="CIVILIZATION_GERMANY.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_GERMANY.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_GERMANY" class="menuitem">Niemiec</div></a>
+				<a href="CIVILIZATION_PERSIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_PERSIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_PERSIA" class="menuitem">Persja</div></a>
+				<a href="CIVILIZATION_POLYNESIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_POLYNESIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_POLYNESIA" class="menuitem">Polinezja</div></a>
+				<a href="CIVILIZATION_POLAND.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_POLAND.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_POLAND" class="menuitem">Polska</div></a>
+				<a href="CIVILIZATION_PORTUGAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_PORTUGAL.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_PORTUGAL" class="menuitem">Portugalia</div></a>
+				<a href="CIVILIZATION_RUSSIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_RUSSIA.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_RUSSIA" class="menuitem">Rosja</div></a>
+				<a href="CIVILIZATION_ROME.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_ROME.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_ROME" class="menuitem">Rzym</div></a>
+				<a href="CIVILIZATION_SONGHAI.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_SONGHAI.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_SONGHAI" class="menuitem">Songhaj</div></a>
+				<a href="CIVILIZATION_SIAM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_SIAM.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_SIAM" class="menuitem">Syjam</div></a>
+				<a href="CIVILIZATION_SHOSHONE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_SHOSHONE.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_SHOSHONE" class="menuitem">Szoszon&oacute;w</div></a>
+				<a href="CIVILIZATION_SWEDEN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_SWEDEN.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_SWEDEN" class="menuitem">Szwecja</div></a>
+				<a href="CIVILIZATION_VENICE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_VENICE.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_VENICE" class="menuitem">Wenecja</div></a>
+				<a href="CIVILIZATION_ZULU.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/CIVILIZATION_ZULU.png\' />', true);" onmouseout="return hideTip();"><div id="CIVILIZATION_ZULU" class="menuitem">Zulus&oacute;w</div></a>
+			</div></div>
+			<div id="GROUP_LEADERS" class="menugroupcontainer"><a href="javascript:togglediv('LEADERS_CONTENT');"><div id="LEADERS" class="menugroup">Przyw&oacute;dcy</div></a><div id="LEADERS_CONTENT">
+				<a href="LEADER_AHMAD_ALMANSUR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_AHMAD_ALMANSUR.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_AHMAD_ALMANSUR" class="menuitem">Ahmad al-Mansur</div></a>
+				<a href="LEADER_ALEXANDER.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ALEXANDER.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ALEXANDER" class="menuitem">Aleksander</div></a>
+				<a href="LEADER_ASKIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ASKIA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ASKIA" class="menuitem">Askia</div></a>
+				<a href="LEADER_ASHURBANIPAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ASHURBANIPAL.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ASHURBANIPAL" class="menuitem">Aszurbanipal</div></a>
+				<a href="LEADER_ATTILA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ATTILA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ATTILA" class="menuitem">Attyla</div></a>
+				<a href="LEADER_BISMARCK.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_BISMARCK.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_BISMARCK" class="menuitem">Bismarck</div></a>
+				<a href="LEADER_BOUDICCA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_BOUDICCA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_BOUDICCA" class="menuitem">Budyka</div></a>
+				<a href="LEADER_SHAKA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_SHAKA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_SHAKA" class="menuitem">Czaka</div></a>
+				<a href="LEADER_GENGHIS_KHAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_GENGHIS_KHAN.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_GENGHIS_KHAN" class="menuitem">Czyngis-chan</div></a>
+				<a href="LEADER_DARIUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_DARIUS.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_DARIUS" class="menuitem">Dariusz I</div></a>
+				<a href="LEADER_DIDO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_DIDO.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_DIDO" class="menuitem">Dydona</div></a>
+				<a href="LEADER_ELIZABETH.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ELIZABETH.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ELIZABETH" class="menuitem">El&#380;bieta</div></a>
+				<a href="LEADER_ENRICO_DANDOLO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ENRICO_DANDOLO.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ENRICO_DANDOLO" class="menuitem">Enrico Dandolo</div></a>
+				<a href="LEADER_GAJAH_MADA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_GAJAH_MADA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_GAJAH_MADA" class="menuitem">Gad&#380;ad Mada</div></a>
+				<a href="LEADER_GANDHI.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_GANDHI.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_GANDHI" class="menuitem">Gandhi</div></a>
+				<a href="LEADER_GUSTAVUS_ADOLPHUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_GUSTAVUS_ADOLPHUS.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_GUSTAVUS_ADOLPHUS" class="menuitem">Gustaw Adolf</div></a>
+				<a href="LEADER_SELASSIE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_SELASSIE.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_SELASSIE" class="menuitem">Hajle Sellasje</div></a>
+				<a href="LEADER_HARALD.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_HARALD.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_HARALD" class="menuitem">Harald Sinoz&#281;by</div></a>
+				<a href="LEADER_HARUN_AL_RASHID.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_HARUN_AL_RASHID.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_HARUN_AL_RASHID" class="menuitem">Harun ar-Raszid</div></a>
+				<a href="LEADER_HIAWATHA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_HIAWATHA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_HIAWATHA" class="menuitem">Hiawatha</div></a>
+				<a href="LEADER_ISABELLA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ISABELLA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ISABELLA" class="menuitem">Izabela</div></a>
+				<a href="LEADER_KAMEHAMEHA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_KAMEHAMEHA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_KAMEHAMEHA" class="menuitem">Kamehameha</div></a>
+				<a href="LEADER_CATHERINE.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_CATHERINE.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_CATHERINE" class="menuitem">Katarzyna</div></a>
+				<a href="LEADER_CASIMIR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_CASIMIR.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_CASIMIR" class="menuitem">Kazimierz III</div></a>
+				<a href="LEADER_MARIA_I.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_MARIA_I.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_MARIA_I" class="menuitem">Maria I</div></a>
+				<a href="LEADER_MARIA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_MARIA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_MARIA" class="menuitem">Maria Teresa</div></a>
+				<a href="LEADER_MONTEZUMA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_MONTEZUMA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_MONTEZUMA" class="menuitem">Montezuma</div></a>
+				<a href="LEADER_NEBUCHADNEZZAR.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_NEBUCHADNEZZAR.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_NEBUCHADNEZZAR" class="menuitem">Nabuchodonozor II</div></a>
+				<a href="LEADER_NAPOLEON.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_NAPOLEON.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_NAPOLEON" class="menuitem">Napoleon</div></a>
+				<a href="LEADER_ODA_NOBUNAGA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_ODA_NOBUNAGA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_ODA_NOBUNAGA" class="menuitem">Oda Nobunaga</div></a>
+				<a href="LEADER_AUGUSTUS.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_AUGUSTUS.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_AUGUSTUS" class="menuitem">Oktawian August</div></a>
+				<a href="LEADER_PACHACUTI.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_PACHACUTI.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_PACHACUTI" class="menuitem">Pachacutec</div></a>
+				<a href="LEADER_PACAL.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_PACAL.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_PACAL" class="menuitem">Pakal</div></a>
+				<a href="LEADER_PEDRO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_PEDRO.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_PEDRO" class="menuitem">Pedro II</div></a>
+				<a href="LEADER_POCATELLO.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_POCATELLO.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_POCATELLO" class="menuitem">Pocatello</div></a>
+				<a href="LEADER_RAMKHAMHAENG.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_RAMKHAMHAENG.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_RAMKHAMHAENG" class="menuitem">Ramkhamhaeng</div></a>
+				<a href="LEADER_RAMESSES.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_RAMESSES.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_RAMESSES" class="menuitem">Ramzes II</div></a>
+				<a href="LEADER_SEJONG.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_SEJONG.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_SEJONG" class="menuitem">Sedzong</div></a>
+				<a href="LEADER_SULEIMAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_SULEIMAN.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_SULEIMAN" class="menuitem">Sulejman</div></a>
+				<a href="LEADER_THEODORA.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_THEODORA.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_THEODORA" class="menuitem">Teodora</div></a>
+				<a href="LEADER_WASHINGTON.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_WASHINGTON.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_WASHINGTON" class="menuitem">Waszyngton</div></a>
+				<a href="LEADER_WILLIAM.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_WILLIAM.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_WILLIAM" class="menuitem">Wilhelm</div></a>
+				<a href="LEADER_WU_ZETIAN.aspx" onmouseover="return tooltip('<img src=\'/civilopedia/images/small/LEADER_WU_ZETIAN.png\' />', true);" onmouseout="return hideTip();"><div id="LEADER_WU_ZETIAN" class="menuitem">Wu Zetian</div></a>
+			</div></div>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div class="borderbottom">&nbsp;</div>
+		<div class="footer">
+			<p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="http://www.firaxis.com/" target="_blank">Firaxis</a> and have been exported from their game <a href=http://www.civilization5.com/"" target="_blank">Civilization V</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

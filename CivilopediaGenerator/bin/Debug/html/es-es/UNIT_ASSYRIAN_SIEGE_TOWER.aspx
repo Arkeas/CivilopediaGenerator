@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Torre de asedio</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_ASSYRIAN_SIEGE_TOWER.png" alt="Torre de asedio" class="contentimage" />
+	<div class="contentleft">
+		<h2>Coste:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">75 <img src="/civilopedia/images/production.png" alt="production" /> / 150 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Tipo de combate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Cuerpo a cuerpo</div></div></div></div></div></div></div></div>
+		<h2>Combate:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">12 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Movimiento:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilizaci&oacute;n:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_ASSYRIA.aspx" onmouseover="return tooltip('Imperio Asirio');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_ASSYRIA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Capacidades:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_SAPPER.aspx" onmouseover="return tooltip('Zapador');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_EXP_6.png" /></a><a href="PROMOTION_CITY_SIEGE.aspx" onmouseover="return tooltip('Bonificaci&oacute;n contra ciudades (200)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_COVER_1.aspx" onmouseover="return tooltip('Cobertura I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_14.png" /></a><a href="PROMOTION_ONLY_ATTACKS_CITIES.aspx" onmouseover="return tooltip('Solo ataca ciudades');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_EXTRA_SIGHT_I.aspx" onmouseover="return tooltip('Visual adicional (1)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Sin bonificaciones defensivas por terreno');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Tecnolog&iacute;as necesarias:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MATHEMATICS.aspx" onmouseover="return tooltip('Matem&aacute;ticas');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MATHEMATICS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Queda obsoleta con:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_PHYSICS.aspx" onmouseover="return tooltip('F&iacute;sica');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PHYSICS.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Modernizar unidad</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_TREBUCHET.aspx" onmouseover="return tooltip('Trabuquete');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_TREBUCHET.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Sustituye a:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CATAPULT.aspx" onmouseover="return tooltip('Catapulta');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CATAPULT.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Torre de asedio</div>
+		<h2>Informaci&oacute;n de la partida:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Poderosa unidad de cuerpo a cuerpo de asedio que concede una bonificaci&oacute;n al ataque contra las ciudades a las unidades cercanas que est&eacute;n al lado de una ciudad enemiga. Solo la pueden construir los asirios.</div></div></div></div></div></div></div></div>
+		<h2>Estrategia:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Esta unidad de cuerpo a cuerpo de asedio debe moverse cerca de una ciudad enemiga para ser eficaz, pero cuando lo haga ser&aacute; devastadora. No solo tiene un ataque poderoso contra ciudades, sino que adem&aacute;s concede una bonificaci&oacute;n a tus unidades cercanas que tambi&eacute;n ataquen la ciudad. Combina una Torre de asedio con unidades de cuerpo a cuerpo o a distancia y aseg&uacute;rate de que llegue a su destino antes de morir para ver c&oacute;mo las ciudades caen mucho m&aacute;s r&aacute;pidamente.</div></div></div></div></div></div></div></div>
+		<h2>Informaci&oacute;n hist&oacute;rica:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Las torres de asedio m&aacute;s antiguas de las que se tiene constancia se remontan a las del ej&eacute;rcito del Imperio Neoasirio, en el siglo IX a. C. Los bajorrelieves del reinado de Asurbanipal II muestran torres de asedio en las murallas de ciudades enemigas. En aquellos tiempos, las murallas de ladrillos de arcilla sol&iacute;an ofrecer protecci&oacute;n suficiente contra los ej&eacute;rcitos antiguos de Mesopotamia, pero las torres de asedio que usaron los asirios les permitieron tomar las ciudades enemigas r&aacute;pida y eficazmente, lo que proporcion&oacute; medios al imperio para crecer pr&aacute;cticamente sin obst&aacute;culos durante trescientos a&ntilde;os. </div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

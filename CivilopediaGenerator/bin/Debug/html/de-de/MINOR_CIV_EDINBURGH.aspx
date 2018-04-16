@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="CityStates.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Edinburgh</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div class="contentleft">
+	</div>
+	<div class="contentright">
+		<div class="title">Edinburgh</div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Edinburgh, das auf einem majest&auml;tischen Felsen in Schottland liegt, und seine umliegenden Gebiete wurden schon ab 3300 v. Chr. besiedelt. Die Stadt hat wahrscheinlich keltische Wurzeln, was einem g&auml;ngigen Volksmythos widerspricht, demzufolge die Stadt nach König Edwin von Northumbria benannt ist. Die ersten belegten Erw&auml;hnungen der Stadt findet man im 6. Jahrhundert n. Chr. in den Heldensagen der Gododdin, eines Volksstamms der Briten. Die massive Vulkansteinformation hat die fr&uuml;he Stadt vor den meisten Angreifern besch&uuml;tzt, sodass erst im Jahr 950 n. Chr. die letzten Spuren der Gododdin beseitigt wurden und die Stadt an die Schotten fiel. Von diesem Zeitpunkt an blieb die Stadt immer unter schottischer Herrschaft.<br /><br />1492 verlegte König Jakob IV. den königlichen Hof nach Edinburgh und machte es zur offiziellen Hauptstadt von Schottland. Edinburgh florierte ab diesem Zeitpunkt in wirtschaftlicher und kultureller Hinsicht durch die gesamte Renaissance hindurch. 1639 f&uuml;hrten religiöse Streitigkeiten zwischen einer presbyterianischen Sekte und der Anglikanischen Kirche zusammen mit der sp&auml;teren Besetzung der Stadt durch Oliver Cromwell zu fundamentalen Ver&auml;nderungen sowohl f&uuml;r Schottland als auch f&uuml;r Edinburgh. 1707 wurde der Act of Union verabschiedet, wodurch Schottland und England im gemeinsamen Königreich von Gro&szlig;britannien vereint und das schottische Parlament daraufhin aufgelöst wurde. Die Stadtbewohner von Edinburgh revoltierten, als sie von der Entscheidung erfuhren.<br /><br />Nach der umstrittenen Vereinigung der beiden Staaten arbeiteten die Bewohner von Edinburgh daran, ihre nationale Identit&auml;t und Kultur zu bewahren, was gegen Ende des Jahrhunderts in der sogenannten schottischen Aufkl&auml;rung gipfelte. In dieser wohl einflussreichsten und erfolgreichsten Periode der Stadtgeschichte wurde Edinburgh durch die zahlreichen ber&uuml;hmten Schotten quasi zu einem Leuchtfeuer f&uuml;r Europa, unter ihnen gro&szlig;e M&auml;nner und Frauen wie Walter Scott, Robert Burns und Adam Smith. Im Zeitalter der Aufkl&auml;rung verdiente sich Edinburgh auch seinen Beinamen "Athen des Nordens".<br /><br />Edinburgh fiel w&auml;hrend der Industriellen Revolution zur&uuml;ck. Zwar versuchte die Stadt, sich zu modernisieren, doch wurde sie schon bald von der schneller wachsenden schottischen Stadt Glasgow &uuml;berholt. Erst viel sp&auml;ter, im Jahr 1992, als Edinburgh Gastgeber f&uuml;r den Vertragsgipfel der Europ&auml;ischen Union war, wurde es wieder zur bedeutendsten Stadt im Land. 1999 wurde das schottische Parlament wieder eingesetzt, und es sieht danach aus, dass die Schotten durchaus in Betracht ziehen, diesem wieder die volle Hoheitsgewalt zu &uuml;bertragen. Ob Schottland nun in den n&auml;chsten Jahren die Unabh&auml;ngigkeit erlangt oder nicht - die Wiederherstellung des Regierungsapparats in Edinburgh hat die Hauptstadt neu belebt und ihr zum ersten Mal seit fast 300 Jahren wieder Macht und Bedeutung verliehen.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

@@ -1,0 +1,11 @@
+March 20, 2015 - Added Traditional Chinese language<br />
+November 2, 2014 - Updated all languages for game version 1.0.3.276<br />
+October 15, 2013 - Updated all languages for game version 1.0.3.142<br />
+September 12, 2013 - Added missing Game Info section to Terrains and Features where applicable<br />
+August 23, 2013 - Updated all languages for game version 1.0.3.70<br />
+July 18, 2013 - Corrected images for Promotions. Gods &amp; Kings version is still available <a href="godsandkings">here</a> but will no longer be updated.<br />
+July 9, 2013 - Updated for Brave New World Expansion<br />
+July 3, 2013 - Updated all languages for game version 1.0.3.18<br />
+November 20, 2012 - Updated all languages for game version 1.0.2.21<br />
+November 4, 2012 - Fixed missing Korean text<br />
+November 1, 2012 - Updated all languages for game version 1.0.2.13<br />

@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: B-17</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_AMERICAN_B17.png" alt="B-17" class="contentimage" />
+	<div class="contentleft">
+		<h2>Co&ucirc;t :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">375 <img src="/civilopedia/images/production.png" alt="production" /></div></div></div></div></div></div></div></div>
+		<h2>Type de combat :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Unit&eacute; de bombardier</div></div></div></div></div></div></div></div>
+		
+		<h2>Combat &agrave; distance :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">70 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Port&eacute;e :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">10</div></div></div></div></div></div></div></div>
+		<h2>D&eacute;placement :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Civilisation :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_AMERICA.aspx" onmouseover="return tooltip('Empire am&eacute;ricain');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_AMERICA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Comp&eacute;tences :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_EVASION.aspx" onmouseover="return tooltip('Esquive');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_23.png" /></a><a href="PROMOTION_AIR_SIEGE_1.aspx" onmouseover="return tooltip('Si&egrave;ge I');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_40.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ressources requises :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_OIL.aspx" onmouseover="return tooltip('P&eacute;trole');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_OIL.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Technologies requises :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_RADAR.aspx" onmouseover="return tooltip('Radar');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_RADAR.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Am&eacute;liorer l'unit&eacute;</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_STEALTH_BOMBER.aspx" onmouseover="return tooltip('Bombardier furtif');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_STEALTH_BOMBER.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Remplace :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_BOMBER.aspx" onmouseover="return tooltip('Bombardier');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_BOMBER.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">B-17</div>
+		<h2>Informations de jeu :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Unit&eacute; a&eacute;rienne capable de faire pleuvoir la mort sur les unit&eacute;s et villes ennemies. Le bombardier B-17 est exclusif aux Am&eacute;ricains. Il peut &eacute;chapper aux tentatives d'interception, et inflige plus de d&eacute;g&acirc;ts aux villes que le bombardier standard, qu'il remplace.</div></div></div></div></div></div></div></div>
+		<h2>Strat&eacute;gie :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Le bombardier B-17 est une unit&eacute; exclusive aux Am&eacute;ricains ; il remplace le bombardier classique. Identique &agrave; ce dernier, il est cependant plus difficile &agrave; prendre en cible par les unit&eacute;s antia&eacute;riennes et les chasseurs. Le B-17 re&ccedil;oit &eacute;galement un bonus lorsqu'il attaque les villes ennemies. Comme le bombardier, l'autonomie du B-17 est de 10 cases. Pour plus d'informations, veuillez consulter les r&egrave;gles relatives aux avions.</div></div></div></div></div></div></div></div>
+		<h2>Informations historiques :</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Le Boeing B-17 "Flying Fortress" &eacute;tait un bombardier lourd utilis&eacute; par l'United States Army Air Corps durant la Deuxi&egrave;me Guerre mondiale. Avec ses quatre moteurs, ses nombreux canons et son plafond sup&eacute;rieur, le B-17 &eacute;tait le bombardier de pr&eacute;dilection de l'US Air Corps, m&ecirc;me si sa port&eacute;e et sa capacit&eacute; de chargement &eacute;taient inf&eacute;rieures &agrave; celles du B-24 Liberator. Cette pr&eacute;f&eacute;rence venait de sa capacit&eacute; &agrave; absorber de lourds d&eacute;g&acirc;ts tout en ramenant son &eacute;quipage en vie.<br /><br />&Agrave; l'origine, le B-17 &eacute;tait utilis&eacute; pour de dangereuses missions de jour contre des cibles en Allemagne, mais de nombreux appareils ont &eacute;t&eacute; abattus par les chasseurs de la Luftwaffe. Plus tard au cours de la guerre, les forces alli&eacute;es ont con&ccedil;u des chasseurs capables d'escorter les bombardiers en territoire ennemi, les missions du B-17 connurent alors plus de succ&egrave;s et permirent de bombarder lourdement les villes et les zones industrielles allemandes.<br /><br />Plus de 12 000 B-17 furent construits pendant la Deuxi&egrave;me Guerre mondiale, et environ un tiers d'entre eux ont &eacute;t&eacute; perdus au combat.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

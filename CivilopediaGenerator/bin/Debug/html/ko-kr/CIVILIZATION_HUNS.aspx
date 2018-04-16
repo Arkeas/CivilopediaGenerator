@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Civilizations.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: 훈족</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/CIVILIZATION_HUNS.png" alt="훈족" class="contentimage" />
+	<div class="contentleft">
+		<h2>지도자:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="LEADER_ATTILA.aspx" onmouseover="return tooltip('아틸라');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/LEADER_ATTILA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>고유 유닛:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_HUN_HORSE_ARCHER.aspx" onmouseover="return tooltip('궁기병');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HUN_HORSE_ARCHER.png" /></a><a href="UNIT_HUN_BATTERING_RAM.aspx" onmouseover="return tooltip('공성추');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_HUN_BATTERING_RAM.png" /></a></div></div></div></div></div></div></div></div>
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">훈족</div>
+		
+<h2>역사</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">4세기와 5세기 사이에 유럽을 통해 이동했던 유목민족인 훈족은 원래 중앙아시아 지역에 기반을 둔 민족으로 추측된다. 그들의 역사상 가장 유명한 지도자인 아틸라 밑에서 결집한 훈족은 유럽 전역에서 약탈과 강탈을 서슴지 않았으며 로마제국과 그 동맹국들에는 엄청난 재앙이 되었다.</div></div></div></div></div></div></div></div>
+<h2>지리와 기후</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">몽골과 중앙아시아 지역에서 이동해 온 것으로 추정되는 훈족은 4세기 초반에 최초로 볼가 강을 건넜다. 몽골 지방은 다양한 지리적 조건을 지닌 고원이며 험준한 숲과 초원, 사막, 수백 개에 달하는 호수와 습지로 구성되어 있다. 이 지역에는 다양한 품종의 야생마들이 살고 있어, 훈족이 기마술을 익히는 데 큰 도움을 주었다. <br /><br />훈족은 황금기 때 중앙아시아부터 현재의 독일에 이르는 넓은 지역을 통치하였다. 척박한 땅과 악천후도 훈족의 이러한 정복 사업에는 큰 영향을 끼치지 못했던 것으로 추정된다.</div></div></div></div></div></div></div></div>
+<h2>훈족의 기원</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">훈족의 진정한 기원에 대해서는 확실히 밝혀진 것이 없으며 아직도 논란의 대상이다. 훈족은 그야말로 '갑자기 등장'하여 마주치는 모든 것들을 사정없이 파괴해 버렸다. 훈족은 중국 북부의 유목민족인 흉노족의 후예일 가능성이 있다고 추정된다. 흉노족은 기원전 3세기경 중국 진나라를 자주 침략했으며, 중국은 흉노족과 기타 유목민족의 습격을 막기 위해 만리장성을 쌓았다. 흉노족이 중국에서 거의 눈에 띄지 않게 되었을 때 훈족이 유럽 지역에 나타났으며, 이렇게 갑작스레 훈족이 서방 세계에 등장한 것과 흉노족이 사라진 것은 훈족과 흉노족 사이의 관계를 나타내는 것으로 추정된다.</div></div></div></div></div></div></div></div>
+<h2>유럽 침략</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">훈족에 관한 초기 기록은 주로 적들의 관점에서 쓰였기 때문에 공정성과는 거리가 멀고, 남아있는 것도 훈족의 정복전쟁에 관한 드문드문한 기록뿐이다. 4세기경 유럽으로 이동한 훈족은 알라니족, 동고트족, 서고트족 등 여러 경쟁 부족들을 정복했다. 아직 통합되지 않았던 훈족은 동로마와 서로마제국을 공격하는 동시에 로마를 침략하는 다른 부족을 막아주는 용병 역할도 겸했다. 이 시기에 비잔틴(동로마제국)은 훈족에게 공물을 바치는 조건으로 평화 유지 협정을 맺었으나, 실제로는 제대로 바치지 않은 적이 많았다. <br /><br />훈족의 역사가 명확하게 기록된 때는 아틸라의 통치 직전부터이다. 아틸라 이전에 훈족을 통치하던 자는 그의 삼촌인 루아로, 루아는 훈족 내부의 다른 세력들을 모두 제압하고 그와 반대편에 있는 모든 지도자를 숙청했다. 그는 철권통치로 훈족을 다스렸으며, 다른 주변 부족들을 성공적으로 공격하면서 더욱 원대한 야망을 갖게 되었다. <br /><br />훈족 연합의 왕이 된 그는 동로마제국과 수많은 전쟁을 치르게 되었으며, 이를 시점으로 역사에 기록된다. 훈족에 의해 정복당한 몇몇 부족들은 비잔틴제국으로 망명했다고 추정된다. 루아는 이러한 망명자들을 돌려 달라고 요구했으며, 비잔틴제국에 군대를 풀어 콘스탄티노플 북서쪽 도시인 트라키아를 약탈하였다. 그러나 루아는 전투 도중에 죽게 되는데, 전해지는 바로는 벼락을 맞았다고 한다. 그의 죽음으로 훈족은 어쩔 수 없이 퇴각해야 했다.</div></div></div></div></div></div></div></div>
+<h2>강력한 군대</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">434년 루아의 죽음으로 아틸라와 그의 형제 블레다는 함께 왕위에 올라 유럽 정벌을 계속해 나갔다. 공물과 약탈을 통해 재원을 충당하며, 훈족은 5세기 무렵 유럽 대륙에서 매우 강력한 세력을 형성하게 되었다. 갈리아 지방에서의 총사령관직 유지를 위해 훈족의 왕 루아와 동맹을 맺었던 로마 장군 아이티우스는 로마제국의 북부 지역을 공격하는 부르고뉴를 상대하기 위해 훈족과 다시 손을 잡았다.<br /><br />충분한 재정을 확보한 뒤 훈족은 다시 한 번 동로마제국을 노렸고, 약해진 비잔틴 왕조를 위협하여 435년 마르구스 조약에 서명하게 하였다. 비잔틴제국은 이미 훈족에게 연간 수백 킬로그램의 금을 바친다고 약속하였는데, 이 조약에 의해 그 양이 두 배로 늘어났다. 하지만 과거에 그랬던 것처럼 비잔틴제국은 공물을 잘 바치지 않았고, 역시 과거에 그랬던 것처럼 훈족은 다시 동로마제국으로 돌아와 수많은 도시를 약탈하며 443년에는 마침내 콘스탄티노플에 도달하게 된다. 비잔틴제국은 이번에는 원래 예정된 공물의 세 배를 바치는 조약에 동의하고서야 훈족을 돌려보낼 수 있었다.</div></div></div></div></div></div></div></div>
+<h2>아틸라의 지배</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">형 블레다가 445년에 사망하자 아틸라가 훈제국의 유일한 통치자로 등극한다. 447년 아틸라는 동로마제국의 군대를 격파하고 여러 요새를 점령해 발칸 반도를 손에 넣었다. 로마인들은 다시 한 번 훈족에게 공물을 조건으로 화평을 제안하였고, 아틸라가 다른 곳으로 주의를 돌리기 전까지는 제대로 공물을 바쳤다.<br /><br />451년, 아틸라는 갈리아 지방으로 진군하여 오를레앙으로 가는 길목에 있는 여러 도시를 공격했다. 얄궂게도 갈리아 지방의 방어를 위해 훈족에 맞선 것은 한때 훈족의 협력자였던 로마 장군 아이티우스였다. 그는 로마인들과 서고트족으로 구성된 부대를 이끌고 카날루냐 평원에서 아틸라가 이끄는 훈족 군대와 싸워 대승을 거두었다. 군 지휘권자로서 처음 쓰디쓴 패배를 맛본 아틸라는 재정비를 위해 갈리아 지방에서 퇴각하게 된다. 야망에 불타는 정복자답게, 아틸라는 군대를 곧 재정비하고 이탈리아와 로마제국의 심장부인 로마를 공략하기 위해 동쪽으로 진군한다.<br /><br />아틸라는 이탈리아 북부의 여러 도시를 공격하는 데 성공했으나, 로마까지 진군하지는 못했다. 몇몇 역사가들은 아틸라가 로마까지 진군하지 못한 이유는 교황 레오 1세가 아틸라를 설득하였기 때문이라고 믿지만, 동로마제국이 원군 파병을 약속해 아틸라가 퇴각하게 되었다는 설이 더욱 힘을 얻고 있다. 453년, 아틸라는 결혼식 날 갑작스러운 죽음을 맞게 된다. 몇몇 역사가들은 그가 단순한 코피 때문에 죽었다고 한다. 강력한 카리스마를 기반으로 한 통치력을 가진 아틸라가 사라지자 무적의 군단으로 이름을 떨쳤던 훈족의 명성도 사라지게 된다.</div></div></div></div></div></div></div></div>
+<h2>아틸라 사후</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">아틸라 사후 훈제국은 아틸라의 장남인 엘락에 의해 통치된다. 그러나 아틸라의 다른 아들인 덴기지크와 이르네크도 왕좌를 원했고, 이러한 내부 분열은 훈족을 침체기에 빠뜨렸다. 엘락은 즉위한 지 1년이 지났을 무렵인 454년에 네다오 전투에서 전사하고 훈족은 게르만족 연합군에게 참패하였다. 형의 죽음 이후 덴기지크는 한때 왕좌를 차지하나, 훈족은 곧 그들의 혜성 같은 등장과 마찬가지로 빠르게 역사의 뒤안길로 사라졌다. 469년 덴기지크 사망 이후, 남은 훈족들은 다시 중앙아시아 지역으로 건너간 것으로 추정된다.</div></div></div></div></div></div></div></div>
+<h2>훈족 사회</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">기원이 명확하지는 않지만, 수많은 자료를 보면 훈족은 말에 탄 채로 밥을 먹고, 잠을 자고, 심지어 죽을 때도 말에 탄 채로 죽었다고 한다. 훈족이 뛰어난 기마술을 지닌 민족으로 잘 알려진 이유는 아마 이러한 역사상의 기록 때문일 것이다. 훈족은 주로 양치기 생활을 했으며, 그들이 키우는 가축은 이동 중에 먹을 수 있는 식량과 옷을 만들 가죽을 제공했다. 그들은 또한 자주 사냥을 나가 궁술을 연마했으며, 그들이 사용하는 특수한 활인 합성궁은 적들에게 매우 큰 위협이 되었다.<br /><br />훈족은 무시무시한 정복자일 뿐만 아니라 뛰어난 손재주와 장인정신을 가진 민족이기도 했다. 훈족이 생활했던 지역에서는 장례식에 사용되었을 것으로 추정되는 청동 솥을 포함한 여러 청동기가 발견되었다.</div></div></div></div></div></div></div></div>
+		
+<h2>정보</h2>
+		<div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">이탈리아의 작곡가인 베르디는 1846년 사랑하는 여인인 오다벨라에 의해 살해당하는 아틸라를 노래한 오페라 '아틸라'를 작곡했다. <br /><br />로마인들은 끊임없이 자신들을 정복할 야욕을 드러냈던 아틸라를 '신의 재앙'이라고 불렀다.<br /><br />몇몇 역사가들은 훈족에게 '편두' 풍습이 있었다고 추측한다. 편두란 천 등으로 머리를 동여매어 의도적으로 아이의 머리 모양을 납작하게 바꾸는 것이다. 훈족은 주로 적을 겁주려고 일부러 이런 넓고 평평한 얼굴을 만들었다고 여겨진다.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

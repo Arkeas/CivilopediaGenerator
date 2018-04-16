@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Ekologia</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_ECOLOGY.png" alt="Ekologia" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">6400 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_ATOMIC_THEORY.aspx" onmouseover="return tooltip('Teoria atomu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_ATOMIC_THEORY.png" /></a><a href="TECH_PENICILIN.aspx" onmouseover="return tooltip('Penicylina');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_PENICILIN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala wynale&#378;&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_TELECOM.aspx" onmouseover="return tooltip('Telekomunikacja');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_TELECOM.png" /></a><a href="TECH_MOBILE_TACTICS.aspx" onmouseover="return tooltip('Taktyk mobilnych');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MOBILE_TACTICS.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Pozwala budowa&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_RECYCLING_CENTER.aspx" onmouseover="return tooltip('Centrum recyklingu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_RECYCLING_CENTER.png" /></a><a href="BUILDING_SOLAR_PLANT.aspx" onmouseover="return tooltip('Elektrownia s&#322;oneczna');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_SOLAR_PLANT.png" /></a><a href="BUILDING_SYDNEY_OPERA_HOUSE.aspx" onmouseover="return tooltip('Opera w Sydney');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_SYDNEY_OPERA_HOUSE.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		
+	</div>
+	<div class="contentright">
+		<div class="title">Ekologia</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Pozwala zbudowa&#263; <span class="color_positive_text">elektrowni&#281; s&#322;oneczn&#261;</span>, budowl&#281;, kt&oacute;r&#261; mo&#380;na wznosi&#263; tylko w miastach po&#322;o&#380;onych na lub w pobli&#380;u pustyni, a kt&oacute;ra zwi&#281;ksza <img src="/civilopedia/images/production.png" alt="production" /> produkcj&#281;. Daje tak&#380;e mo&#380;liwo&#347;&#263; wzniesienia <span class="color_positive_text">centrum recyklingu</span> zwi&#281;kszaj&#261;cego twoje rezerwy aluminium.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cytat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />„Zaledwie w czasie jednego, wsp&oacute;&#322;czesnego nam stulecia, jeden gatunek – cz&#322;owiek – zdoby&#322; pot&#281;&#380;n&#261; si&#322;&#281; pozwalaj&#261;c&#261; zmieni&#263; natur&#281; tego &#347;wiata.”<br /> – Rachel Carson<br /></div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Ekologia nie jest pojedyncz&#261; technologi&#261;, to nauka interdyscyplinarna badaj&#261;ca r&oacute;&#380;ne formy interakcji i zwi&#261;zk&oacute;w przyczynowych mi&#281;dzy organizmami a ich &#347;rodowiskiem, w skr&oacute;cie – zajmuje si&#281; badaniem ekosystem&oacute;w. Podstawowym za&#322;o&#380;eniem tej dyscypliny jest przekonanie, &#380;e wszystko w danym ekosystemie – ska&#322;y, gleba, ptaki, owady, drzewa, etc. – ma wp&#322;yw na wszystkie elementy ekosystemu i jest z nimi po&#322;&#261;czone, bezpo&#347;rednio lub poprzez &#322;a&#324;cuch zale&#380;no&#347;ci. Skoro wszystko jest po&#322;&#261;czone, ekolodzy wierz&#261; te&#380; w poj&#281;cie holizmu – nawet znaj&#261;c wszystkie drobne interakcje, nie mo&#380;na przewidzie&#263; ka&#380;dej mo&#380;liwej reakcji, dlatego nale&#380;y bada&#263; ca&#322;e systemy. Ekologia bada po&#322;&#261;czenia mi&#281;dzy tymi elementami oraz to, jak zmiana jednego z nich przynosi korzy&#347;&#263; innym lub je niszczy.<br /><br />Wsp&oacute;&#322;czesna nauka ekologii jest bardzo m&#322;oda, ale zyska&#322;a spor&#261; popularno&#347;&#263; i rozmach dzi&#281;ki ruchowi ochrony &#347;rodowiska z lat sze&#347;&#263;dziesi&#261;tych XX w. Od niedawna ekologia zajmuje si&#281; zachowaniem r&oacute;&#380;norodno&#347;ci biologicznej i niekorzystnym wp&#322;ywem rozwoju ludzko&#347;ci na &#347;rodowisko i inne organizmy &#380;ywe. Prowadzi si&#281; d&#322;ugotrwa&#322;e badania tych skutk&oacute;w; najd&#322;u&#380;ej trwaj&#261;cy projekt rozpocz&#261;&#322; si&#281; w roku 1856.<br /><br />Wyniki tych bada&#324; znalaz&#322;y praktyczne zastosowania, np. wydajniejsze i korzystniejsze zarz&#261;dzanie zasobami naturalnymi, takimi jak mokrad&#322;a i lasy, lepsze planowanie zdrowia publicznego, a nawet usprawnione metody planowania zabudowy miast. Ekologia stworzy&#322;a te&#380; podwaliny g&#322;&#281;bszego zrozumienia spo&#322;ecznych interakcji mi&#281;dzy lud&#378;mi.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

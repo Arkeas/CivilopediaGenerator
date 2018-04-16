@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Husar</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_AUSTRIAN_HUSSAR.png" alt="Husar" class="contentimage" />
+	<div class="contentleft">
+		<h2>Kosten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">225 <img src="/civilopedia/images/production.png" alt="production" /></div></div></div></div></div></div></div></div>
+		<h2>Kampftyp:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Berittene Einheiten</div></div></div></div></div></div></div></div>
+		<h2>Kampf:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">34 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		
+		
+		<h2>Fortbewegung:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">5 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Zivilisation:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_AUSTRIA.aspx" onmouseover="return tooltip('Österreich');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_AUSTRIA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>F&auml;higkeiten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_NO_DEFENSIVE_BONUSES.aspx" onmouseover="return tooltip('Keine defensiven Gel&auml;nde-Bonusse');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_CAN_MOVE_AFTER_ATTACKING.aspx" onmouseover="return tooltip('Fortbewegung nach einem Angriff');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_CITY_PENALTY.aspx" onmouseover="return tooltip('Malus beim Angriff auf St&auml;dte (33)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_EXTRA_SIGHT_I.aspx" onmouseover="return tooltip('Zus&auml;tzliche Sicht (1)');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a><a href="PROMOTION_FLANK_ATTACK_BONUS.aspx" onmouseover="return tooltip('Verbesserter Flankenangriff');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Benötigte Ressourcen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="RESOURCE_HORSE.aspx" onmouseover="return tooltip('Pferde');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/RESOURCE_HORSE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Benötigte Technologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MILITARY_SCIENCE.aspx" onmouseover="return tooltip('Milit&auml;rwissenschaft');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MILITARY_SCIENCE.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wird veraltet durch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_COMBUSTION.aspx" onmouseover="return tooltip('Verbrennungsmotor');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_COMBUSTION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Einheit modernisieren</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_WWI_TANK.aspx" onmouseover="return tooltip('Landfahrzeug');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_WWI_TANK.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ersetzt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CAVALRY.aspx" onmouseover="return tooltip('Kavallerie');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CAVALRY.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Husar</div>
+		<h2>Spielinformationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Eine schnelle berittene Einheit, die zum Aufkl&auml;ren und f&uuml;r Blitzangriffe eingesetzt wird. Sie ist besonders mit Flankenangriffen tödlich. Nur die Österreicher können sie bauen.</div></div></div></div></div></div></div></div>
+		<h2>Strategie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Husaren sind gro&szlig;artige Aufkl&auml;rer und Flankenangreifer. Sie sind etwas schneller als die Kavallerie, die sie ersetzen. Sie starten mit Beförderungen, die ihnen +1 Sicht bringen und den Bonus bei Flankenangriffen um 50% steigern.</div></div></div></div></div></div></div></div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Der Name "Husaren" entstammt dem lateinischen Wort "cursor", was so viel hei&szlig;t wie "Eilbote". Diese furchteinflö&szlig;ende leichte Kavallerie diente dem Habsburgerreich und Österreich das 17. und 18. Jahrhundert hindurch. Die Husaren, denen Kavallerieeinheiten &uuml;berall in Europa nacheiferten, wurden als irregul&auml;res Regiment aus f&auml;higen Reitern rekrutiert, die sich auf schnelle, unvorhersehbare Angriffe spezialisierten. Mit der Zeit wurden die Husaren zu einer formellen Einheit. Rekruten wurden auf spezifische Bedingungen hin ausgew&auml;hlt, die sowohl den Reiter als auch sein Pferd betrafen. Husaren-Regimente wurden besonders in den Koalitionskriegen eingesetzt und dienten schlie&szlig;lich in Armeen &uuml;berall in Europa und Asien bis ins 20. Jahrhundert hinein.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

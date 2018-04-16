@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Units.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Zhugenu-Sch&uuml;tze</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/UNIT_CHINESE_CHUKONU.png" alt="Zhugenu-Sch&uuml;tze" class="contentimage" />
+	<div class="contentleft">
+		<h2>Kosten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">120 <img src="/civilopedia/images/production.png" alt="production" /> / 240 <img src="/civilopedia/images/peace.png" alt="faith" /></div></div></div></div></div></div></div></div>
+		<h2>Kampftyp:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Bogensch&uuml;tzen</div></div></div></div></div></div></div></div>
+		<h2>Kampf:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">13 <img src="/civilopedia/images/strength.png" alt="strength" /></div></div></div></div></div></div></div></div>
+		<h2>Fernkampf:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">14 <img src="/civilopedia/images/range_strength.png" alt="range strength" /></div></div></div></div></div></div></div></div>
+		<h2>Reichweite:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2</div></div></div></div></div></div></div></div>
+		<h2>Fortbewegung:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">2 <img src="/civilopedia/images/moves.png" alt="moves" /></div></div></div></div></div></div></div></div>
+		<h2>Zivilisation:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="CIVILIZATION_CHINA.aspx" onmouseover="return tooltip('Chinesisches Kaiserreich');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/CIVILIZATION_CHINA.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>F&auml;higkeiten:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="PROMOTION_ONLY_DEFENSIVE.aspx" onmouseover="return tooltip('Kann keine Nahkampfangriffe ausf&uuml;hren');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_57.png" /></a><a href="PROMOTION_SECOND_ATTACK.aspx" onmouseover="return tooltip('Kann zweimal angreifen');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/PROMOTION_59.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Benötigte Technologie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_MACHINERY.aspx" onmouseover="return tooltip('Maschinen');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MACHINERY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Wird veraltet durch:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_INDUSTRIALIZATION.aspx" onmouseover="return tooltip('Industrialisierung');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_INDUSTRIALIZATION.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Einheit modernisieren</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_GATLINGGUN.aspx" onmouseover="return tooltip('Gatling-Kanone');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_GATLINGGUN.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Ersetzt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="UNIT_CROSSBOWMAN.aspx" onmouseover="return tooltip('Armbrustsch&uuml;tze');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/UNIT_CROSSBOWMAN.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Zhugenu-Sch&uuml;tze</div>
+		<h2>Spielinformationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Mittelalterliche Fernwaffen-Infanterieeinheit. Nur die Chinesen können sie bauen. Diese Einheit kann zweimal in einer Runde feuern, anders als der Armbrustsch&uuml;tze, den sie ersetzt.</div></div></div></div></div></div></div></div>
+		<h2>Strategie:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Der Zhugenu-Sch&uuml;tze ist die Spezialeinheit der Chinesen und ersetzt den Armbrustsch&uuml;tzen. Der Zhugenu-Sch&uuml;tze ist etwas schw&auml;cher als der Armbrustsch&uuml;tze, kann aber zwei Mal pro Runde angreifen, was ihn zu einer m&auml;chtigen Angriffskraft macht. Die Einheit ist besonders gef&auml;hrlich, wenn sie in einer Stadt stationiert ist, die angegriffen wird.</div></div></div></div></div></div></div></div>
+		<h2>Historische Informationen:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Die "Zhugenu" ist eine recht raffinierte Repetierarmbrust, die gegen Ende des 2. Jahrhunderts n. Chr. in China erfunden wurde. Das Ger&auml;t sieht in etwa aus wie eine gewöhnliche europ&auml;ische Armbrust mit einem oben, genau &uuml;ber der Sehne, angebrachten Kasten, der mit Armbrustbolzen gef&uuml;llt ist. Im Einsatz zieht der Soldat einen Hebel, um die Sehne zu spannen, und dr&uuml;ckt dann den Hebel zur&uuml;ck, woraufhin ein Bolzen aus dem Kasten in Schussposition rutscht. Das verschaffte der Zhugenu eine höhere Schussrate als der herkömmlichen europ&auml;ischen Armbrust. Allerdings wurde die Zhugenu mit leichteren Bolzen best&uuml;ckt und hatte eine geringere Reichweite als die europ&auml;ische Variante. Welches die &uuml;berlegene Waffe war, hing von den jeweiligen Umst&auml;nden ab - das europ&auml;ische Modell bot in offenem Gel&auml;nde einen Vorteil gegen schwer gepanzerte Gegner, w&auml;hrend die Zhugenu vermutlich auf kurze Distanz gegen eine gro&szlig;e Anzahl leicht gepanzerter Angreifer die bessere Wahl w&auml;re.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+

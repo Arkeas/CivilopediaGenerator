@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="Technologies.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+	<title>CIVILOPEDIA Online: Gildii</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<img src="/civilopedia/images/large/TECH_GUILDS.png" alt="Gildii" class="contentimage" />
+	<div class="contentleft">
+		<h2>Koszt:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">275 <img src="/civilopedia/images/research.png" alt="research" /></div></div></div></div></div></div></div></div>
+		<h2>Wymaga technologii:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CURRENCY.aspx" onmouseover="return tooltip('Waluta');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CURRENCY.png" /></a></div></div></div></div></div></div></div></div>
+		<h2>Pozwala wynale&#378;&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="TECH_CHIVALRY.aspx" onmouseover="return tooltip('Rycerstwo');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_CHIVALRY.png" /></a><a href="TECH_MACHINERY.aspx" onmouseover="return tooltip('Mechanika');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/TECH_MACHINERY.png" /></a></div></div></div></div></div></div></div></div>
+		
+		<h2>Pozwala budowa&#263;:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="BUILDING_NATIONAL_TREASURY.aspx" onmouseover="return tooltip('Kompania Wschodnioindyjska');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_NATIONAL_TREASURY.png" /></a><a href="BUILDING_MACHU_PICHU.aspx" onmouseover="return tooltip('Machu Picchu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_MACHU_PICHU.png" /></a><a href="BUILDING_ARTISTS_GUILD.aspx" onmouseover="return tooltip('Gildia artyst&oacute;w');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/BUILDING_ARTISTS_GUILD.png" /></a></div></div></div></div></div></div></div></div>
+        
+		
+		<h2>Pozwala robotnikom:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><a href="IMPROVEMENT_POLDER.aspx" onmouseover="return tooltip('Budowa polderu');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_POLDER.png" /></a><a href="IMPROVEMENT_TRADING_POST.aspx" onmouseover="return tooltip('Budowa punktu handlowego');" onmouseout="return hideTip();"><img src="/civilopedia/images/small/IMPROVEMENT_TRADING_POST.png" /></a></div></div></div></div></div></div></div></div>
+	</div>
+	<div class="contentright">
+		<div class="title">Gildii</div>
+		<h2>Informacje o grze:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">Pozwala robotnikom na zbudowanie <span class="color_positive_text">punktu handlowego</span>, kt&oacute;ry zwi&#281;ksza produkcj&#281; <img src="/civilopedia/images/gold.png" alt="gold" /> z&#322;ota na danym polu. Pozwala te&#380; miastom na zamian&#281; <img src="/civilopedia/images/production.png" alt="production" /> produkcji w <img src="/civilopedia/images/gold.png" alt="gold" /> z&#322;oto zamiast budowy jednostek lub budynk&oacute;w.</div></div></div></div></div></div></div></div>
+		
+		<h2>Cytat:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><br />„Przybyli kupcy i handlarze. Ich zyski s&#261; z g&oacute;ry ustalone...”<br /> - Sri Guru Granth Sahib<br /></div></div></div></div></div></div></div></div>
+		<h2>Informacje historyczne:</h2><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">W miastach przedindustrialnych rzemie&#347;lnicy zak&#322;adali stowarzyszenia lub gildie skupiaj&#261;ce przedstawicieli ich profesji. Mia&#322;y one na celu zar&oacute;wno ochron&#281; tajnik&oacute;w rzemios&#322;a, jak i zapewnienie jej cz&#322;onkom wp&#322;yw&oacute;w. Pierwsze gildie handlowe powstawa&#322;y ju&#380; w III w. p.n.e. w Rzymie i Chinach dynastii Han. Do 300 r. n.e. praktyka ta pojawi&#322;a si&#281; w Indiach Gupt&oacute;w i Egipcie Ptolomeuszy. W &#347;redniowieczu gildie szybko rozpowszechni&#322;y si&#281; z W&#322;och na ca&#322;&#261; Europ&#281;. W XII w. tak w Pary&#380;u, jak i w Londynie by&#322;o ponad 100 zarejestrowanych gildii. W niekt&oacute;rych przypadkach by&#322;y one tak pot&#281;&#380;ne, &#380;e przejmowa&#322;y w&#322;adz&#281; w mie&#347;cie - wida&#263; to po siedzibach gildii w Niemczech, Szwajcarii i Holandii.<br /><br />Z czasem gildie zaj&#281;&#322;y si&#281; ochron&#261; jako&#347;ci i nauczania rzemios&#322;a, tworz&#261;c tradycj&#281; zdobywania stopni od terminatora po wielkiego mistrza. By zapewni&#263; jako&#347;&#263; produktu, wprowadzono znaki handlowe informuj&#261;ce, &#380;e przedmiot spe&#322;nia zar&oacute;wno standardy gildii, jak i rz&#261;dowe. Wraz z up&#322;ywem czasu jednak wp&#322;ywy i pot&#281;ga gildii zacz&#281;&#322;y s&#322;abn&#261;&#263; - pojawi&#322;y si&#281; nowe rzemios&#322;a, sprawy polityczne i masowa produkcja. We Francji istnienie gildii zniesiono w 1791 r. prawem Le Chapelier’a. Wkr&oacute;tce to samo zrobi&#322;y inne kraje. Cho&#263; w epoce przemys&#322;u zosta&#322;y one w znacznej mierze zast&#261;pione zwi&#261;zkami zawodowymi, niekt&oacute;re z nich istniej&#261; nadal, zw&#322;aszcza w dziedzinie filmu, literatury i innych profesji artystycznych.</div></div></div></div></div></div></div></div>
+	</div>
+</asp:Content>
+
